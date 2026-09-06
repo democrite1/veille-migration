@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "parties": "Annuaire des partis",
+    "elections": "Élections",
+    "legislation": "Législation",
+    "news": "Actualités",
+    "methodology": "Méthodologie"
+  },
+  "home": {
+    "title": "Observatoire des politiques migratoires",
+    "subtitle": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties occidentales.",
+    "scopeTitle": "Périmètre",
+    "scopeText": "UE27, Royaume-Uni, Norvège, Suisse, Islande, États-Unis, Canada, Australie, Nouvelle-Zélande, Argentine. Sélection sur critère politique (démocraties occidentales avec mouvements anti-immigration actifs), pas ethnique.",
+    "countriesLive": "Pays actuellement couverts",
+    "explorePartiesLink": "Explorer l'annuaire des partis →",
+    "readMethodology": "Lire la méthodologie →"
+  },
+  "parties": {
+    "title": "Annuaire des partis",
+    "filterCountry": "Pays",
+    "filterAll": "Tous",
+    "intention": "Intention",
+    "actionStatus": "Statut d'action",
+    "intentionReduction": "Stop / réduction immigration",
+    "intentionRemigration": "Remigration",
+    "actionProgramme": "Programme",
+    "actionMeasures": "Mesures concrètes",
+    "actionMeasuresRepealed": "Mesures concrètes (abrogées)",
+    "electoralStatusPower": "Pouvoir",
+    "electoralStatusOpposition": "Opposition",
+    "electoralStatusExtra": "Extra-parlementaire",
+    "source": "Source",
+    "classificationSource": "Source de classification",
+    "officialSite": "Site officiel",
+    "socialAccounts": "Comptes officiels",
+    "history": "Historique du statut"
+  },
+  "methodology": {
+    "title": "Méthodologie",
+    "intro": "Ce site documente les partis, lois et élections liés aux politiques migratoires dans les démocraties occidentales. Chaque classification est sourcée et vérifiable."
+  },
+  "elections": {
+    "title": "Suivi électoral",
+    "intro": "Élections nationales, régionales, locales et partielles, tous niveaux confondus."
+  },
+  "legislation": {
+    "title": "Suivi législatif",
+    "intro": "Lois anti-immigration promulguées ou en discussion avancée, par pays et au niveau de l'Union européenne."
+  },
+  "news": {
+    "title": "Actualités des initiatives",
+    "intro": "Traitement journalistique des initiatives liées aux politiques migratoires : nature, développements, statut légal, couverture presse."
+  },
+  "footer": {
+    "sources": "Sources : Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
+    "donate": "Soutenir ce projet"
+  }
+}

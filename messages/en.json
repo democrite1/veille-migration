@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "parties": "Party directory",
+    "elections": "Elections",
+    "legislation": "Legislation",
+    "news": "News",
+    "methodology": "Methodology"
+  },
+  "home": {
+    "title": "Migration Policy Watch",
+    "subtitle": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "scopeTitle": "Scope",
+    "scopeText": "EU27, United Kingdom, Norway, Switzerland, Iceland, United States, Canada, Australia, New Zealand, Argentina. Selection by political criterion (Western democracies with active anti-immigration movements), not ethnic.",
+    "countriesLive": "Currently covered countries",
+    "explorePartiesLink": "Explore the party directory →",
+    "readMethodology": "Read the methodology →"
+  },
+  "parties": {
+    "title": "Party directory",
+    "filterCountry": "Country",
+    "filterAll": "All",
+    "intention": "Intention",
+    "actionStatus": "Action status",
+    "intentionReduction": "Stop / reduce immigration",
+    "intentionRemigration": "Remigration",
+    "actionProgramme": "Platform pledge",
+    "actionMeasures": "Concrete measures",
+    "actionMeasuresRepealed": "Concrete measures (repealed)",
+    "electoralStatusPower": "In power",
+    "electoralStatusOpposition": "Opposition",
+    "electoralStatusExtra": "Extra-parliamentary",
+    "source": "Source",
+    "classificationSource": "Classification source",
+    "officialSite": "Official website",
+    "socialAccounts": "Official accounts",
+    "history": "Status history"
+  },
+  "methodology": {
+    "title": "Methodology",
+    "intro": "This site documents parties, laws and elections related to migration policy across Western democracies. Every classification is sourced and verifiable."
+  },
+  "elections": {
+    "title": "Electoral tracker",
+    "intro": "National, regional, local and by-elections, all levels."
+  },
+  "legislation": {
+    "title": "Legislative tracker",
+    "intro": "Anti-immigration laws enacted or under advanced discussion, by country and at EU level."
+  },
+  "news": {
+    "title": "Initiative news",
+    "intro": "Journalistic coverage of migration-policy initiatives: nature, developments, legal status, press coverage."
+  },
+  "footer": {
+    "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
+    "donate": "Support this project"
+  }
+}

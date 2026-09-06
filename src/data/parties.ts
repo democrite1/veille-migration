@@ -1,0 +1,451 @@
+import type { Party } from './types';
+
+/**
+ * Seed data. Each fact carries its own source per the site's editorial rule:
+ * no unsourced classification. Verified against sources on 2026-08-18.
+ * This file is the local stand-in for the `parties` + `classifications` Supabase
+ * tables until the daily fetch pipeline (see /scripts/fetch) is connected to a
+ * live project.
+ */
+export const parties: Party[] = [
+  {
+    slug: 'rassemblement-national',
+    name: 'Rassemblement National (RN)',
+    countryCode: 'FR',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Premier groupe d'opposition à l'Assemblée nationale (17e législature), environ 120 députés sur 577.",
+    electoralStatusSource: {
+      name: 'Assemblée nationale — vie-publique.fr',
+      url: 'https://www.vie-publique.fr/en-bref/300422-assemblee-nationale-le-nombre-de-deputes-par-groupe-politique',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://rassemblementnational.fr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/RNational_off' },
+    ],
+    classificationSource: {
+      name: 'The PopuList',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste radical de droite / anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: "Programme officiel RN — élections législatives 2024",
+        url: 'https://rassemblementnational.fr',
+        note: 'Réduction drastique de l\'immigration légale et de l\'accès à la nationalité ("priorité nationale"). Le terme "remigration" a été explicitement écarté par la direction du parti (Bardella, Le Pen), qui s\'en distingue publiquement de Reconquête.',
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Assemblée nationale',
+        url: 'https://www2.assemblee-nationale.fr/17/les-groupes-politiques/rassemblement-national',
+        note: "Parti d'opposition sans majorité : aucune loi RN promulguée à ce jour au niveau national. Des propositions de loi portées par des députés RN sont déposées ponctuellement — voir la section Suivi législatif pour le détail texte par texte.",
+      },
+    },
+    founded: 1972,
+    description:
+      "Fondé en 1972 sous le nom de Front National, renommé Rassemblement National en 2018. Dirigé par Jordan Bardella (président) ; Marine Le Pen reste la figure présidentielle du parti, sous le coup d'une procédure judiciaire affectant son éligibilité, en appel.",
+  },
+  {
+    slug: 'reconquete',
+    name: 'Reconquête !',
+    countryCode: 'FR',
+    positioning: 'Droite radicale, national-conservateur',
+    electoralStatus: 'extra-parlementaire',
+    electoralStatusDetail:
+      "Aucun député à l'Assemblée nationale (0,75% des voix au 1er tour, législatives du 30 juin 2024). Une eurodéputée (Sarah Knafo) au Parlement européen.",
+    electoralStatusSource: {
+      name: 'France info',
+      url: 'https://www.franceinfo.fr/politique/parti-reconquete/',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://parti-reconquete.fr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/Reconquete_off' },
+    ],
+    classificationSource: {
+      name: 'The PopuList',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti d\'extrême droite / anti-immigration.',
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Déclarations publiques d\'Éric Zemmour',
+        url: 'https://parti-reconquete.fr',
+        note: 'Le terme "remigration" est employé explicitement et de manière répétée par le fondateur du parti, y compris en meeting, comme objectif de politique migratoire.',
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Assemblée nationale — résultats législatives 2024',
+        url: 'https://www.franceinfo.fr/politique/parti-reconquete/',
+        note: "Aucun élu à l'Assemblée nationale : aucun texte déposé au niveau national à ce jour.",
+      },
+    },
+    founded: 2021,
+    description:
+      "Fondé par Éric Zemmour en décembre 2021. Après les élections européennes de 2024, le bureau exécutif s'est resserré autour d'Éric Zemmour, Sarah Knafo et Stanislas Rigault.",
+  },
+  {
+    slug: 'afd',
+    name: 'Alternative für Deutschland (AfD)',
+    countryCode: 'DE',
+    positioning: 'Droite radicale, national-conservateur',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Deuxième force politique du Bundestag depuis les élections fédérales du 23 février 2025 (20,8% des voix, 152 sièges). Coprésidence de groupe : Alice Weidel et Tino Chrupalla. Aucun parti n'accepte de coalition avec l'AfD au niveau fédéral (« Brandmauer »).",
+    electoralStatusSource: {
+      name: 'Die Bundeswahlleiterin — résultat définitif Bundestagswahl 2025',
+      url: 'https://www.bundeswahlleiterin.de/info/presse/mitteilungen/bundestagswahl-2025/29_25_endgueltiges-ergebnis.html',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.afd.de',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/AfD' },
+    ],
+    classificationSource: {
+      name: 'Manifesto Project / The PopuList / CHES',
+      url: 'https://manifesto-project.wzb.eu',
+      note: 'Classifié parti de la famille nationaliste / populiste radical de droite.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Grundsatzprogramm AfD',
+        url: 'https://www.afd.de',
+        note: 'Le programme fédéral officiel prône un arrêt/une réduction drastique de l\'immigration et l\'augmentation des expulsions, sans employer officiellement le terme "remigration". Ce terme est en revanche associé publiquement au parti depuis la réunion de Potsdam (novembre 2023, révélée par Correctiv en janvier 2024), à laquelle a participé un collaborateur alors proche d\'Alice Weidel ; la direction du parti a publiquement pris ses distances avec les plans de "remigration de masse" évoqués lors de cette réunion.',
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Deutscher Bundestag',
+        url: 'https://www.bundestag.de/parlament/fraktionen/afd/afd-inhalt-527374',
+        note: "Parti d'opposition au niveau fédéral, exclu de toute coalition : aucune loi AfD promulguée au Bundestag à ce jour.",
+      },
+    },
+    founded: 2013,
+    description:
+      "Fondé en 2013, d'abord sur une ligne anti-euro avant de se recentrer sur l'immigration et l'identité nationale à partir de 2015. Depuis les élections fédérales de 2025, deuxième force politique du Bundestag.",
+  },
+  {
+    slug: 'reform-uk',
+    name: 'Reform UK',
+    countryCode: 'GB',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      '8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices.',
+    electoralStatusSource: {
+      name: 'UK Parliament — members.parliament.uk',
+      url: 'https://members.parliament.uk/member/5091/career',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.reformparty.uk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/reformparty_uk' },
+    ],
+    classificationSource: {
+      name: 'The PopuList (successeur du Brexit Party) / Wikipedia',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: "Manifeste Reform UK 2024 (« Contract with You »)",
+        url: 'https://www.reformparty.uk',
+        note: "Objectif de « net zero » migration nette, gel de l'immigration non essentielle et expulsion de tous les arrivants illégaux par petits bateaux. Ne mentionne pas explicitement la « remigration » de populations déjà installées légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'UK Parliament',
+        url: 'https://members.parliament.uk/member/5091/career',
+        note: "Parti d'opposition, 8 sièges sur 650 : aucune loi Reform UK promulguée à ce jour.",
+      },
+    },
+    founded: 2018,
+    description:
+      "Fondé en 2018 sous le nom Brexit Party, renommé Reform UK en 2021. Dirigé par Nigel Farage depuis septembre 2024.",
+  },
+  {
+    slug: 'fratelli-italia',
+    name: "Fratelli d'Italia (FdI)",
+    countryCode: 'IT',
+    positioning: 'National-conservateur, post-néofasciste, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Au pouvoir depuis octobre 2022. Giorgia Meloni est présidente du Conseil, à la tête d'une coalition avec la Lega et Forza Italia.",
+    electoralStatusSource: {
+      name: 'Governo Italiano',
+      url: 'https://www.governo.it',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.fratelli-italia.it',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/FratellidItalia' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti de droite radicale ; héritier direct du MSI (Movimento Sociale Italiano) via Alleanza Nazionale.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Secolo d\'Italia — bilan gouvernemental',
+        url: 'https://www.secoloditalia.it/2026/06/stop-allimmigrazione-irregolare-fdi-presenta-i-numeri-del-governo-meloni-su-rimpatri-e-sbarchi/',
+        note: "Priorité affichée : réduction drastique des débarquements et expulsions accélérées des personnes en situation irrégulière. -57% de débarquements en 2024-2025 vs 2023 ; -43% sur les 5 premiers mois de 2026 vs 4 ans plus tôt. Pas de politique de remigration de citoyens ou résidents légaux.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Il Foglio / Today.it',
+        url: 'https://www.ilfoglio.it/politica/2025/06/30/news/il-doppio-fronte-del-governo-sull-immigrazione-il-decreto-flussi-e-le-polemiche-con-la-cassazione-per-l-albania-7879409',
+        note: "Décret flux migratoires et protocole Italie-Albanie (centres de rétention et rapatriement extraterritoriaux à Gjader) formellement en vigueur, malgré des décisions judiciaires italiennes ayant à plusieurs reprises refusé la rétention de migrants dans ces centres — tension ouverte entre gouvernement et magistrature sur l'application effective du dispositif.",
+      },
+    },
+    founded: 2012,
+    description:
+      "Fondé en 2012 par Giorgia Meloni et d'autres dissidents du Peuple de la Liberté, dans la continuité de l'Alleanza Nazionale et, plus loin, du MSI néofasciste. Premier parti italien depuis les élections de septembre 2022.",
+  },
+  {
+    slug: 'pvv',
+    name: 'Partij voor de Vrijheid (PVV)',
+    countryCode: 'NL',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Trajectoire récente : membre de la coalition gouvernementale (cabinet Schoof) de juillet 2024 à juin 2025, avant que Geert Wilders ne retire le PVV du gouvernement faute d'accord sur un durcissement supplémentaire de la politique d'asile. Arrivé à égalité de sièges avec D66 (26 sièges chacun) aux élections anticipées du 29 octobre 2025, le PVV a ensuite été exclu des négociations de coalition : le cabinet Jetten (D66-VVD-CDA, gouvernement minoritaire) a prêté serment le 23 février 2026. Le PVV est redevenu le principal parti d'opposition.",
+    electoralStatusSource: {
+      name: 'NOS / Kiesraad',
+      url: 'https://nos.nl/collectie/14006/liveblog/2588474-nog-altijd-onzeker-wie-de-grootste-partij-is-d66-of-pvv-aanwijzen-verkenner-uitgesteld-tot-dinsdag',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.pvv.nl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/geertwilderspvv' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Follow the Money',
+        url: 'https://www.ftm.nl/artikelen/vier-partijen-hebben-deportatie-van-migranten-in-hun-verkiezingsprogramma-staan',
+        note: "Selon l'analyse de Follow the Money, le PVV fait partie des partis dont le programme électoral appelle à la « remigratie » (remigration) des personnes issues de l'immigration. D'anciennes versions du programme proposaient explicitement un « ministère de la Remigration et de la Déislamisation » ; le programme 2023 a retiré cette formulation précise tout en maintenant l'objectif d'un arrêt total de l'asile et d'une réduction de l'immigration non-occidentale.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Rijksoverheid.nl',
+        url: 'https://www.rijksoverheid.nl/documenten/kamerstukken/2024/10/25/brief-over-nadere-afspraken-uitvoering-hoofdstuk-2-hoofdlijnenakkoord-grip-op-asiel-en-migratie',
+        note: "Projet de loi « asielnoodmaatregelenwet » (loi de mesures d'urgence sur l'asile) déposé le 25 octobre 2024 par le cabinet Schoof, sous l'impulsion du PVV, pour permettre l'invocation d'un régime de crise migratoire. Le texte n'a jamais été voté avant la chute du gouvernement en juin 2025 ; son sort sous le cabinet Jetten reste incertain.",
+      },
+    },
+    founded: 2006,
+    description:
+      'Fondé par Geert Wilders en 2006. Parti à adhérent unique (Wilders en est le seul membre officiel), structure atypique parmi les partis néerlandais.',
+  },
+  {
+    slug: 'gop-trump',
+    name: 'Parti républicain (GOP) — administration Trump',
+    countryCode: 'US',
+    positioning: 'Coalition de droite ; aile national-populiste dominante depuis 2024',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Contrôle la présidence (Donald Trump depuis le 20 janvier 2025) ainsi que la Chambre des représentants et le Sénat (119e Congrès, 2025-2027).",
+    electoralStatusSource: {
+      name: 'Congress.gov',
+      url: 'https://www.congress.gov',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.gop.com',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/GOP' },
+    ],
+    classificationSource: {
+      name: 'Manifesto Project',
+      url: 'https://manifesto-project.wzb.eu',
+      note: "Inclusion sur auto-déclaration : le programme officiel 2024 du parti (RNC Platform) fait de l'immigration sa priorité affichée n°1-2.",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Axios — « Trump\'s self-deportation machine »',
+        url: 'https://www.axios.com/2026/07/28/trump-self-deportation-ice',
+        note: "Le programme officiel du parti promet « la plus grande opération d'expulsion de l'histoire américaine ». Le dispositif de « self-deportation » mis en œuvre par l'administration incite financièrement au départ volontaire, avec des objectifs chiffrés de retours (plus de 200 000 départs attendus via ce seul programme) — critère de remigration au sens de la méthodologie de ce site, même si le mot lui-même n'est pas employé officiellement.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'DHS / Washington Times',
+        url: 'https://www.washingtontimes.com/news/2026/sep/3/donald-trump-cuts-migrant-population-nearly-3-million-total-us/',
+        note: "Plus de 605 000 expulsions et 1,9 million de départs « volontaires » (self-deportation) depuis janvier 2025, soit environ 2,5 millions de départs cumulés, portés par des mesures administratives (décrets présidentiels, directives DHS/ICE) sans nécessiter de vote du Congrès.",
+      },
+    },
+    actionStatusHistory: [
+      {
+        date: '2026-06-30',
+        tag: 'mesures_concretes_abrogee',
+        note: "Le décret présidentiel (Executive Order 14160, 20 janvier 2025) visant à mettre fin au droit du sol pour les enfants nés aux États-Unis de parents sans statut légal a été invalidé par la Cour suprême le 30 juin 2026 (6 voix contre 3), comme contraire au 14e amendement.",
+        source: {
+          name: 'Congress.gov — CRS Legal Sidebar',
+          url: 'https://www.congress.gov/crs-product/LSB11468',
+        },
+      },
+    ],
+    founded: 1854,
+    description:
+      "Contrairement aux autres fiches de cet annuaire, le Parti républicain est une coalition large et non un parti anti-immigration mono-thématique. Son inclusion reflète les priorités explicitement affichées dans son programme officiel 2024 et les mesures prises depuis par l'administration Trump, pas une classification de l'ensemble du parti sur toute son histoire.",
+  },
+  {
+    slug: 'sverigedemokraterna',
+    name: 'Sverigedemokraterna (SD)',
+    countryCode: 'SE',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Non représenté au gouvernement mais partenaire de soutien parlementaire de la coalition Kristersson (Moderaterna-Kristdemokraterna-Liberalerna) via l'accord de Tidö (octobre 2022), avec une influence directe sur la politique migratoire sans détenir de portefeuille ministériel. Le 1er avril 2026, les quatre partis du bloc Tidö ont annoncé qu'en cas de victoire du bloc aux élections législatives de septembre 2026, SD entrerait pour la première fois au gouvernement avec des ministres.",
+    electoralStatusSource: {
+      name: 'Regeringen.se',
+      url: 'https://www.regeringen.se/pressmeddelanden/2026/05/regeringen-och-sverigedemokraterna-presenterar-bokslut-over-tidoavtalet/',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://sd.se',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/sdriks' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti de droite radicale ; fondé en 1988 avec des racines documentées dans des mouvements néonazis suédois.',
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Migrationsverket',
+        url: 'https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html',
+        note: "Le « återvandringsbidrag » (littéralement : allocation de remigration) porté par SD dans l'accord de Tidö a été fortement revalorisé à 350 000 couronnes suédoises par adulte (jusqu'à 600 000 par foyer) à compter du 1er janvier 2026 — incitation financière chiffrée au retour volontaire, correspondant explicitement au critère de remigration retenu par la méthodologie de ce site.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Regeringen.se',
+        url: 'https://www.regeringen.se/pressmeddelanden/2025/04/ett-kraftigt-hojt-atervandringsbidrag/',
+        note: "Règlement gouvernemental adopté le 30 octobre 2025, entré en vigueur le 1er janvier 2026, revalorisant l'allocation de remigration. Coût estimé à environ 2,5 milliards de couronnes sur trois ans.",
+      },
+    },
+    founded: 1988,
+    description:
+      "Fondé en 1988, avec des origines documentées dans des mouvements d'extrême droite et néonazis suédois dont le parti a formellement rompu au tournant des années 2010. Dirigé par Jimmie Åkesson depuis 2005.",
+  },
+  {
+    slug: 'fpo',
+    name: 'Freiheitliche Partei Österreichs (FPÖ)',
+    countryCode: 'AT',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Premier parti aux élections législatives de septembre 2024 — une première historique — mais resté dans l'opposition : les négociations de coalition avec l'ÖVP menées par Herbert Kickl ont échoué début 2025. Le gouvernement Stocker (ÖVP-SPÖ-NEOS, première coalition tripartite du pays) a prêté serment le 3 mars 2025. Herbert Kickl dirige l'opposition au Conseil national (Nationalrat).",
+    electoralStatusSource: {
+      name: 'Euronews / t-online',
+      url: 'https://www.euronews.com/2025/03/03/centre-right-ovps-christian-stocker-sworn-in-as-new-austrian-chancellor',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.fpoe.at',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/fpoe_at' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti de droite radicale ; fondé en 1956, avec d\'anciens cadres nazis et du VdU parmi ses fondateurs.',
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'NZZ / 20 Minuten',
+        url: 'https://www.20min.ch/story/wahlen-oesterreich-remigration-und-asylstopp-was-will-fpoe-chef-herbert-kickl-103192636',
+        note: "Le terme « Remigration » figure explicitement dans le programme électoral du parti et dans le discours régulier de Herbert Kickl, qui l'emploie pour désigner le retour de personnes immigrées y compris titulaires d'un titre de séjour valide. Le parti a même publié en 2026 un clip musical de promotion intitulé « Airbert One – Der Remigrationssong ».",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Wahlprogramm FPÖ',
+        url: 'https://www.fpoe.at',
+        note: "Parti d'opposition depuis mars 2025 : aucune loi FPÖ promulguée. Le programme prévoit la suspension du droit d'asile par « loi d'urgence » (Notgesetz), non déposée faute de majorité gouvernementale.",
+      },
+    },
+    founded: 1956,
+    description:
+      'Fondé en 1956, en partie par d\'anciens membres du parti nazi et du VdU. Dirigé par Herbert Kickl depuis 2021.',
+  },
+  {
+    slug: 'vox',
+    name: 'Vox',
+    countryCode: 'ES',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "33 députés sur 350 au Congreso de los Diputados, quatrième force politique du pays, dans l'opposition depuis sa création. A rompu ses pactes de gouvernement régionaux avec le Parti populaire (PP) en juillet 2024 sur la question de l'accueil des mineurs étrangers non accompagnés.",
+    electoralStatusSource: {
+      name: 'Congreso de los Diputados',
+      url: 'https://en.wikipedia.org/wiki/Vox_(political_party)',
+      accessedOn: '2026-08-18',
+    },
+    officialWebsite: 'https://www.voxespana.es',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/vox_es' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Democrata.es',
+        url: 'https://www.democrata.es/politica/congreso-y-senado/vox-propone-congreso-expulsion-migrantes-irregulares-confiscacion-open-arms/',
+        note: "Programme centré sur l'expulsion des migrants en situation irrégulière et la fin des voies de régularisation, sans politique explicite de remigration de résidents en situation régulière ou de nationaux.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Vox España',
+        url: 'https://www.voxespana.es/wp-content/uploads/2026/04/MCIU-VOX-Prioridad-nacional.pdf',
+        note: "Proposition déposée au Congreso de los Diputados en avril 2026 (« Prioridad nacional ») demandant l'expulsion des migrants en situation irrégulière ; non contraignante et non votée, mais formellement déposée — parti minoritaire sans capacité de faire adopter une loi.",
+      },
+    },
+    founded: 2013,
+    description:
+      "Fondé en 2013 par des dissidents du Parti populaire (PP), dont Santiago Abascal, qui préside le parti depuis sa création.",
+  },
+];
+
+export function getPartiesByCountry(countryCode?: string) {
+  if (!countryCode) return parties;
+  return parties.filter((p) => p.countryCode === countryCode);
+}
+
+export function getPartyBySlug(slug: string) {
+  return parties.find((p) => p.slug === slug);
+}

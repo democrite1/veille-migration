@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "veille-migration",
+      "runtimeExecutable": "C:\\Users\\Alexis\\Desktop\\CLAUDE\\code site\\.claude\\dev.cmd",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}
