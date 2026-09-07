@@ -439,6 +439,132 @@ export const parties: Party[] = [
     description:
       "Fondé en 2013 par des dissidents du Parti populaire (PP), dont Santiago Abascal, qui préside le parti depuis sa création.",
   },
+  {
+    slug: 'fidesz',
+    name: 'Fidesz – Magyar Polgári Szövetség',
+    countryCode: 'HU',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Défaite historique aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán n'obtient que 55 sièges (37% des voix) contre 141 sièges (54% des voix) pour le parti Tisza de Péter Magyar. Orbán a concédé sa défaite le soir même. Fidesz est désormais dans l'opposition.",
+    electoralStatusSource: {
+      name: 'CNN',
+      url: 'https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://fidesz.hu',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/fidesz_hu' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'HVG',
+        url: 'https://hvg.hu/itthon/20260110_a-biztos-valasztas-ez-lett-orbanek-valasztasi-jelszava-eloben-a-fidesz-jeloltbemutato-kongresszusarol',
+        note: "Discours centré sur la fermeture des frontières et le refus d'accueillir des migrants imposés par l'UE, avec une rhétorique sur le déclin démographique des « Européens de souche » ; pas de programme explicite de remigration de résidents déjà installés (l'immigration reste marginale en Hongrie, la politique vise essentiellement à empêcher de nouvelles arrivées).",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'mfor.hu',
+        url: 'https://mfor.hu/cikkek/kozelet/dontott-a-kormany-a-hetfon-lejaro-migracios-valsaghelyzetrol.html',
+        note: "L'« état de crise migratoire » décrété par les gouvernements Orbán successifs depuis 2015-2016 (fermeture des frontières, zones de transit, barrière frontalière) reste en vigueur : le nouveau gouvernement Tisza l'a lui-même prolongé jusqu'au 31 décembre 2026, illustrant la règle méthodologique selon laquelle une mesure concrète reste active indépendamment du parti au pouvoir tant qu'elle n'est pas abrogée.",
+      },
+    },
+    founded: 1988,
+    description:
+      "Fondé en 1988 comme mouvement libéral anti-communiste, réorienté vers le national-conservatisme sous la direction de Viktor Orbán à partir des années 1990. Premier ministre de 2010 à 2026.",
+  },
+  {
+    slug: 'perussuomalaiset',
+    name: 'Perussuomalaiset (Finns Party / PS)',
+    countryCode: 'FI',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Membre de la coalition gouvernementale du Premier ministre Petteri Orpo depuis 2023. La présidente du parti, Riikka Purra, est vice-Première ministre et ministre des Finances. 46 sièges sur 200 à l'Eduskunta.",
+    electoralStatusSource: {
+      name: 'Eduskunta',
+      url: 'https://fi.wikipedia.org/wiki/Perussuomalaiset',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.perussuomalaiset.fi',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/perussuomalaiset' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Perussuomalaiset.fi',
+        url: 'https://www.perussuomalaiset.fi/maahanmuuttopolitiikka/',
+        note: "Programme visant une réduction forte de l'immigration hors UE/EEE par des mesures législatives et administratives, sans politique de remigration de résidents déjà installés.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Suomen Politiikka',
+        url: 'https://www.suomenpolitiikka.fi/helmikuun-perussuomalaisten-puheenaiheet-2026-kooste/',
+        note: "Durcissement de la loi sur la citoyenneté mené en trois phases : allongement de la durée de résidence requise, renforcement des conditions de ressources et de bonne conduite (deux phases déjà mises en œuvre, la troisième — test de citoyenneté — en consultation).",
+      },
+    },
+    founded: 1995,
+    description:
+      "Fondé en 1995 dans la continuité du Parti rural finlandais. Dirigé par Riikka Purra depuis 2021.",
+  },
+  {
+    slug: 'vlaams-belang',
+    name: 'Vlaams Belang',
+    countryCode: 'BE',
+    positioning: 'National-populiste, droite radicale, indépendantiste flamand',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Deuxième parti de Belgique en sièges mais maintenu dans l'opposition au niveau fédéral par le « cordon sanitaire » (refus de coalition de tous les autres partis). Influence indirecte forte sur l'orientation des politiques migratoires des gouvernements successifs.",
+    electoralStatusSource: {
+      name: 'Sampol.be',
+      url: 'https://www.sampol.be/2024/06/naar-een-nieuw-normaal-over-migratie-onder-invloed-van-vlaams-belang',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.vlaamsbelang.org',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/vlbelang' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti d'extrême droite ; héritier direct du Vlaams Blok, dissous en 2004 pour racisme par la justice belge.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Vlaams Belang',
+        url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
+        note: "Programme axé sur l'arrêt de l'immigration et le retour effectif des personnes en situation irrégulière (fermeture des frontières extérieures, centres de retour fermés) ; centré sur l'expulsion des personnes en situation irrégulière plutôt que sur une remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Vlaams Belang',
+        url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
+        note: "Résolution déposée au Parlement européen avec 36 autres eurodéputés appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière ; non contraignante, parti d'opposition sans capacité de faire adopter une loi au niveau fédéral belge.",
+      },
+    },
+    founded: 2004,
+    description:
+      "Fondé en 2004 en remplacement du Vlaams Blok, dissous par la justice belge pour infraction aux lois anti-racisme. Dirigé par Tom Van Grieken depuis 2014.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {

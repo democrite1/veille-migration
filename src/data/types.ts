@@ -1,4 +1,4 @@
-export type CountryCode = 'FR' | 'DE' | 'GB' | 'IT' | 'NL' | 'US' | 'SE' | 'AT' | 'ES';
+export type CountryCode = 'FR' | 'DE' | 'GB' | 'IT' | 'NL' | 'US' | 'SE' | 'AT' | 'ES' | 'HU' | 'FI' | 'BE';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

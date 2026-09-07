@@ -104,4 +104,21 @@ export const elections: Election[] = [
       note: "Le 1er avril 2026, les quatre partis du bloc Tidö (dont Sverigedemokraterna) ont annoncé qu'en cas de victoire, SD entrerait pour la première fois au gouvernement avec des ministres.",
     },
   },
+  {
+    id: 'hu-legislatives-2026',
+    countryCode: 'HU',
+    level: 'national',
+    scopeName: 'Országgyűlési választás (élections législatives)',
+    mandateDuration: '4 ans',
+    powers: "Élection de l'Assemblée nationale (Országgyűlés), qui vote les lois et désigne le gouvernement.",
+    date: '2026-04-12',
+    status: 'resultat_connu',
+    result:
+      "Défaite historique du Fidesz-KDNP de Viktor Orbán (55 sièges, 37% des voix) face au parti Tisza de Péter Magyar (141 sièges sur 199, 54% des voix, majorité des deux tiers). Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) fait aussi son entrée au Parlement avec 6 sièges.",
+    source: {
+      name: 'CNN',
+      url: 'https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar',
+      accessedOn: '2026-09-07',
+    },
+  },
 ];

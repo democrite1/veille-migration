@@ -19,6 +19,9 @@ const COUNTRY_LABELS: Record<string, string> = {
   SE: 'Suède',
   AT: 'Autriche',
   ES: 'Espagne',
+  HU: 'Hongrie',
+  FI: 'Finlande',
+  BE: 'Belgique',
 };
 
 export async function generateStaticParams() {
