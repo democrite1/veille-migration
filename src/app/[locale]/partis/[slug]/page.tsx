@@ -34,6 +34,10 @@ const COUNTRY_LABELS: Record<string, string> = {
   AU: 'Australie',
   CA: 'Canada',
   HR: 'Croatie',
+  SI: 'Slovénie',
+  BG: 'Bulgarie',
+  NZ: 'Nouvelle-Zélande',
+  AR: 'Argentine',
 };
 
 export async function generateStaticParams() {

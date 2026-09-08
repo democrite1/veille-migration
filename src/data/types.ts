@@ -22,7 +22,11 @@ export type CountryCode =
   | 'DK'
   | 'AU'
   | 'CA'
-  | 'HR';
+  | 'HR'
+  | 'SI'
+  | 'BG'
+  | 'NZ'
+  | 'AR';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

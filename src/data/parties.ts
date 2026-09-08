@@ -1069,6 +1069,174 @@ export const parties: Party[] = [
     description:
       "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava, maire de Vukovar. Partenaire de coalition du HDZ depuis 2024.",
   },
+  {
+    slug: 'sds-slovenija',
+    name: 'Slovenska demokratska stranka (SDS)',
+    countryCode: 'SI',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Janez Janša (président du parti) a été élu Premier ministre le 22 mai 2026 par l'Assemblée nationale (51 voix), formant son quatrième gouvernement en coalition avec Demokrati, NSi, SLS et Fokus (2026-2030). Son équipe ministérielle a été confirmée le 4 juin 2026.",
+    electoralStatusSource: {
+      name: 'STA (Agence de presse slovène)',
+      url: 'https://www.sta.si/v-srediscu/vlada2026',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.sds.si',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/SDS_Slovenija' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'N1 Info',
+        url: 'https://n1info.si/volitve-2026/jansa-o-oblikovanju-vlade-s-tem-se-se-ne-ukvarjamo-to-svetujemo-tudi-ostalim/',
+        note: "Programme centré sur le renvoi des migrants en situation irrégulière vers des pays tiers et le contrôle strict des frontières, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: '24ur.com',
+        url: 'https://www.24ur.com/novice/slovenija/golob-dotok-ilegalnih-migrantov-je-minimalen-mahnic-bi-ustanovil-urad-za-deportacije.html',
+        note: "Dès sa prise de fonction, le Premier ministre Janša a signé une lettre avec les dirigeants de 18 États membres de l'UE demandant le retour des migrants illégaux vers des pays tiers ; un « bureau des déportations » est annoncé par le député SDS Branko Mahnič.",
+      },
+    },
+    founded: 1989,
+    description:
+      "Fondé en 1989 sous le nom de Parti social-démocrate slovène, réorienté vers le national-conservatisme dans les années 1990. Dirigé par Janez Janša depuis 1993, Premier ministre à quatre reprises (2004-2008, 2012-2013, 2020-2022, depuis 2026).",
+  },
+  {
+    slug: 'vazrazhdane',
+    name: 'Възраждане (Renaissance / Vazrazhdane)',
+    countryCode: 'BG',
+    positioning: 'National-populiste, pro-russe, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Recul électoral marqué aux élections législatives du 19 avril 2026 : 12 sièges (4,19% des voix), contre 33 sièges lors de la précédente Assemblée nationale où le parti était la deuxième force politique du pays. Reste dans l'opposition, n'ayant jamais participé à un gouvernement.",
+    electoralStatusSource: {
+      name: 'Wikipedia — 2026 Bulgarian parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2026_Bulgarian_parliamentary_election',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://vazrazhdane.bg',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/vazrazhdane_bg' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et pro-russe.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Novinite.com',
+        url: 'https://www.novinite.com/articles/223323/Vazrazhdane+Party+Leader+Urges+Bulgaria+to+Refrain+from+Signing+EU+Migration+Pact',
+        note: "Kostadin Kostadinov (président) s'oppose fermement à l'application du Pacte européen sur la migration et l'asile en Bulgarie, craignant d'en faire un pays d'accueil de réfugiés en transit vers l'Autriche et l'Allemagne. Pas de politique explicite de remigration.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Assemblée nationale bulgare',
+        url: 'https://www.parliament.bg',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Vazrazhdane promulguée à ce jour.",
+      },
+    },
+    founded: 2014,
+    description:
+      "Fondé en 2014 par Kostadin Kostadinov, journaliste, qui en est resté le président. Ligne nationaliste, pro-russe et anti-UE.",
+  },
+  {
+    slug: 'nz-first',
+    name: 'New Zealand First',
+    countryCode: 'NZ',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Partenaire de la coalition gouvernementale avec le National Party depuis les élections d'octobre 2023. Winston Peters, chef du parti, a occupé le poste de vice-Premier ministre. Des tensions existent avec son partenaire de coalition sur plusieurs aspects de la politique migratoire, à l'approche des élections d'octobre 2026.",
+    electoralStatusSource: {
+      name: 'NZ Herald',
+      url: 'https://www.nzherald.co.nz/nz/politics/new-zealand-first-national-at-odds-on-immigration-policy-whether-new-zealand-a-launch-pad-to-australia-jamie-ensor/5XMNMNSUURDOLBYMUU36ZLC5HI/',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.nzfirst.nz',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/nzfirst' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'NZ Herald',
+        url: 'https://www.nzherald.co.nz/nz/politics/nz-firsts-winston-peters-announces-a-new-migrant-values-statement-policy/YRSNUSTEOV2G57XKOYFCWSL3TY/',
+        note: "Campagne 2026 axée sur une réduction de l'immigration, un « document de valeurs néo-zélandaises » obligatoire pour les nouveaux migrants et la conditionnalité de certaines prestations sociales (dont la retraite, à partir de 2029) à la citoyenneté. Pas de politique explicite de remigration.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: '1News',
+        url: 'https://www.1news.co.nz/2026/09/07/peters-signals-benefits-as-well-as-super-require-citizenship-under-nz-first-policy/',
+        note: "Propositions de campagne pour les élections d'octobre 2026 (document de valeurs, conditionnalité des prestations) : non encore déposées comme texte de loi.",
+      },
+    },
+    founded: 1993,
+    description:
+      "Fondé en 1993 par Winston Peters, ancien député du National Party. A participé à plusieurs gouvernements de coalition, travaillistes et nationaux, depuis sa fondation.",
+  },
+  {
+    slug: 'la-libertad-avanza',
+    name: 'La Libertad Avanza (LLA)',
+    countryCode: 'AR',
+    positioning: 'Libertarien, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Javier Milei, fondateur du parti, est président de la Nation argentine depuis décembre 2023. La Libertad Avanza est arrivée en tête des élections législatives de 2025, renforçant sa position au Congrès.",
+    electoralStatusSource: {
+      name: 'Diario de Cuyo',
+      url: 'https://www.diariodecuyo.com.ar/argentina/milei-lanza-lla-nacional-y-pone-primera-hacia-la-campana-2025-1665742.html',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.lalibertadavanza.com.ar',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/LLibertadAvanza' },
+    ],
+    classificationSource: {
+      name: 'Manifesto Project',
+      url: 'https://manifesto-project.wzb.eu',
+      note: "Inclusion sur mesures concrètes en matière migratoire prises par l'administration Milei, bien que le parti se définisse avant tout comme libertarien plutôt qu'anti-immigration au sens classique européen.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'La República / El Cronista',
+        url: 'https://larepublica.pe/mundo/2026/07/30/milei-modifica-la-ley-de-migraciones-para-prohibir-el-ingreso-de-extranjeros-que-expresen-mensajes-de-odio-contra-argentina-1356360',
+        note: "Restrictions ciblées sur l'entrée et le séjour des étrangers jugés « hostiles » envers l'Argentine, plutôt qu'une politique de réduction généralisée de l'immigration ou de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Perfil',
+        url: 'https://www.perfil.com/noticias/politica/la-justicia-freno-su-reforma-migratoria-pero-milei-insiste-con-un-nuevo-dnu-contra-extranjeros.phtml',
+        note: "Décret présidentiel (DNU) n°681/2026 modifiant la loi sur les migrations pour interdire l'entrée aux étrangers tenant des propos jugés hostiles envers l'Argentine, en vigueur. Une réforme migratoire plus large avait auparavant été bloquée par la justice argentine.",
+      },
+    },
+    founded: 2021,
+    description:
+      "Fondé en 2021 par l'économiste Javier Milei, élu président de l'Argentine en décembre 2023 sur une ligne libertarienne et anti-establishment.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {
