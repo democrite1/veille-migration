@@ -7,6 +7,15 @@ const LEVEL_LABELS: Record<string, string> = {
   DE: 'Allemagne',
   GB: 'Royaume-Uni',
   EU: 'Union européenne',
+  CH: 'Suisse',
+  IT: 'Italie',
+  NL: 'Pays-Bas',
+  SE: 'Suède',
+  HU: 'Hongrie',
+  PL: 'Pologne',
+  PT: 'Portugal',
+  US: 'États-Unis',
+  AR: 'Argentine',
 };
 
 export default async function LegislationPage() {
