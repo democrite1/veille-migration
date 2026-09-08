@@ -28,6 +28,9 @@ const COUNTRY_LABELS: Record<string, string> = {
   NO: 'Norvège',
   CZ: 'République tchèque',
   GR: 'Grèce',
+  RO: 'Roumanie',
+  SK: 'Slovaquie',
+  DK: 'Danemark',
 };
 
 export async function generateStaticParams() {

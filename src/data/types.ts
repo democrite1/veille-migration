@@ -16,7 +16,10 @@ export type CountryCode =
   | 'PL'
   | 'NO'
   | 'CZ'
-  | 'GR';
+  | 'GR'
+  | 'RO'
+  | 'SK'
+  | 'DK';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

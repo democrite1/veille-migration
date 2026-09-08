@@ -817,6 +817,132 @@ export const parties: Party[] = [
     description:
       'Fondé le 28 juin 2016 par Kyriakos Velopoulos, ancien député de Nouvelle Démocratie et animateur de télévision, qui en est resté le président et fondateur.',
   },
+  {
+    slug: 'aur',
+    name: 'Alianța pentru Unirea Românilor (AUR)',
+    countryCode: 'RO',
+    positioning: 'National-souverainiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Parti d'opposition. Son président George Simion a perdu le second tour de l'élection présidentielle de mai 2025 face à Nicușor Dan et n'a pas participé aux négociations de la coalition gouvernementale qui a suivi. Le parti conteste devant la Cour constitutionnelle la loi de finances 2026 votée par la coalition au pouvoir.",
+    electoralStatusSource: {
+      name: 'Euronews România',
+      url: 'https://www.euronews.ro/articole/george-simion-nu-suntem-in-alianta-cu-psd-nici-cu-pnl',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.aur.ro',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/AUR_Romania' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-souverainiste de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'AUR.ro',
+        url: 'https://www.aur.ro',
+        note: "Positionnement souverainiste et anti-immigration général, moins centré sur des mesures migratoires spécifiques que d'autres partis de cette liste (la Roumanie reste un pays d'émigration nette avec une immigration extra-européenne limitée). Pas de politique explicite de remigration.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Digi24',
+        url: 'https://www.digi24.ro/video/george-simion-dupa-votul-din-parlament-pe-bugetul-2026-opozitie-totala-aur-contesta-legea-la-ccr-3687189',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi migratoire AUR promulguée à ce jour.",
+      },
+    },
+    founded: 2019,
+    description:
+      'Fondé en 2019 par George Simion et Claudiu Târziu sur une ligne unioniste (rattachement de la Moldavie), souverainiste et traditionaliste.',
+  },
+  {
+    slug: 'republika-sk',
+    name: 'Republika',
+    countryCode: 'SK',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Parti d'opposition en progression constante dans les sondages (11-13%), sans participation au gouvernement de coalition dirigé par Robert Fico (SMER) depuis octobre 2023. Les politologues slovaques évoquent la possibilité que Republika devienne un partenaire de coalition à l'avenir.",
+    electoralStatusSource: {
+      name: 'StartitUp.sk',
+      url: 'https://www.startitup.sk/republika-moze-byt-vo-vlade-politolog-vysvetluje-preco-rastie-a-co-by-sa-od-nej-mohla-ucit-opozicia/',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.hnutie-republika.sk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/hnutierepublika' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'SkSprávy.sk',
+        url: 'https://skspravy.sk/konflikt/uhrik-progresivcov-sme-s-mazurekom-v-debate-uplne-zadupali-do-zeme/',
+        note: "Milan Uhrík (président) et Milan Mazurek, figures dirigeantes du parti, ont explicitement déclaré que « la seule politique migratoire qu'ils soutiennent est la remigration » — usage explicite du terme, critère direct de la méthodologie de ce site.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Hnutie-republika.sk',
+        url: 'https://www.hnutie-republika.sk',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi Republika promulguée à ce jour.",
+      },
+    },
+    founded: 2021,
+    description:
+      "Fondé en 2021 par une scission du parti Kotlebovci – Ľudová strana Naše Slovensko (ĽSNS, dissous par la justice slovaque en 2024), sous la direction de Milan Uhrík.",
+  },
+  {
+    slug: 'danmarksdemokraterne',
+    name: 'Danmarksdemokraterne',
+    countryCode: 'DK',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Troisième force politique du Folketing après les élections de 2022, non conviée aux réunions de coalition du nouveau gouvernement formé après les élections législatives de février 2026. La présidente Inger Støjberg dénonce une politique migratoire quasi absente du programme du nouveau gouvernement.",
+    electoralStatusSource: {
+      name: 'Kristeligt Dagblad',
+      url: 'https://www.kristeligt-dagblad.dk/danmark/stoejberg-skoser-regerings-udlaendingepolitik-et-svigt-af-danmark',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://danmarksdemokraterne.dk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/Danmarksdem' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Danmarksdemokraterne.dk',
+        url: 'https://danmarksdemokraterne.dk/forside/udlaendingepolitik/',
+        note: "Programme centré sur une politique migratoire stricte et la critique du relâchement supposé des contrôles migratoires, sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Kristeligt Dagblad',
+        url: 'https://www.kristeligt-dagblad.dk/danmark/stoejberg-skoser-regerings-udlaendingepolitik-et-svigt-af-danmark',
+        note: "Parti d'opposition depuis 2026 : aucune loi Danmarksdemokraterne promulguée à ce jour.",
+      },
+    },
+    founded: 2022,
+    description:
+      "Fondé en 2022 par Inger Støjberg, ancienne ministre de l'Immigration et de l'Intégration, après son exclusion du parti libéral Venstre.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {
