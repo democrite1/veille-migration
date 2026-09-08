@@ -66,6 +66,15 @@ const COUNTRY_NAMES: Record<string, { fr: string; en: string }> = {
   CY: { fr: 'Chypre', en: 'Cyprus' },
 };
 
+// Every run inserts fresh source rows rather than updating in place (simplest
+// way to keep each fact's citation in sync with src/data/*.ts). That means
+// old rows from previous runs are orphaned unless cleaned up — left
+// unchecked, the table grows unbounded and PostgREST's default 1000-row cap
+// on unbounded `select('*')` queries starts silently truncating results,
+// which once broke party pages in production. insertedSourceIds tracks every
+// id created in *this* run so main() can delete everything else at the end.
+const insertedSourceIds = new Set<string>();
+
 async function insertSource(source: Source): Promise<string> {
   const { data, error } = await supabase
     .from('sources')
@@ -78,6 +87,7 @@ async function insertSource(source: Source): Promise<string> {
     .select('id')
     .single();
   if (error) throw new Error(`insert source "${source.name}": ${error.message}`);
+  insertedSourceIds.add(data.id);
   return data.id;
 }
 
@@ -212,6 +222,15 @@ async function main() {
     if (error) throw new Error(`insert news ${n.id}: ${error.message}`);
   }
   console.log(`  ok: ${news.length} news items`);
+
+  console.log('Cleaning up orphaned sources from previous runs...');
+  const idList = Array.from(insertedSourceIds).join(',');
+  const { error: cleanupErr, count } = await supabase
+    .from('sources')
+    .delete({ count: 'exact' })
+    .not('id', 'in', `(${idList})`);
+  if (cleanupErr) throw new Error(`sources cleanup: ${cleanupErr.message}`);
+  console.log(`  ok: removed ${count ?? 0} orphaned source row(s), ${insertedSourceIds.size} current sources kept`);
 
   console.log('Done.');
 }

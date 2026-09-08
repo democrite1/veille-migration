@@ -30,17 +30,32 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
 
   const partyIds = partyRows.map((p) => p.id);
 
-  const [{ data: sourcesAll, error: srcErr }, { data: classifications, error: classErr }, { data: socials, error: socErr }, { data: history, error: histErr }] =
+  const [{ data: classifications, error: classErr }, { data: socials, error: socErr }, { data: history, error: histErr }] =
     await Promise.all([
-      supabase.from('sources').select('*'),
       supabase.from('party_classifications').select('*').in('party_id', partyIds),
       supabase.from('party_social_accounts').select('*').in('party_id', partyIds),
       supabase.from('party_status_history').select('*').in('party_id', partyIds),
     ]);
-  if (srcErr) throw new Error(`getParties sources: ${srcErr.message}`);
   if (classErr) throw new Error(`getParties classifications: ${classErr.message}`);
   if (socErr) throw new Error(`getParties socials: ${socErr.message}`);
   if (histErr) throw new Error(`getParties history: ${histErr.message}`);
+
+  // Fetch only the sources actually referenced (never the whole table — it
+  // grows with every seed run and PostgREST silently caps unbounded
+  // `select('*')` queries at 1000 rows, which orphaned real references once
+  // the table passed that size).
+  const sourceIds = Array.from(
+    new Set(
+      [
+        ...partyRows.map((p) => p.electoral_status_source_id),
+        ...partyRows.map((p) => p.classification_source_id),
+        ...(classifications ?? []).map((c) => c.source_id),
+        ...(history ?? []).map((h) => h.source_id),
+      ].filter(Boolean),
+    ),
+  );
+  const { data: sourcesAll, error: srcErr } = await supabase.from('sources').select('*').in('id', sourceIds);
+  if (srcErr) throw new Error(`getParties sources: ${srcErr.message}`);
 
   const sourceMap = new Map((sourcesAll ?? []).map((s) => [s.id, s]));
 
