@@ -691,6 +691,132 @@ export const parties: Party[] = [
     description:
       "Coalition électorale fondée en 2018, transformée en parti en 2023, réunissant des courants nationalistes (Ruch Narodowy) et libertariens (Nowa Nadzieja). Coprésidée par Krzysztof Bosak et Sławomir Mentzen.",
   },
+  {
+    slug: 'fremskrittspartiet',
+    name: 'Fremskrittspartiet (FrP)',
+    countryCode: 'NO',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Meilleur résultat électoral de son histoire aux élections législatives de septembre 2025 (23,8% des voix, 47 sièges sur 169). Le bloc rouge-vert emmené par le Parti travailliste conserve toutefois sa majorité, avec une marge plus étroite qu'en 2021. Le FrP reste dans l'opposition au Storting.",
+    electoralStatusSource: {
+      name: 'NRK',
+      url: 'https://www.nrk.no/norge/ny-valgstudie_-ideologisk-skifte-mot-hoyre-1.17991477',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.frp.no',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/Fremskrittsp' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'FrP — partiprogram 2025-2029',
+        url: 'https://www.frp.no/files/Program/2025/FrP-Partiprogram-2025-2029.pdf',
+        note: "Programme centré sur une réduction drastique de l'immigration non-occidentale et de l'asile, sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Storting',
+        url: 'https://www.stortinget.no',
+        note: "Parti d'opposition sans participation gouvernementale depuis 2020 : aucune loi FrP promulguée à ce jour au niveau national.",
+      },
+    },
+    founded: 1973,
+    description:
+      "Fondé en 1973 comme parti anti-impôts (Anders Langes Parti), réorienté vers un profil national-populiste centré sur l'immigration à partir des années 1980-1990. A participé au gouvernement Solberg de 2013 à 2020.",
+  },
+  {
+    slug: 'spd-cz',
+    name: 'Svoboda a přímá demokracie (SPD)',
+    countryCode: 'CZ',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Entré au gouvernement après les élections législatives d'octobre 2025, en coalition avec ANO d'Andrej Babiš. Tomio Okamura, président du parti, est devenu président de la Chambre des députés. Le SPD dispose de plusieurs portefeuilles ministériels (défense, transports, agriculture) au sein du gouvernement Babiš.",
+    electoralStatusSource: {
+      name: 'iRozhlas',
+      url: 'https://www.irozhlas.cz/zpravy-domov/tomio-okamura-byl-ano-spd-a-motoristy-nominovan-do-cela-snemovny-program-koalice_2510291414_cen',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.spd.cz',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/SPD_CZ' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et anti-UE.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'SPD.cz',
+        url: 'https://www.spd.cz',
+        note: "Programme centré sur l'arrêt de l'immigration extra-européenne et le rejet du Pacte européen sur la migration et l'asile, sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'iRozhlas',
+        url: 'https://www.irozhlas.cz/zpravy-domov/okamura-chce-aby-se-spd-podilelo-na-vlade-s-ano-zminil-ministerstva-vnitra_2510051407_job',
+        note: "Entré au gouvernement fin 2025 : aucune loi migratoire spécifiquement portée par le SPD promulguée à ce jour, le ministère de l'Intérieur restant hors de son portefeuille.",
+      },
+    },
+    founded: 2015,
+    description:
+      "Fondé en 2015 par Tomio Okamura après sa rupture avec le parti Aube de la démocratie directe. Okamura en est le président depuis la fondation.",
+  },
+  {
+    slug: 'elliniki-lisi',
+    name: 'Ελληνική Λύση (Solution grecque)',
+    countryCode: 'GR',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Onze députés à la Vouli (Parlement hellénique). Kyriakos Velopoulos, fondateur et président du parti, siège dans l'opposition ; le pays est dirigé par le gouvernement de la Nouvelle Démocratie (ND) de Kyriakos Mitsotakis.",
+    electoralStatusSource: {
+      name: 'Hellenic Parliament',
+      url: 'https://www.hellenicparliament.gr/vouleftes/ana-koinovouleftiki-omada/?partyId=c69150dd-3ea9-4abb-a756-aa8d00a2f334',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://elliniki-lisi.gr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/kvelopoulos' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Enikos.gr',
+        url: 'https://www.enikos.gr/politics/velopoulos-i-ellada-den-antechei-alles-metanasteftikes-roes-entoni-kritiki-gia-ton-kyvernitiko-anaschimatismo/2595253/',
+        note: "Discours centré sur la fermeture des frontières et l'arrêt des flux migratoires (« la Grèce ne supporte plus d'autres flux »), sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Newsit.gr',
+        url: 'https://www.newsit.gr/politikh/vouli-me-tis-psifous-tis-nd-perase-apo-tin-epitropi-to-nomosxedio-gia-to-asylo-kai-ti-metanasteysi/4694513/',
+        note: "Parti d'opposition sans participation gouvernementale : a voté contre le projet de loi sur l'asile et la migration porté par le gouvernement ND en 2026, le jugeant insuffisamment restrictif ; aucune loi Elliniki Lisi promulguée.",
+      },
+    },
+    founded: 2016,
+    description:
+      'Fondé le 28 juin 2016 par Kyriakos Velopoulos, ancien député de Nouvelle Démocratie et animateur de télévision, qui en est resté le président et fondateur.',
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {

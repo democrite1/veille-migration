@@ -13,7 +13,10 @@ export type CountryCode =
   | 'BE'
   | 'CH'
   | 'PT'
-  | 'PL';
+  | 'PL'
+  | 'NO'
+  | 'CZ'
+  | 'GR';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

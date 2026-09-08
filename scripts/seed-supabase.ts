@@ -47,6 +47,9 @@ const COUNTRY_NAMES: Record<string, { fr: string; en: string }> = {
   CH: { fr: 'Suisse', en: 'Switzerland' },
   PT: { fr: 'Portugal', en: 'Portugal' },
   PL: { fr: 'Pologne', en: 'Poland' },
+  NO: { fr: 'Norvège', en: 'Norway' },
+  CZ: { fr: 'République tchèque', en: 'Czech Republic' },
+  GR: { fr: 'Grèce', en: 'Greece' },
 };
 
 async function insertSource(source: Source): Promise<string> {

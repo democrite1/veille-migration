@@ -18,6 +18,9 @@ const COUNTRY_LABELS: Record<string, string> = {
   CH: 'Suisse',
   PT: 'Portugal',
   PL: 'Pologne',
+  NO: 'Norvège',
+  CZ: 'République tchèque',
+  GR: 'Grèce',
 };
 
 const LEVEL_LABELS: Record<string, string> = {
