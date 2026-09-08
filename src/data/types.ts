@@ -26,7 +26,11 @@ export type CountryCode =
   | 'SI'
   | 'BG'
   | 'NZ'
-  | 'AR';
+  | 'AR'
+  | 'EE'
+  | 'LV'
+  | 'LU'
+  | 'CY';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

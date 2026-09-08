@@ -60,6 +60,10 @@ const COUNTRY_NAMES: Record<string, { fr: string; en: string }> = {
   BG: { fr: 'Bulgarie', en: 'Bulgaria' },
   NZ: { fr: 'Nouvelle-Zélande', en: 'New Zealand' },
   AR: { fr: 'Argentine', en: 'Argentina' },
+  EE: { fr: 'Estonie', en: 'Estonia' },
+  LV: { fr: 'Lettonie', en: 'Latvia' },
+  LU: { fr: 'Luxembourg', en: 'Luxembourg' },
+  CY: { fr: 'Chypre', en: 'Cyprus' },
 };
 
 async function insertSource(source: Source): Promise<string> {

@@ -1237,6 +1237,174 @@ export const parties: Party[] = [
     description:
       "Fondé en 2021 par l'économiste Javier Milei, élu président de l'Argentine en décembre 2023 sur une ligne libertarienne et anti-establishment.",
   },
+  {
+    slug: 'ekre',
+    name: 'Eesti Konservatiivne Rahvaerakond (EKRE)',
+    countryCode: 'EE',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Environ 10 sièges sur 101 au Riigikogu en 2026, dans l'opposition face à la coalition au pouvoir (Reform, SDE, Eesti 200). Le parti se présente comme la seule véritable opposition, menant des actions d'obstruction parlementaire contre la politique gouvernementale.",
+    electoralStatusSource: {
+      name: 'Riigikogu',
+      url: 'https://www.riigikogu.ee/fraktsioonide-teated/eesti-konservatiivse-rahvaerakonna-fraktsioon/ekre-alustab-riigikogus-taiemahulist-obstruktsiooni-valitsuse-poliitika-pidurdamiseks/',
+      accessedOn: '2026-09-08',
+    },
+    officialWebsite: 'https://ekre.ee',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/EKRE_erakond' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'EKRE.ee',
+        url: 'https://ekre.ee',
+        note: "Programme centré sur la limitation stricte de l'immigration extra-européenne et la défense de « l'État-nation estonien », sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Riigikogu',
+        url: 'https://www.riigikogu.ee/fraktsioonide-teated/eesti-konservatiivse-rahvaerakonna-fraktsioon/ekre-alustab-riigikogus-taiemahulist-obstruktsiooni-valitsuse-poliitika-pidurdamiseks/',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi EKRE promulguée à ce jour.",
+      },
+    },
+    founded: 2012,
+    description:
+      'Fondé en 2012 par fusion de deux petits partis nationaux-conservateurs. Dirigé par Martin Helme, fils du fondateur Mart Helme.',
+  },
+  {
+    slug: 'nacionala-apvieniba',
+    name: 'Nacionālā apvienība (Alliance nationale)',
+    countryCode: 'LV',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Partenaire de la nouvelle coalition gouvernementale formée le 28 mai 2026 avec Apvienotais saraksts (Liste unie), Jaunā Vienotība (Nouvelle Unité) et ZZS (Union des Verts et des Agriculteurs). La ministre issue du parti, Ilze Indriksone, a annoncé vouloir « garantir que la Lettonie reste un État national » via une politique migratoire stricte.",
+    electoralStatusSource: {
+      name: 'LSM.lv',
+      url: 'https://www.lsm.lv/raksts/zinas/latvija/28.05.2026-apvienotais-saraksts-nacionala-apvieniba-jauna-vienotiba-un-zzs-paraksta-koalicijas-ligumu-un-valdibas-deklaraciju.a649007/',
+      accessedOn: '2026-09-08',
+    },
+    officialWebsite: 'https://www.nacionalaapvieniba.lv',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/nacionalaap' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'LSM.lv',
+        url: 'https://www.lsm.lv/raksts/zinas/latvija/25.05.2026-providus-vaditaja-jaunaja-valdiba-var-butiski-mainities-migracijas-un-integracijas-politika.a648671/',
+        note: "Programme axé sur un développement économique « sans immigration de masse » de pays tiers, la fin des « visas dorés » pour investisseurs étrangers, et la priorité à la main-d'œuvre locale, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'LSM.lv',
+        url: 'https://www.lsm.lv/raksts/zinas/latvija/04.09.2026-koalicija-nogludinajusi-domstarpibas-un-solas-imigracijas-ierobezosanas-planu-apstiprinat-divu-nedelu-laika.a661835/',
+        note: "En tant que partenaire de la coalition gouvernementale, a obtenu l'inscription au programme du nouveau gouvernement d'un plan de restriction de l'immigration, dont l'adoption formelle était annoncée pour la mi-septembre 2026.",
+      },
+    },
+    founded: 2010,
+    description:
+      "Fondé en 2010 par la fusion de Tēvzemei un Brīvībai/LNNK et Visu Latvijai!. Membre de coalitions gouvernementales à plusieurs reprises depuis 2011.",
+  },
+  {
+    slug: 'adr-luxembourg',
+    name: 'Alternativ Demokratesch Reformpartei (ADR)',
+    countryCode: 'LU',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Parti d'opposition depuis la formation du gouvernement de coalition CSV-DP (Frieden-Bettel) le 17 novembre 2023. A fait son entrée au Parlement européen pour la première fois de son histoire lors des élections européennes de 2024.",
+    electoralStatusSource: {
+      name: 'Wikipedia — Frieden-Bettel Government',
+      url: 'https://en.wikipedia.org/wiki/Frieden-Bettel_Government',
+      accessedOn: '2026-09-08',
+    },
+    officialWebsite: 'https://adr.lu',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/adr_lu' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Le Quotidien',
+        url: 'https://lequotidien.lu/politique-societe/ladr-veut-stopper-la-migration-irreguliere/',
+        note: "Appelle à « stopper la migration irrégulière » et critique la politique migratoire jugée trop laxiste de la coalition CSV-DP, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Le Quotidien',
+        url: 'https://lequotidien.lu/politique-societe/ladr-veut-stopper-la-migration-irreguliere/',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi ADR promulguée à ce jour.",
+      },
+    },
+    founded: 1987,
+    description:
+      "Fondé en 1987 comme parti de défense des droits à pension, réorienté progressivement vers un profil national-conservateur centré sur l'immigration et l'identité nationale.",
+  },
+  {
+    slug: 'elam',
+    name: 'Εθνικό Λαϊκό Μέτωπο (ELAM)',
+    countryCode: 'CY',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Progression spectaculaire aux élections législatives du 24 mai 2026 : le parti double sa représentation parlementaire, passant de 4 à 8 sièges (environ 11% des voix, contre 6,8% en 2021), devenant la troisième force politique du pays derrière le DISY (au pouvoir) et l'AKEL.",
+    electoralStatusSource: {
+      name: 'Anixneuseis.gr',
+      url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
+      accessedOn: '2026-09-08',
+    },
+    officialWebsite: 'https://elamcy.com',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/ELAM_official' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti d'extrême droite, historiquement lié au parti grec Aube dorée (Chrysi Avgi).",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Anixneuseis.gr',
+        url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
+        note: "Ligne dure sur l'immigration et la question chypriote, y compris position favorable à la fermeture des points de passage entre les deux parties de l'île ; sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Anixneuseis.gr',
+        url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi ELAM promulguée à ce jour.",
+      },
+    },
+    founded: 2008,
+    description:
+      "Fondé en 2008. Troisième force politique de Chypre depuis les élections législatives de mai 2026, en forte progression électorale depuis sa création.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {

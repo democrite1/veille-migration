@@ -36,6 +36,10 @@ const COUNTRY_LABELS: Record<string, string> = {
   BG: 'Bulgarie',
   NZ: 'Nouvelle-Zélande',
   AR: 'Argentine',
+  EE: 'Estonie',
+  LV: 'Lettonie',
+  LU: 'Luxembourg',
+  CY: 'Chypre',
 };
 
 export default async function PartiesPage({
