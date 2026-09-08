@@ -165,7 +165,7 @@ export const elections: Election[] = [
     date: '2026-03-22',
     status: 'resultat_connu',
     result:
-      "Retour au pouvoir du SDS de Janez Janša, qui forme une coalition avec Demokrati, NSi, SLS et Fokus. Janša est élu Premier ministre par l'Assemblée le 22 mai 2026 (51 voix), pour un quatrième mandat.",
+      "Résultat extrêmement serré : le mouvement Svoboda de Robert Golob arrive en tête avec 29 sièges (28,55% des voix), devant le SDS de Janez Janša avec 28 sièges (28,21%) — un écart d'un seul mandat. Svoboda échoue toutefois à former un gouvernement ; le SDS y parvient en coalition avec Demokrati, NSi, SLS et Fokus, et Janša est élu Premier ministre par l'Assemblée le 22 mai 2026 (51 voix), pour un quatrième mandat.",
     source: {
       name: 'STA (Agence de presse slovène)',
       url: 'https://www.sta.si/v-srediscu/vlada2026',

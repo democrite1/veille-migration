@@ -1076,7 +1076,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'pouvoir',
     electoralStatusDetail:
-      "Janez Janša (président du parti) a été élu Premier ministre le 22 mai 2026 par l'Assemblée nationale (51 voix), formant son quatrième gouvernement en coalition avec Demokrati, NSi, SLS et Fokus (2026-2030). Son équipe ministérielle a été confirmée le 4 juin 2026.",
+      "Aux élections législatives du 22 mars 2026, le SDS arrive deuxième de très peu (28 sièges, 28,21% des voix) derrière le mouvement Svoboda de Robert Golob (29 sièges, 28,55%). N'ayant pas réussi à former de gouvernement, Svoboda cède la place : Janez Janša est élu Premier ministre le 22 mai 2026 par l'Assemblée nationale (51 voix), à la tête d'une coalition SDS-Demokrati-NSi-SLS-Fokus (2026-2030). Son équipe ministérielle a été confirmée le 4 juin 2026.",
     electoralStatusSource: {
       name: 'STA (Agence de presse slovène)',
       url: 'https://www.sta.si/v-srediscu/vlada2026',

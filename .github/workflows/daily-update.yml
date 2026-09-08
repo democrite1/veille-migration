@@ -1,12 +1,21 @@
 name: Daily data update
 
+# These fetch scripts surface *candidate* news via Google News RSS — they
+# do not write to Supabase and do not need any secrets. Every fact actually
+# published on the site (src/data/*.ts) still goes through manual review:
+# see scripts/fetch/*.ts for why (no free keyless API reliably covers
+# ~28 countries' electoral commissions, EUR-Lex, or party classification
+# databases). Review the candidates artifact below, update src/data/*.ts,
+# then run `npx tsx scripts/seed-supabase.ts` and push — that's what
+# actually updates the live site.
+
 on:
   schedule:
     - cron: '0 5 * * *' # 05:00 UTC daily
   workflow_dispatch: {}
 
 jobs:
-  fetch-and-deploy:
+  fetch-candidates:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,31 +26,21 @@ jobs:
 
       - run: npm install
 
-      - name: Fetch parties
+      - name: Fetch party status candidates
         run: npm run fetch:parties
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Fetch elections
+      - name: Fetch election candidates
         run: npm run fetch:elections
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Fetch legislation
+      - name: Fetch legislation candidates
         run: npm run fetch:legislation
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Fetch news
+      - name: Fetch initiative news candidates
         run: npm run fetch:news
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      # Vercel redeploys automatically on push to main; if the fetch scripts
-      # only write to Supabase (no repo changes), trigger a deploy hook instead:
-      # - name: Trigger Vercel deploy
-      #   run: curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"
+      - name: Upload candidates for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: fetch-candidates-${{ github.run_id }}
+          path: scripts/fetch/output/*.json
+          retention-days: 14
