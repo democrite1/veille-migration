@@ -943,6 +943,132 @@ export const parties: Party[] = [
     description:
       "Fondé en 2022 par Inger Støjberg, ancienne ministre de l'Immigration et de l'Intégration, après son exclusion du parti libéral Venstre.",
   },
+  {
+    slug: 'one-nation',
+    name: "Pauline Hanson's One Nation",
+    countryCode: 'AU',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. Parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
+    electoralStatusSource: {
+      name: 'The Daily Aus',
+      url: 'https://www.thedailyaus.com.au/politics/one-nation-policies-22-06-2026',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.onenation.org.au',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/PaulineHansonOz' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Build a Ballot',
+        url: 'https://www.buildaballot.org.au/party-info/one-nation-policies',
+        note: "Objectif chiffré de réduire l'immigration de plus de 570 000 personnes par rapport aux niveaux actuels (plafond de 130 000 visas), expulsion de 75 000 « migrants illégaux » et retrait de la Convention de l'ONU relative au statut des réfugiés. Pas de politique de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Parlement australien',
+        url: 'https://www.aph.gov.au',
+        note: "Parti minoritaire d'opposition (4 sièges sur 76 au Sénat) : aucune loi One Nation promulguée à ce jour.",
+      },
+    },
+    founded: 1997,
+    description:
+      'Fondé en 1997 par Pauline Hanson, ancienne députée libérale devenue indépendante. Hanson dirige le parti depuis sa fondation.',
+  },
+  {
+    slug: 'ppc',
+    name: 'Parti populaire du Canada (PPC)',
+    countryCode: 'CA',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'extra-parlementaire',
+    electoralStatusDetail:
+      "Aucun député élu à la Chambre des communes. Pire résultat électoral de son histoire aux élections fédérales de 2025, avec moins de 1% des voix (contre près de 5% en 2021).",
+    electoralStatusSource: {
+      name: 'Wikipedia',
+      url: 'https://en.wikipedia.org/wiki/People%27s_Party_of_Canada',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.peoplespartyofcanada.ca',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/peoplespca' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Impunity Observer',
+        url: 'https://impunityobserver.com/2025/04/02/maxime-bernier-only-the-peoples-party-sides-with-canadians-on-immigration/',
+        note: "Programme visant à réduire l'immigration à 150 000 entrées par an et à abroger la loi canadienne sur le multiculturalisme, sans politique explicite de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'CBC News',
+        url: 'https://www.cbc.ca/news/politics/maxime-bernier-ppc-campaign-launch-1.7492181',
+        note: "Aucun élu à la Chambre des communes : aucun texte déposé au niveau fédéral à ce jour.",
+      },
+    },
+    founded: 2018,
+    description:
+      "Fondé en 2018 par Maxime Bernier, ancien député conservateur, après sa défaite à la direction du Parti conservateur du Canada. Bernier en est le chef depuis la fondation.",
+  },
+  {
+    slug: 'domovinski-pokret',
+    name: 'Domovinski pokret (Mouvement de la patrie)',
+    countryCode: 'HR',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Partenaire de la coalition gouvernementale avec l'Union démocratique croate (HDZ) depuis avril 2024, malgré des tensions récurrentes au sein de la majorité en 2026. Dirigé par Ivan Penava.",
+    electoralStatusSource: {
+      name: 'Radio Slobodna Evropa',
+      url: 'https://www.slobodnaevropa.org/a/hrvatska-vlada-parlamentarna-vecina/32938194.html',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://dp.hr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/domovinskipokret' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Monitor.hr',
+        url: 'https://www.monitor.hr/kako-bi-most-domovinski-pokret-i-mozemo-rijesili-problem-uvoza-stranih-radnika/',
+        note: "S'oppose à la libéralisation de la loi sur les étrangers et à la suppression des quotas de travailleurs étrangers, et met en avant le retour de la diaspora croate plutôt que l'importation de main-d'œuvre étrangère — logique de retour de la diaspora nationale, distincte de la remigration de populations immigrées telle que définie par la méthodologie de ce site.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Index.hr',
+        url: 'https://www.index.hr/amp/vijesti/clanak/otvoreno-o-stranim-radnicima-hdzovac-mi-znamo-sve-o-tim-ljudima/2609577.aspx',
+        note: "En tant que partenaire de la coalition gouvernementale, soutient les amendements à la loi sur les étrangers (obligation de connaissance de la langue croate, annulation de visa en cas d'abus) actuellement en vigueur.",
+      },
+    },
+    founded: 2020,
+    description:
+      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava, maire de Vukovar. Partenaire de coalition du HDZ depuis 2024.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {

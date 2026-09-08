@@ -24,6 +24,9 @@ const COUNTRY_LABELS: Record<string, string> = {
   RO: 'Roumanie',
   SK: 'Slovaquie',
   DK: 'Danemark',
+  AU: 'Australie',
+  CA: 'Canada',
+  HR: 'Croatie',
 };
 
 const LEVEL_LABELS: Record<string, string> = {

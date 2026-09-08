@@ -19,7 +19,10 @@ export type CountryCode =
   | 'GR'
   | 'RO'
   | 'SK'
-  | 'DK';
+  | 'DK'
+  | 'AU'
+  | 'CA'
+  | 'HR';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 
