@@ -7,32 +7,32 @@ import type { NewsItem } from './types';
 export const news: NewsItem[] = [
   {
     id: 'save-europe-act',
-    title: "« Save Europe Act » : la Commission européenne bloque l'initiative citoyenne pour la remigration",
+    title: "« Save Europe Act » : la Commission européenne bloque l'initiative citoyenne pour la remigration, l'affaire portée devant la CJUE",
     countries: ['EU'],
-    date: '2026-07-22',
+    date: '2026-08-22',
     summary:
-      "Initiative citoyenne européenne (ICE) lancée par la commentatrice néerlandaise Eva Vlaardingerbroek et soutenue par Viktor Orbán, réclamant un arrêt total de l'immigration non-européenne (légale et illégale) et un cadre de remigration à l'échelle de l'UE : suspension des visas étudiants et de regroupement familial pour les non-Européens, restriction de l'asile pour les migrants économiques et les ressortissants de pays sûrs. Plus de 580 000 signatures revendiquées par les organisateurs.",
+      "Initiative citoyenne européenne (ICE) lancée le 31 mai 2026 par la commentatrice néerlandaise Eva Vlaardingerbroek et l'activiste identitaire autrichien Martin Sellner, réclamant un moratoire sur les nouvelles voies d'immigration non-occidentale, un durcissement des frontières extérieures, des procédures de retour accélérées et un cadre européen de remigration incitée financièrement. Rejetée à l'enregistrement par la Commission européenne le 22 juillet 2026 (discrimination raciale/ethnique alléguée), l'initiative a néanmoins continué de recueillir des signatures : plus de 700 000 en moins de trois mois, avec un objectif affiché d'un million.",
     legalStatus:
-      "Refusée à l'enregistrement par la Commission européenne le 22 juillet 2026, au motif que le moratoire proposé est discriminatoire sur des critères raciaux et ethniques et contraire aux valeurs de l'UE. Les organisateurs ont annoncé un recours juridique contre cette décision.",
+      "Les organisateurs ont porté l'affaire devant la Cour de justice de l'Union européenne (CJUE) pour contester le refus d'enregistrement de la Commission, tout en poursuivant la collecte de signatures vers l'objectif d'un million.",
     source: {
-      name: 'Hungarian Conservative / rmx.news',
-      url: 'https://www.hungarianconservative.com/articles/current/save-europe-act-remigration-eu-commission-blocked/',
-      accessedOn: '2026-08-18',
+      name: 'Hungarian Conservative',
+      url: 'https://www.hungarianconservative.com/articles/current/save-europe-act-hits-700000-signatures-as-organizers-prepare-eu-court-fight/',
+      accessedOn: '2026-09-08',
     },
   },
   {
     id: 'return-to-the-land',
-    title: 'Return to the Land : extension d\'un réseau de communautés « réservées aux Blancs » aux États-Unis',
+    title: 'Return to the Land : le réseau de communautés « réservées aux Blancs » contre-attaque en justice contre le DOJ et la presse',
     countries: ['US'],
-    date: '2026-05-20',
+    date: '2026-08-24',
     summary:
       "Fondée en septembre 2023 par Eric Orwoll dans l'Arkansas, Return to the Land (RTTL) est une organisation privée qui réserve l'installation sur ses terrains aux personnes vetted comme d'ascendance européenne et partageant ses vues séparatistes ; les personnes juives en sont explicitement exclues. Le mouvement a ouvert une deuxième implantation en 2025 et prévoit quatre nouveaux sites (Ozarks, Appalaches). Une conférence internationale rassemblant des figures de l'extrême droite de France, d'Allemagne, d'Afrique du Sud, de Suède, du Royaume-Uni et des États-Unis s'est tenue le 7 février 2026 pour coordonner ce type d'initiatives à l'échelle mondiale.",
     legalStatus:
-      "Poursuivie en justice pour discrimination en 2026 après le refus de vendre un terrain à une candidate d'ascendance juive. Le procureur général de l'Arkansas a indiqué n'avoir identifié aucune infraction à la loi de l'État à ce stade.",
+      "Poursuivie en justice pour discrimination depuis mai 2026 après le refus de vendre un terrain à une candidate d'ascendance juive. Les cofondateurs (Eric Orwoll, Peter Csere) ont depuis contre-attaqué : plainte déposée le 24 août 2026 contre le ministère de la Justice américain, le régulateur des valeurs mobilières de l'Arkansas et le procureur général de l'État pour faire cesser les enquêtes à leur encontre ; plainte distincte en diffamation déposée le 28 juillet 2026 contre Sky News (Royaume-Uni) au sujet d'un documentaire de 2025, réclamant 1,2 million de dollars de dommages compensatoires et 1,5 million de dommages punitifs.",
     source: {
-      name: 'CNN / Arkansas Advocate',
-      url: 'https://www.cnn.com/2026/05/20/us/arkansas-return-to-the-land-discrimination-lawsuit',
-      accessedOn: '2026-08-18',
+      name: 'Arkansas Advocate / Arkansas Times',
+      url: 'https://arkansasadvocate.com/2026/08/25/group-behind-whites-only-community-sues-arkansas-federal-agencies/',
+      accessedOn: '2026-09-08',
     },
   },
   {
