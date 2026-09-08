@@ -565,6 +565,132 @@ export const parties: Party[] = [
     description:
       "Fondé en 2004 en remplacement du Vlaams Blok, dissous par la justice belge pour infraction aux lois anti-racisme. Dirigé par Tom Van Grieken depuis 2014.",
   },
+  {
+    slug: 'udc-svp',
+    name: 'Union démocratique du centre (UDC / SVP)',
+    countryCode: 'CH',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Premier parti de Suisse en sièges à l'Assemblée fédérale. Détient 2 des 7 sièges du Conseil fédéral (gouvernement collégial permanent réparti entre partis selon la « formule magique ») : Guy Parmelin (président de la Confédération en 2026) et Albert Rösti. Contrairement aux autres pays de ce site, la Suisse ne connaît pas d'alternance gouvernement/opposition classique : les grands partis siègent en permanence à l'exécutif.",
+    electoralStatusSource: {
+      name: 'Conseil fédéral — admin.ch',
+      url: 'https://www.admin.ch/de/bundesrat-mitglieder',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://www.svp.ch',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/svp_ch' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'UDC — svp.ch',
+        url: 'https://www.svp.ch',
+        note: "Programme centré sur la limitation de l'immigration et la préférence nationale à l'embauche, sans politique de remigration de résidents déjà installés légalement.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Confédération suisse',
+        url: 'https://www.admin.ch',
+        note: "Initiative populaire « contre l'immigration de masse » portée par l'UDC, acceptée en votation le 9 février 2014 (50,3%), inscrivant des plafonds et contingents d'immigration dans la Constitution. Sa mise en œuvre législative de 2016 a été fortement atténuée (mécanisme de préférence indigène « light ») pour rester compatible avec l'accord de libre circulation UE-Suisse, sous la pression du Parlement et du risque de rupture des accords bilatéraux.",
+      },
+    },
+    founded: 1971,
+    description:
+      "Fondé en 1971 par fusion de partis agrariens et bourgeois cantonaux, réorienté vers le national-conservatisme à partir des années 1990 sous l'impulsion de Christoph Blocher.",
+  },
+  {
+    slug: 'chega',
+    name: 'Chega',
+    countryCode: 'PT',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Deuxième force politique du pays, devançant le Parti socialiste (PS) après les élections législatives anticipées de mai 2025 consécutives à la chute du gouvernement. André Ventura est chef de l'opposition depuis le 3 juin 2025. Le gouvernement est dirigé par l'Alliance Démocratique (AD, centre-droit) de Luís Montenegro.",
+    electoralStatusSource: {
+      name: 'Diário de Notícias',
+      url: 'https://www.dn.pt/pol%C3%ADtica/ventura-ser%C3%A1-l%C3%ADder-da-oposi%C3%A7%C3%A3o-mesmo-sem-eleger-mais-deputados-entre-os-emigrantes',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://partidochega.pt',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/partido_chega' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Diário da Cidadania',
+        url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
+        note: "Programme centré sur la fin de l'immigration « à portes ouvertes », l'expulsion des personnes en situation irrégulière et le durcissement de l'accès à la résidence et à la nationalité, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Diário da Cidadania',
+        url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
+        note: "Parti d'opposition sans participation gouvernementale : propositions présentées (durcissement de la résidence et de la nationalité) mais aucune loi Chega promulguée. Le durcissement effectif du régime d'expulsion en vigueur depuis mars 2026 (« pacote retorno ») a été porté par le gouvernement AD, sous la pression politique de Chega, non par Chega lui-même.",
+      },
+    },
+    founded: 2019,
+    description:
+      "Fondé en 2019 par André Ventura, ancien commentateur sportif et membre du PSD. Quatrième, puis deuxième force politique du pays en l'espace de six ans.",
+  },
+  {
+    slug: 'konfederacja',
+    name: 'Konfederacja',
+    countryCode: 'PL',
+    positioning: 'National-libertarien, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Groupe parlementaire à la Diète (Sejm) depuis 2019, dans l'opposition à la coalition gouvernementale menée par Donald Tusk (Koalicja Obywatelska) depuis octobre 2023. Krzysztof Bosak, coprésident du parti, est vice-maréchal (vice-président) de la Diète.",
+    electoralStatusSource: {
+      name: 'Sejm Rzeczypospolitej Polskiej',
+      url: 'https://www.sejm.gov.pl/sejm9.nsf/klubposlowie.xsp?klub=Konfederacja',
+      accessedOn: '2026-09-07',
+    },
+    officialWebsite: 'https://konfederacja.pl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/KONFEDERACJA_' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Konfederacja.pl',
+        url: 'https://konfederacja.pl/rzad-nie-kontroluje-imigracji-do-polski',
+        note: "Programme centré sur le contrôle des frontières, l'expulsion des migrants en situation irrégulière et le rejet du Pacte européen sur la migration et l'asile, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Konfederacja.pl',
+        url: 'https://konfederacja.pl/chcemy-aby-sejm-zobowiazal-rzad-od-odrzucenia-paktu-migracyjnego/',
+        note: "Proposition de loi déposée à la Diète pour supprimer le système de caution (kaucja) pour demandeurs d'asile instauré par le gouvernement PiS puis maintenu par le gouvernement Tusk ; non votée, parti minoritaire d'opposition sans capacité de faire adopter une loi seul.",
+      },
+    },
+    founded: 2018,
+    description:
+      "Coalition électorale fondée en 2018, transformée en parti en 2023, réunissant des courants nationalistes (Ruch Narodowy) et libertariens (Nowa Nadzieja). Coprésidée par Krzysztof Bosak et Sławomir Mentzen.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {

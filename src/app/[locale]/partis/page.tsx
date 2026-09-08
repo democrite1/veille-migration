@@ -20,6 +20,9 @@ const COUNTRY_LABELS: Record<string, string> = {
   HU: 'Hongrie',
   FI: 'Finlande',
   BE: 'Belgique',
+  CH: 'Suisse',
+  PT: 'Portugal',
+  PL: 'Pologne',
 };
 
 export default async function PartiesPage({
