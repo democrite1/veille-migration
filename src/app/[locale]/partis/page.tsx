@@ -49,7 +49,8 @@ export default async function PartiesPage({
   searchParams: Promise<{ country?: string }>;
 }) {
   const { country } = await searchParams;
-  const [allParties, filtered] = await Promise.all([getParties(), getParties(country)]);
+  const allParties = await getParties();
+  const filtered = country ? allParties.filter((p) => p.countryCode === country) : allParties;
   return <PartiesPageInner country={country} allParties={allParties} filtered={filtered} />;
 }
 

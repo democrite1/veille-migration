@@ -13,6 +13,12 @@ import type {
 } from '@/data/types';
 
 function toSource(row: any): Source {
+  if (!row) {
+    // Defensive: a missing source row should degrade one citation, not crash
+    // the whole page. Should not happen with a consistent database, but a
+    // hard crash here previously took down the entire /partis listing.
+    return { name: 'Source indisponible', url: '#' };
+  }
   return {
     name: row.name,
     url: row.url,
@@ -22,24 +28,24 @@ function toSource(row: any): Source {
 }
 
 /**
- * Fetches rows from `sources` by id, in batches. A single `.in('id', ids)`
- * call with hundreds of UUIDs produces a query string tens of kilobytes long,
- * which intermittently triggers 500s somewhere along the Vercel/Supabase
- * request path (URL-length limits on an intermediary). Chunking keeps every
- * individual request small regardless of how many parties/sources exist.
+ * Fetches rows from `sources` by id. Chunked and sequential (not
+ * Promise.all) on purpose: a single request with the full id list works
+ * fine in practice, but as the dataset keeps growing this keeps any one
+ * request's `.in()` list bounded, without adding extra concurrent load on
+ * Supabase's free-tier API — the thing that actually caused intermittent
+ * 500s here (fixed properly by removing the redundant double getParties()
+ * call in the party listing page; this is defense in depth).
  */
 async function fetchSourcesByIds(supabase: ReturnType<typeof getSupabaseClient>, ids: string[]) {
-  const chunkSize = 80;
-  const chunks: string[][] = [];
-  for (let i = 0; i < ids.length; i += chunkSize) chunks.push(ids.slice(i, i + chunkSize));
-
-  const results = await Promise.all(
-    chunks.map((chunk) => supabase.from('sources').select('*').in('id', chunk)),
-  );
-  for (const r of results) {
-    if (r.error) throw new Error(`fetchSourcesByIds: ${r.error.message}`);
+  const chunkSize = 150;
+  const rows: any[] = [];
+  for (let i = 0; i < ids.length; i += chunkSize) {
+    const chunk = ids.slice(i, i + chunkSize);
+    const { data, error } = await supabase.from('sources').select('*').in('id', chunk);
+    if (error) throw new Error(`fetchSourcesByIds: ${error.message}`);
+    rows.push(...(data ?? []));
   }
-  return results.flatMap((r) => r.data ?? []);
+  return rows;
 }
 
 /**
