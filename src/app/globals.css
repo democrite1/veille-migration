@@ -3,14 +3,60 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    /* Accessibilité : base agrandie (18px au lieu de 16px). Toutes les tailles
+       Tailwind étant en rem, ceci agrandit proportionnellement tout le site
+       (y compris pour les lecteurs âgés ou malvoyants) sans toucher chaque classe. */
+    font-size: 112.5%;
+  }
   body {
     @apply bg-paper text-ink antialiased;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1.25;
+  }
+  /* Focus clavier toujours visible, y compris sur fond stylisé (bannières pays). */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid theme('colors.accent');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    padding: 0.6rem 1rem;
+    clip: auto;
+    overflow: visible;
+    @apply rounded-md bg-ink text-base font-medium text-paper;
   }
 }
 
 @layer components {
   .badge {
-    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-medium;
+    @apply inline-flex items-center gap-1 rounded-full border px-3 py-1 text-sm font-medium;
   }
   .badge-reduction {
     @apply border-muted/40 bg-black/[0.03] text-ink;
@@ -31,6 +77,6 @@
     @apply rounded-lg border border-line bg-white/60 p-5 shadow-sm;
   }
   .source-cite {
-    @apply text-xs text-muted;
+    @apply text-sm text-muted;
   }
 }

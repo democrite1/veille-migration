@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getElections } from '@/lib/queries';
 import SourceCite from '@/components/SourceCite';
-import { countryFlag } from '@/lib/flags';
+import FlagIcon from '@/components/FlagIcon';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -65,8 +65,8 @@ function ElectionsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getE
         {sorted.map((e) => (
           <li key={e.id} className="card space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-serif text-lg font-semibold">
-                <span className="mr-2" aria-hidden="true">{countryFlag(e.countryCode)}</span>
+              <h2 className="flex items-center gap-2 font-serif text-lg font-semibold">
+                <FlagIcon countryCode={e.countryCode} className="h-4 w-auto rounded-[1px]" />
                 {e.scopeName}
               </h2>
               <div className="flex gap-2">

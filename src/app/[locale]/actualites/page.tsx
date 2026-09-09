@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getNews } from '@/lib/queries';
 import SourceCite from '@/components/SourceCite';
-import { countryFlag } from '@/lib/flags';
+import FlagIcon from '@/components/FlagIcon';
 
 export default async function NewsPage() {
   const news = await getNews();
@@ -23,10 +23,12 @@ function NewsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getNews>>
         {sorted.map((n) => (
           <li key={n.id} className="card space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-serif text-lg font-semibold">
+              <h2 className="flex flex-wrap items-center gap-2 font-serif text-lg font-semibold">
                 {n.countries.length > 0 && (
-                  <span className="mr-2" aria-hidden="true">
-                    {n.countries.map((c) => countryFlag(c)).join(' ')}
+                  <span className="inline-flex gap-1">
+                    {n.countries.map((c) => (
+                      <FlagIcon key={c} countryCode={c} className="h-4 w-auto rounded-[1px]" />
+                    ))}
                   </span>
                 )}
                 {n.title}

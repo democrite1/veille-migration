@@ -28,8 +28,13 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className="min-h-screen font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <a href="#main-content" className="skip-link">
+            {locale === 'en' ? 'Skip to main content' : 'Aller au contenu principal'}
+          </a>
           <Header />
-          <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
+          <main id="main-content" className="mx-auto max-w-5xl px-4 py-10">
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>

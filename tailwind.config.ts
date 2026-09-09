@@ -9,7 +9,7 @@ const config: Config = {
         paper: '#faf9f6',
         line: '#e3e0d9',
         accent: '#8a1f2d',
-        muted: '#6b6f76',
+        muted: '#52565d',
       },
       fontFamily: {
         serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
