@@ -579,6 +579,175 @@ export const parties: Party[] = [
       'Fondé par Geert Wilders en 2006. Parti à adhérent unique (Wilders en est le seul membre officiel), structure atypique parmi les partis néerlandais.',
   },
   {
+    slug: 'ja21',
+    name: 'JA21',
+    countryCode: 'NL',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Neuf sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025 (+8 par rapport à 2023), portés notamment par le ralliement d'une ancienne secrétaire d'État issue du PVV. Parti d'opposition, non associé au gouvernement minoritaire Jetten (D66-VVD-CDA) formé en février 2026.",
+    electoralStatusSource: {
+      name: 'NL Times — Former PVV State Sec.\'s switch to JA21 wins party seats in polls',
+      url: 'https://nltimes.nl/2025/06/24/former-pvv-state-secs-switch-ja21-wins-party-7-seats-polls',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://ja21.nl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/JA21NL' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti national-conservateur de droite radicale. Fondé en 2020 par des dissidents de Forum voor Democratie (FvD), sur une ligne jugée plus modérée dans la forme mais tout aussi ferme sur l'immigration.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'NL Times',
+        url: 'https://nltimes.nl/2025/06/24/former-pvv-state-secs-switch-ja21-wins-party-7-seats-polls',
+        note: "Propose l'externalisation du traitement des demandes d'asile vers des pays tiers hors UE, sur le modèle danois, ainsi qu'une réduction générale de l'immigration. Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Tweede Kamer',
+        url: 'https://www.tweedekamer.nl',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi JA21 promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives anticipées 2025',
+        chamber: 'Tweede Kamer',
+        date: '2025-10-29',
+        seats: 9,
+        totalSeats: 150,
+        votePercent: 5.95,
+        source: {
+          name: 'Wikipedia — 2025 Dutch general election',
+          url: 'https://en.wikipedia.org/wiki/2025_Dutch_general_election',
+          accessedOn: '2026-09-09',
+        },
+      },
+      {
+        label: 'Élections législatives 2023',
+        chamber: 'Tweede Kamer',
+        date: '2023-11-22',
+        seats: 1,
+        totalSeats: 150,
+        votePercent: 0.68,
+        source: {
+          name: 'Wikipedia — 2023 Dutch general election',
+          url: 'https://en.wikipedia.org/wiki/2023_Dutch_general_election',
+          accessedOn: '2026-09-09',
+          note: "Recul marqué par rapport à 2021 (3 sièges), avant le fort rebond de 2025.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 0,
+      totalCountryMeps: 31,
+      source: {
+        name: 'Wikipedia — 2024 European Parliament election in the Netherlands',
+        url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_the_Netherlands',
+        accessedOn: '2026-09-09',
+        note: "Aucun siège obtenu aux élections européennes de 2024.",
+      },
+    },
+    founded: 2020,
+    description:
+      "Fondé en 2020 par Joost Eerdmans et Annabel Nanninga, dissidents de Forum voor Democratie (FvD). Dirigé par Joost Eerdmans.",
+  },
+  {
+    slug: 'fvd',
+    name: 'Forum voor Democratie (FvD)',
+    countryCode: 'NL',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Sept sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025, plus que doublant sa représentation (3 sièges auparavant). Percée locale spectaculaire aux élections municipales de mars 2026 : 299 sièges de conseillers municipaux, contre 55 avant le scrutin — la plus forte progression de tous les partis. Parti d'opposition, non associé au gouvernement Jetten.",
+    electoralStatusSource: {
+      name: 'AlleCijfers.nl — Verkiezingsuitslagen voor FvD',
+      url: 'https://allecijfers.nl/politieke-partij/fvd/',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://fvd.nl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/fvdemocratie' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti populiste de droite radicale. Fondé en 2016 par Thierry Baudet, qui reste président du parti après avoir cédé la tête de liste à Lidewij de Vos pour les élections de 2025.",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'nl.wikipedia.org — Forum voor Democratie',
+        url: 'https://nl.wikipedia.org/wiki/Forum_voor_Democratie',
+        note: "Le programme de campagne 2025 du parti inclut explicitement la lutte contre l'immigration et le lancement de « programmes de remigration » (« remigratieprogramma's ») — usage direct du terme, critère central de la méthodologie de ce site. Thierry Baudet est également connu pour avoir employé publiquement, dès les années 2010, le concept d'« omvolking » (grand remplacement).",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Tweede Kamer',
+        url: 'https://www.tweedekamer.nl',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi FvD promulguée à ce jour au niveau national.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives anticipées 2025',
+        chamber: 'Tweede Kamer',
+        date: '2025-10-29',
+        seats: 7,
+        totalSeats: 150,
+        source: {
+          name: 'AlleCijfers.nl',
+          url: 'https://allecijfers.nl/politieke-partij/fvd/',
+          accessedOn: '2026-09-09',
+          note: 'Plus du double du nombre de sièges obtenus en 2023 (3 sièges).',
+        },
+      },
+      {
+        label: 'Élections législatives 2023',
+        chamber: 'Tweede Kamer',
+        date: '2023-11-22',
+        seats: 3,
+        totalSeats: 150,
+        source: {
+          name: 'DutchNews.nl',
+          url: 'https://www.dutchnews.nl/2025/01/sixth-mp-for-forum-voor-democratie-the-party-with-three-seats/',
+          accessedOn: '2026-09-09',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 0,
+      totalCountryMeps: 31,
+      source: {
+        name: 'nl.wikipedia.org — Verkiezingen voor het Europees Parlement 2024',
+        url: 'https://nl.wikipedia.org/wiki/Verkiezingen_voor_het_Europees_Parlement_2024/Kandidatenlijst/Forum_voor_Democratie',
+        accessedOn: '2026-09-09',
+        note: "1,9% des voix, sous le seuil de représentation : le parti disparaît du Parlement européen en 2024 après y avoir compté 3 élus depuis 2019. Reste affilié à l'échelle européenne au parti Europe des nations souveraines (ESN).",
+      },
+    },
+    localImplantation: {
+      summary:
+        "Percée locale majeure en mars 2026 : 299 conseillers municipaux (contre 55 avant le scrutin), le parti passant de 3,6% à 8,4% de moyenne dans les communes où il se présentait déjà, avec ses meilleurs scores dans le nord du pays (Drenthe, Groningue, Frise).",
+      source: {
+        name: 'StukRoodVlees — Waarom deed Forum het zo goed bij de Raadsverkiezingen?',
+        url: 'https://stukroodvlees.nl/waarom-deed-forum-het-zo-goed-bij-de-raadsverkiezingen/',
+        accessedOn: '2026-09-09',
+      },
+    },
+    founded: 2016,
+    description:
+      "Fondé en 2016 par Thierry Baudet et Henk Otten sur une ligne eurosceptique et conservatrice, réorientée vers un populisme plus radical à partir de 2020. Baudet en reste le président malgré plusieurs scissions internes.",
+  },
+  {
     slug: 'gop-trump',
     name: 'Parti républicain (GOP) — administration Trump',
     countryCode: 'US',
@@ -935,6 +1104,74 @@ export const parties: Party[] = [
     founded: 2013,
     description:
       "Fondé en 2013 par des dissidents du Parti populaire (PP), dont Santiago Abascal, qui préside le parti depuis sa création.",
+  },
+  {
+    slug: 'se-acabo-la-fiesta',
+    name: 'Se Acabó La Fiesta (SALF)',
+    countryCode: 'ES',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'extra-parlementaire',
+    electoralStatusDetail:
+      "Créé en 2024 par la personnalité des réseaux sociaux Luis « Alvise » Pérez comme simple groupement électoral pour les européennes de juin 2024, où il crée la surprise avec 3 sièges. Formellement enregistré comme parti politique le 31 janvier 2025 puis officiellement lancé comme force nationale le 12 octobre 2025 ; ne s'est pas encore présenté à des élections législatives espagnoles et ne siège donc pas au Congreso de los Diputados.",
+    electoralStatusSource: {
+      name: 'France 24 — Spanish social media star launches new far-right party',
+      url: 'https://www.france24.com/en/live-news/20251012-spanish-social-media-star-launches-new-far-right-party',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://seacabolafiesta.es',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/vamosalvise' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia / presse espagnole',
+      url: 'https://en.wikipedia.org/wiki/Se_Acab%C3%B3_La_Fiesta',
+      note: "Classifié parti de droite radicale à extrême droite par la presse et les observateurs politiques espagnols.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Euronews — Alvise Pérez, the Spanish outsider',
+        url: 'https://www.euronews.com/2024/05/29/alvise-perez-the-spanish-outsider-wanting-to-capture-discontent-in-the-european-elections',
+        note: "Alvise Pérez a promis « le plus grand plan d'expulsion de l'histoire récente de l'Espagne », ciblant les personnes étrangères ayant commis des infractions, financé par le gel de l'aide internationale espagnole. Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Congreso de los Diputados',
+        url: 'https://www.congreso.es',
+        note: "Parti sans élu au Congreso de los Diputados : aucune loi SALF promulguée à ce jour en Espagne.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections européennes 2024',
+        chamber: 'Parlement européen (liste espagnole)',
+        date: '2024-06-09',
+        seats: 3,
+        totalSeats: 61,
+        votePercent: 4.6,
+        source: {
+          name: 'Wikipedia — 2024 European Parliament election in Spain',
+          url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_Spain',
+          accessedOn: '2026-09-09',
+          note: "Percée surprise pour un groupement électoral créé quelques semaines avant le scrutin, sixième force du pays.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 61,
+      source: {
+        name: 'Wikipedia — Alvise Pérez',
+        url: 'https://en.wikipedia.org/wiki/Alvise_P%C3%A9rez',
+        accessedOn: '2026-09-09',
+        note: "Sur les 3 élus initiaux, 2 (Nora Junco et Diego Solier) ont quitté le parti en 2025 après un conflit avec Alvise Pérez pour rejoindre le groupe ECR ; Alvise Pérez lui-même siège comme non-inscrit, le groupe ECR ayant quitté celui auquel le parti était initialement rattaché.",
+      },
+    },
+    founded: 2024,
+    description:
+      "Fondé en 2024 par Luis « Alvise » Pérez, personnalité des réseaux sociaux, d'abord comme simple liste électorale pour les européennes avant de se structurer en parti politique national en 2025.",
   },
   {
     slug: 'fidesz',
@@ -1705,6 +1942,142 @@ export const parties: Party[] = [
       'Fondé le 28 juin 2016 par Kyriakos Velopoulos, ancien député de Nouvelle Démocratie et animateur de télévision, qui en est resté le président et fondateur.',
   },
   {
+    slug: 'niki-grece',
+    name: 'Νίκη (Victoire / NIKI)',
+    countryCode: 'GR',
+    positioning: 'Ultra-conservateur, orthodoxe-nationaliste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Dix députés à la Vouli (Parlement hellénique), entrés pour la première fois lors des élections de mai-juin 2023. Parti largement inconnu avant la campagne, centré sur la primauté de l'Église orthodoxe sur l'État et les thématiques de « guerre culturelle » (opposition à l'avortement, à l'immigration et au mariage homosexuel). Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
+    electoralStatusSource: {
+      name: 'Al Jazeera — Very worrying: Three far-right parties enter Greek parliament',
+      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://www.niki.gr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/NIKI_official_' },
+    ],
+    classificationSource: {
+      name: 'Al Jazeera / The PopuList',
+      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
+      note: "Classifié parti d'extrême droite par les observateurs, aux côtés d'Elliniki Lisi et de Spartiates : la Grèce est devenue en 2023 le seul pays européen avec trois partis d'extrême droite représentés simultanément au Parlement.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
+        note: "Programme axé sur l'opposition à l'immigration non-européenne dans le cadre plus large d'une « guerre culturelle » de défense de l'identité orthodoxe grecque, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Hellenic Parliament',
+        url: 'https://www.hellenicparliament.gr',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi NIKI promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives de juin 2023',
+        chamber: 'Vouli ton Ellinon',
+        date: '2023-06-25',
+        seats: 10,
+        totalSeats: 300,
+        votePercent: 3.7,
+        source: {
+          name: 'IPU Parline — Greece Hellenic Parliament June 2023 Election',
+          url: 'https://data.ipu.org/parliament/GR/GR-LC01/election/GR-LC01-E20230625/',
+          accessedOn: '2026-09-09',
+          note: "Première entrée au Parlement, un an après sa fondation.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 21,
+      europeanGroup: 'Non-inscrits',
+      source: {
+        name: 'Parlement européen — résultats des élections européennes 2024, Grèce',
+        url: 'https://results.elections.europa.eu/en/national-results/greece/2024-2029/',
+        accessedOn: '2026-09-09',
+        note: "Première entrée du parti au Parlement européen, avec l'acteur et mannequin Nikos Anadiotis comme élu.",
+      },
+    },
+    founded: 2019,
+    description:
+      "Fondé en 2019 par Dimitris Natsios, théologien orthodoxe. Parti resté marginal jusqu'à sa percée surprise aux élections législatives de 2023.",
+  },
+  {
+    slug: 'spartiates',
+    name: 'Σπαρτιάτες (Spartiates / Spartans)',
+    countryCode: 'GR',
+    positioning: 'Extrême droite, ultranationaliste',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Douze députés à la Vouli, entrés au Parlement dès leur première élection en juin 2023 — une percée largement attribuée au soutien affiché d'Ilias Kasidiaris, ancien député d'Aube dorée condamné pour appartenance à une organisation criminelle, dont le propre parti (Ethniko Komma – Ellines) avait été disqualifié par la justice grecque juste avant le scrutin. Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
+    electoralStatusSource: {
+      name: 'NBC News — Greece election far right Spartans',
+      url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://spartiates.gr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/spartiates_gr' },
+    ],
+    classificationSource: {
+      name: 'Al Jazeera / Wikipedia',
+      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
+      note: "Classifié parti d'extrême droite, présenté par les observateurs comme un successeur informel d'Aube dorée (Chrysi Avgi), parti dissous par la justice grecque en 2020 pour appartenance à une organisation criminelle.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'NBC News',
+        url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
+        note: "Programme ultranationaliste centré sur l'identité ethnique grecque, l'opposition à l'immigration extra-européenne et le rejet du multiculturalisme ; soutien électoral disproportionné dans les régions du nord de la Grèce les plus exposées à la pression migratoire.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Hellenic Parliament',
+        url: 'https://www.hellenicparliament.gr',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi Spartiates promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives de juin 2023',
+        chamber: 'Vouli ton Ellinon',
+        date: '2023-06-25',
+        seats: 12,
+        totalSeats: 300,
+        votePercent: 4.68,
+        source: {
+          name: 'NBC News',
+          url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
+          accessedOn: '2026-09-09',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 0,
+      totalCountryMeps: 21,
+      source: {
+        name: 'Wikipedia — 2024 European Parliament election in Greece',
+        url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_Greece',
+        accessedOn: '2026-09-09',
+        note: "Le parti a été exclu des élections européennes de 2024 par décision de la Cour suprême grecque (Aréopage), en raison de ses liens avec Aube dorée, organisation jugée criminelle — décision soutenue par l'ensemble des grands partis grecs (Nouvelle Démocratie, PASOK, Syriza, Nouvelle Gauche).",
+      },
+    },
+    founded: 2023,
+    description:
+      "Fondé en 2023 en vue des élections législatives par d'anciens cadres et sympathisants d'Aube dorée, dans le contexte de l'interdiction judiciaire d'un parti concurrent porté par Ilias Kasidiaris.",
+  },
+  {
     slug: 'aur',
     name: 'Alianța pentru Unirea Românilor (AUR)',
     countryCode: 'RO',
@@ -1839,6 +2212,73 @@ export const parties: Party[] = [
     founded: 2021,
     description:
       "Fondé en 2021 par Diana Șoșoacă après son exclusion du parti AUR, sur une ligne souverainiste et anti-européenne radicale, marquée par des controverses régulières liées à des propos jugés antisémites et à un comportement perturbateur au Parlement européen.",
+  },
+  {
+    slug: 'sns',
+    name: 'Slovenská národná strana (SNS)',
+    countryCode: 'SK',
+    positioning: 'National-conservateur, ultra-nationaliste, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Partenaire de la coalition gouvernementale de Robert Fico (SMER-SD, Hlas-SD, SNS) depuis le 25 octobre 2023. Le président du parti, Andrej Danko, ancien président du Conseil national, siège comme ministre au sein du gouvernement Fico IV.",
+    electoralStatusSource: {
+      name: 'Wikipedia — Fico\'s Fourth Cabinet',
+      url: 'https://en.wikipedia.org/wiki/Fico%27s_Fourth_Cabinet',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://www.sns.sk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/SNSoficialne' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti de droite radicale, ultra-nationaliste. Doyen des partis nationalistes slovaques (fondé en 1990), déjà partenaire de coalition à plusieurs reprises depuis les années 1990.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'SNS.sk — campagne 2023',
+        url: 'https://www.sns.sk/kto-voli-progresivne-slovensko-ten-hlasuje-za-migrantov-na-slovensku/',
+        note: "Campagne 2023 centrée sur le refus de l'immigration illégale, résumée par le slogan « voter Slovaquie progressiste, c'est voter pour des migrants en Slovaquie ». Positionnement anti-immigration ferme, sans politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'STVR — Slovensko je pripravené zareagovať na akúkoľvek vlnu nelegálnej migrácie',
+        url: 'https://spravy.stvr.sk/2023/10/slovensko-nasadi-na-zelenej-hranici-s-madarskom-masivnu-silu-avizoval-to-premier-a-minister-vnutra/',
+        note: "Comme partenaire de la coalition gouvernementale, a soutenu le déploiement de jusqu'à 500 militaires en patrouilles conjointes avec la police à la frontière hongroise face à la migration de transit en 2023, ainsi que la suppression de l'attestation de séjour temporaire pour les migrants en 2024.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2023',
+        chamber: 'Národná rada (Conseil national)',
+        date: '2023-09-30',
+        seats: 10,
+        totalSeats: 150,
+        votePercent: 5.6,
+        source: {
+          name: 'IPU Parline — Slovakia National Council September 2023 Election',
+          url: 'https://data.ipu.org/parliament/SK/SK-LC01/election/SK-LC01-E20230930/',
+          accessedOn: '2026-09-09',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 0,
+      totalCountryMeps: 15,
+      source: {
+        name: 'The Slovak Spectator — 2024 Slovak European elections: Official results',
+        url: 'https://spectator.sme.sk/politics-and-society/c/2024-slovakia-european-elections-official-results',
+        accessedOn: '2026-09-09',
+        note: "Échec total aux élections européennes de juin 2024 : sous le seuil de représentation, le parti perd son siège au Parlement européen.",
+      },
+    },
+    founded: 1990,
+    description:
+      "Fondé en 1990, plus ancien parti nationaliste slovaque encore actif. A participé à plusieurs gouvernements de coalition depuis les années 1990, dont deux précédents gouvernements Fico. Dirigé par Andrej Danko depuis 2012.",
   },
   {
     slug: 'republika-sk',
