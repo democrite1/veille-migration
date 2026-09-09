@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { getSupabaseClient } from './supabase';
 import type {
   Party,
@@ -20,7 +21,36 @@ function toSource(row: any): Source {
   };
 }
 
-export async function getParties(countryCode?: string): Promise<Party[]> {
+/**
+ * Fetches rows from `sources` by id, in batches. A single `.in('id', ids)`
+ * call with hundreds of UUIDs produces a query string tens of kilobytes long,
+ * which intermittently triggers 500s somewhere along the Vercel/Supabase
+ * request path (URL-length limits on an intermediary). Chunking keeps every
+ * individual request small regardless of how many parties/sources exist.
+ */
+async function fetchSourcesByIds(supabase: ReturnType<typeof getSupabaseClient>, ids: string[]) {
+  const chunkSize = 80;
+  const chunks: string[][] = [];
+  for (let i = 0; i < ids.length; i += chunkSize) chunks.push(ids.slice(i, i + chunkSize));
+
+  const results = await Promise.all(
+    chunks.map((chunk) => supabase.from('sources').select('*').in('id', chunk)),
+  );
+  for (const r of results) {
+    if (r.error) throw new Error(`fetchSourcesByIds: ${r.error.message}`);
+  }
+  return results.flatMap((r) => r.data ?? []);
+}
+
+/**
+ * Cached per request/build with React's `cache()`: `getPartyBySlug` (called
+ * once per static party page) and `generateStaticParams` both call this with
+ * the same (no) arguments, so without dedup a 43-party build fired off ~44
+ * redundant full fetches concurrently — wasteful, and the likely source of
+ * an intermittent "Cannot read properties of undefined" crash when two of
+ * those concurrent fetches interleaved.
+ */
+export const getParties = cache(async function getParties(countryCode?: string): Promise<Party[]> {
   const supabase = getSupabaseClient();
 
   let query = supabase.from('parties').select('*').order('name');
@@ -64,10 +94,9 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
       ].filter(Boolean),
     ),
   );
-  const { data: sourcesAll, error: srcErr } = await supabase.from('sources').select('*').in('id', sourceIds);
-  if (srcErr) throw new Error(`getParties sources: ${srcErr.message}`);
+  const sourcesAll = await fetchSourcesByIds(supabase, sourceIds);
 
-  const sourceMap = new Map((sourcesAll ?? []).map((s) => [s.id, s]));
+  const sourceMap = new Map(sourcesAll.map((s) => [s.id, s]));
 
   return partyRows.map((row): Party => {
     const intentionRow = classifications?.find((c) => c.party_id === row.id && c.axis === 'intention');
@@ -139,13 +168,9 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
       description: row.description,
     };
   });
-}
+});
 
 export async function getPartyBySlug(slug: string): Promise<Party | undefined> {
-  const supabase = getSupabaseClient();
-  const { data, error } = await supabase.from('parties').select('id').eq('slug', slug).maybeSingle();
-  if (error) throw new Error(`getPartyBySlug: ${error.message}`);
-  if (!data) return undefined;
   const all = await getParties();
   return all.find((p) => p.slug === slug);
 }
@@ -155,9 +180,8 @@ export async function getElections(): Promise<Election[]> {
   const { data: rows, error } = await supabase.from('elections').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getElections: ${error.message}`);
   const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const { data: sources, error: srcErr } = await supabase.from('sources').select('*').in('id', sourceIds);
-  if (srcErr) throw new Error(`getElections sources: ${srcErr.message}`);
-  const sourceMap = new Map((sources ?? []).map((s) => [s.id, s]));
+  const sources = await fetchSourcesByIds(supabase, sourceIds);
+  const sourceMap = new Map(sources.map((s) => [s.id, s]));
 
   return (rows ?? []).map(
     (row): Election => ({
@@ -181,9 +205,8 @@ export async function getLegislation(): Promise<Legislation[]> {
   const { data: rows, error } = await supabase.from('legislation').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getLegislation: ${error.message}`);
   const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const { data: sources, error: srcErr } = await supabase.from('sources').select('*').in('id', sourceIds);
-  if (srcErr) throw new Error(`getLegislation sources: ${srcErr.message}`);
-  const sourceMap = new Map((sources ?? []).map((s) => [s.id, s]));
+  const sources = await fetchSourcesByIds(supabase, sourceIds);
+  const sourceMap = new Map(sources.map((s) => [s.id, s]));
 
   return (rows ?? []).map(
     (row): Legislation => ({
@@ -203,9 +226,8 @@ export async function getNews(): Promise<NewsItem[]> {
   const { data: rows, error } = await supabase.from('news_items').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getNews: ${error.message}`);
   const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const { data: sources, error: srcErr } = await supabase.from('sources').select('*').in('id', sourceIds);
-  if (srcErr) throw new Error(`getNews sources: ${srcErr.message}`);
-  const sourceMap = new Map((sources ?? []).map((s) => [s.id, s]));
+  const sources = await fetchSourcesByIds(supabase, sourceIds);
+  const sourceMap = new Map(sources.map((s) => [s.id, s]));
 
   return (rows ?? []).map(
     (row): NewsItem => ({
