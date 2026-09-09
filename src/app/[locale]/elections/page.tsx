@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getElections } from '@/lib/queries';
 import SourceCite from '@/components/SourceCite';
+import { countryFlag } from '@/lib/flags';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -64,7 +65,10 @@ function ElectionsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getE
         {sorted.map((e) => (
           <li key={e.id} className="card space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-serif text-lg font-semibold">{e.scopeName}</h2>
+              <h2 className="font-serif text-lg font-semibold">
+                <span className="mr-2" aria-hidden="true">{countryFlag(e.countryCode)}</span>
+                {e.scopeName}
+              </h2>
               <div className="flex gap-2">
                 <span className="badge badge-programme">{COUNTRY_LABELS[e.countryCode] ?? e.countryCode}</span>
                 <span className="badge badge-programme">{LEVEL_LABELS[e.level]}</span>
@@ -73,7 +77,10 @@ function ElectionsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getE
                 </span>
               </div>
             </div>
-            <p className="text-sm text-muted">{e.date} — mandat : {e.mandateDuration}</p>
+            <p className="text-sm text-muted">
+              {e.date} — mandat : {e.mandateDuration}
+              {e.totalSeats ? ` — ${e.totalSeats} sièges à pourvoir` : ''}
+            </p>
             <p className="text-sm"><span className="font-medium">Pouvoirs : </span>{e.powers}</p>
             {e.result ? (
               <p className="text-sm"><span className="font-medium">Résultat : </span>{e.result}</p>

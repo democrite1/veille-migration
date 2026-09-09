@@ -66,6 +66,33 @@ export interface SocialAccount {
   url: string;
 }
 
+/** One past result for a given assembly/chamber — the building block of a party's electoral history. */
+export interface ElectoralResult {
+  label: string; // e.g. "Élections législatives 2024"
+  chamber?: string; // e.g. "Assemblée nationale", "Bundestag", "Sénat"
+  date: string; // ISO date
+  seats: number;
+  totalSeats: number; // size of the assembly, so dominance is legible at a glance
+  votePercent?: number;
+  source: Source;
+}
+
+/** European Parliament representation, tracked separately from national assemblies. */
+export interface EuropeanRepresentation {
+  meps: number;
+  totalCountryMeps?: number; // that country's total MEP allocation, for context
+  europeanGroup?: string; // e.g. "Identité et Démocratie", "ECR", "Patriotes pour l'Europe"
+  source: Source;
+}
+
+/** Local/regional footprint: mayors, regional councillors, etc. — "le maillage national". */
+export interface LocalImplantation {
+  summary: string;
+  mayors?: number;
+  regionalCouncillors?: number;
+  source: Source;
+}
+
 export interface Party {
   slug: string;
   name: string;
@@ -81,6 +108,10 @@ export interface Party {
   intention: Classification;
   actionStatus: Classification;
   actionStatusHistory?: StatusHistoryEntry[];
+  /** Past results, most recent first — gives the seats-out-of-total context a single "X sièges" figure can't. */
+  electoralHistory?: ElectoralResult[];
+  europeanRepresentation?: EuropeanRepresentation;
+  localImplantation?: LocalImplantation;
   founded?: number;
   description: string;
 }
@@ -98,6 +129,8 @@ export interface Election {
   date: string; // ISO date
   status: ElectionStatus;
   result?: string;
+  /** Size of the assembly/chamber being elected, so "X sièges" can be read as "X sur Y". */
+  totalSeats?: number;
   source: Source;
 }
 

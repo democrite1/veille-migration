@@ -6,6 +6,7 @@ import {
   ElectoralStatusBadge,
   IntentionBadge,
 } from '@/components/ClassificationBadges';
+import { countryFlag } from '@/lib/flags';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -81,7 +82,7 @@ function PartiesPageInner({
             href={{ pathname: '/partis', query: { country: c } }}
             className={`badge ${country === c ? 'badge-mesures' : 'badge-programme'}`}
           >
-            {COUNTRY_LABELS[c] ?? c}
+            <span aria-hidden="true">{countryFlag(c)}</span> {COUNTRY_LABELS[c] ?? c}
           </Link>
         ))}
       </nav>
@@ -95,6 +96,7 @@ function PartiesPageInner({
                   {party.name}
                 </Link>
                 <p className="text-xs text-muted">
+                  <span aria-hidden="true">{countryFlag(party.countryCode)}</span>{' '}
                   {COUNTRY_LABELS[party.countryCode] ?? party.countryCode} — {party.positioning}
                 </p>
               </div>

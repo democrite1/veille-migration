@@ -104,6 +104,8 @@ async function main() {
   for (const party of parties) {
     const electoralStatusSourceId = await insertSource(party.electoralStatusSource);
     const classificationSourceId = await insertSource(party.classificationSource);
+    const mepsSourceId = party.europeanRepresentation ? await insertSource(party.europeanRepresentation.source) : null;
+    const localSourceId = party.localImplantation ? await insertSource(party.localImplantation.source) : null;
 
     const { data: partyRow, error: partyError } = await supabase
       .from('parties')
@@ -120,6 +122,14 @@ async function main() {
           classification_source_id: classificationSourceId,
           founded: party.founded ?? null,
           description: party.description,
+          meps_count: party.europeanRepresentation?.meps ?? null,
+          meps_total_country: party.europeanRepresentation?.totalCountryMeps ?? null,
+          meps_group: party.europeanRepresentation?.europeanGroup ?? null,
+          meps_source_id: mepsSourceId,
+          local_implantation_summary: party.localImplantation?.summary ?? null,
+          local_implantation_mayors: party.localImplantation?.mayors ?? null,
+          local_implantation_regional_councillors: party.localImplantation?.regionalCouncillors ?? null,
+          local_implantation_source_id: localSourceId,
         },
         { onConflict: 'slug' },
       )
@@ -169,6 +179,24 @@ async function main() {
       }
     }
 
+    if (party.electoralHistory) {
+      await supabase.from('party_electoral_history').delete().eq('party_id', partyId);
+      for (const result of party.electoralHistory) {
+        const sourceId = await insertSource(result.source);
+        const { error } = await supabase.from('party_electoral_history').insert({
+          party_id: partyId,
+          label: result.label,
+          chamber: result.chamber ?? null,
+          date: result.date,
+          seats: result.seats,
+          total_seats: result.totalSeats,
+          vote_percent: result.votePercent ?? null,
+          source_id: sourceId,
+        });
+        if (error) throw new Error(`insert electoral history for ${party.slug}: ${error.message}`);
+      }
+    }
+
     console.log(`  ok: ${party.name}`);
   }
 
@@ -185,6 +213,7 @@ async function main() {
       date: e.date,
       status: e.status,
       result: e.result ?? null,
+      total_seats: e.totalSeats ?? null,
       source_id: sourceId,
     });
     if (error) throw new Error(`insert election ${e.id}: ${error.message}`);

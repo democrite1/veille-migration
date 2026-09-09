@@ -7,6 +7,7 @@ import type {
   Source,
   Classification,
   StatusHistoryEntry,
+  ElectoralResult,
   CountryCode,
 } from '@/data/types';
 
@@ -30,15 +31,21 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
 
   const partyIds = partyRows.map((p) => p.id);
 
-  const [{ data: classifications, error: classErr }, { data: socials, error: socErr }, { data: history, error: histErr }] =
-    await Promise.all([
-      supabase.from('party_classifications').select('*').in('party_id', partyIds),
-      supabase.from('party_social_accounts').select('*').in('party_id', partyIds),
-      supabase.from('party_status_history').select('*').in('party_id', partyIds),
-    ]);
+  const [
+    { data: classifications, error: classErr },
+    { data: socials, error: socErr },
+    { data: history, error: histErr },
+    { data: electoralHistory, error: ehErr },
+  ] = await Promise.all([
+    supabase.from('party_classifications').select('*').in('party_id', partyIds),
+    supabase.from('party_social_accounts').select('*').in('party_id', partyIds),
+    supabase.from('party_status_history').select('*').in('party_id', partyIds),
+    supabase.from('party_electoral_history').select('*').in('party_id', partyIds).order('date', { ascending: false }),
+  ]);
   if (classErr) throw new Error(`getParties classifications: ${classErr.message}`);
   if (socErr) throw new Error(`getParties socials: ${socErr.message}`);
   if (histErr) throw new Error(`getParties history: ${histErr.message}`);
+  if (ehErr) throw new Error(`getParties electoral history: ${ehErr.message}`);
 
   // Fetch only the sources actually referenced (never the whole table — it
   // grows with every seed run and PostgREST silently caps unbounded
@@ -49,8 +56,11 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
       [
         ...partyRows.map((p) => p.electoral_status_source_id),
         ...partyRows.map((p) => p.classification_source_id),
+        ...partyRows.map((p) => p.meps_source_id),
+        ...partyRows.map((p) => p.local_implantation_source_id),
         ...(classifications ?? []).map((c) => c.source_id),
         ...(history ?? []).map((h) => h.source_id),
+        ...(electoralHistory ?? []).map((e) => e.source_id),
       ].filter(Boolean),
     ),
   );
@@ -64,6 +74,7 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
     const actionRow = classifications?.find((c) => c.party_id === row.id && c.axis === 'action_status');
     const partySocials = (socials ?? []).filter((s) => s.party_id === row.id);
     const partyHistory = (history ?? []).filter((h) => h.party_id === row.id);
+    const partyElectoralHistory = (electoralHistory ?? []).filter((e) => e.party_id === row.id);
 
     const buildClassification = (r: any): Classification => ({
       tag: r.tag,
@@ -93,6 +104,36 @@ export async function getParties(countryCode?: string): Promise<Party[]> {
               source: h.source_id ? toSource(sourceMap.get(h.source_id)) : undefined,
             }),
           )
+        : undefined,
+      electoralHistory: partyElectoralHistory.length
+        ? partyElectoralHistory.map(
+            (e): ElectoralResult => ({
+              label: e.label,
+              chamber: e.chamber ?? undefined,
+              date: e.date,
+              seats: e.seats,
+              totalSeats: e.total_seats,
+              votePercent: e.vote_percent ?? undefined,
+              source: toSource(sourceMap.get(e.source_id)),
+            }),
+          )
+        : undefined,
+      europeanRepresentation:
+        row.meps_count != null
+          ? {
+              meps: row.meps_count,
+              totalCountryMeps: row.meps_total_country ?? undefined,
+              europeanGroup: row.meps_group ?? undefined,
+              source: toSource(sourceMap.get(row.meps_source_id)),
+            }
+          : undefined,
+      localImplantation: row.local_implantation_summary
+        ? {
+            summary: row.local_implantation_summary,
+            mayors: row.local_implantation_mayors ?? undefined,
+            regionalCouncillors: row.local_implantation_regional_councillors ?? undefined,
+            source: toSource(sourceMap.get(row.local_implantation_source_id)),
+          }
         : undefined,
       founded: row.founded ?? undefined,
       description: row.description,
@@ -129,6 +170,7 @@ export async function getElections(): Promise<Election[]> {
       date: row.date,
       status: row.status,
       result: row.result ?? undefined,
+      totalSeats: row.total_seats ?? undefined,
       source: toSource(sourceMap.get(row.source_id)),
     }),
   );
