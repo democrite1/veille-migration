@@ -1679,13 +1679,14 @@ export const parties: Party[] = [
       },
     ],
     europeanRepresentation: {
-      meps: 6,
+      meps: 5,
       totalCountryMeps: 53,
       europeanGroup: "Éclatés entre plusieurs groupes : Europe des nations souveraines (ESN), Patriotes pour l'Europe (PfE) et non-inscrits, reflet des divisions internes du mouvement",
       source: {
         name: 'Parlement européen — résultats des élections européennes 2024, Pologne',
         url: 'https://results.elections.europa.eu/en/national-results/poland/2024-2029/',
         accessedOn: '2026-09-09',
+        note: "6 élus lors du scrutin de 2024 ; Grzegorz Braun, exclu de la Konfederacja début 2025, siège désormais séparément (voir fiche Konfederacja Korony Polskiej).",
       },
     },
     localImplantation: {
@@ -1700,6 +1701,59 @@ export const parties: Party[] = [
     founded: 2018,
     description:
       "Coalition électorale fondée en 2018, transformée en parti en 2023, réunissant des courants nationalistes (Ruch Narodowy) et libertariens (Nowa Nadzieja). Coprésidée par Krzysztof Bosak et Sławomir Mentzen.",
+  },
+  {
+    slug: 'konfederacja-korony-polskiej',
+    name: 'Konfederacja Korony Polskiej (KKP)',
+    countryCode: 'PL',
+    positioning: 'National-catholique, ultranationaliste, extrême droite',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Trois députés à la Diète depuis juin 2025 (dont un ancien député du PiS ayant fait défection en juin 2025), suffisant pour former un groupe parlementaire (koło) autonome — sans avoir remporté de siège lors d'une élection dédiée. Grzegorz Braun, président du parti, a terminé quatrième à l'élection présidentielle de mai 2025 avec 6,3% des voix, avant d'être exclu de la Konfederacja pour avoir maintenu sa candidature contre la ligne officielle du mouvement.",
+    electoralStatusSource: {
+      name: 'Notes from Poland — Polish far-right leader Braun again stripped of legal immunity',
+      url: 'https://notesfrompoland.com/2025/11/13/polish-far-right-leader-braun-again-stripped-of-legal-immunity-by-european-parliament/',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://konfederacjakoronypolskiej.pl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/GrzegorzBraun_' },
+    ],
+    classificationSource: {
+      name: 'Balkan Insight / Wikipedia',
+      url: 'https://balkaninsight.com/2026/07/01/impossible-to-discredit-the-far-right-theatre-of-polands-grzegorz-braun/rd/',
+      note: "Classifié parti d'extrême droite, national-catholique et ultranationaliste. Son président Grzegorz Braun a fait l'objet de cinq levées d'immunité parlementaire européenne pour des faits liés à des actions et propos antisémites, anti-ukrainiens et anti-LGBT, dont l'extinction en direct de bougies de Hanouca au Parlement polonais en décembre 2023.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Wikipedia — Grzegorz Braun',
+        url: 'https://en.wikipedia.org/wiki/Grzegorz_Braun',
+        note: "Programme prônant la sortie de la Pologne de l'Union européenne et la fin de l'immigration en provenance d'Ukraine. Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Sejm Rzeczypospolitej Polskiej',
+        url: 'https://www.sejm.gov.pl',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi KKP promulguée à ce jour.",
+      },
+    },
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 53,
+      europeanGroup: 'Non-inscrit',
+      source: {
+        name: 'Wikipedia — Grzegorz Braun',
+        url: 'https://en.wikipedia.org/wiki/Grzegorz_Braun',
+        accessedOn: '2026-09-09',
+        note: "Grzegorz Braun a été élu député européen en 2024 sur la liste Konfederacja, avant sa rupture avec le parti début 2025. Aucun des trois groupes de droite du Parlement européen n'a accepté de l'accueillir : il y siège comme non-inscrit.",
+      },
+    },
+    founded: 2019,
+    description:
+      "Fondé en 2019 par Grzegorz Braun, réalisateur et homme politique, sur une ligne national-catholique et ultranationaliste. D'abord allié électoral de la Konfederacja, dont il a rompu début 2025.",
   },
   {
     slug: 'fremskrittspartiet',
