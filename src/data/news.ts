@@ -95,4 +95,49 @@ export const news: NewsItem[] = [
       accessedOn: '2026-09-09',
     },
   },
+  {
+    id: 'afd-saxe-anhalt-record',
+    title: "Allemagne : l'AfD remporte largement l'élection régionale de Saxe-Anhalt et prend une avance inédite dans les sondages nationaux",
+    countries: ['DE'],
+    date: '2026-09-06',
+    summary:
+      "L'AfD arrive en tête de l'élection régionale de Saxe-Anhalt du 6 septembre 2026 avec 44,4% des voix, contre 18,3% pour les conservateurs du chancelier Friedrich Merz (CDU/CSU) — un parti d'extrême droite au bord du pouvoir régional pour la première fois depuis la Seconde Guerre mondiale. Ce résultat confirme une tendance nationale : plusieurs instituts de sondage (dont INSA) placent désormais l'AfD en tête des intentions de vote au niveau fédéral avec environ 28% des voix, un écart inédit avec la CDU/CSU (20-21%), les instituts anticipant que le parti pourrait arriver en tête des prochaines élections fédérales prévues en 2029.",
+    legalStatus:
+      "Résultat électoral légal et définitif ; la formation d'un gouvernement régional en Saxe-Anhalt reste bloquée par le refus de tous les autres partis de gouverner avec l'AfD (« Brandmauer »), malgré son score.",
+    source: {
+      name: 'CNBC — Germany\'s far-right AfD seeks landmark state victory',
+      url: 'https://www.cnbc.com/2026/09/06/germanys-far-right-afd-seeks-landmark-state-victory.html',
+      accessedOn: '2026-09-09',
+    },
+  },
+  {
+    id: 'suisse-referendum-10-millions',
+    title: "Suisse : le peuple rejette de justesse l'initiative de l'UDC plafonnant la population à 10 millions d'habitants",
+    countries: ['CH'],
+    date: '2026-06-14',
+    summary:
+      "Portée par l'UDC (SVP) sous le nom « Stop à la surpopulation ! (Initiative pour la durabilité) », l'initiative populaire proposait d'inscrire dans la Constitution suisse l'obligation de ne pas dépasser 10 millions de résidents permanents avant 2050 — la population du pays étant passée de 7,3 millions en 2002 (date de l'accord de libre circulation avec l'UE) à plus de 9 millions en 2025. Son adoption aurait potentiellement contraint le gouvernement à dénoncer cet accord. Soumise au vote le 14 juin 2026 dans le cadre du système de démocratie directe suisse, l'initiative a été rejetée avec 55% de « non » contre 45% de « oui », le clivage villes/campagnes et linguistique étant très marqué : le « oui » l'a emporté dans les zones rurales alémaniques (jusqu'à 65,9% dans le canton d'Appenzell Rhodes-Intérieures), le « non » dominant dans les villes romandes.",
+    legalStatus:
+      "Initiative rejetée par le peuple suisse le 14 juin 2026 ; sans suite constitutionnelle. L'accord de libre circulation UE-Suisse reste inchangé.",
+    source: {
+      name: 'SWI swissinfo.ch — Swiss voters reject proposal to cap population at ten million',
+      url: 'https://www.swissinfo.ch/eng/votes/swiss-voters-reject-proposal-to-cap-population-at-ten-million/91548146',
+      accessedOn: '2026-09-09',
+    },
+  },
+  {
+    id: 'remigration-summit-portugal',
+    title: '« Remigration Summit » : 500 militants identitaires venus d\'Europe et d\'Amérique du Nord se réunissent au Portugal',
+    countries: ['PT'],
+    date: '2026-05-30',
+    summary:
+      "Le 30 mai 2026, l'activiste identitaire autrichien Martin Sellner a organisé à Figueira da Foz (Portugal) la deuxième édition du « Remigration Summit », rassemblant environ 500 à 600 participants venus de toute l'Europe ainsi que des États-Unis et du Canada — militants de partis d'extrême droite, figures du mouvement identitaire et sympathisants du concept de « remigration ». La présence remarquée de Gregory Bovino, ancien haut responsable de la patrouille frontalière américaine (US Border Patrol) sous l'administration Trump, a suscité une controverse particulière aux États-Unis, où plusieurs médias ont interrogé la nature de ses liens avec le mouvement identitaire européen.",
+    legalStatus:
+      "Événement privé tenu légalement au Portugal ; aucune procédure judiciaire connue à son encontre à ce jour, contrairement à la réunion de Potsdam de novembre 2023 qui avait suscité une intense controverse politique en Allemagne.",
+    source: {
+      name: 'NPR — What was Gregory Bovino doing at a \'remigration\' conference in Portugal?',
+      url: 'https://www.npr.org/2026/06/05/nx-s1-5844714/gregory-bovino-attended-remigration-conference-2026',
+      accessedOn: '2026-09-09',
+    },
+  },
 ];
