@@ -412,6 +412,83 @@ export const parties: Party[] = [
       "Fondé en 2012 par Giorgia Meloni et d'autres dissidents du Peuple de la Liberté, dans la continuité de l'Alleanza Nazionale et, plus loin, du MSI néofasciste. Premier parti italien depuis les élections de septembre 2022.",
   },
   {
+    slug: 'lega',
+    name: 'Lega',
+    countryCode: 'IT',
+    positioning: 'National-populiste, régionaliste puis nationaliste, droite radicale',
+    electoralStatus: 'pouvoir',
+    electoralStatusDetail:
+      "Partenaire de la coalition gouvernementale de Giorgia Meloni depuis octobre 2022, aux côtés de Fratelli d'Italia et Forza Italia. Matteo Salvini, président du parti, est vice-président du Conseil et ministre des Infrastructures et des Transports ; il avait auparavant été ministre de l'Intérieur de juin 2018 à septembre 2019, période de la politique dite des « ports fermés » aux navires humanitaires en Méditerranée.",
+    electoralStatusSource: {
+      name: 'Governo Italiano',
+      url: 'https://www.governo.it',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://www.leganord.org',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/LegaSalvini' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti populiste de droite radicale. Fondé en 1989 sous le nom Lega Nord, à l'origine régionaliste et autonomiste (indépendance du « Nord » de l'Italie), le parti s'est renommé Lega en 2018 sous la direction de Matteo Salvini et a recentré son discours sur l'immigration et le nationalisme italien plutôt que sur le régionalisme.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Ministero dell\'Interno / Lega.salvinipremier.it',
+        url: 'https://www.legasalvinipremier.it',
+        note: "Programme centré sur la fermeture des routes migratoires méditerranéennes et l'expulsion des personnes en situation irrégulière. Salvini a été condamné en première instance en 2024 pour avoir bloqué en 2019 le débarquement de 147 migrants du navire Open Arms (jugement annulé en appel en décembre 2024). Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Il Foglio / Ministero dell\'Interno',
+        url: 'https://www.ilfoglio.it/politica/2025/06/30/news/il-doppio-fronte-del-governo-sull-immigrazione-il-decreto-flussi-e-le-polemiche-con-la-cassazione-per-l-albania-7879409',
+        note: "Comme partenaire de la coalition gouvernementale, coporte le décret flux migratoires et le protocole Italie-Albanie en vigueur (voir fiche Fratelli d'Italia) ; en tant que ministre de l'Intérieur en 2018-2019, Salvini avait fait adopter le premier « decreto sicurezza » restreignant l'accès à la protection humanitaire, partiellement retouché par les gouvernements suivants.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections générales 2022',
+        chamber: 'Camera dei Deputati',
+        date: '2022-09-25',
+        seats: 65,
+        totalSeats: 400,
+        votePercent: 8.8,
+        source: {
+          name: 'Groupe d\'études géopolitiques — Parliamentary election in Italy, 25 September 2022',
+          url: 'https://geopolitique.eu/en/articles/parliamentary-election-in-italy-25-september-2022/',
+          accessedOn: '2026-09-09',
+          note: "Recul marqué par rapport à 2018 (-8,5 points), le parti étant supplanté par Fratelli d'Italia comme force dominante de la coalition de droite.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 8,
+      totalCountryMeps: 76,
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
+      source: {
+        name: 'eunews.it — The Patriots for Europe group springs up in the EU Parliament',
+        url: 'https://www.eunews.it/en/2024/07/08/the-patriots-for-europe-group-springs-up-in-the-eu-parliament-it-is-the-third-largest-the-league-is-also-a-part/',
+        accessedOn: '2026-09-09',
+      },
+    },
+    localImplantation: {
+      summary:
+        "Ancrage historique fort dans le nord de l'Italie (Vénétie, Lombardie), où le parti détient plusieurs présidences de région depuis les années 1990, dont la Vénétie sans interruption depuis 2010.",
+      source: {
+        name: 'Regione del Veneto',
+        url: 'https://www.regione.veneto.it',
+        accessedOn: '2026-09-09',
+      },
+    },
+    founded: 1989,
+    description:
+      "Fondé en 1989 sous le nom de Lega Nord, mouvement régionaliste et autonomiste du nord de l'Italie. Recentré sur l'immigration et le nationalisme italien à l'échelle du pays sous la direction de Matteo Salvini, qui préside le parti depuis 2013 et l'a renommé Lega en 2018.",
+  },
+  {
     slug: 'pvv',
     name: 'Partij voor de Vrijheid (PVV)',
     countryCode: 'NL',
@@ -1696,6 +1773,74 @@ export const parties: Party[] = [
       'Fondé en 2019 par George Simion et Claudiu Târziu sur une ligne unioniste (rattachement de la Moldavie), souverainiste et traditionaliste.',
   },
   {
+    slug: 'sos-romania',
+    name: 'S.O.S. România',
+    countryCode: 'RO',
+    positioning: 'National-souverainiste, ultra-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Entré au Parlement pour la première fois lors des élections du 1er décembre 2024 : 28 sièges à la Chambre des députés et 12 sièges au Sénat. Sa présidente Diana Șoșoacă, ancienne sénatrice AUR exclue du parti en 2021, s'est vu refuser sa candidature à l'élection présidentielle de 2025 par la Cour constitutionnelle en raison de positions jugées anticonstitutionnelles.",
+    electoralStatusSource: {
+      name: 'RFE/RL — The Far-Right Firebrand Too Dangerous To Run For Romania\'s Presidency',
+      url: 'https://www.rferl.org/a/sosoaca-romania-far-right-presidential-election/33209702.html',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://sosromania.eu',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/sosoacadiana' },
+    ],
+    classificationSource: {
+      name: 'European Conservatism and Populism Studies (ECPS) / Wikipedia',
+      url: 'https://www.populismstudies.org',
+      note: "Classifié parti ultra-nationaliste et populiste radical. Fondé en 2021 par Diana Șoșoacă après son exclusion d'AUR ; ligne combinant souverainisme, anti-européisme (appel au « RO-exit »), positions anti-vaccins et rhétorique régulièrement qualifiée d'antisémite par des observateurs.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'ECPS — Charting Populist Pathways',
+        url: 'https://www.populismstudies.org/charting-populist-pathways-romanian-populisms-journey-to-the-european-parliament/',
+        note: "Diana Șoșoacă s'est fait connaître par des positions anti-immigration, intégrées à un ensemble plus large de thèmes souverainistes (retrait de l'UE, opposition aux directives européennes sur l'asile et la santé). Pas de politique explicite de remigration formalisée dans un programme écrit.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Camera Deputaților',
+        url: 'https://www.cdep.ro',
+        note: "Parti d'opposition entré au Parlement fin 2024 : aucune loi S.O.S. România promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2024',
+        chamber: 'Chambre des députés',
+        date: '2024-12-01',
+        seats: 28,
+        totalSeats: 331,
+        votePercent: 7.36,
+        source: {
+          name: 'RFE/RL',
+          url: 'https://www.rferl.org/a/sosoaca-romania-far-right-presidential-election/33209702.html',
+          accessedOn: '2026-09-09',
+          note: "Entrée au Parlement pour la première fois ; a également remporté 12 sièges sur 136 au Sénat le même jour.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 33,
+      source: {
+        name: 'Balkan Insight — European Parliament Lifts Romanian Far-Right MEP\'s Immunity',
+        url: 'https://balkaninsight.com/2026/04/28/european-parliament-lifts-romanian-far-right-meps-immunity/bi/',
+        accessedOn: '2026-09-09',
+        note: "Le parti avait remporté 2 sièges lors des élections européennes de juin 2024 (5,03% des voix) ; Diana Șoșoacă, non-inscrite, en restait la seule élue en avril 2026, date à laquelle le Parlement européen a levé son immunité.",
+      },
+    },
+    founded: 2021,
+    description:
+      "Fondé en 2021 par Diana Șoșoacă après son exclusion du parti AUR, sur une ligne souverainiste et anti-européenne radicale, marquée par des controverses régulières liées à des propos jugés antisémites et à un comportement perturbateur au Parlement européen.",
+  },
+  {
     slug: 'republika-sk',
     name: 'Republika',
     countryCode: 'SK',
@@ -1845,6 +1990,88 @@ export const parties: Party[] = [
     founded: 2022,
     description:
       "Fondé en 2022 par Inger Støjberg, ancienne ministre de l'Immigration et de l'Intégration, après son exclusion du parti libéral Venstre.",
+  },
+  {
+    slug: 'dansk-folkeparti',
+    name: 'Dansk Folkeparti (DF)',
+    countryCode: 'DK',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Spectaculaire retour électoral aux élections du 24 mars 2026 : le parti quasiment triple son score (9,1% des voix, 16 sièges), après avoir frôlé l'effondrement en 2022 (5 sièges). Dans l'opposition à la coalition gouvernementale de Mette Frederiksen. Le président Morten Messerschmidt a annoncé que le parti ne rejoindrait un gouvernement que si celui-ci garantit que davantage d'immigrés extra-européens quittent le Danemark qu'il n'en arrive.",
+    electoralStatusSource: {
+      name: 'Searchlight Magazine — Danish Election: DPP comeback as far right vote is reshuffled',
+      url: 'https://searchlightmagazine.com/2026/03/danish-election-dpp-comeback-as-far-right-vote-is-reshuffled/',
+      accessedOn: '2026-09-09',
+    },
+    officialWebsite: 'https://danskfolkeparti.dk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/MrMesserschmidt' },
+    ],
+    classificationSource: {
+      name: 'The PopuList / Manifesto Project',
+      url: 'https://popu-list.org',
+      note: "Classifié parti national-conservateur de droite radicale. Fondé en 1995 par Pia Kjærsgaard, historiquement le parti anti-immigration de référence au Danemark, à l'origine de l'inflexion restrictive de la politique migratoire danoise adoptée ensuite par les gouvernements sociaux-démocrates successifs.",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Altinget — Når Dansk Folkeparti taler om remigration, henter de ordene fra kontroversiel højreradikal bevægelse',
+        url: 'https://www.altinget.dk/artikel/naar-dansk-folkeparti-taler-om-remigration-henter-de-ordene-fra-kontroversiel-hoejreradikal-bevaegelse',
+        note: "Le président Morten Messerschmidt emploie explicitement le terme « remigration » dans sa communication publique (« MASSIVE HJEMSENDELSER OG REMIGRATION NU! », publié sur X), appelant à des renvois massifs et à des incitations au départ des immigrés non-occidentaux — usage direct du terme, critère central de la méthodologie de ce site. Le média danois Altinget a documenté que cette terminologie provient du même corpus identitaire que celui popularisé par Martin Sellner.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Folketinget',
+        url: 'https://www.ft.dk',
+        note: "Parti d'opposition depuis 2026 : aucune loi Dansk Folkeparti promulguée à ce jour dans ce nouveau mandat. Le parti revendique toutefois avoir directement inspiré, lors de ses précédentes participations gouvernementales (2001-2011, puis soutien parlementaire 2015-2019), plusieurs des dispositifs restrictifs toujours en vigueur dans la loi danoise sur les étrangers.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2026',
+        chamber: 'Folketing',
+        date: '2026-03-24',
+        seats: 16,
+        totalSeats: 179,
+        votePercent: 9.1,
+        source: {
+          name: 'Searchlight Magazine',
+          url: 'https://searchlightmagazine.com/2026/03/danish-election-dpp-comeback-as-far-right-vote-is-reshuffled/',
+          accessedOn: '2026-09-09',
+          note: 'Le parti fait plus que tripler son nombre de sièges par rapport à 2022.',
+        },
+      },
+      {
+        label: 'Élections législatives 2022',
+        chamber: 'Folketing',
+        date: '2022-11-01',
+        seats: 5,
+        totalSeats: 179,
+        votePercent: 2.64,
+        source: {
+          name: 'Wikipedia — 2022 Danish general election',
+          url: 'https://en.wikipedia.org/wiki/2022_Danish_general_election',
+          accessedOn: '2026-09-09',
+          note: "Quasi-effondrement du parti, en grande partie absorbé par le Danmarksdemokraterne alors nouvellement fondé.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 15,
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
+      source: {
+        name: 'Wikipedia — Anders Vistisen',
+        url: 'https://en.wikipedia.org/wiki/Anders_Vistisen',
+        accessedOn: '2026-09-09',
+      },
+    },
+    founded: 1995,
+    description:
+      "Fondé en 1995 par Pia Kjærsgaard, dissidente du Parti du progrès. A soutenu ou participé à plusieurs gouvernements danois entre 2001 et 2019, période durant laquelle le pays a adopté l'une des politiques migratoires les plus restrictives d'Europe du Nord. Dirigé par Morten Messerschmidt depuis janvier 2022.",
   },
   {
     slug: 'one-nation',
