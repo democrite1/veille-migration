@@ -50,4 +50,49 @@ export const news: NewsItem[] = [
       accessedOn: '2026-08-18',
     },
   },
+  {
+    id: 'afrikaner-refugee-resettlement',
+    title: "Réfugiés afrikaners : Washington accueille des milliers de Blancs sud-africains, malgré le refus des organisations qui les représentent",
+    countries: ['US', 'ZA'],
+    date: '2026-05-10',
+    summary:
+      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : 59 premiers réfugiés arrivés le 12 mai 2025, puis plus de 4 500 admis entre octobre 2025 et avril 2026 — l'écrasante majorité des 6 069 réfugiés admis aux États-Unis sur cette période, dans un contexte de plafond national des admissions humanitaires ramené à son niveau le plus bas de l'histoire (7 500 places pour l'année budgétaire 2026). Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
+    legalStatus:
+      "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour. Des données de suivi début 2026 indiquent que 63% des Afrikaners admis depuis octobre 2025 restaient sans emploi six mois après leur arrivée.",
+    source: {
+      name: 'PassBlue — Cracks Are Showing in Trump\'s Special "Refugee" Program for Afrikaners',
+      url: 'https://passblue.com/2026/05/10/cracks-are-showing-in-trumps-special-refugee-program-for-afrikaners/',
+      accessedOn: '2026-09-09',
+    },
+  },
+  {
+    id: 'compact-magazine-allemagne',
+    title: "Allemagne : la justice fédérale annule l'interdiction du magazine d'extrême droite Compact, malgré ses liens documentés avec le concept de « remigration »",
+    countries: ['DE'],
+    date: '2025-06-24',
+    summary:
+      "Le magazine Compact, dirigé par Jürgen Elsässer et régulièrement décrit par les autorités allemandes comme un « porte-voix central de l'extrémisme de droite », avait été interdit avec effet immédiat le 16 juillet 2024 par la ministre fédérale de l'Intérieur Nancy Faeser, en vertu de la loi sur les associations. La Cour administrative fédérale (Bundesverwaltungsgericht) a suspendu l'interdiction dès août 2024 le temps de la procédure, avant de l'annuler définitivement le 24 juin 2025. Les juges ont reconnu que les contenus de Compact — dont la description des personnes migrantes comme citoyens de seconde zone — portaient atteinte à la dignité humaine et aux principes démocratiques, et que la ligne éditoriale du magazine rejoignait étroitement le concept de « remigration » porté par l'activiste identitaire autrichien Martin Sellner ; ils ont toutefois jugé l'interdiction totale disproportionnée au regard de la liberté d'expression et de la presse garantie par l'article 5 de la Loi fondamentale, y compris pour des publications jugées hostiles à l'ordre libéral.",
+    legalStatus:
+      "Interdiction annulée définitivement par la Cour administrative fédérale le 24 juin 2025 ; le magazine Compact peut de nouveau être publié et diffusé légalement en Allemagne.",
+    source: {
+      name: 'JURIST — Germany federal court lifts ban on right-wing Compact magazine',
+      url: 'https://www.jurist.org/news/2025/06/germany-federal-court-lifts-ban-on-right-wing-compact-magazine/',
+      accessedOn: '2026-09-09',
+    },
+  },
+  {
+    id: 'uk-hotels-asile-protestations',
+    title: "Royaume-Uni : la vague de manifestations contre les hôtels accueillant des demandeurs d'asile s'étend à tout le pays",
+    countries: ['GB'],
+    date: '2026-08-28',
+    summary:
+      "Déclenchée par une série de rassemblements à Epping (Essex) à partir du 13 juillet 2025 — après qu'un demandeur d'asile hébergé dans un hôtel local a été inculpé d'agression sexuelle sur une adolescente de 14 ans —, la contestation contre l'hébergement de demandeurs d'asile en hôtel s'est étendue à l'ensemble du Royaume-Uni. L'organisation antiraciste HOPE not hate a recensé au moins 251 rassemblements dans 77 localités entre juin et décembre 2025, en Angleterre, en Écosse, au pays de Galles et en Irlande du Nord, avec des points chauds à Londres, Epping, Norwich, Altrincham et sur la côte sud. Ces manifestations, parfois marquées par des débordements et des arrestations, ont été relayées ou organisées par divers acteurs — dont des sections locales de Reform UK, Britain First, UKIP, Homeland Party et Patriotic Alternative — sans qu'aucune organisation unique ne pilote le mouvement dans son ensemble.",
+    legalStatus:
+      "Plusieurs autorités locales ont engagé des procédures judiciaires pour faire cesser l'hébergement de demandeurs d'asile dans des hôtels contestés (dont Epping) ; une décision de justice favorable en ce sens a été obtenue puis annulée en appel par le gouvernement britannique fin août 2025. Situation juridique évolutive, hôtel par hôtel.",
+    source: {
+      name: 'HOPE not hate — State of Hate 2026: A Year of Anti-Migrant Protests',
+      url: 'https://hopenothate.org.uk/state-of-hate-2026-anti-migrant-protests/',
+      accessedOn: '2026-09-09',
+    },
+  },
 ];
