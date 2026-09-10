@@ -218,6 +218,48 @@ export const parties: Party[] = [
     },
     electoralHistory: [
       {
+        label: 'Élection régionale de Saxe-Anhalt 2026',
+        chamber: 'Landtag de Saxe-Anhalt',
+        date: '2026-09-06',
+        seats: 39,
+        totalSeats: 83,
+        votePercent: 43.8,
+        source: {
+          name: 'ZDFheute — Wahl in Sachsen-Anhalt: AfD liegt klar vor CDU',
+          url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+          accessedOn: '2026-09-10',
+          note: "Meilleur score régional de l'histoire du parti ; à 3 sièges seulement de la majorité absolue (42), mais toujours écartée du pouvoir par le refus de tout autre parti de gouverner avec elle.",
+        },
+      },
+      {
+        label: 'Élection régionale de Rhénanie-Palatinat 2026',
+        chamber: 'Landtag de Rhénanie-Palatinat',
+        date: '2026-03-22',
+        seats: 24,
+        totalSeats: 105,
+        votePercent: 19.5,
+        source: {
+          name: 'Landeswahlleiter Rheinland-Pfalz',
+          url: 'https://www.wahlen.rlp.de/nachrichten/nachichtendetailseite/endgueltiges-ergebnis-der-landtagswahl-2026-steht-fest',
+          accessedOn: '2026-09-10',
+          note: "Meilleur résultat du parti dans un Land d'Allemagne de l'Ouest à ce jour.",
+        },
+      },
+      {
+        label: 'Élection régionale du Bade-Wurtemberg 2026',
+        chamber: 'Landtag du Bade-Wurtemberg',
+        date: '2026-03-08',
+        seats: 35,
+        totalSeats: 157,
+        votePercent: 18.8,
+        source: {
+          name: 'Statistisches Landesamt Baden-Württemberg',
+          url: 'https://www.statistik-bw.de/presse/pressemitteilungen/pressemitteilung/vorlaeufige-ergebnisse-der-landtagswahl-2026-in-baden-wuerttemberg/',
+          accessedOn: '2026-09-10',
+          note: "Quasi-doublement du score de 2021 (+9,1 points), troisième place derrière les Verts et la CDU.",
+        },
+      },
+      {
         label: 'Élections fédérales 2025',
         chamber: 'Bundestag',
         date: '2025-02-23',
@@ -257,7 +299,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Premier Landrat (préfet de district) du parti obtenu à Sonneberg (Thuringe) en juin 2023, puis premier maire à Raguhn-Jeßnitz (Saxe-Anhalt) la même année. Implantation croissante dans les Länder de l'ex-RDA, confirmée par une large victoire régionale en Saxe-Anhalt en 2026.",
+        "Premier Landrat (préfet de district) du parti obtenu à Sonneberg (Thuringe) en juin 2023, puis premier maire à Raguhn-Jeßnitz (Saxe-Anhalt) la même année. Percée confirmée à l'Ouest lors des élections municipales (Kommunalwahlen) de mars 2026 : 12,2% en Bavière (contre 4,5% en 2020) et 14,8% en Hesse (contre 6,8% en 2021), en plus des victoires régionales en Saxe-Anhalt, Rhénanie-Palatinat et Bade-Wurtemberg.",
       source: {
         name: 'ZDFheute / Tagesspiegel',
         url: 'https://www.zdfheute.de/politik/deutschland/sesselmann-afd-landrat-thueringen-sonneberg-100.html',
@@ -1132,7 +1174,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "33 députés sur 350 au Congreso de los Diputados, quatrième force politique du pays, dans l'opposition depuis sa création. A rompu ses pactes de gouvernement régionaux avec le Parti populaire (PP) en juillet 2024 sur la question de l'accueil des mineurs étrangers non accompagnés.",
+      "33 députés sur 350 au Congreso de los Diputados, quatrième force politique du pays, dans l'opposition depuis sa création au niveau national. A rompu ses pactes de gouvernement régionaux avec le Parti populaire (PP) en juillet 2024 sur la question de l'accueil des mineurs étrangers non accompagnés, mais a depuis progressé dans quatre scrutins régionaux successifs (Estrémadure, Aragon, Castille-et-León, Andalousie, décembre 2025 - mai 2026), redevenant l'arbitre de plusieurs gouvernements régionaux du PP.",
     electoralStatusSource: {
       name: 'Congreso de los Diputados',
       url: 'https://en.wikipedia.org/wiki/Vox_(political_party)',
@@ -1189,6 +1231,60 @@ export const parties: Party[] = [
           url: 'https://www.interior.gob.es',
           accessedOn: '2026-09-09',
           note: "Meilleur résultat historique du parti, avant un recul à 33 sièges en 2023.",
+        },
+      },
+      {
+        label: 'Élections régionales d\'Andalousie 2026',
+        chamber: 'Parlamento de Andalucía',
+        date: '2026-05-17',
+        seats: 15,
+        totalSeats: 109,
+        votePercent: 13.8,
+        source: {
+          name: 'Wikipedia — 2026 Andalusian regional election',
+          url: 'https://en.wikipedia.org/wiki/2026_Andalusian_regional_election',
+          accessedOn: '2026-09-10',
+          note: "Le PP conserve la présidence de la région (Juanma Moreno) mais perd sa majorité absolue et dépend désormais de Vox pour gouverner.",
+        },
+      },
+      {
+        label: 'Élections régionales de Castille-et-León 2026',
+        chamber: 'Cortes de Castilla y León',
+        date: '2026-03-15',
+        seats: 14,
+        totalSeats: 82,
+        votePercent: 18.89,
+        source: {
+          name: 'El Español',
+          url: 'https://www.elespanol.com/espana/20260316/resultados-elecciones-castilla-leon-directo-ultima-hora-escanos-conseguidos-pp-psoe-vox/1003744170785_10.html',
+          accessedOn: '2026-09-10',
+        },
+      },
+      {
+        label: 'Élections régionales d\'Aragon 2026',
+        chamber: 'Cortes de Aragón',
+        date: '2026-02-08',
+        seats: 14,
+        totalSeats: 67,
+        votePercent: 17.85,
+        source: {
+          name: 'Wikipedia — 2026 Aragonese regional election',
+          url: 'https://en.wikipedia.org/wiki/2026_Aragonese_regional_election',
+          accessedOn: '2026-09-10',
+        },
+      },
+      {
+        label: 'Élections régionales d\'Estrémadure 2025',
+        chamber: 'Asamblea de Extremadura',
+        date: '2025-12-21',
+        seats: 11,
+        totalSeats: 65,
+        votePercent: 16.9,
+        source: {
+          name: 'Wikipedia — 2025 Extremaduran regional election',
+          url: 'https://en.wikipedia.org/wiki/2025_Extremaduran_regional_election',
+          accessedOn: '2026-09-10',
+          note: "Gain de 6 sièges, ouvrant la série de scrutins régionaux qui ont marqué le début de l'année 2026 en Espagne.",
         },
       },
     ],
@@ -2824,11 +2920,11 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. Parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
+      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. Percée spectaculaire en 2026 : victoire du parti à l'élection partielle fédérale de Farrer (9 mai) avec David Farley, premier député One Nation directement élu à la Chambre des représentants de son histoire (les précédents élus y étaient arrivés par défection) ; deuxième place à l'élection partielle de Nepean (Victoria, 2 mai) ; et surtout un « séisme électoral » en Australie-Méridionale (21 mars), où le parti dépasse les Libéraux pour la première fois de l'histoire de cet État. Reste un parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
     electoralStatusSource: {
-      name: 'The Daily Aus',
-      url: 'https://www.thedailyaus.com.au/politics/one-nation-policies-22-06-2026',
-      accessedOn: '2026-09-07',
+      name: 'The Conversation — Labor easily wins South Australian election with One Nation beating Liberals into second',
+      url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
+      accessedOn: '2026-09-10',
     },
     officialWebsite: 'https://www.onenation.org.au',
     socialAccounts: [
@@ -2856,6 +2952,34 @@ export const parties: Party[] = [
       },
     },
     electoralHistory: [
+      {
+        label: 'Élection partielle fédérale de Farrer 2026',
+        chamber: 'Chambre des représentants',
+        date: '2026-05-09',
+        seats: 1,
+        totalSeats: 150,
+        votePercent: 39.5,
+        source: {
+          name: 'Wikipedia — 2026 Farrer by-election',
+          url: 'https://en.wikipedia.org/wiki/2026_Farrer_by-election',
+          accessedOn: '2026-09-10',
+          note: "David Farley élu avec 57,5% des voix après répartition des préférences (« two-candidate preferred ») — première élection directe d'un député One Nation à la chambre basse fédérale ; les précédents élus de ce parti y étaient arrivés par défection.",
+        },
+      },
+      {
+        label: "Élection générale d'Australie-Méridionale 2026",
+        chamber: "House of Assembly d'Australie-Méridionale",
+        date: '2026-03-21',
+        seats: 4,
+        totalSeats: 47,
+        votePercent: 22.9,
+        source: {
+          name: 'The Conversation',
+          url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
+          accessedOn: '2026-09-10',
+          note: "Meilleur résultat du parti à une élection d'État ou fédérale depuis 1998 (Queensland). Le parti obtient aussi 3 sièges au Conseil législatif (chambre haute) et devance les Libéraux en voix, une première historique dans cet État.",
+        },
+      },
       {
         label: 'Élections fédérales 2025',
         chamber: 'Sénat australien',
@@ -2885,11 +3009,11 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Représenté dans plusieurs parlements d'État, notamment le Queensland et l'Australie-Occidentale, mais sans détenir de mandat à la Chambre des représentants (chambre basse fédérale) ni de mairie dans une grande ville.",
+        "Représenté dans plusieurs parlements d'État, notamment le Queensland, l'Australie-Occidentale et désormais l'Australie-Méridionale. Deuxième place (24,5%) à l'élection partielle d'État de Nepean (Victoria, 2 mai 2026) ; candidatures déposées dans toutes les circonscriptions de la chambre basse pour l'élection générale de Victoria de novembre 2026.",
       source: {
-        name: 'Parliament of Queensland',
-        url: 'https://www.parliament.qld.gov.au',
-        accessedOn: '2026-09-09',
+        name: 'ABC News — One Nation Victoria candidates revealed',
+        url: 'https://www.abc.net.au/news/2026-08-03/one-nation-victoria-candiates-revealed/106989410',
+        accessedOn: '2026-09-10',
       },
     },
     founded: 1997,
@@ -3034,16 +3158,107 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Ivan Penava, président du parti, est maire de Vukovar depuis 2013 — le principal mandat local détenu par le mouvement, qui reste par ailleurs peu implanté dans les autres grandes villes croates.",
+        "Ivan Penava, président du parti, a perdu la mairie de Vukovar — qu'il détenait depuis 2013 — lors des élections locales de mai 2025, battu de 184 voix par Marijan Pavliček (Hrvatski suverenisti, parti plus radical encore que Domovinski pokret sur les questions identitaires). Le mouvement reste par ailleurs peu implanté dans les autres grandes villes croates.",
       source: {
-        name: 'Grad Vukovar',
-        url: 'https://www.vukovar.hr',
-        accessedOn: '2026-09-09',
+        name: 'HRT — Domovinski pokret izgubio Vukovar, pobijedio suverenist M. Pavliček',
+        url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
+        accessedOn: '2026-09-10',
       },
     },
     founded: 2020,
     description:
-      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava, maire de Vukovar. Partenaire de coalition du HDZ depuis 2024.",
+      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava. Partenaire de coalition du HDZ depuis 2024, malgré la perte de son fief historique de Vukovar en 2025.",
+  },
+  {
+    slug: 'hrvatski-suverenisti',
+    name: 'Hrvatski suverenisti (Souverainistes croates)',
+    countryCode: 'HR',
+    positioning: 'National-conservateur, droite radicale à extrême droite',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Deux sièges au Sabor (8,02% en coalition avec Most aux élections de 2024), mais surtout une victoire locale retentissante : son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025, mettant fin à onze années de règne d'Ivan Penava (Domovinski pokret) sur ce bastion symbolique du nationalisme croate, avec seulement 184 voix d'avance. Poursuit sa progression en 2026 via une coalition électorale (« Vukovarska koalicija ») avec DOMiNO et le HSP pour les élections des conseils d'arrondissement de Split, prévues le 27 septembre 2026.",
+    electoralStatusSource: {
+      name: 'HRT',
+      url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://hrvatski-suverenisti.hr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/hrsuverenisti' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia',
+      url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
+      note: "Classifié national-conservateur, christiano-fondamentaliste, droite radicale à extrême droite. Né en 2019 de la fusion du Parti conservateur croate, de Hrast (Mouvement pour une Croatie réussie) et de la Génération du renouveau.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Wikipedia — Croatian Sovereignists',
+        url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
+        note: "Ligne national-conservatrice et christiano-identitaire plus radicale que celle de Domovinski pokret, dont il a débauché plusieurs cadres locaux. Pas de politique explicite de remigration formalisée dans un programme écrit.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Sabor',
+        url: 'https://www.sabor.hr',
+        note: "Parti d'opposition minoritaire au niveau national (2 sièges) : aucune loi Hrvatski suverenisti promulguée à ce jour au Parlement croate.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2024',
+        chamber: 'Sabor',
+        date: '2024-04-17',
+        seats: 2,
+        totalSeats: 151,
+        votePercent: 8.02,
+        source: {
+          name: 'Wikipedia — Croatian Sovereignists',
+          url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
+          accessedOn: '2026-09-10',
+          note: "Résultat obtenu en coalition électorale avec Most (Le Pont).",
+        },
+      },
+      {
+        label: 'Élections législatives 2020',
+        chamber: 'Sabor',
+        date: '2020-07-05',
+        seats: 4,
+        totalSeats: 151,
+        votePercent: 10.89,
+        source: {
+          name: 'Wikipedia — Croatian Sovereignists',
+          url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
+          accessedOn: '2026-09-10',
+          note: "Résultat obtenu en coalition électorale menée par Domovinski pokret, dont le parti n'était alors qu'une composante.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 0,
+      totalCountryMeps: 12,
+      source: {
+        name: 'Wikipedia — Croatian Sovereignists',
+        url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
+        accessedOn: '2026-09-10',
+        note: "Un député européen élu en 2019 (avant même la fusion formelle du parti) ; aucun élu depuis les élections européennes de 2024.",
+      },
+    },
+    localImplantation: {
+      summary:
+        "Détient la mairie de Vukovar depuis mai 2025 (Marijan Pavliček), la principale ville symbolique de la mémoire nationale croate — une victoire directement arrachée à Domovinski pokret. Étend son implantation via une coalition locale à Split pour les élections d'arrondissement de septembre 2026.",
+      source: {
+        name: 'Nacional.hr',
+        url: 'https://www.nacional.hr/primopredaja-pavlicek-postao-gradonacelnik-vukovara-penava-ovdje-stvari-nisu-jednostavne/',
+        accessedOn: '2026-09-10',
+      },
+    },
+    founded: 2019,
+    description:
+      "Fondé le 10 novembre 2019 par fusion du Parti conservateur croate, de Hrast et de la Génération du renouveau. Dirigé par Marijan Pavliček, maire de Vukovar depuis 2025.",
   },
   {
     slug: 'sds-slovenija',
