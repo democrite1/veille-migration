@@ -269,6 +269,88 @@ export const parties: Party[] = [
       "Fondé en 2013, d'abord sur une ligne anti-euro avant de se recentrer sur l'immigration et l'identité nationale à partir de 2015. Depuis les élections fédérales de 2025, deuxième force politique du Bundestag.",
   },
   {
+    slug: 'bsw',
+    name: 'Bündnis Sahra Wagenknecht (BSW)',
+    countryCode: 'DE',
+    positioning: 'Populiste de gauche, national-conservateur sur l\'immigration',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Absent du Bundestag, le parti ayant manqué le seuil des 5% de seulement 0,03 point lors des élections fédérales de février 2025 (4,981%). A depuis contesté plusieurs élections régionales en 2026 avec des résultats contrastés : échec à franchir le seuil au Bade-Wurtemberg en mars 2026, puis entrée réussie au Landtag de Saxe-Anhalt en septembre 2026 (5 sièges). Aucune participation gouvernementale.",
+    electoralStatusSource: {
+      name: 'Springer Nature — The Sahra Wagenknecht Alliance (BSW) and the 2025 Federal Election: So Near, Yet So Far',
+      url: 'https://link.springer.com/chapter/10.1007/978-3-032-20555-1_20',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://bsw-vg.de',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/BSW_Bund' },
+    ],
+    classificationSource: {
+      name: 'InfoMigrants / Manifesto Project',
+      url: 'https://www.infomigrants.net/en/post/62871/german-elections-what-does-the-bsw-say-about-migration-in-its-manifesto',
+      note: "Cas atypique de cet annuaire : parti classé à gauche sur le plan économique (issu d'une scission de Die Linke en 2024) mais dont le programme migratoire est décrit par la presse comme largement superposable à celui de l'AfD sur le contrôle des frontières et les expulsions. Inclus ici sur la base de ce positionnement migratoire documenté, non sur l'ensemble de son programme économique et social.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'InfoMigrants — German elections: What does the BSW say about migration in its manifesto?',
+        url: 'https://www.infomigrants.net/en/post/62871/german-elections-what-does-the-bsw-say-about-migration-in-its-manifesto',
+        note: "Programme demandant l'arrêt de l'immigration irrégulière, l'expulsion des demandeurs d'asile déboutés et le refus d'accueil pour toute personne déjà passée par un pays tiers sûr — position justifiée par la protection de l'État-providence plutôt que par un discours identitaire. Pas de politique de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Deutscher Bundestag',
+        url: 'https://www.bundestag.de',
+        note: "Absent du Bundestag depuis 2025 : aucune loi BSW promulguée au niveau fédéral à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élection régionale de Saxe-Anhalt 2026',
+        chamber: 'Landtag de Saxe-Anhalt',
+        date: '2026-09-06',
+        seats: 5,
+        totalSeats: 83,
+        votePercent: 5.3,
+        source: {
+          name: 'Politpro — Saxony-Anhalt State Election',
+          url: 'https://politpro.eu/en/saxony-anhalt/election/parliament/2026',
+          accessedOn: '2026-09-10',
+        },
+      },
+      {
+        label: 'Élections fédérales 2025',
+        chamber: 'Bundestag',
+        date: '2025-02-23',
+        seats: 0,
+        totalSeats: 630,
+        votePercent: 4.981,
+        source: {
+          name: 'Springer Nature',
+          url: 'https://link.springer.com/chapter/10.1007/978-3-032-20555-1_20',
+          accessedOn: '2026-09-10',
+          note: "Meilleur score jamais obtenu par un nouveau parti allemand sans siège — à 0,03 point du seuil de représentation.",
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 5,
+      totalCountryMeps: 96,
+      europeanGroup: 'Non-inscrits',
+      source: {
+        name: 'Wikipedia — Sahra Wagenknecht Alliance',
+        url: 'https://en.wikipedia.org/wiki/Sahra_Wagenknecht_Alliance',
+        accessedOn: '2026-09-10',
+        note: "Une tentative de constituer un groupe européen propre autour du BSW en 2024 n'a pas abouti faute d'un nombre suffisant de partis partenaires dans assez de pays.",
+      },
+    },
+    founded: 2024,
+    description:
+      "Fondé en janvier 2024 par Sahra Wagenknecht, ancienne figure de proue de Die Linke, après sa rupture avec ce parti. Combine positions économiques de gauche (hausse du salaire minimum, des retraites, plafonnement des loyers) et ligne restrictive sur l'immigration et l'octroi de l'asile.",
+  },
+  {
     slug: 'reform-uk',
     name: 'Reform UK',
     countryCode: 'GB',
@@ -2648,6 +2730,64 @@ export const parties: Party[] = [
     founded: 1995,
     description:
       "Fondé en 1995 par Pia Kjærsgaard, dissidente du Parti du progrès. A soutenu ou participé à plusieurs gouvernements danois entre 2001 et 2019, période durant laquelle le pays a adopté l'une des politiques migratoires les plus restrictives d'Europe du Nord. Dirigé par Morten Messerschmidt depuis janvier 2022.",
+  },
+  {
+    slug: 'borgernes-parti',
+    name: 'Borgernes Parti (Lars Boje Mathiesen)',
+    countryCode: 'DK',
+    positioning: 'National-conservateur, libertarien, extrême droite',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Quatre élus lors de sa toute première élection, celle du 24 mars 2026 (2,1% des voix). Trois des quatre députés (Jacob Harris, Nadia Natalie Isaksen, Emilie Schytte) sont devenus non-inscrits dès mai 2026 à la suite de dissensions internes, ne laissant que le président-fondateur Lars Boje Mathiesen comme unique élu du parti au Folketing.",
+    electoralStatusSource: {
+      name: 'TV 2 — Borgernes Parti kommer i Folketinget',
+      url: 'https://nyheder.tv2.dk/politik/2026-03-24-borgernes-parti-kommer-i-folketinget',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://borgernesparti.dk',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/borgernesparti' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia — Citizens\' Party (Denmark)',
+      url: 'https://en.wikipedia.org/wiki/Citizens%27_Party_(Denmark)',
+      note: "Classifié parti d'extrême droite, national-conservateur et libertarien. Fondé en août 2024 par Lars Boje Mathiesen après son exclusion du Nye Borgerlige (Nouvelle Droite), dont il avait pris la présidence en février 2023 avant d'en être écarté un mois plus tard pour des différends sur le financement de campagne.",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Politpro — Borgernes Parti',
+        url: 'https://politpro.eu/en/denmark/political-parties/borgernes-parti',
+        note: "Le programme électoral 2026 du parti appelle explicitement à la remigration, décrite dans sa plateforme comme un objectif de « libération » du Danemark vis-à-vis de l'islam, aux côtés d'une ligne dure anti-immigration envers les personnes originaires de pays à majorité musulmane — usage direct du terme, critère central de la méthodologie de ce site.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Folketinget',
+        url: 'https://www.ft.dk',
+        note: "Parti d'opposition entré au Parlement en mars 2026 : aucune loi Borgernes Parti promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2026',
+        chamber: 'Folketing',
+        date: '2026-03-24',
+        seats: 4,
+        totalSeats: 179,
+        votePercent: 2.1,
+        source: {
+          name: 'TV 2',
+          url: 'https://nyheder.tv2.dk/politik/2026-03-24-borgernes-parti-kommer-i-folketinget',
+          accessedOn: '2026-09-10',
+          note: "Première élection du parti, fondé un an et demi plus tôt seulement.",
+        },
+      },
+    ],
+    founded: 2024,
+    description:
+      "Fondé en août 2024 par Lars Boje Mathiesen, ancien président du Nye Borgerlige dont il a été exclu en 2023. Ce dernier parti, en net recul, n'a obtenu aucun siège à l'élection de mars 2026 et son ancienne présidente Pernille Vermund en a recommandé la dissolution début 2024.",
   },
   {
     slug: 'one-nation',
