@@ -1264,6 +1264,88 @@ export const parties: Party[] = [
       "Fondé en 1988 comme mouvement libéral anti-communiste, réorienté vers le national-conservatisme sous la direction de Viktor Orbán à partir des années 1990. Premier ministre de 2010 à 2026.",
   },
   {
+    slug: 'mi-hazank',
+    name: 'Mi Hazánk Mozgalom (Notre Patrie)',
+    countryCode: 'HU',
+    positioning: 'Extrême droite, ultranationaliste',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Six sièges à l'Országgyűlés, un score stable entre les élections de 2022 et celles d'avril 2026 (5,6-6,2% des voix selon le mode de scrutin). Décrit par les observateurs comme le parti le plus radical à entrer au Parlement hongrois depuis la Seconde Guerre mondiale. Troisième force parlementaire depuis 2026, loin derrière Tisza (141 sièges) et le Fidesz (55 sièges), sans participation gouvernementale.",
+    electoralStatusSource: {
+      name: 'Wikipedia — 2026 Hungarian parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://mihazank.hu',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/mihazankmozgalom' },
+    ],
+    classificationSource: {
+      name: 'The Times of Israel / The PopuList',
+      url: 'https://www.timesofisrael.com/hungarys-most-radical-nationalist-party-since-wwii-just-won-7-seats-in-parliament/',
+      note: "Classifié parti d'extrême droite ultranationaliste. Fondé en 2018 par László Toroczkai, maire d'Ásotthalom (localité frontalière symbole de la fermeture des frontières hongroises), après son exclusion du Jobbik qu'il jugeait trop modéré.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Budapest Times — Migration clash erupts over EU pact in parliament',
+        url: 'https://www.budapesttimes.hu/hungary/migration-clash-erupts-over-eu-pact-in-parliament/',
+        note: "Ligne dure contre le Pacte européen sur la migration et l'asile, jugeant même la politique du Fidesz insuffisamment restrictive. Programme centré sur la fermeture totale des frontières, sans politique explicite de remigration de résidents en situation régulière (l'immigration extra-européenne restant marginale en Hongrie).",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Országgyűlés',
+        url: 'https://www.parlament.hu',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi Mi Hazánk promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2026',
+        chamber: 'Országgyűlés',
+        date: '2026-04-12',
+        seats: 6,
+        totalSeats: 199,
+        votePercent: 5.63,
+        source: {
+          name: 'Wikipedia — 2026 Hungarian parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+          accessedOn: '2026-09-10',
+        },
+      },
+      {
+        label: 'Élections législatives 2022',
+        chamber: 'Országgyűlés',
+        date: '2022-04-03',
+        seats: 7,
+        totalSeats: 199,
+        votePercent: 6.17,
+        source: {
+          name: 'European Roma Rights Centre',
+          url: 'https://www.errc.org/news/hungary-far-right-extremist-mi-hazank-emerges-as-the-other-winner-in-the-2022-elections',
+          accessedOn: '2026-09-10',
+          note: 'Première entrée au Parlement, comme troisième force de l\'opposition.',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 21,
+      europeanGroup: 'Europe des nations souveraines (ESN)',
+      source: {
+        name: 'Wikipedia — 2024 European Parliament election in Hungary',
+        url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_Hungary',
+        accessedOn: '2026-09-10',
+        note: "Première entrée du parti au Parlement européen, László Toroczkai ayant lui-même été élu.",
+      },
+    },
+    founded: 2018,
+    description:
+      "Fondé en 2018 par László Toroczkai, maire d'Ásotthalom et ancien vice-président du Jobbik, après sa rupture avec ce dernier qu'il jugeait en voie de normalisation. Réunit d'anciens cadres du Jobbik et de la Garde hongroise (Magyar Gárda), milice paramilitaire dissoute par la justice en 2009.",
+  },
+  {
     slug: 'perussuomalaiset',
     name: 'Perussuomalaiset (Finns Party / PS)',
     countryCode: 'FI',
