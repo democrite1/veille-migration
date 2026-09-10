@@ -2,6 +2,44 @@ import type { Election } from './types';
 
 export const elections: Election[] = [
   {
+    id: 'gb-senedd-election-2026',
+    countryCode: 'GB',
+    level: 'regional',
+    scopeName: 'Senedd election (Parlement gallois)',
+    mandateDuration: '4 ans',
+    powers:
+      'Élection du Senedd (Parlement gallois), compétent notamment en santé, éducation et collectivités locales galloises.',
+    date: '2026-05-07',
+    status: 'resultat_connu',
+    result:
+      "Percée historique de Reform UK, qui devient deuxième force politique du pays avec 34 sièges (29,3%) sur un Senedd élargi à 96 sièges pour ce scrutin, juste derrière Plaid Cymru (43 sièges). Le Labour gallois, au pouvoir sans interruption depuis la dévolution, s'effondre à 9 sièges.",
+    totalSeats: 96,
+    source: {
+      name: 'Swansea Bay News',
+      url: 'https://swanseabaynews.com/senedd-election-2026-plaid-cymru-largest-party-reform-uk-historic-breakthrough-welsh-labour-reduced-to-nine-seats-the-new-political-map-of-wales/',
+      accessedOn: '2026-09-10',
+    },
+  },
+  {
+    id: 'gb-holyrood-election-2026',
+    countryCode: 'GB',
+    level: 'regional',
+    scopeName: 'Scottish Parliament election (Holyrood)',
+    mandateDuration: '4 ans',
+    powers:
+      'Élection du Parlement écossais, compétent notamment en santé, éducation, justice et collectivités locales écossaises.',
+    date: '2026-05-07',
+    status: 'resultat_connu',
+    result:
+      "Première entrée de Reform UK au Parlement écossais : 17 sièges (18-19% des voix selon le mode de scrutin), à égalité avec le Labour pour la deuxième place. Le SNP reste le premier parti (58 sièges) mais sans majorité absolue.",
+    totalSeats: 129,
+    source: {
+      name: 'YouGov — How Scotland voted at the 2026 Holyrood election',
+      url: 'https://yougov.com/en-gb/articles/54908-how-scotland-voted-in-the-2026-holyrood-election',
+      accessedOn: '2026-09-10',
+    },
+  },
+  {
     id: 'fr-municipales-2026',
     countryCode: 'FR',
     level: 'local',

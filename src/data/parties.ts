@@ -357,7 +357,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      '8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices.',
+      "8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices. Percée majeure le 7 mai 2026 : entrée simultanée au Senedd gallois (34 sièges, deuxième force) et au Parlement écossais (17 sièges, deuxième force ex æquo avec le Labour), en plus du contrôle de nombreux conseils locaux anglais.",
     electoralStatusSource: {
       name: 'UK Parliament — members.parliament.uk',
       url: 'https://members.parliament.uk/member/5091/career',
@@ -390,6 +390,34 @@ export const parties: Party[] = [
     },
     electoralHistory: [
       {
+        label: 'Élections du Senedd gallois 2026',
+        chamber: 'Senedd (Parlement gallois)',
+        date: '2026-05-07',
+        seats: 34,
+        totalSeats: 96,
+        votePercent: 29.3,
+        source: {
+          name: 'Swansea Bay News — Senedd Election 2026',
+          url: 'https://swanseabaynews.com/senedd-election-2026-plaid-cymru-largest-party-reform-uk-historic-breakthrough-welsh-labour-reduced-to-nine-seats-the-new-political-map-of-wales/',
+          accessedOn: '2026-09-10',
+          note: "Percée historique : première entrée du parti au Senedd (élargi à 96 sièges pour ce scrutin), devenant la deuxième force politique du pays derrière Plaid Cymru, très loin devant le Labour gallois (9 sièges seulement) qui dirigeait le pays depuis la dévolution.",
+        },
+      },
+      {
+        label: 'Élections du Parlement écossais (Holyrood) 2026',
+        chamber: 'Scottish Parliament',
+        date: '2026-05-07',
+        seats: 17,
+        totalSeats: 129,
+        votePercent: 18.5,
+        source: {
+          name: 'YouGov — How Scotland voted at the 2026 Holyrood election',
+          url: 'https://yougov.com/en-gb/articles/54908-how-scotland-voted-in-the-2026-holyrood-election',
+          accessedOn: '2026-09-10',
+          note: "Première entrée au Parlement écossais, à égalité de sièges avec le Labour (17 chacun) pour la deuxième place, très loin derrière le SNP qui reste le premier parti sans majorité absolue.",
+        },
+      },
+      {
         label: 'Élections générales 2024',
         chamber: 'Chambre des Communes',
         date: '2024-07-04',
@@ -406,7 +434,7 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Percée aux élections locales de mai 2025 : plus de 600 conseillers élus et prise de contrôle de plusieurs conseils de comté (dont le Kent, le Lincolnshire et Durham), ainsi que deux mairies avec scrutin direct (Greater Lincolnshire et Hull and East Yorkshire).",
+        "Percée aux élections locales de mai 2025 : plus de 600 conseillers élus et prise de contrôle de plusieurs conseils de comté (dont le Kent, le Lincolnshire et Durham), ainsi que deux mairies avec scrutin direct (Greater Lincolnshire et Hull and East Yorkshire). Confirmée et amplifiée aux élections locales anglaises de mai 2026 (plus de 1 450 conseillers), puis par l'entrée simultanée au Senedd gallois et au Parlement écossais début mai 2026 — le parti est désormais représenté dans les quatre nations du Royaume-Uni.",
       source: {
         name: 'The Guardian — Local elections 2025 results',
         url: 'https://www.theguardian.com/politics/2025/may/02/local-elections-results-2025-reform-uk',
