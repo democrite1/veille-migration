@@ -180,4 +180,14 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     motifs: ['☀️', '🫒', '⚓'],
     accent: '#D57800',
   },
+  IE: {
+    tagline: "Son candidat est arrivé en tête au premier décompte d'une élection partielle en 2026, avant de s'incliner de justesse après répartition des préférences.",
+    motifs: ['☘️', '🎻', '🏰'],
+    accent: '#169B62',
+  },
+  IS: {
+    tagline: "Une percée locale inédite dans la capitale en 2026, après des années passées à l'ombre d'un parti d'extrême droite aujourd'hui disparu.",
+    motifs: ['🌋', '🐑', '❄️'],
+    accent: '#02529C',
+  },
 };

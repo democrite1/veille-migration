@@ -3857,6 +3857,140 @@ export const parties: Party[] = [
     description:
       "Fondé en 2008. Troisième force politique de Chypre depuis les élections législatives de mai 2026, en forte progression électorale depuis sa création.",
   },
+  {
+    slug: 'independent-ireland',
+    name: 'Independent Ireland',
+    countryCode: 'IE',
+    positioning: 'National-populiste, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Quatre députés (TDs) au Dáil depuis les élections de novembre 2024, dont le co-fondateur Michael Collins, arrivé en tête dans sa circonscription de Cork South-West. Environ 23-24 conseillers locaux. Candidat arrivé en tête au premier décompte de l'élection partielle de Galway West (mai 2026) avant de s'incliner de justesse après répartition des préférences.",
+    electoralStatusSource: {
+      name: 'The Irish Times — Galway West byelection live results',
+      url: 'https://www.irishtimes.com/politics/2026/05/23/galway-west-byelection-live-latest-results/',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://www.independentireland.ie',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/independentirl' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia / presse irlandaise',
+      url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
+      note: "Classifié parti populiste de droite radicale par la presse et les observateurs politiques irlandais. Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne rurale et anti-establishment progressivement recentrée sur l'immigration.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Irish Times — Fifth of Dublin Central votes went to candidates who had used anti-immigration rhetoric',
+        url: 'https://www.irishtimes.com/politics/2026/05/25/fifth-of-dublin-central-votes-went-to-candidates-who-had-used-anti-immigration-rhetoric/',
+        note: "Programme incluant une interdiction de la burqa dans l'espace public et la création de centres de rétention de type « australien » pour les demandeurs d'asile déboutés. Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Oireachtas (Parlement irlandais)',
+        url: 'https://www.oireachtas.ie',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi Independent Ireland promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections générales 2024',
+        chamber: 'Dáil Éireann',
+        date: '2024-11-29',
+        seats: 4,
+        totalSeats: 174,
+        source: {
+          name: 'RTE — The TDs elected to the 34th Dáil',
+          url: 'https://www.rte.ie/news/election-24/2024/1201/1484007-elected-candidates/',
+          accessedOn: '2026-09-10',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 14,
+      europeanGroup: 'Renew Europe',
+      source: {
+        name: 'Wikipedia — Independent Ireland',
+        url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
+        accessedOn: '2026-09-10',
+        note: "Positionnement européen atypique pour un parti de cette liste : son unique élu européen siège dans le groupe centriste Renew Europe plutôt que dans un groupe de droite radicale.",
+      },
+    },
+    localImplantation: {
+      summary:
+        "Environ 23 à 24 conseillers municipaux et de comté élus depuis 2024. Quasi-victoire à l'élection partielle de Galway West en mai 2026 : son candidat Noel Thomas a devancé le Fine Gael au premier décompte (20,9% contre 20,1%) avant de perdre après répartition des préférences.",
+      source: {
+        name: 'RTE — Galway West bye-election',
+        url: 'https://www.rte.ie/news/bye-election-2026/2026/0523/1574863-galway-west-bye-election/',
+        accessedOn: '2026-09-10',
+      },
+    },
+    founded: 2023,
+    description:
+      "Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne d'abord rurale et anti-establishment, de plus en plus centrée sur l'immigration depuis 2025-2026.",
+  },
+  {
+    slug: 'midflokkurinn',
+    name: 'Miðflokkurinn (Parti du centre)',
+    countryCode: 'IS',
+    positioning: 'National-conservateur, droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Représenté à l'Althing depuis les élections de novembre 2024. Percée inédite aux élections municipales de Reykjavik de mai 2026 : passage de 0 à 3 sièges au conseil municipal de la capitale (11,36% des voix), dans le cadre d'un net basculement à droite de la ville.",
+    electoralStatusSource: {
+      name: 'Iceland Review — Major changes ahead for Reykjavik City Council',
+      url: 'https://www.icelandreview.com/news/major-changes-ahead-for-reykjavik-city-council-after-election-results/',
+      accessedOn: '2026-09-10',
+    },
+    officialWebsite: 'https://midflokkurinn.is',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/midflokkurinn' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia / presse islandaise',
+      url: 'https://en.wikipedia.org/wiki/Centre_Party_(Iceland)',
+      note: "Classifié parti national-conservateur, populiste de droite et eurosceptique. Fondé en 2017 par Sigmundur Davíð Gunnlaugsson, ancien Premier ministre islandais (2013-2016), après sa rupture avec le Parti du progrès.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Politpro — Miðflokkurinn',
+        url: 'https://politpro.eu/en/iceland/political-parties/midflokkurinn',
+        note: "Positionnement national-conservateur défendant une gestion stricte de l'immigration et de l'octroi de l'asile, dans un pays historiquement marginal sur ces enjeux mais où le parti en a fait un thème central de campagne. Pas de politique explicite de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Althingi',
+        url: 'https://www.althingi.is',
+        note: "Parti d'opposition sans participation gouvernementale : aucune loi Miðflokkurinn promulguée à ce jour.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections municipales de Reykjavik 2026',
+        chamber: 'Conseil municipal de Reykjavik',
+        date: '2026-05-16',
+        seats: 3,
+        totalSeats: 23,
+        votePercent: 11.36,
+        source: {
+          name: 'Wikipedia — 2026 Reykjavík City Council election',
+          url: 'https://en.wikipedia.org/wiki/2026_Reykjav%C3%ADk_City_Council_election',
+          accessedOn: '2026-09-10',
+          note: "Première entrée du parti au conseil municipal de la capitale, après un score nul en 2022.",
+        },
+      },
+    ],
+    founded: 2017,
+    description:
+      "Fondé en 2017 par Sigmundur Davíð Gunnlaugsson, ancien Premier ministre islandais contraint à la démission lors du scandale des Panama Papers en 2016. Seul parti islandais de cette envergure classé national-conservateur et restrictif sur l'immigration.",
+  },
 ];
 
 export function getPartiesByCountry(countryCode?: string) {
