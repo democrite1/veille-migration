@@ -21,6 +21,19 @@ export default function CountryBanner({
   return (
     <div className="sticky top-0 z-20 mx-[calc(50%-50vw)] mb-8 w-screen overflow-hidden border-b border-line bg-paper shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
       <div className="relative mx-auto min-h-[200px] max-w-5xl sm:min-h-[260px]">
+        {/* Per-country color wash, pulled from the actual flag — so each
+            country page reads as visually distinct, not just beige with a
+            different flag pasted on. Kept very low-opacity for legibility. */}
+        {profile ? (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background: `linear-gradient(120deg, ${profile.accent}2e 0%, ${profile.accent}0d 45%, transparent 75%)`,
+            }}
+          />
+        ) : null}
+
         {/* Gray tiled motif texture, covering the full banner */}
         {tiles.length ? (
           <div
