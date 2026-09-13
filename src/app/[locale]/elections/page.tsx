@@ -38,6 +38,7 @@ const COUNTRY_LABELS: Record<string, string> = {
   CY: 'Chypre',
   IE: 'Irlande',
   IS: 'Islande',
+  JP: 'Japon',
 };
 
 const LEVEL_LABELS: Record<string, string> = {

@@ -45,6 +45,7 @@ const COUNTRY_LABELS: Record<string, string> = {
   CY: 'Chypre',
   IE: 'Irlande',
   IS: 'Islande',
+  JP: 'Japon',
 };
 
 export async function generateStaticParams() {

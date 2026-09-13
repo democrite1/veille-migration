@@ -32,7 +32,8 @@ export type CountryCode =
   | 'LU'
   | 'CY'
   | 'IE'
-  | 'IS';
+  | 'IS'
+  | 'JP';
 
 export type ElectoralStatus = 'pouvoir' | 'opposition' | 'extra-parlementaire';
 

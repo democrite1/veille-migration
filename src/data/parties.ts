@@ -1817,11 +1817,12 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Deuxième force politique du pays, devançant le Parti socialiste (PS) après les élections législatives anticipées de mai 2025 consécutives à la chute du gouvernement. André Ventura est chef de l'opposition depuis le 3 juin 2025. Le gouvernement est dirigé par l'Alliance Démocratique (AD, centre-droit) de Luís Montenegro.",
+      "Deuxième force politique du pays, devançant le Parti socialiste (PS) après les élections législatives anticipées de mai 2025 consécutives à la chute du gouvernement. André Ventura est chef de l'opposition depuis le 3 juin 2025. Le gouvernement est dirigé par l'Alliance Démocratique (AD, centre-droit) de Luís Montenegro. En 2026, Ventura a porté Chega au second tour de l'élection présidentielle — une première pour l'extrême droite portugaise depuis la Révolution des Œillets : 23,5% le 18 janvier, puis 33,16% le 8 février face au socialiste António José Seguro (66,84%), qui devient le candidat le plus voté de l'histoire électorale portugaise.",
     electoralStatusSource: {
-      name: 'Diário de Notícias',
-      url: 'https://www.dn.pt/pol%C3%ADtica/ventura-ser%C3%A1-l%C3%ADder-da-oposi%C3%A7%C3%A3o-mesmo-sem-eleger-mais-deputados-entre-os-emigrantes',
-      accessedOn: '2026-09-07',
+      name: 'Al Jazeera — Portugal votes in first presidential run-off in 40 years',
+      url: 'https://www.aljazeera.com/news/2026/2/8/polls-open-in-second-round-of-portugal-presidential-election',
+      accessedOn: '2026-09-13',
+      note: "Statut de chef de l'opposition documenté par le Diário de Notícias (https://www.dn.pt). Deuxième second tour présidentiel seulement de l'histoire portugaise, après celui de 1986.",
     },
     officialWebsite: 'https://partidochega.pt',
     socialAccounts: [
@@ -3990,6 +3991,102 @@ export const parties: Party[] = [
     founded: 2017,
     description:
       "Fondé en 2017 par Sigmundur Davíð Gunnlaugsson, ancien Premier ministre islandais contraint à la démission lors du scandale des Panama Papers en 2016. Seul parti islandais de cette envergure classé national-conservateur et restrictif sur l'immigration.",
+  },
+  {
+    slug: 'sanseito',
+    name: '参政党 (Sanseitō)',
+    countryCode: 'JP',
+    positioning: 'Nationaliste japonais, populiste de droite radicale à extrême droite',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Dans l'opposition aux deux chambres de la Diète, avec 15 sièges sur 465 à la Chambre des représentants et 15 sur 248 à la Chambre des conseillers. Le parti a doublé sa présence parlementaire en sept mois, à la faveur de deux scrutins nationaux successifs : les sénatoriales du 20 juillet 2025 (de 1 à 15 conseillers) puis les élections générales anticipées du 8 février 2026 (de 3 à 15 députés). Malgré la supermajorité obtenue par le PLD de Sanae Takaichi lors de ce dernier scrutin, Sanseitō est devenu l'une des principales forces d'opposition et a imposé l'immigration au centre du débat public japonais.",
+    electoralStatusSource: {
+      name: 'Wikipedia — 2026 Japanese general election',
+      url: 'https://en.wikipedia.org/wiki/2026_Japanese_general_election',
+      accessedOn: '2026-09-13',
+    },
+    officialWebsite: 'https://sanseito.jp',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/sansei411' },
+      { platform: 'YouTube', url: 'https://www.youtube.com/@sanseito-official' },
+    ],
+    classificationSource: {
+      name: 'The Asia-Pacific Journal (Cambridge University Press) — Zaitokukai, Sanseito, and the Sudden Emergence of Anti-Foreigner Populism',
+      url: 'https://www.cambridge.org/core/journals/asia-pacific-journal/article/zaitokukai-sanseito-and-the-sudden-emergence-of-antiforeigner-populism-in-the-july-2025-house-of-councilors-election-has-japan-reached-a-tipping-point/5252E99245D15FD900599683401E96A0',
+      note: "Classifié parti populiste de droite radicale à extrême droite, nationaliste et anti-immigration, par la littérature académique évaluée par les pairs. Critère d'inclusion doublement satisfait : classification universitaire, et revendication explicite du parti lui-même, dont le slogan de campagne est « 日本人ファースト » (« les Japonais d'abord »). Les bases de données de référence utilisées ailleurs sur ce site (Manifesto Project, ParlGov, PopuList, CHES) ne couvrant pas le Japon, la classification s'appuie ici sur les sources académiques et de presse équivalentes.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'The Conversation — Rightwing populist Sanseitō party shakes Japan with election surge',
+        url: 'https://theconversation.com/rightwing-populist-sanseito-party-shakes-japan-with-election-surge-261303',
+        note: "Programme centré sur la limitation du nombre d'étrangers admis (« s'opposer à l'acceptation excessive d'immigrés »), des contrôles de loyauté pour les résidents étrangers, la restriction de l'accès des étrangers aux prestations sociales et l'interdiction de l'achat de terres par des non-Japonais. Pas de politique explicite de remigration de résidents en situation régulière : la ligne porte sur la réduction des flux et le durcissement du statut, non sur le renvoi organisé des personnes déjà installées.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'The Japan Times — Will foreign-national policies return to the spotlight in the snap election?',
+        url: 'https://www.japantimes.co.jp/news/2026/01/20/japan/politics/election-immigration-policy/',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Sanseitō promulguée à ce jour. Son influence est indirecte — la pression électorale exercée depuis juillet 2025 a conduit les partis de gouvernement à inscrire à leur tour le dossier des résidents étrangers à l'agenda de la campagne de février 2026.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élections générales anticipées 2026',
+        chamber: 'Chambre des représentants (Shūgiin)',
+        date: '2026-02-08',
+        seats: 15,
+        totalSeats: 465,
+        votePercent: 7.44,
+        source: {
+          name: 'Wikipedia — 2026 Japanese general election',
+          url: 'https://en.wikipedia.org/wiki/2026_Japanese_general_election',
+          accessedOn: '2026-09-13',
+          note: "Gain de 12 sièges, tous obtenus à la représentation proportionnelle. Scrutin anticipé convoqué par la Première ministre Sanae Takaichi, remporté par le PLD avec 316 sièges sur 465.",
+        },
+      },
+      {
+        label: 'Élections à la Chambre des conseillers 2025',
+        chamber: 'Chambre des conseillers (Sangiin)',
+        date: '2025-07-20',
+        seats: 14,
+        totalSeats: 248,
+        votePercent: 12.55,
+        source: {
+          name: 'Wikipedia — 2025 Japanese House of Councillors election',
+          url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
+          accessedOn: '2026-09-13',
+          note: "14 sièges remportés sur les 125 renouvelés ce jour-là, portant le groupe à 15 sur 248. Troisième score national à la proportionnelle. Scrutin considéré comme le point de bascule de l'entrée de la question migratoire dans le débat électoral japonais.",
+        },
+      },
+      {
+        label: 'Élections à la Chambre des conseillers 2022',
+        chamber: 'Chambre des conseillers (Sangiin)',
+        date: '2022-07-10',
+        seats: 1,
+        totalSeats: 248,
+        votePercent: 3.33,
+        source: {
+          name: 'Wikipedia — Sanseitō',
+          url: 'https://en.wikipedia.org/wiki/Sanseit%C5%8D',
+          accessedOn: '2026-09-13',
+          note: "Première entrée au Parlement, deux ans après la fondation du parti, avec l'élection de son fondateur Sohei Kamiya.",
+        },
+      },
+    ],
+    localImplantation: {
+      summary:
+        "Maillage local en construction rapide mais encore marginal à l'échelle du pays : environ 200 conseillers municipaux sur les 28 696 que compte le Japon, et 5 conseillers préfectoraux sur 2 614. Le parti s'appuie sur un réseau de sections locales issu de sa base YouTube plutôt que sur des implantations historiques.",
+      source: {
+        name: 'Wikipedia — Sanseitō',
+        url: 'https://en.wikipedia.org/wiki/Sanseit%C5%8D',
+        accessedOn: '2026-09-13',
+      },
+    },
+    founded: 2020,
+    description:
+      "Fondé le 17 mars 2020 par Sohei Kamiya, ancien conseiller municipal de Suita (préfecture d'Osaka), d'abord comme une chaîne YouTube contestataire pendant la pandémie de Covid-19. Devenu en deux scrutins la principale force anti-immigration du Japon sous le slogan « les Japonais d'abord », il est le premier parti de ce type à peser sur la vie politique nationale d'un pays d'Asie membre du G7.",
   },
 ];
 

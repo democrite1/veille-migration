@@ -190,4 +190,9 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     motifs: ['🌋', '🐑', '❄️'],
     accent: '#02529C',
   },
+  JP: {
+    tagline: "Un parti né sur YouTube pendant la pandémie y a imposé l'immigration comme thème de campagne nationale — un enjeu totalement absent des enquêtes d'opinion électorales jusqu'en 2025.",
+    motifs: ['⛩️', '🗻', '🌸'],
+    accent: '#BC002D',
+  },
 };

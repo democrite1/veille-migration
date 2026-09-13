@@ -66,6 +66,7 @@ const COUNTRY_NAMES: Record<string, { fr: string; en: string }> = {
   CY: { fr: 'Chypre', en: 'Cyprus' },
   IE: { fr: 'Irlande', en: 'Ireland' },
   IS: { fr: 'Islande', en: 'Iceland' },
+  JP: { fr: 'Japon', en: 'Japan' },
 };
 
 // Every run inserts fresh source rows rather than updating in place (simplest

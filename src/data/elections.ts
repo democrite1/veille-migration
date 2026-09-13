@@ -2,6 +2,130 @@ import type { Election } from './types';
 
 export const elections: Election[] = [
   {
+    id: 'jp-shugiin-2026',
+    countryCode: 'JP',
+    level: 'national',
+    scopeName: 'Shūgiin senkyo (élections générales, Chambre des représentants)',
+    mandateDuration: '4 ans (dissolution possible à tout moment)',
+    powers:
+      'Chambre basse de la Diète, dotée du dernier mot sur le budget, les traités et la désignation du Premier ministre.',
+    date: '2026-02-08',
+    status: 'resultat_connu',
+    result:
+      "Scrutin anticipé convoqué par la Première ministre Sanae Takaichi, qui obtient pour le PLD 316 sièges sur 465 — la plus large majorité jamais réunie par un parti seul depuis 1945. Sanseitō, parti nationaliste anti-immigration, passe de 3 à 15 sièges (7,44% à la proportionnelle) et devient l'une des principales forces d'opposition, sept mois après sa percée aux sénatoriales. Le Parti conservateur du Japon perd en revanche ses 3 sièges.",
+    totalSeats: 465,
+    source: {
+      name: 'Wikipedia — 2026 Japanese general election',
+      url: 'https://en.wikipedia.org/wiki/2026_Japanese_general_election',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'jp-sangiin-2025',
+    countryCode: 'JP',
+    level: 'national',
+    scopeName: 'Sangiin senkyo (élections à la Chambre des conseillers)',
+    mandateDuration: '6 ans, renouvellement par moitié tous les 3 ans',
+    powers:
+      'Chambre haute de la Diète, qui examine et peut retarder les textes votés par la Chambre des représentants.',
+    date: '2025-07-20',
+    status: 'resultat_connu',
+    result:
+      "Scrutin de bascule : Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
+    totalSeats: 248,
+    source: {
+      name: 'Wikipedia — 2025 Japanese House of Councillors election',
+      url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'pt-presidenciais-2026',
+    countryCode: 'PT',
+    level: 'national',
+    scopeName: 'Eleições presidenciais (élection présidentielle)',
+    mandateDuration: '5 ans, renouvelable une fois',
+    powers:
+      "Chef de l'État, doté d'un droit de veto, du pouvoir de dissoudre l'Assemblée et de saisir la Cour constitutionnelle.",
+    date: '2026-01-18',
+    status: 'resultat_connu',
+    result:
+      "Premier tour le 18 janvier : António José Seguro (PS) 31,1%, André Ventura (Chega) 23,5% — première qualification de l'extrême droite portugaise pour un second tour présidentiel. Second tour le 8 février : Seguro l'emporte avec 66,84% contre 33,16% à Ventura, devenant le candidat le plus voté de l'histoire électorale du pays. Deuxième second tour présidentiel seulement depuis 1976.",
+    source: {
+      name: 'Al Jazeera — Portugal votes in first presidential run-off in 40 years',
+      url: 'https://www.aljazeera.com/news/2026/2/8/polls-open-in-second-round-of-portugal-presidential-election',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'de-landtagswahl-sachsen-anhalt-2026',
+    countryCode: 'DE',
+    level: 'regional',
+    scopeName: 'Landtagswahl Sachsen-Anhalt (élections régionales de Saxe-Anhalt)',
+    mandateDuration: '5 ans',
+    powers:
+      "Parlement du Land, compétent notamment en éducation, police et administration régionale, et qui élit le ministre-président.",
+    date: '2026-09-06',
+    status: 'resultat_connu',
+    result:
+      "Meilleur score de l'AfD dans un scrutin régional allemand : 43,8% et 39 sièges sur 83, loin devant la CDU du chancelier Merz (moins de 18%). Le BSW obtient 5,3%, un appoint qui rend arithmétiquement possible une majorité avec l'AfD — hypothèse d'une première direction de Land par l'extrême droite depuis 1945.",
+    totalSeats: 83,
+    source: {
+      name: 'NPR — Germany\'s far-right achieves an electoral breakthrough in key state election',
+      url: 'https://www.npr.org/2026/09/06/nx-s1-5955677/german-afd-far-right',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'us-midterms-2026',
+    countryCode: 'US',
+    level: 'national',
+    scopeName: 'Élections de mi-mandat (Chambre des représentants et un tiers du Sénat)',
+    mandateDuration: '2 ans (Chambre), 6 ans (Sénat)',
+    powers:
+      "Renouvellement intégral de la Chambre des représentants et d'un tiers du Sénat, plus de nombreux postes de gouverneurs et de législatures d'État.",
+    date: '2026-11-03',
+    status: 'a_venir',
+    totalSeats: 435,
+    source: {
+      name: 'Wikipedia — List of elections in 2026',
+      url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'lv-saeimas-velesanas-2026',
+    countryCode: 'LV',
+    level: 'national',
+    scopeName: 'Saeimas vēlēšanas (élections législatives)',
+    mandateDuration: '4 ans',
+    powers: 'Parlement monocaméral, qui élit le président de la République et investit le gouvernement.',
+    date: '2026-10-03',
+    status: 'a_venir',
+    totalSeats: 100,
+    source: {
+      name: 'Wikipedia — List of elections in 2026',
+      url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'cz-komunalni-senatni-volby-2026',
+    countryCode: 'CZ',
+    level: 'local',
+    scopeName: 'Komunální a senátní volby (élections municipales et sénatoriales)',
+    mandateDuration: '4 ans (communes), 6 ans (Sénat)',
+    powers:
+      "Renouvellement des conseils municipaux du pays et d'un tiers du Sénat, chambre haute disposant d'un veto suspensif.",
+    date: '2026-10-09',
+    status: 'a_venir',
+    source: {
+      name: 'Wikipedia — List of elections in 2026',
+      url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
     id: 'gb-senedd-election-2026',
     countryCode: 'GB',
     level: 'regional',
