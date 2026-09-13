@@ -1902,6 +1902,135 @@ export const parties: Party[] = [
       "Fondé en 2019 par André Ventura, ancien commentateur sportif et membre du PSD. Quatrième, puis deuxième force politique du pays en l'espace de six ans.",
   },
   {
+    slug: 'pis',
+    name: 'Prawo i Sprawiedliwość (PiS — Droit et Justice)',
+    countryCode: 'PL',
+    positioning: 'National-conservateur, populiste de droite radicale',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Premier parti d'opposition avec 194 sièges sur 460 à la Diète (Sejm), après huit années de pouvoir ininterrompu (2015-2023) closes par la victoire de la coalition de Donald Tusk. Le parti conserve un levier institutionnel majeur : Karol Nawrocki, élu président de la République en juin 2025 avec son soutien, oppose son veto aux textes du gouvernement.",
+    electoralStatusSource: {
+      name: 'Wikipedia — 2023 Polish parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
+      accessedOn: '2026-09-13',
+    },
+    officialWebsite: 'https://pis.org.pl',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/pisorgpl' },
+    ],
+    classificationSource: {
+      name: 'The PopuList — fiche Pologne',
+      url: 'https://popu-list.org/wp-content/uploads/2023/09/Poland.pdf',
+      note: "Classifié parti populiste d'extrême droite (populist far-right) par la base PopuList, l'une des quatre références méthodologiques de ce site. Également répertorié comme populiste de droite radicale (populist radical right) dans la littérature académique comparative.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: 'Notes From Poland — Polish government\'s referendum invalidated by low turnout',
+        url: 'https://notesfrompoland.com/2023/10/15/exit-poll-polish-governments-referendum-invalidated-by-low-turnout/',
+        note: "Ligne constante de refus de l'accueil : rejet des quotas européens de relocalisation depuis 2015, opposition au Pacte européen sur la migration et l'asile, et organisation en octobre 2023 d'un référendum demandant aux électeurs s'ils soutenaient « l'admission de milliers d'immigrés illégaux du Moyen-Orient et d'Afrique dans le cadre du mécanisme de relocalisation forcée imposé par la bureaucratie européenne ». Pas de politique explicite de remigration de résidents en situation régulière : la ligne porte sur le blocage des entrées.",
+      },
+    },
+    actionStatus: {
+      tag: 'mesures_concretes',
+      source: {
+        name: 'Euronews — Poland completes 186-kilometre border wall with Belarus after migration dispute',
+        url: 'https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute',
+        note: "Mesures effectivement mises en œuvre pendant les huit années au pouvoir : mur de 186 km achevé en juillet 2022 le long de la frontière biélorusse (5,5 m de haut, 1,3 milliard de zlotys, 2 500 caméras), état d'urgence frontalier, et règlement autorisant les refoulements — dispositif dont l'illégalité a été constatée dans plusieurs cas par le Médiateur polonais et par des juridictions. Ces dispositifs restent en vigueur sous le gouvernement Tusk, d'où le classement « mesures concrètes » et non « abrogées ».",
+      },
+    },
+    actionStatusHistory: [
+      {
+        date: '2023-10-15',
+        tag: 'mesures_concretes',
+        note: "Référendum sur la relocalisation des migrants organisé le jour des législatives : invalidé faute de quorum (40% de participation contre les 50% requis), l'opposition ayant appelé au boycott.",
+        source: {
+          name: 'Notes From Poland',
+          url: 'https://notesfrompoland.com/2023/10/15/exit-poll-polish-governments-referendum-invalidated-by-low-turnout/',
+          accessedOn: '2026-09-13',
+        },
+      },
+      {
+        date: '2022-06-30',
+        tag: 'mesures_concretes',
+        note: "Achèvement du mur frontalier avec la Biélorussie, mesure anti-immigration la plus lourde jamais engagée par un gouvernement polonais.",
+        source: {
+          name: 'Euronews',
+          url: 'https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute',
+          accessedOn: '2026-09-13',
+        },
+      },
+    ],
+    electoralHistory: [
+      {
+        label: 'Élections législatives 2023',
+        chamber: 'Sejm',
+        date: '2023-10-15',
+        seats: 194,
+        totalSeats: 460,
+        votePercent: 35.38,
+        source: {
+          name: 'Wikipedia — 2023 Polish parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
+          accessedOn: '2026-09-13',
+          note: "Premier parti en sièges et en voix, mais privé de majorité : les trois listes d'opposition réunies forment le gouvernement Tusk. Participation record de 72,9%.",
+        },
+      },
+      {
+        label: 'Élections sénatoriales 2023',
+        chamber: 'Sénat',
+        date: '2023-10-15',
+        seats: 34,
+        totalSeats: 100,
+        votePercent: 34.81,
+        source: {
+          name: 'Wikipedia — 2023 Polish parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
+          accessedOn: '2026-09-13',
+          note: 'Recul de 46 à 34 sièges par rapport à 2019.',
+        },
+      },
+      {
+        label: 'Élections législatives 2019',
+        chamber: 'Sejm',
+        date: '2019-10-13',
+        seats: 235,
+        totalSeats: 460,
+        votePercent: 43.6,
+        source: {
+          name: 'Wikipedia — 2023 Polish parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
+          accessedOn: '2026-09-13',
+          note: 'Deuxième majorité absolue consécutive, après celle de 2015.',
+        },
+      },
+    ],
+    europeanRepresentation: {
+      meps: 20,
+      totalCountryMeps: 53,
+      europeanGroup: 'Conservateurs et réformistes européens (ECR)',
+      source: {
+        name: 'Wikipedia — Law and Justice',
+        url: 'https://en.wikipedia.org/wiki/Law_and_Justice',
+        accessedOn: '2026-09-13',
+        note: "Première délégation nationale du groupe ECR, qu'il co-dirige avec Fratelli d'Italia.",
+      },
+    },
+    localImplantation: {
+      summary:
+        "Maillage territorial de premier plan : 239 sièges sur les 552 des assemblées régionales (sejmiks) aux élections locales d'avril 2024, avec 34,27% des voix au niveau national et la première place dans sept régions sur seize, principalement à l'est et au sud-est du pays. Le parti a toutefois perdu le contrôle de la plupart des exécutifs régionaux, faute d'alliés.",
+      regionalCouncillors: 239,
+      source: {
+        name: 'TVP World — Regional assembly results in the Polish local elections of 2024',
+        url: 'https://tvpworld.com/76871385/detailed-outline-of-regional-assembly-results-in-the-polish-local-elections-of-2024',
+        accessedOn: '2026-09-13',
+      },
+    },
+    founded: 2001,
+    description:
+      "Fondé le 13 juin 2001 par les frères Jarosław et Lech Kaczyński, et dirigé par Jarosław Kaczyński depuis 2003. Au pouvoir de 2015 à 2023, il a fait du refus des quotas européens de relocalisation puis de la fermeture de la frontière biélorusse l'un des axes centraux de son action, tout en ouvrant parallèlement le pays à une immigration de travail ukrainienne et asiatique de grande ampleur — une tension que ses concurrents de la Konfederacja lui reprochent régulièrement.",
+  },
+  {
     slug: 'konfederacja',
     name: 'Konfederacja',
     countryCode: 'PL',
