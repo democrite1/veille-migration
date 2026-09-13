@@ -2,6 +2,43 @@ import type { Election } from './types';
 
 export const elections: Election[] = [
   {
+    id: 'gb-greater-manchester-mayoral-by-election-2026',
+    countryCode: 'GB',
+    level: 'partial',
+    scopeName: 'Élection partielle à la mairie du Grand Manchester',
+    mandateDuration: "Jusqu'au terme du mandat en cours (2028)",
+    powers:
+      "Maire de la Greater Manchester Combined Authority, compétent notamment en transports, logement et police pour 2,9 millions d'habitants.",
+    date: '2026-07-30',
+    status: 'resultat_connu',
+    result:
+      "Partielle provoquée par le départ d'Andy Burnham, élu député six semaines plus tôt. La travailliste Bev Craig l'emporte. Restore Britain, parti remigrationniste fondé cinq mois auparavant, arrive quatrième sur sept avec 46 289 voix (8,7%), devant les conservateurs sur ce scrutin.",
+    totalSeats: 1,
+    source: {
+      name: 'Wikipedia — 2026 Greater Manchester mayoral by-election',
+      url: 'https://en.wikipedia.org/wiki/2026_Greater_Manchester_mayoral_by-election',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
+    id: 'gb-makerfield-by-election-2026',
+    countryCode: 'GB',
+    level: 'partial',
+    scopeName: 'Élection législative partielle de Makerfield',
+    mandateDuration: "Jusqu'aux prochaines élections générales",
+    powers: 'Un siège à la Chambre des communes.',
+    date: '2026-06-18',
+    status: 'resultat_connu',
+    result:
+      "Andy Burnham (Labour) conserve le siège pour son parti avec 54,8%, devant Reform UK (34,5%). Restore Britain, pour sa première législative partielle, obtient 6,84% (3 111 voix) et se classe troisième sur quatorze candidats. Participation : 58,75%.",
+    totalSeats: 650,
+    source: {
+      name: 'Wikipedia — 2026 Makerfield by-election',
+      url: 'https://en.wikipedia.org/wiki/2026_Makerfield_by-election',
+      accessedOn: '2026-09-13',
+    },
+  },
+  {
     id: 'jp-shugiin-2026',
     countryCode: 'JP',
     level: 'national',

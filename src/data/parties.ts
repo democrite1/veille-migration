@@ -488,6 +488,90 @@ export const parties: Party[] = [
       "Fondé en 2018 sous le nom Brexit Party, renommé Reform UK en 2021. Dirigé par Nigel Farage depuis septembre 2024.",
   },
   {
+    slug: 'restore-britain',
+    name: 'Restore Britain',
+    countryCode: 'GB',
+    positioning: 'Ethno-nationaliste, extrême droite',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Un député sur 650 à la Chambre des communes : son fondateur Rupert Lowe, élu de Great Yarmouth en 2024 sous l'étiquette Reform UK avant d'en être suspendu en mars 2025. Le parti revendique 130 000 adhérents cotisants en juin 2026 — davantage que la plupart des partis établis britanniques — et 37 conseillers locaux au 10 août 2026, dont sept élus du Kent ralliés en bloc. Les intentions de vote nationales oscillaient entre 7 et 9% au printemps 2026. Advance UK, parti rival fondé le même jour par un autre ancien de Reform UK, Ben Habib, a été dissous le 10 juillet 2026 pour ne pas diviser cet espace politique.",
+    electoralStatusSource: {
+      name: 'Wikipedia — Restore Britain',
+      url: 'https://en.wikipedia.org/wiki/Restore_Britain',
+      accessedOn: '2026-09-13',
+      note: "Dissolution d'Advance UK documentée par Left Foot Forward (https://leftfootforward.org/2026/06/ben-habib-winds-up-advance-uk-to-clear-the-way-for-restore-britain/).",
+    },
+    officialWebsite: 'https://www.restorebritain.org.uk',
+    socialAccounts: [
+      { platform: 'X (parti)', url: 'https://x.com/RestoreBritain' },
+      { platform: 'X (Rupert Lowe)', url: 'https://x.com/RupertLowe10' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia — Restore Britain',
+      url: 'https://en.wikipedia.org/wiki/Restore_Britain',
+      note: "Critère d'auto-déclaration satisfait sans ambiguïté : le parti se décrit lui-même comme ethno-nationaliste. Classé parti d'extrême droite ; le Financial Times y voit « une forme de nativisme dur que la vie politique britannique n'avait plus connue depuis la disparition de fait du BNP », HOPE not hate « une re-racialisation du courant d'extrême droite britannique », et The Critic un positionnement « plus à droite que Reform ».",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Wikipedia — Restore Britain',
+        url: 'https://en.wikipedia.org/wiki/Restore_Britain',
+        note: "Ses figures de proue revendiquent ouvertement le terme « remigration » — critère central de la méthodologie de ce site. Rupert Lowe a publié un document de politique publique de 133 pages consacré aux « expulsions de masse », visant la déportation à grande échelle des personnes sans statut légal au Royaume-Uni et une immigration nette négative. Le parti reprend par ailleurs les thèses du « Grand Remplacement », affirmant que la part de la population de souche britannique déclinera d'ici 2070.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'UK Parliament — Restore Britain',
+        url: 'https://en.wikipedia.org/wiki/Restore_Britain',
+        note: "Parti d'opposition disposant d'un seul siège aux Communes : aucune loi Restore Britain promulguée, et aucune possibilité arithmétique d'en faire adopter une. Son influence est celle d'un aiguillon exercé sur Reform UK et sur le Parti conservateur.",
+      },
+    },
+    electoralHistory: [
+      {
+        label: 'Élection partielle à la mairie du Grand Manchester 2026',
+        chamber: 'Maire de la Greater Manchester Combined Authority',
+        date: '2026-07-30',
+        seats: 0,
+        totalSeats: 1,
+        votePercent: 8.7,
+        source: {
+          name: 'Wikipedia — 2026 Greater Manchester mayoral by-election',
+          url: 'https://en.wikipedia.org/wiki/2026_Greater_Manchester_mayoral_by-election',
+          accessedOn: '2026-09-13',
+          note: "Meilleur total de voix du parti à ce jour : 46 289 bulletins pour Marlon West, quatrième sur sept candidats. Scrutin uninominal remporté par la travailliste Bev Craig. La partielle découle du départ d'Andy Burnham, qui avait quitté la mairie pour se faire élire député à Makerfield six semaines plus tôt.",
+        },
+      },
+      {
+        label: 'Élection législative partielle de Makerfield 2026',
+        chamber: 'Chambre des communes',
+        date: '2026-06-18',
+        seats: 0,
+        totalSeats: 650,
+        votePercent: 6.84,
+        source: {
+          name: 'Wikipedia — 2026 Makerfield by-election',
+          url: 'https://en.wikipedia.org/wiki/2026_Makerfield_by-election',
+          accessedOn: '2026-09-13',
+          note: "Première candidature du parti à une législative partielle : Rebecca Shepherd obtient 3 111 voix (6,84%), troisième sur quatorze candidats, derrière le Labour (Andy Burnham, 54,8%) et Reform UK (34,5%).",
+        },
+      },
+    ],
+    localImplantation: {
+      summary:
+        "37 conseillers locaux au 10 août 2026, répartis sur dix-sept collectivités anglaises, galloises et écossaises — un maillage constitué pour l'essentiel par ralliements d'élus en cours de mandat plutôt que par conquête électorale. Seule exception : aux élections locales anglaises du 7 mai 2026, sa structure affiliée Great Yarmouth First a remporté la totalité des dix sièges qu'elle briguait (neuf au conseil du comté de Norfolk, un au conseil d'arrondissement de Great Yarmouth), dans le fief parlementaire de Rupert Lowe.",
+      regionalCouncillors: 37,
+      source: {
+        name: 'Wikipedia — Restore Britain',
+        url: 'https://en.wikipedia.org/wiki/Restore_Britain',
+        accessedOn: '2026-09-13',
+      },
+    },
+    founded: 2026,
+    description:
+      "Lancé le 30 juin 2025 comme simple groupe de pression par Rupert Lowe, député de Great Yarmouth exclu de Reform UK trois mois plus tôt, puis converti en parti politique le 13 février 2026 et enregistré auprès de l'Electoral Commission le 20 mars. Le parti le plus jeune de ce répertoire, et l'un des rares en Europe de l'Ouest à faire de la remigration un axe programmatique assumé plutôt qu'un sous-entendu. Il a disputé trois scrutins durant son premier semestre d'existence.",
+  },
+  {
     slug: 'fratelli-italia',
     name: "Fratelli d'Italia (FdI)",
     countryCode: 'IT',
