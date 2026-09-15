@@ -787,6 +787,70 @@ export const parties: Party[] = [
       "Fondé en 1989 sous le nom de Lega Nord, mouvement régionaliste et autonomiste du nord de l'Italie. Recentré sur l'immigration et le nationalisme italien à l'échelle du pays sous la direction de Matteo Salvini, qui préside le parti depuis 2013 et l'a renommé Lega en 2018.",
   },
   {
+    slug: 'futuro-nazionale',
+    name: 'Futuro Nazionale (FN)',
+    countryCode: 'IT',
+    positioning: 'Extrême droite, national-conservatrice et souverainiste',
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Huit députés sur 400 à la Chambre, aucun sénateur, un eurodéputé — son fondateur Roberto Vannacci — et sept conseillers régionaux, sept mois après sa création. Le parti revendique environ 140 000 adhérents. Expulsé du groupe Patriotes pour l'Europe au Parlement européen à la suite du départ de Vannacci de la Lega, il a rejoint le 24 février 2026 le groupe Europe des nations souveraines (ESN), fondé par l'AfD. Le 31 mars 2026, ses députés ont voté contre la confiance au gouvernement Meloni, se plaçant dans l'opposition à la coalition de centre-droit dont le parti se présentait pourtant comme « l'allié naturel ». Comme l'UDR française, il n'a jamais disputé d'élection nationale sous son propre nom : tous ses parlementaires ont été élus sous l'étiquette de la Lega.",
+    electoralStatusSource: {
+      name: 'Wikipedia — National Future (Futuro Nazionale)',
+      url: 'https://en.wikipedia.org/wiki/National_Future',
+      accessedOn: '2026-09-15',
+    },
+    officialWebsite: 'https://www.futuronazionale.it',
+    socialAccounts: [
+      { platform: 'X (Roberto Vannacci)', url: 'https://x.com/RoVannacci' },
+      { platform: 'Instagram (parti)', url: 'https://www.instagram.com/futuro_nazionale_ufficiale/' },
+    ],
+    classificationSource: {
+      name: 'Wikipedia — National Future (Futuro Nazionale)',
+      url: 'https://en.wikipedia.org/wiki/National_Future',
+      note: "Classifié parti d'extrême droite, national-conservateur et populiste de droite. Comme pour les autres formations récentes de cet annuaire, les bases universitaires de référence (Manifesto Project, ParlGov, PopuList, CHES) n'ont pas encore codé un parti fondé en février 2026 ; l'appartenance au groupe Europe des nations souveraines, le plus à droite du Parlement européen, fournit un indicateur de positionnement complémentaire.",
+    },
+    intention: {
+      tag: 'remigration',
+      source: {
+        name: 'Wikipedia — National Future (Futuro Nazionale)',
+        url: 'https://en.wikipedia.org/wiki/National_Future',
+        note: "Ligne fortement anti-immigration assortie d'une politique explicite de remigration visant les personnes qui ne s'assimilent pas aux normes et valeurs culturelles italiennes — usage direct du terme, critère central de la méthodologie de ce site. C'est ce qui distingue le parti de la Lega, dont Vannacci est issu, et de Fratelli d'Italia, dont la ligne reste centrée sur la réduction des entrées.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Camera dei Deputati',
+        url: 'https://www.camera.it',
+        note: "Parti d'opposition depuis mars 2026 : aucune loi Futuro Nazionale promulguée, et aucun exécutif local détenu à ce jour.",
+      },
+    },
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 76,
+      europeanGroup: 'Europe des nations souveraines (ESN)',
+      source: {
+        name: "ANSA — Vannacci lascia il Gruppo dei Patrioti per l'Europa al Parlamento europeo",
+        url: 'https://www.ansa.it/europa/notizie/europarlamento/news/2026/02/03/vannacci-lascia-il-gruppo-dei-patrioti-per-leuropa-al-parlamento-europeo_d4b1c292-491d-4a9f-964a-52b810651abf.html',
+        accessedOn: '2026-09-15',
+        note: "Vannacci avait été élu en 2024 sur les listes de la Lega avec plus de 500 000 voix de préférence. Expulsé des Patriotes pour l'Europe après sa rupture avec la Lega, il a rejoint le groupe ESN le 24 février 2026.",
+      },
+    },
+    localImplantation: {
+      summary:
+        "Implantation locale embryonnaire : sept conseillers régionaux, issus eux aussi de ralliements plutôt que d'élections. Première candidature sous son propre nom aux municipales de Vigevano (Lombardie) le 24 mai 2026, où le candidat soutenu par le parti obtient 14,21% au premier tour sans se qualifier pour le second.",
+      regionalCouncillors: 7,
+      source: {
+        name: 'Wikipedia — National Future (Futuro Nazionale)',
+        url: 'https://en.wikipedia.org/wiki/National_Future',
+        accessedOn: '2026-09-15',
+      },
+    },
+    founded: 2026,
+    description:
+      "Fondé le 6 février 2026 par Roberto Vannacci, général de division à la retraite devenu eurodéputé, trois jours après sa rupture avec la Lega dont il était vice-secrétaire — l'aboutissement de mois de tensions internes sur ses positions. Révélé au grand public par son livre « Il mondo al contrario » (2023), qui lui avait valu une sanction disciplinaire de l'armée italienne. Avec environ 140 000 adhérents revendiqués, c'est l'un des partis les plus jeunes et les mieux dotés en militants de cet annuaire.",
+  },
+  {
     slug: 'pvv',
     name: 'Partij voor de Vrijheid (PVV)',
     countryCode: 'NL',
