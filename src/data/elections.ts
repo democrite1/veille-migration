@@ -295,12 +295,15 @@ export const elections: Election[] = [
     mandateDuration: '4 ans',
     powers: 'Élection du Riksdag, qui vote les lois et désigne le gouvernement.',
     date: '2026-09-13',
-    status: 'a_venir',
+    status: 'resultat_connu',
+    result:
+      "Défaite du bloc Tidö de trois sièges (173 contre 176) et premier recul électoral de Sverigedemokraterna depuis son entrée au Riksdag en 2010 : 17,5% et 62 sièges, contre 20,5% et 73 sièges en 2022. SD perd sa deuxième place au profit des Modérés (19,9%, 70 sièges). Les sociaux-démocrates de Magdalena Andersson restent premier parti (28,1%, 100 sièges). Le 1er avril 2026, les quatre partis du bloc Tidö avaient annoncé qu'en cas de victoire, SD entrerait pour la première fois au gouvernement avec des ministres : le scrutin a écarté cette hypothèse. Participation : 80,3%.",
+    totalSeats: 349,
     source: {
-      name: 'Val.se (Valmyndigheten)',
-      url: 'https://sv.wikipedia.org/wiki/Riksdagsvalet_i_Sverige_2026',
-      accessedOn: '2026-08-18',
-      note: "Le 1er avril 2026, les quatre partis du bloc Tidö (dont Sverigedemokraterna) ont annoncé qu'en cas de victoire, SD entrerait pour la première fois au gouvernement avec des ministres.",
+      name: 'Wikipedia — 2026 Swedish general election',
+      url: 'https://en.wikipedia.org/wiki/2026_Swedish_general_election',
+      accessedOn: '2026-09-15',
+      note: "Résultats préliminaires (95,3% des bulletins dépouillés). L'Autorité électorale suédoise (Valmyndigheten) arrête le résultat définitif environ une semaine après le scrutin.",
     },
   },
   {

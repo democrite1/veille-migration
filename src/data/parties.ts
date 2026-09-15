@@ -1078,7 +1078,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Non représenté au gouvernement mais partenaire de soutien parlementaire de la coalition Kristersson (Moderaterna-Kristdemokraterna-Liberalerna) via l'accord de Tidö (octobre 2022), avec une influence directe sur la politique migratoire sans détenir de portefeuille ministériel. Le 1er avril 2026, les quatre partis du bloc Tidö ont annoncé qu'en cas de victoire du bloc aux élections législatives de septembre 2026, SD entrerait pour la première fois au gouvernement avec des ministres.",
+      "Premier revers électoral du parti depuis son entrée au Riksdag en 2010 : aux élections du 13 septembre 2026, SD recule à 17,5% et 62 sièges sur 349 (contre 20,5% et 73 sièges en 2022) et perd sa deuxième place au profit des Modérés. Le bloc Tidö est battu de trois sièges (173 contre 176), ce qui fait tomber la perspective — annoncée le 1er avril 2026 par les quatre partis du bloc — d'une première entrée de SD au gouvernement avec des ministres. Le parti soutenait sans y participer la coalition Kristersson via l'accord de Tidö (octobre 2022), avec une influence directe sur la politique migratoire.",
     electoralStatusSource: {
       name: 'Regeringen.se',
       url: 'https://www.regeringen.se/pressmeddelanden/2026/05/regeringen-och-sverigedemokraterna-presenterar-bokslut-over-tidoavtalet/',
@@ -1110,6 +1110,20 @@ export const parties: Party[] = [
       },
     },
     electoralHistory: [
+      {
+        label: 'Élections législatives 2026',
+        chamber: 'Riksdag',
+        date: '2026-09-13',
+        seats: 62,
+        totalSeats: 349,
+        votePercent: 17.5,
+        source: {
+          name: 'Wikipedia — 2026 Swedish general election',
+          url: 'https://en.wikipedia.org/wiki/2026_Swedish_general_election',
+          accessedOn: '2026-09-15',
+          note: "Perte de 11 sièges, retour au niveau de 2018 et rétrogradation à la troisième place derrière les Modérés (19,9%, 70 sièges). Participation : 80,3%. Résultats préliminaires : l'Autorité électorale suédoise arrête le résultat définitif environ une semaine après le scrutin.",
+        },
+      },
       {
         label: 'Élections législatives 2022',
         chamber: 'Riksdag',
