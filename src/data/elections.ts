@@ -63,8 +63,8 @@ export const elections: Election[] = [
       "L'AfD quasiment double son score de 2021 (+9,1 points) à 18,8% et 35 sièges sur 157, troisième derrière les Verts et la CDU. Le BSW échoue à franchir le seuil des 5%.",
     totalSeats: 157,
     source: {
-      name: 'Statistisches Landesamt Baden-Württemberg',
-      url: 'https://www.statistik-bw.de/presse/pressemitteilungen/pressemitteilung/vorlaeufige-ergebnisse-der-landtagswahl-2026-in-baden-wuerttemberg/',
+      name: "Ministerium des Inneren Baden-Württemberg — Endgültiges Landesergebnis der Landtagswahl 2026 festgestellt",
+      url: 'https://im.baden-wuerttemberg.de/de/service/presse-und-oeffentlichkeitsarbeit/pressemitteilung/pid/endgueltiges-landesergebnis-der-landtagswahl-2026-festgestellt',
       accessedOn: '2026-09-15',
     },
   },
@@ -95,11 +95,12 @@ export const elections: Election[] = [
     powers: 'Parlement de la communauté autonome, qui investit son président.',
     date: '2026-03-15',
     status: 'resultat_connu',
-    result: "Vox obtient 18,89% et 14 sièges sur 82, son meilleur score régional de l'année.",
+    result:
+      "Vox obtient 18,9% et 14 sièges sur 82 (237 100 voix), en hausse d'un siège et de 1,3 point par rapport à 2022. Le PP arrive en tête avec 33 sièges et le PSOE en obtient 30 : la majorité absolue étant à 42, le PP se retrouve de nouveau dépendant de Vox pour gouverner, deux ans après la rupture de leur pacte régional en juillet 2024.",
     totalSeats: 82,
     source: {
-      name: 'El Español',
-      url: 'https://www.elespanol.com/espana/20260316/resultados-elecciones-castilla-leon-directo-ultima-hora-escanos-conseguidos-pp-psoe-vox/1003744170785_10.html',
+      name: 'Wikipedia — 2026 Castilian-Leonese regional election',
+      url: 'https://en.wikipedia.org/wiki/2026_Castilian-Leonese_regional_election',
       accessedOn: '2026-09-15',
     },
   },
@@ -314,7 +315,6 @@ export const elections: Election[] = [
       "Renouvellement intégral de la Chambre des représentants et d'un tiers du Sénat, plus de nombreux postes de gouverneurs et de législatures d'État.",
     date: '2026-11-03',
     status: 'a_venir',
-    totalSeats: 435,
     source: {
       name: 'Wikipedia — List of elections in 2026',
       url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
@@ -455,11 +455,12 @@ export const elections: Election[] = [
     date: '2026-05-07',
     status: 'resultat_connu',
     result:
-      "Reform UK obtient plus de 1 000 sièges de conseillers et prend le contrôle d'une dizaine de councils (notamment dans les East Midlands), la plus forte progression d'un parti hors des deux principaux partis dans l'histoire récente des élections locales anglaises. Labour perd environ 1 100 sièges et 28 councils.",
+      "Reform UK gagne 1 451 sièges de conseillers — portant son total à 1 453 — et prend le contrôle de 14 councils, sans en détenir aucun auparavant : la plus forte progression jamais enregistrée par un parti hors des deux principaux dans l'histoire des élections locales anglaises. Labour subit les pertes les plus lourdes (−1 496 conseillers, −38 councils) et se classe pour la première fois troisième en part de voix équivalente ; les conservateurs perdent 563 conseillers et 6 councils. Les Verts gagnent 441 sièges, les libéraux-démocrates 155. Soixante-quatre councils se retrouvent sans majorité, soit 23 de plus qu'auparavant.",
     source: {
-      name: 'Local Government Chronicle',
-      url: 'https://www.lgcplus.com/politics/governance-and-structure/live-blog-local-election-results-2026-08-05-2026/',
-      accessedOn: '2026-08-18',
+      name: 'Wikipedia — 2026 United Kingdom local elections',
+      url: 'https://en.wikipedia.org/wiki/2026_United_Kingdom_local_elections',
+      accessedOn: '2026-09-15',
+      note: "Une version antérieure de cette entrée, tirée d'un direct de résultats, annonçait « plus de 1 000 » sièges Reform et « une dizaine » de councils : chiffres de nuit électorale nettement inférieurs au décompte définitif.",
     },
   },
   {
@@ -507,11 +508,12 @@ export const elections: Election[] = [
     date: '2026-04-12',
     status: 'resultat_connu',
     result:
-      "Défaite historique du Fidesz-KDNP de Viktor Orbán (55 sièges, 37% des voix) face au parti Tisza de Péter Magyar (141 sièges sur 199, 54% des voix, majorité des deux tiers). Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) fait aussi son entrée au Parlement avec 6 sièges.",
+      "Défaite historique du Fidesz-KDNP de Viktor Orbán (52 sièges sur 199, 38,61% des voix de liste) face au parti Tisza de Péter Magyar (141 sièges, 53,18%), qui obtient à son tour une majorité des deux tiers. Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) se maintient au Parlement mais recule de 7 à 6 sièges (5,63%). Participation de 78,99%, la plus forte depuis 1990.",
+    totalSeats: 199,
     source: {
-      name: 'CNN',
-      url: 'https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar',
-      accessedOn: '2026-09-07',
+      name: 'Wikipedia — 2026 Hungarian parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+      accessedOn: '2026-09-15',
     },
   },
   {
@@ -951,7 +953,6 @@ export const elections: Election[] = [
     status: 'resultat_connu',
     result:
       "Le Parti républicain remporte la Chambre des représentants (220 sièges sur 435) et le Sénat (53 sièges sur 100), aux côtés de la victoire présidentielle de Donald Trump, donnant au parti le contrôle total du gouvernement fédéral pour le 119e Congrès (2025-2027).",
-    totalSeats: 435,
     source: {
       name: 'Ballotpedia — Election results, 2024: U.S. Congress',
       url: 'https://ballotpedia.org/Election_results,_2024:_U.S._Congress',

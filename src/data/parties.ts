@@ -315,8 +315,8 @@ export const parties: Party[] = [
         totalSeats: 157,
         votePercent: 18.8,
         source: {
-          name: 'Statistisches Landesamt Baden-Württemberg',
-          url: 'https://www.statistik-bw.de/presse/pressemitteilungen/pressemitteilung/vorlaeufige-ergebnisse-der-landtagswahl-2026-in-baden-wuerttemberg/',
+          name: "Ministerium des Inneren Baden-Württemberg — Endgültiges Landesergebnis der Landtagswahl 2026 festgestellt",
+          url: 'https://im.baden-wuerttemberg.de/de/service/presse-und-oeffentlichkeitsarbeit/pressemitteilung/pid/endgueltiges-landesergebnis-der-landtagswahl-2026-festgestellt',
           accessedOn: '2026-09-10',
           note: "Quasi-doublement du score de 2021 (+9,1 points), troisième place derrière les Verts et la CDU.",
         },
@@ -1479,8 +1479,8 @@ export const parties: Party[] = [
         totalSeats: 82,
         votePercent: 18.89,
         source: {
-          name: 'El Español',
-          url: 'https://www.elespanol.com/espana/20260316/resultados-elecciones-castilla-leon-directo-ultima-hora-escanos-conseguidos-pp-psoe-vox/1003744170785_10.html',
+          name: 'Wikipedia — 2026 Castilian-Leonese regional election',
+          url: 'https://en.wikipedia.org/wiki/2026_Castilian-Leonese_regional_election',
           accessedOn: '2026-09-10',
         },
       },
@@ -1610,11 +1610,12 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Défaite historique aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán n'obtient que 55 sièges (37% des voix) contre 141 sièges (54% des voix) pour le parti Tisza de Péter Magyar. Orbán a concédé sa défaite le soir même. Fidesz est désormais dans l'opposition.",
+      "Défaite historique aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán tombe à 52 sièges sur 199 (38,61% des voix de liste) face au parti Tisza de Péter Magyar, qui en obtient 141 (53,18%) — soit à son tour une majorité des deux tiers, suffisante pour réviser la Constitution. Orbán a concédé sa défaite le soir même. Participation de 78,99%, la plus forte depuis la transition démocratique de 1990. Fidesz est désormais dans l'opposition.",
     electoralStatusSource: {
-      name: 'CNN',
-      url: 'https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar',
-      accessedOn: '2026-09-07',
+      name: 'Wikipedia — 2026 Hungarian parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+      accessedOn: '2026-09-15',
+      note: "Chiffres définitifs. Une version antérieure de cette fiche indiquait 55 sièges et 37%, estimations de soir de scrutin reprises d'un direct de presse et corrigées depuis.",
     },
     officialWebsite: 'https://fidesz.hu',
     socialAccounts: [
@@ -1646,13 +1647,14 @@ export const parties: Party[] = [
         label: 'Élections législatives 2026',
         chamber: 'Országgyűlés (Assemblée nationale)',
         date: '2026-04-12',
-        seats: 55,
+        seats: 52,
         totalSeats: 199,
-        votePercent: 37,
+        votePercent: 38.61,
         source: {
-          name: 'Nemzeti Választási Iroda (Office électoral national)',
-          url: 'https://www.valasztas.hu',
-          accessedOn: '2026-09-09',
+          name: 'Wikipedia — 2026 Hungarian parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+          accessedOn: '2026-09-15',
+          note: "Perte de plus de 80 sièges par rapport à 2022. Le parti progresse pourtant en pourcentage de voix de liste : c'est la coalition d'opposition unifiée autour de Tisza qui fait basculer la quasi-totalité des circonscriptions uninominales.",
         },
       },
       {
@@ -2150,8 +2152,8 @@ export const parties: Party[] = [
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Notes From Poland — Polish government\'s referendum invalidated by low turnout',
-        url: 'https://notesfrompoland.com/2023/10/15/exit-poll-polish-governments-referendum-invalidated-by-low-turnout/',
+        name: 'Wikipedia — 2023 Polish referendum',
+        url: 'https://en.wikipedia.org/wiki/2023_Polish_referendum',
         note: "Ligne constante de refus de l'accueil : rejet des quotas européens de relocalisation depuis 2015, opposition au Pacte européen sur la migration et l'asile, et organisation en octobre 2023 d'un référendum demandant aux électeurs s'ils soutenaient « l'admission de milliers d'immigrés illégaux du Moyen-Orient et d'Afrique dans le cadre du mécanisme de relocalisation forcée imposé par la bureaucratie européenne ». Pas de politique explicite de remigration de résidents en situation régulière : la ligne porte sur le blocage des entrées.",
       },
     },
@@ -2167,10 +2169,10 @@ export const parties: Party[] = [
       {
         date: '2023-10-15',
         tag: 'mesures_concretes',
-        note: "Référendum sur la relocalisation des migrants organisé le jour des législatives : invalidé faute de quorum (40% de participation contre les 50% requis), l'opposition ayant appelé au boycott.",
+        note: "Référendum sur la relocalisation des migrants organisé le jour des législatives : invalidé faute de quorum (40,91% de participation contre les 50% requis), l'opposition ayant appelé au boycott.",
         source: {
-          name: 'Notes From Poland',
-          url: 'https://notesfrompoland.com/2023/10/15/exit-poll-polish-governments-referendum-invalidated-by-low-turnout/',
+          name: 'Wikipedia — 2023 Polish referendum',
+          url: 'https://en.wikipedia.org/wiki/2023_Polish_referendum',
           accessedOn: '2026-09-13',
         },
       },
