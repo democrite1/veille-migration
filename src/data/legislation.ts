@@ -2,6 +2,21 @@ import type { Legislation } from './types';
 
 export const legislation: Legislation[] = [
   {
+    id: 'dk-paradigmeskiftet-2019',
+    countryOrLevel: 'DK',
+    title: "« Paradigmeskiftet » (projet de loi L 140) — bascule de l'intégration vers le retour",
+    status: 'promulguee',
+    date: '2019-02-21',
+    description:
+      "Adopté par le Folketing le 21 février 2019 au sein d'un ensemble de 114 restrictions migratoires votées cette année-là. Le texte inverse la finalité du droit d'asile danois : la protection devient temporaire par principe pour tous les réfugiés, y compris réinstallés, avec réexamen périodique du statut et possibilité de révocation dès que la situation du pays d'origine est jugée sûre ; les prestations sociales versées aux réfugiés sont rebaptisées « aide au retour ». Deux particularités en font un cas à part dans cet annuaire. D'abord, il a été voté par la coalition libérale-conservatrice au pouvoir, par le Dansk Folkeparti — seul parti anti-immigration de cet annuaire à y avoir contribué — et par les sociaux-démocrates alors dans l'opposition. Ensuite, ce sont ces derniers qui l'ont approfondi une fois arrivés au pouvoir : le gouvernement de Mette Frederiksen, en fonction depuis juin 2019, a fait de la politique migratoire la plus restrictive d'Europe de l'Ouest une politique de gauche, sa ministre de l'Immigration annonçant en 2021 l'objectif de « zéro demandeur d'asile ». Les demandes d'asile sont depuis tombées à leur plus bas niveau depuis quarante ans et 95% des déboutés sont effectivement éloignés. C'est la principale démonstration, en Europe, qu'un tel programme peut être mis en œuvre sans qu'aucun parti anti-immigration ne soit au pouvoir.",
+    source: {
+      name: "The Local Denmark — Denmark's parliament passes 'paradigm change' asylum bill",
+      url: 'https://www.thelocal.dk/20190221/denmarks-parliament-passes-paradigm-change-asylum-bill',
+      accessedOn: '2026-09-15',
+      note: "Analyses complémentaires : ECRE (https://ecre.org/denmark-paradigm-shift-takes-race-to-the-bottom-to-a-new-low/) et le profil pays du Migration Policy Institute (https://www.migrationpolicy.org/journal/country-profile/denmarks-turn-temporary-protection-has-made-it-pioneer-restrictive).",
+    },
+  },
+  {
     id: 'eu-pacte-migration-asile',
     countryOrLevel: 'EU',
     title: 'Pacte européen sur la migration et l\'asile',
