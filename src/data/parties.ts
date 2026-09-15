@@ -179,6 +179,68 @@ export const parties: Party[] = [
       "Fondé par Éric Zemmour en décembre 2021. Après les élections européennes de 2024, le bureau exécutif s'est resserré autour d'Éric Zemmour, Sarah Knafo et Stanislas Rigault.",
   },
   {
+    slug: 'udr',
+    name: 'Union des droites pour la République (UDR)',
+    countryCode: 'FR',
+    positioning: "Droite nationale et identitaire, classée union de l'extrême droite (UXD) par le ministère de l'Intérieur",
+    electoralStatus: 'opposition',
+    electoralStatusDetail:
+      "Dix-sept députés sur 577 — de quoi constituer son propre groupe à l'Assemblée nationale —, un sénateur sur 348 et un eurodéputé. Le parti a franchi un seuil aux municipales de mars 2026 en enlevant Nice, cinquième ville de France, où Éric Ciotti a été élu maire, ainsi que Montauban et une dizaine de mairies au total. Particularité notable : le parti n'a jamais disputé d'élection nationale sous son propre nom, ayant été fondé sept semaines après les législatives de juillet 2024 dont ses députés sont issus.",
+    electoralStatusSource: {
+      name: 'Wikipédia — Union des droites pour la République',
+      url: 'https://fr.wikipedia.org/wiki/Union_des_droites_pour_la_R%C3%A9publique',
+      accessedOn: '2026-09-15',
+    },
+    officialWebsite: 'https://www.udr.fr',
+    socialAccounts: [
+      { platform: 'X', url: 'https://x.com/ECiotti' },
+    ],
+    classificationSource: {
+      name: "Ministère de l'Intérieur — nuance politique UXD",
+      url: 'https://fr.wikipedia.org/wiki/Union_des_droites_pour_la_R%C3%A9publique',
+      note: "Cas particulier dans cet annuaire : la classification ne vient pas des bases universitaires habituelles (Manifesto Project, ParlGov, PopuList, CHES), trop lentes pour un parti fondé en 2024, mais de l'État lui-même. Le ministère de l'Intérieur attribue à ses candidats la nuance « UXD » (union de l'extrême droite). L'UDR a contesté ce classement lors des municipales de 2026 ; le Conseil constitutionnel a rejeté son recours.",
+    },
+    intention: {
+      tag: 'reduction',
+      source: {
+        name: "LCP — Immigration, natalité, souveraineté : Éric Ciotti tente de réaliser l'union des droites à l'Assemblée",
+        url: 'https://lcp.fr/actualites/immigration-natalite-souverainete-eric-ciotti-tente-de-realiser-l-union-des-droites-a-l',
+        note: "Ligne centrée sur le durcissement des critères d'accès à la nationalité et au titre de séjour et sur la lutte contre les mariages de complaisance, dans une stratégie affichée d'union des droites autour de l'immigration, de la sécurité et de l'identité nationale. Pas de politique de remigration de résidents en situation régulière.",
+      },
+    },
+    actionStatus: {
+      tag: 'programme',
+      source: {
+        name: 'Assemblée nationale',
+        url: 'https://www2.assemblee-nationale.fr',
+        note: "Groupe d'opposition de dix-sept députés : aucune loi UDR promulguée. Le parti dispose en revanche, depuis mars 2026, d'un pouvoir exécutif local réel à Nice et Montauban.",
+      },
+    },
+    europeanRepresentation: {
+      meps: 1,
+      totalCountryMeps: 81,
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
+      source: {
+        name: 'Wikipédia — Union des droites pour la République',
+        url: 'https://fr.wikipedia.org/wiki/Union_des_droites_pour_la_R%C3%A9publique',
+        accessedOn: '2026-09-15',
+      },
+    },
+    localImplantation: {
+      summary:
+        "Une dizaine de mairies au lendemain des municipales de mars 2026, dont deux prises majeures : Nice — cinquième commune de France, dont Éric Ciotti est devenu maire — et Montauban. Le parti revendiquait plus de 13 000 adhérents fin 2024. Son implantation se confond largement avec celle de son allié le Rassemblement national, avec lequel il a conclu des accords de désistement réciproque.",
+      mayors: 10,
+      source: {
+        name: 'CNews — Municipales 2026 : les principales villes conquises par le RN au second tour',
+        url: 'https://www.cnews.fr/france/2026-03-23/municipales-2026-nice-carcassonne-montargis-menton-les-principales-villes',
+        accessedOn: '2026-09-15',
+      },
+    },
+    founded: 2024,
+    description:
+      "Né le 31 août 2024 de la rupture d'Éric Ciotti avec Les Républicains, dont il présidait le parti, après son ralliement au Rassemblement national pour les législatives anticipées de juillet 2024 — décision qui avait provoqué sa tentative d'exclusion puis la scission du parti. Prolonge une structure créée en 2012 sous le nom d'Association des Amis d'Éric Ciotti. C'est aujourd'hui la charnière entre la droite parlementaire classique et le RN.",
+  },
+  {
     slug: 'afd',
     name: 'Alternative für Deutschland (AfD)',
     countryCode: 'DE',
