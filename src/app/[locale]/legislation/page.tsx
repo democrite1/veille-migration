@@ -16,6 +16,23 @@ const LEVEL_LABELS: Record<string, string> = {
   PT: 'Portugal',
   US: 'États-Unis',
   AR: 'Argentine',
+  DK: 'Danemark',
+};
+
+// A struck-down or repealed text must never read as being in force.
+const STATUS_LABELS: Record<string, string> = {
+  promulguee: 'Promulguée',
+  en_discussion: 'En discussion',
+  invalidee: 'Invalidée par la justice',
+  abrogee: 'Abrogée',
+  caduque: 'Caduque',
+};
+const STATUS_STYLES: Record<string, string> = {
+  promulguee: 'badge-mesures',
+  en_discussion: 'badge-programme',
+  invalidee: 'badge-mesures-abrogee',
+  abrogee: 'badge-mesures-abrogee',
+  caduque: 'badge-mesures-abrogee',
 };
 
 export default async function LegislationPage() {
@@ -41,8 +58,8 @@ function LegislationPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof ge
               <h2 className="font-serif text-lg font-semibold">{l.title}</h2>
               <div className="flex gap-2">
                 <span className="badge badge-programme">{LEVEL_LABELS[l.countryOrLevel] ?? l.countryOrLevel}</span>
-                <span className={`badge ${l.status === 'promulguee' ? 'badge-mesures' : 'badge-reduction'}`}>
-                  {l.status === 'promulguee' ? 'Promulguée' : 'En discussion'}
+                <span className={`badge ${STATUS_STYLES[l.status] ?? 'badge-programme'}`}>
+                  {STATUS_LABELS[l.status] ?? l.status}
                 </span>
               </div>
             </div>

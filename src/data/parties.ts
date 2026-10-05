@@ -122,9 +122,10 @@ export const parties: Party[] = [
     intention: {
       tag: 'remigration',
       source: {
-        name: 'Déclarations publiques d\'Éric Zemmour',
-        url: 'https://parti-reconquete.fr',
-        note: 'Le terme "remigration" est employé explicitement et de manière répétée par le fondateur du parti, y compris en meeting, comme objectif de politique migratoire.',
+        name: "Public Sénat — Présidentielle 2022 : Éric Zemmour détaille son programme et assume le terme « remigration »",
+        url: 'https://www.publicsenat.fr/actualites/non-classe/presidentielle-2022-eric-zemmour-detaille-son-programme-et-assume-le-terme',
+        accessedOn: '2026-10-05',
+        note: "Le 23 mars 2022, Éric Zemmour, fondateur et président du parti, a déclaré : « Nous créerons un grand ministère de la remigration doté de tous les moyens humains et matériels pour mettre en œuvre cette nouvelle politique migratoire », en assumant explicitement le terme. Usage direct du terme par le dirigeant du parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
@@ -247,7 +248,7 @@ export const parties: Party[] = [
     positioning: 'Droite radicale, national-conservateur',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Deuxième force politique du Bundestag depuis les élections fédérales du 23 février 2025 (20,8% des voix, 152 sièges). Coprésidence de groupe : Alice Weidel et Tino Chrupalla. Aucun parti n'accepte de coalition avec l'AfD au niveau fédéral (« Brandmauer »).",
+      "Deuxième force politique du Bundestag depuis les élections fédérales du 23 février 2025 (20,8% des voix, 152 sièges). Coprésidence de groupe : Alice Weidel et Tino Chrupalla. Aucun parti n'accepte de coalition avec l'AfD au niveau fédéral (« Brandmauer »). En 2026, le parti est arrivé en tête de deux élections régionales, en Saxe-Anhalt (43,8 %) et en Mecklembourg-Poméranie-Occidentale (38,2 %), sans accéder au pouvoir dans aucun Land.",
     electoralStatusSource: {
       name: 'Die Bundeswahlleiterin — résultat définitif Bundestagswahl 2025',
       url: 'https://www.bundeswahlleiterin.de/info/presse/mitteilungen/bundestagswahl-2025/29_25_endgueltiges-ergebnis.html',
@@ -263,11 +264,12 @@ export const parties: Party[] = [
       note: 'Classifié parti de la famille nationaliste / populiste radical de droite.',
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Grundsatzprogramm AfD',
-        url: 'https://www.afd.de',
-        note: 'Le programme fédéral officiel prône un arrêt/une réduction drastique de l\'immigration et l\'augmentation des expulsions, sans employer officiellement le terme "remigration". Ce terme est en revanche associé publiquement au parti depuis la réunion de Potsdam (novembre 2023, révélée par Correctiv en janvier 2024), à laquelle a participé un collaborateur alors proche d\'Alice Weidel ; la direction du parti a publiquement pris ses distances avec les plans de "remigration de masse" évoqués lors de cette réunion.',
+        name: "nd-aktuell — Bundestagswahl : AfD verabschiedet extrem rechtes Wahlprogramm",
+        url: 'https://www.nd-aktuell.de/artikel/1188160.bundestagswahl-remigration-afd-verabschiedet-extrem-rechtes-wahlprogramm.html',
+        accessedOn: '2026-10-05',
+        note: "Le congrès de Riesa du 12 janvier 2025 a inscrit la « Remigration » au programme pour les élections fédérales, à une large majorité, après qu'Alice Weidel a déclaré : « Wenn es dann Remigration heißen soll, dann heißt es eben Remigration » (« Si cela doit s'appeler remigration, alors cela s'appellera remigration »). Usage explicite du terme par le parti et sa dirigeante — critère central de la méthodologie de ce site. Une version antérieure de cette fiche affirmait à tort que le parti n'employait pas officiellement le terme.",
       },
     },
     actionStatus: {
@@ -279,6 +281,34 @@ export const parties: Party[] = [
       },
     },
     electoralHistory: [
+      {
+        label: "Élection régionale de Mecklembourg-Poméranie-Occidentale 2026",
+        chamber: "Landtag de Mecklembourg-Poméranie-Occidentale",
+        date: '2026-09-20',
+        seats: 32,
+        totalSeats: 71,
+        votePercent: 38.2,
+        source: {
+          name: "Wikipedia — Landtagswahl in Mecklenburg-Vorpommern 2026",
+          url: 'https://de.wikipedia.org/wiki/Landtagswahl_in_Mecklenburg-Vorpommern_2026',
+          accessedOn: '2026-10-05',
+          note: "Le parti arrive en tête devant le SPD (35,5 %) ; la CDU échoue sous le seuil de 5 %. Tenu à l'écart de toute coalition par les autres partis.",
+        },
+      },
+      {
+        label: "Élection au Parlement de Berlin 2026",
+        chamber: "Abgeordnetenhaus de Berlin",
+        date: '2026-09-20',
+        seats: 29,
+        totalSeats: 158,
+        votePercent: 16.3,
+        source: {
+          name: "Wikipedia — Wahl zum Abgeordnetenhaus von Berlin 2026",
+          url: 'https://de.wikipedia.org/wiki/Wahl_zum_Abgeordnetenhaus_von_Berlin_2026',
+          accessedOn: '2026-10-05',
+          note: "Troisième force, derrière Die Linke et la CDU.",
+        },
+      },
       {
         label: 'Élection régionale de Saxe-Anhalt 2026',
         chamber: 'Landtag de Saxe-Anhalt',
@@ -411,6 +441,34 @@ export const parties: Party[] = [
       },
     },
     electoralHistory: [
+      {
+        label: "Élection régionale de Mecklembourg-Poméranie-Occidentale 2026",
+        chamber: "Landtag de Mecklembourg-Poméranie-Occidentale",
+        date: '2026-09-20',
+        seats: 0,
+        totalSeats: 71,
+        votePercent: 4.8,
+        source: {
+          name: "Wikipedia — Landtagswahl in Mecklenburg-Vorpommern 2026",
+          url: 'https://de.wikipedia.org/wiki/Landtagswahl_in_Mecklenburg-Vorpommern_2026',
+          accessedOn: '2026-10-05',
+          note: "Sous le seuil de 5 %.",
+        },
+      },
+      {
+        label: "Élection au Parlement de Berlin 2026",
+        chamber: "Abgeordnetenhaus de Berlin",
+        date: '2026-09-20',
+        seats: 0,
+        totalSeats: 158,
+        votePercent: 4.7,
+        source: {
+          name: "Wikipedia — Wahl zum Abgeordnetenhaus von Berlin 2026",
+          url: 'https://de.wikipedia.org/wiki/Wahl_zum_Abgeordnetenhaus_von_Berlin_2026',
+          accessedOn: '2026-10-05',
+          note: "Sous le seuil de 5 %.",
+        },
+      },
       {
         label: 'Élection régionale de Saxe-Anhalt 2026',
         chamber: 'Landtag de Saxe-Anhalt',
@@ -1205,11 +1263,11 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Premier revers électoral du parti depuis son entrée au Riksdag en 2010 : aux élections du 13 septembre 2026, SD recule à 17,5% et 62 sièges sur 349 (contre 20,5% et 73 sièges en 2022) et perd sa deuxième place au profit des Modérés. Le bloc Tidö est battu de trois sièges (173 contre 176), ce qui fait tomber la perspective — annoncée le 1er avril 2026 par les quatre partis du bloc — d'une première entrée de SD au gouvernement avec des ministres. Le parti soutenait sans y participer la coalition Kristersson via l'accord de Tidö (octobre 2022), avec une influence directe sur la politique migratoire.",
+      "Premier revers électoral du parti depuis son entrée au Riksdag en 2010 : aux élections du 13 septembre 2026, SD recule à 17,48 % et 62 sièges sur 349 (contre 20,5% et 73 sièges en 2022) et perd sa deuxième place au profit des Modérés. Le bloc Tidö est battu de trois sièges (173 contre 176), ce qui fait tomber la perspective — annoncée le 1er avril 2026 par les quatre partis du bloc — d'une première entrée de SD au gouvernement avec des ministres. Le parti soutenait sans y participer la coalition Kristersson via l'accord de Tidö (octobre 2022), avec une influence directe sur la politique migratoire.",
     electoralStatusSource: {
-      name: 'Regeringen.se',
-      url: 'https://www.regeringen.se/pressmeddelanden/2026/05/regeringen-och-sverigedemokraterna-presenterar-bokslut-over-tidoavtalet/',
-      accessedOn: '2026-08-18',
+      name: 'Wikipedia — 2026 Swedish general election',
+      url: 'https://en.wikipedia.org/wiki/2026_Swedish_general_election',
+      accessedOn: '2026-10-05',
     },
     officialWebsite: 'https://sd.se',
     socialAccounts: [
@@ -1243,12 +1301,12 @@ export const parties: Party[] = [
         date: '2026-09-13',
         seats: 62,
         totalSeats: 349,
-        votePercent: 17.5,
+        votePercent: 17.48,
         source: {
           name: 'Wikipedia — 2026 Swedish general election',
           url: 'https://en.wikipedia.org/wiki/2026_Swedish_general_election',
           accessedOn: '2026-09-15',
-          note: "Perte de 11 sièges, retour au niveau de 2018 et rétrogradation à la troisième place derrière les Modérés (19,9%, 70 sièges). Participation : 80,3%. Résultats préliminaires : l'Autorité électorale suédoise arrête le résultat définitif environ une semaine après le scrutin.",
+          note: "Perte de 11 sièges, retour au niveau de 2018 et rétrogradation à la troisième place derrière les Modérés (19,85 %, 70 sièges). Participation : 84,9 %. Résultat définitif certifié le 17 septembre 2026.",
         },
       },
       {
@@ -1416,11 +1474,12 @@ export const parties: Party[] = [
       note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Democrata.es',
-        url: 'https://www.democrata.es/politica/congreso-y-senado/vox-propone-congreso-expulsion-migrantes-irregulares-confiscacion-open-arms/',
-        note: "Programme centré sur l'expulsion des migrants en situation irrégulière et la fin des voies de régularisation, sans politique explicite de remigration de résidents en situation régulière ou de nationaux.",
+        name: "Euronews — Vox propone deportar de manera masiva a millones de inmigrantes",
+        url: 'https://es.euronews.com/my-europe/2025/07/08/vox-propone-de-manera-abierta-deportar-de-manera-masiva-a-millones-de-inmigrantes',
+        accessedOn: '2026-10-05',
+        note: "Le 8 juillet 2025, les députés Rocío de Meer et Samuel Vázquez ont présenté en conférence de presse du parti un projet de « remigración » visant « plus de sept millions » de personnes, descendants nés en Espagne compris. Santiago Abascal a ensuite contesté ce chiffre et restreint la proposition aux personnes en situation irrégulière, aux délinquants et à ceux qui « veulent imposer une religion étrangère ». Tag appliqué selon la règle de la méthodologie (terme employé par le parti ou ses dirigeants), le désaveu partiel du président du parti étant mentionné ici.",
       },
     },
     actionStatus: {
@@ -1891,11 +1950,12 @@ export const parties: Party[] = [
       note: "Classifié parti d'extrême droite ; héritier direct du Vlaams Blok, dissous en 2004 pour racisme par la justice belge.",
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Vlaams Belang',
-        url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
-        note: "Programme axé sur l'arrêt de l'immigration et le retour effectif des personnes en situation irrégulière (fermeture des frontières extérieures, centres de retour fermés) ; centré sur l'expulsion des personnes en situation irrégulière plutôt que sur une remigration de résidents en situation régulière.",
+        name: "Wikipedia — Vlaams Belang",
+        url: 'https://en.wikipedia.org/wiki/Vlaams_Belang',
+        accessedOn: '2026-10-05',
+        note: "Le parti a réclamé en 2021 la création d'une « Agence pour la remigration ». Usage explicite du terme par le parti — critère central de la méthodologie de ce site. Son programme courant met l'accent sur une « stratégie de retour massive » des personnes en situation irrégulière.",
       },
     },
     actionStatus: {
@@ -4040,6 +4100,19 @@ export const parties: Party[] = [
       },
     },
     electoralHistory: [
+      {
+        label: "Élections législatives 2026",
+        chamber: "Saeima",
+        date: '2026-10-03',
+        seats: 10,
+        totalSeats: 100,
+        source: {
+          name: "LSM — The votes are in: United List handed massive mandate by Latvian voters",
+          url: 'https://eng.lsm.lv/article/politics/election/04.10.2026-the-votes-are-in-united-list-handed-massive-mandate-by-latvian-voters.a666044/',
+          accessedOn: '2026-10-05',
+          note: "Résultats préliminaires. Coalition probable avec la Liste unie et Nouvelle Unité (59 sièges sur 100).",
+        },
+      },
       {
         label: 'Élections législatives 2022',
         chamber: 'Saeima',

@@ -7,17 +7,18 @@ import type { NewsItem } from './types';
 export const news: NewsItem[] = [
   {
     id: 'save-europe-act',
-    title: "« Save Europe Act » : la Commission européenne bloque l'initiative citoyenne pour la remigration, l'affaire portée devant la CJUE",
+    title: "« Save Europe Act » : la Commission refuse d'enregistrer le projet d'initiative citoyenne européenne sur la remigration",
     countries: ['EU'],
-    date: '2026-08-22',
+    date: '2026-07-22',
     summary:
-      "Initiative citoyenne européenne (ICE) lancée le 31 mai 2026 par la commentatrice néerlandaise Eva Vlaardingerbroek et l'activiste identitaire autrichien Martin Sellner, réclamant un moratoire sur les nouvelles voies d'immigration non-occidentale, un durcissement des frontières extérieures, des procédures de retour accélérées et un cadre européen de remigration incitée financièrement. Rejetée à l'enregistrement par la Commission européenne le 22 juillet 2026 (discrimination raciale/ethnique alléguée), l'initiative a néanmoins continué de recueillir des signatures : plus de 700 000 en moins de trois mois, avec un objectif affiché d'un million.",
+      "Projet d'initiative citoyenne européenne (ICE) porté par la commentatrice néerlandaise Eva Vlaardingerbroek et l'activiste identitaire autrichien Martin Sellner. Il réclamait un moratoire temporaire sur les nouvelles voies d'immigration « non occidentale », y compris les visas d'études et le regroupement familial, au nom de la « continuité ethnique et culturelle » des « peuples autochtones d'Europe ». Le 22 juillet 2026, la Commission européenne a refusé de l'enregistrer : un tel moratoire constituerait une discrimination fondée sur la race et l'origine ethnique, appliquée sans examen individuel, contraire à l'article 21 de la Charte des droits fondamentaux et à l'article 2 du traité sur l'Union européenne. Faute d'enregistrement, la collecte officielle de déclarations de soutien n'a jamais été ouverte : les signatures que revendiquent les organisateurs, plusieurs centaines de milliers selon les médias qui relaient la campagne, relèvent d'une pétition militante, sans valeur juridique au regard du règlement (UE) 2019/788.",
     legalStatus:
-      "Les organisateurs ont porté l'affaire devant la Cour de justice de l'Union européenne (CJUE) pour contester le refus d'enregistrement de la Commission, tout en poursuivant la collecte de signatures vers l'objectif d'un million.",
+      "Enregistrement refusé par décision d'exécution de la Commission C(2026) 5115 du 22 juillet 2026, en application de l'article 6, paragraphe 3, du règlement (UE) 2019/788. Les organisateurs ont annoncé leur intention de contester cette décision en justice ; un recours devant le Tribunal de l'Union européenne reste à confirmer sur le registre de la Cour.",
     source: {
-      name: 'Hungarian Conservative',
-      url: 'https://www.hungarianconservative.com/articles/current/save-europe-act-hits-700000-signatures-as-organizers-prepare-eu-court-fight/',
-      accessedOn: '2026-09-08',
+      name: 'InfoMigrants — European Commission rejects registration of citizens initiative to suspend migration channels',
+      url: 'https://www.infomigrants.net/en/post/72641/european-commission-rejects-registration-of-citizens-initiatve-to-suspend-migration-channels',
+      accessedOn: '2026-10-05',
+      note: "Texte de la décision : Commission Implementing Decision C(2026) 5115 final du 22.7.2026 (https://www.parliament.bg/pub/ECD/8451361_EN_ACT_part1_v6.pdf). Une version antérieure de cette entrée présentait le projet comme une ICE en cours et reprenait les chiffres de signatures d'un média partisan.",
     },
   },
   {

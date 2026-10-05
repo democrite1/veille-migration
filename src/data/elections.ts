@@ -9,12 +9,14 @@ export const elections: Election[] = [
     mandateDuration: '5 ans',
     powers: "Parlement du Land, qui élit le ministre-président et légifère notamment en éducation, police et administration régionale.",
     date: '2026-09-20',
-    status: 'a_venir',
+    status: 'resultat_connu',
+    result:
+      "L'AfD arrive en tête avec 38,2 % des voix et 32 sièges sur 71, devant le SPD de la ministre-présidente sortante Manuela Schwesig (35,5 %, 29 sièges). La CDU, à 4,9 %, échoue pour la première fois à franchir le seuil de 5 % dans un Land ; le BSW aussi (4,8 %). Tous les autres partis excluant de gouverner avec l'AfD, seule une coalition SPD-Linke-Verts (39 sièges) est envisageable. Participation : 78,0 %.",
+    totalSeats: 71,
     source: {
-      name: 'Landtag Mecklenburg-Vorpommern — Landtagswahl 2026',
-      url: 'https://www.landtag-mv.de/landtag/rund-um-wahlen/landtagswahl-2026',
-      accessedOn: '2026-09-15',
-      note: "Scrutin organisé le même jour que celui de Berlin, deux semaines après la victoire de l'AfD en Saxe-Anhalt. La ministre-présidente sortante Manuela Schwesig (SPD) brigue un troisième mandat.",
+      name: "Wikipedia — Landtagswahl in Mecklenburg-Vorpommern 2026",
+      url: 'https://de.wikipedia.org/wiki/Landtagswahl_in_Mecklenburg-Vorpommern_2026',
+      accessedOn: '2026-10-05',
     },
   },
   {
@@ -25,11 +27,14 @@ export const elections: Election[] = [
     mandateDuration: '5 ans',
     powers: "Parlement du Land-ville de Berlin, qui élit le maire-gouverneur et légifère pour la capitale.",
     date: '2026-09-20',
-    status: 'a_venir',
+    status: 'resultat_connu',
+    result:
+      "Die Linke arrive en tête (25,7 %, 47 sièges), devant la CDU (18,8 %, 34 sièges) et l'AfD (16,3 %, 29 sièges sur 158). Le BSW (4,7 %) n'entre pas au Parlement. Participation : 74,2 %, la plus élevée depuis 1990.",
+    totalSeats: 158,
     source: {
-      name: 'Wikipedia — Wahl zum Abgeordnetenhaus von Berlin 2026',
+      name: "Wikipedia — Wahl zum Abgeordnetenhaus von Berlin 2026",
       url: 'https://de.wikipedia.org/wiki/Wahl_zum_Abgeordnetenhaus_von_Berlin_2026',
-      accessedOn: '2026-09-15',
+      accessedOn: '2026-10-05',
     },
   },
   {
@@ -329,12 +334,14 @@ export const elections: Election[] = [
     mandateDuration: '4 ans',
     powers: 'Parlement monocaméral, qui élit le président de la République et investit le gouvernement.',
     date: '2026-10-03',
-    status: 'a_venir',
+    status: 'resultat_connu',
+    result:
+      "La Liste unie (Apvienotais saraksts) arrive largement en tête avec 35 % des voix et 42 sièges sur 100, sans majorité. Suivent Latvija pirmajā vietā (17 sièges), l'alliance Pouvoir souverain (15), Nacionālā apvienība (10), les Progressistes (9) et Nouvelle Unité (7). La coalition la plus probable réunirait la Liste unie, Nacionālā apvienība et Nouvelle Unité (59 sièges). Résultats préliminaires, à 99,9 % des bulletins dépouillés.",
     totalSeats: 100,
     source: {
-      name: 'Wikipedia — List of elections in 2026',
-      url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
-      accessedOn: '2026-09-13',
+      name: "LSM — The votes are in: United List handed massive mandate by Latvian voters",
+      url: 'https://eng.lsm.lv/article/politics/election/04.10.2026-the-votes-are-in-united-list-handed-massive-mandate-by-latvian-voters.a666044/',
+      accessedOn: '2026-10-05',
     },
   },
   {
@@ -489,13 +496,13 @@ export const elections: Election[] = [
     date: '2026-09-13',
     status: 'resultat_connu',
     result:
-      "Défaite du bloc Tidö de trois sièges (173 contre 176) et premier recul électoral de Sverigedemokraterna depuis son entrée au Riksdag en 2010 : 17,5% et 62 sièges, contre 20,5% et 73 sièges en 2022. SD perd sa deuxième place au profit des Modérés (19,9%, 70 sièges). Les sociaux-démocrates de Magdalena Andersson restent premier parti (28,1%, 100 sièges). Le 1er avril 2026, les quatre partis du bloc Tidö avaient annoncé qu'en cas de victoire, SD entrerait pour la première fois au gouvernement avec des ministres : le scrutin a écarté cette hypothèse. Participation : 80,3%.",
+      "Défaite du bloc Tidö de trois sièges (173 contre 176) et premier recul électoral de Sverigedemokraterna depuis son entrée au Riksdag en 2010 : 17,48 % et 62 sièges, contre 20,5 % et 73 sièges en 2022. SD perd sa deuxième place au profit des Modérés (19,85 %, 70 sièges). Les sociaux-démocrates de Magdalena Andersson restent premier parti (28,02 %, 99 sièges). Le 1er avril 2026, les quatre partis du bloc Tidö avaient annoncé qu'en cas de victoire, SD entrerait pour la première fois au gouvernement avec des ministres : le scrutin a écarté cette hypothèse. Ulf Kristersson a annoncé sa démission et Magdalena Andersson a engagé des négociations avec les partis d'opposition. Participation : 84,9 %.",
     totalSeats: 349,
     source: {
       name: 'Wikipedia — 2026 Swedish general election',
       url: 'https://en.wikipedia.org/wiki/2026_Swedish_general_election',
       accessedOn: '2026-09-15',
-      note: "Résultats préliminaires (95,3% des bulletins dépouillés). L'Autorité électorale suédoise (Valmyndigheten) arrête le résultat définitif environ une semaine après le scrutin.",
+      note: "Résultat définitif certifié le 17 septembre 2026.",
     },
   },
   {

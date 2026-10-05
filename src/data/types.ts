@@ -138,7 +138,7 @@ export interface Election {
 }
 
 export type LegislationLevel = 'national' | 'EU';
-export type LegislationStatus = 'promulguee' | 'en_discussion';
+export type LegislationStatus = 'promulguee' | 'en_discussion' | 'invalidee' | 'abrogee' | 'caduque';
 
 export interface Legislation {
   id: string;

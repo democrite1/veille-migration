@@ -26,7 +26,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#002654',
   },
   DE: {
-    tagline: "Seul pays de la liste où un « cordon sanitaire » officiel (la Brandmauer) exclut explicitement un parti pourtant deuxième force du Bundestag.",
+    tagline: "Un « cordon sanitaire » (la Brandmauer) tient l'AfD à l'écart de toute coalition, alors qu'elle est la deuxième force du Bundestag.",
     motifs: ['🦅', '🏰', '🍺'],
     accent: '#DD0000',
   },
@@ -41,7 +41,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#008C45',
   },
   NL: {
-    tagline: "Un parti à un seul adhérent officiel — son fondateur — a un temps dirigé la coalition gouvernementale.",
+    tagline: "Un parti à un seul adhérent officiel — son fondateur — a siégé au gouvernement de juillet 2024 à juin 2025.",
     motifs: ['🌷', '🚲', '🧀'],
     accent: '#AE1C28',
   },
@@ -51,7 +51,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#3C3B6E',
   },
   SE: {
-    tagline: "Fondé par d'anciens militants néonazis dans les années 1980, ce parti finance aujourd'hui le retour volontaire à hauteur de 350 000 couronnes par adulte.",
+    tagline: "Le parti a soutenu de 2022 à 2026 le gouvernement qui a porté l'aide au retour volontaire à 350 000 couronnes par adulte, avant de reculer aux élections de septembre 2026.",
     motifs: ['👑', '🌲', '🦌'],
     accent: '#006AA7',
   },
@@ -81,7 +81,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#EF3340',
   },
   CH: {
-    tagline: "Système unique en Europe : le premier parti du pays siège en permanence au gouvernement, aux côtés de tous ses rivaux.",
+    tagline: "Système de concordance : le premier parti du pays siège en permanence au gouvernement fédéral, aux côtés de trois autres partis.",
     motifs: ['🏔️', '🧀', '🐄'],
     accent: '#FF0000',
   },
@@ -91,7 +91,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#006600',
   },
   PL: {
-    tagline: "Un parti que presque tout oppose au gouvernement s'allie pourtant à lui sur un point : rejeter le Pacte européen sur la migration.",
+    tagline: "Le mur de 186 km construit en 2022 à la frontière biélorusse est resté en place après l'alternance de 2023.",
     motifs: ['🦅', '🥟', '🐴'],
     accent: '#DC143C',
   },
@@ -161,7 +161,7 @@ export const countryProfiles: Record<CountryCode, CountryProfile> = {
     accent: '#74ACDF',
   },
   EE: {
-    tagline: "Se présente comme « la seule véritable opposition » d'un pays où, selon son chef, deux blocs seulement existeraient en réalité.",
+    tagline: "Ses 17 députés élus en 2023 ne sont plus qu’une dizaine après une scission interne en 2024.",
     motifs: ['🌲', '🎶', '🏰'],
     accent: '#0072CE',
   },

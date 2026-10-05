@@ -62,15 +62,14 @@ export const legislation: Legislation[] = [
     id: 'gb-rwanda-scheme-repeal-2024',
     countryOrLevel: 'GB',
     title: 'Safety of Rwanda (Asylum and Immigration) Act 2024',
-    status: 'promulguee',
+    status: 'abrogee',
     date: '2024-04-25',
     description:
-      "Loi votée sous le gouvernement conservateur de Rishi Sunak organisant l'expulsion des demandeurs d'asile arrivés illégalement vers le Rwanda. Le gouvernement travailliste de Keir Starmer a annoncé l'abandon complet du dispositif dès son arrivée au pouvoir, le 9 juillet 2024, sans qu'aucun vol n'ait eu lieu.",
+      "Loi promulguée le 25 avril 2024 sous le gouvernement conservateur de Rishi Sunak pour permettre le transfert vers le Rwanda de demandeurs d'asile arrivés illégalement. Elle n'est jamais entrée en application, faute d'entrée en vigueur du traité avec le Rwanda. Le gouvernement travailliste de Keir Starmer a abandonné le dispositif en juillet 2024, puis la loi a été abrogée le 2 décembre 2025 par le Border Security, Asylum and Immigration Act 2025.",
     source: {
-      name: 'UK Government / GOV.UK',
-      url: 'https://www.gov.uk/government/news',
-      accessedOn: '2026-08-18',
-      note: "Statut « mesures concrètes (historique, abrogée le 9 juillet 2024) » — la loi n'a pas été formellement abrogée par le Parlement mais son application a été arrêtée par décision gouvernementale dès juillet 2024.",
+      name: 'Wikipedia — Safety of Rwanda (Asylum and Immigration) Act 2024',
+      url: 'https://en.wikipedia.org/wiki/Safety_of_Rwanda_(Asylum_and_Immigration)_Act_2024',
+      accessedOn: '2026-10-05',
     },
   },
   {
@@ -144,17 +143,18 @@ export const legislation: Legislation[] = [
     },
   },
   {
-    id: 'pl-systeme-caution-asile',
+    id: 'pl-suspension-droit-asile-2025',
     countryOrLevel: 'PL',
-    title: 'Système de caution (kaucja) pour demandeurs d\'asile',
+    title: "Loi permettant de suspendre temporairement le droit de demander l'asile",
     status: 'promulguee',
-    date: '2024-01-01',
+    date: '2025-03-26',
     description:
-      "Dispositif instauré sous le gouvernement PiS, maintenu par le gouvernement de coalition de Donald Tusk depuis octobre 2023, imposant une caution financière aux demandeurs d'asile pour rester en liberté durant l'examen de leur dossier. Contesté par Konfederacja, qui a déposé une proposition de loi pour le supprimer.",
+      "Signée le 26 mars 2025 par le président Andrzej Duda. Autorise le ministère de l'Intérieur à restreindre temporairement le droit de déposer une demande de protection internationale lorsque l'« instrumentalisation » de la migration par un État hostile représente une menace « grave et réelle » pour la sécurité, en pratique à la frontière biélorusse. Sont exemptés notamment les mineurs, les femmes enceintes, les personnes nécessitant des soins particuliers et celles exposées à un risque réel en cas de retour. Proposée par le gouvernement de Donald Tusk en septembre 2024 et adoptée avec un large soutien de la majorité comme de l'opposition.",
     source: {
-      name: 'Konfederacja.pl',
-      url: 'https://konfederacja.pl/chcemy-aby-sejm-zobowiazal-rzad-od-odrzucenia-paktu-migracyjnego/',
-      accessedOn: '2026-09-07',
+      name: 'Notes From Poland — Poland introduces law allowing suspension of asylum rights',
+      url: 'https://notesfrompoland.com/2025/03/26/poland-introduces-law-allowing-suspension-of-asylum-rights/',
+      accessedOn: '2026-10-05',
+      note: "Remplace une entrée antérieure sur un « système de caution pour demandeurs d'asile » dont l'existence n'a pu être établie par aucune source.",
     },
   },
   {
@@ -175,7 +175,7 @@ export const legislation: Legislation[] = [
     id: 'us-eo-14160-droit-du-sol',
     countryOrLevel: 'US',
     title: "Executive Order 14160 — fin du droit du sol pour les enfants de parents sans statut légal",
-    status: 'promulguee',
+    status: 'invalidee',
     date: '2025-01-20',
     description:
       "Décret présidentiel signé par Donald Trump le 20 janvier 2025 visant à mettre fin à la citoyenneté automatique par naissance sur le sol américain pour les enfants de parents en situation irrégulière. Invalidé par la Cour suprême le 30 juin 2026 (6 voix contre 3) comme contraire au 14e amendement.",
