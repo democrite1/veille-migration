@@ -1,5 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getLegislation } from '@/lib/queries';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import SourceCite from '@/components/SourceCite';
 
 const LEVEL_LABELS: Record<string, string> = {
@@ -35,7 +37,15 @@ const STATUS_STYLES: Record<string, string> = {
   caduque: 'badge-mesures-abrogee',
 };
 
-export default async function LegislationPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'legislation' });
+  return pageMetadata({ locale, path: '/legislation', title: t('title'), description: t('intro') });
+}
+
+export default async function LegislationPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const legislation = await getLegislation();
   const sorted = [...legislation].sort((a, b) => b.date.localeCompare(a.date));
   return <LegislationPageInner sorted={sorted} />;

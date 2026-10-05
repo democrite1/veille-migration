@@ -6,3 +6,5 @@ out
 .vercel
 *.log
 scripts/fetch/output/
+.swc
+*.tsbuildinfo

@@ -7,6 +7,8 @@ import {
   IntentionBadge,
 } from '@/components/ClassificationBadges';
 import FlagIcon from '@/components/FlagIcon';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -46,11 +48,21 @@ const COUNTRY_LABELS: Record<string, string> = {
   JP: 'Japon',
 };
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  return pageMetadata({ locale, path: '/partis', title: t('partiesTitle'), description: t('partiesDescription') });
+}
+
 export default async function PartiesPage({
+  params,
   searchParams,
 }: {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{ country?: string }>;
 }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const { country } = await searchParams;
   const allParties = await getParties();
   const filtered = country ? allParties.filter((p) => p.countryCode === country) : allParties;

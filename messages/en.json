@@ -55,5 +55,12 @@
   "footer": {
     "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
     "donate": "Support this project"
+  },
+  "meta": {
+    "siteName": "Migration Policy Watch",
+    "siteTitle": "Migration Policy Watch — parties, laws and elections",
+    "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "partiesTitle": "Party directory",
+    "partiesDescription": "Sourced profiles of parties whose platform or academic classification centres on reducing immigration or on remigration: electoral standing, history, footprint."
   }
 }

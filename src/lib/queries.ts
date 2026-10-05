@@ -1,4 +1,5 @@
 import { cache } from 'react';
+import { unstable_cache } from 'next/cache';
 import { getSupabaseClient } from './supabase';
 import type {
   Party,
@@ -56,12 +57,10 @@ async function fetchSourcesByIds(supabase: ReturnType<typeof getSupabaseClient>,
  * an intermittent "Cannot read properties of undefined" crash when two of
  * those concurrent fetches interleaved.
  */
-export const getParties = cache(async function getParties(countryCode?: string): Promise<Party[]> {
+async function fetchParties(): Promise<Party[]> {
   const supabase = getSupabaseClient();
 
-  let query = supabase.from('parties').select('*').order('name');
-  if (countryCode) query = query.eq('country_code', countryCode);
-  const { data: partyRows, error: partyErr } = await query;
+  const { data: partyRows, error: partyErr } = await supabase.from('parties').select('*').order('name');
   if (partyErr) throw new Error(`getParties: ${partyErr.message}`);
   if (!partyRows || partyRows.length === 0) return [];
 
@@ -174,14 +173,26 @@ export const getParties = cache(async function getParties(countryCode?: string):
       description: row.description,
     };
   });
-});
+}
+
+/**
+ * Supabase results are kept in Next's data cache for an hour, so a page view
+ * never waits on the database and a Supabase outage (or free-tier pause)
+ * serves the last good data instead of an error page. The cache key carries
+ * the deployed commit: data only changes through seed + push, and each push
+ * deploys a new commit, so fresh data is fetched once per deployment.
+ */
+const DEPLOY_KEY = process.env.VERCEL_GIT_COMMIT_SHA ?? 'local';
+const CACHE_OPTIONS = { revalidate: 3600, tags: ['supabase'] };
+
+export const getParties = cache(unstable_cache(fetchParties, ['parties', DEPLOY_KEY], CACHE_OPTIONS));
 
 export async function getPartyBySlug(slug: string): Promise<Party | undefined> {
   const all = await getParties();
   return all.find((p) => p.slug === slug);
 }
 
-export async function getElections(): Promise<Election[]> {
+async function fetchElections(): Promise<Election[]> {
   const supabase = getSupabaseClient();
   const { data: rows, error } = await supabase.from('elections').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getElections: ${error.message}`);
@@ -206,7 +217,7 @@ export async function getElections(): Promise<Election[]> {
   );
 }
 
-export async function getLegislation(): Promise<Legislation[]> {
+async function fetchLegislation(): Promise<Legislation[]> {
   const supabase = getSupabaseClient();
   const { data: rows, error } = await supabase.from('legislation').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getLegislation: ${error.message}`);
@@ -227,7 +238,7 @@ export async function getLegislation(): Promise<Legislation[]> {
   );
 }
 
-export async function getNews(): Promise<NewsItem[]> {
+async function fetchNews(): Promise<NewsItem[]> {
   const supabase = getSupabaseClient();
   const { data: rows, error } = await supabase.from('news_items').select('*').order('date', { ascending: false });
   if (error) throw new Error(`getNews: ${error.message}`);
@@ -247,3 +258,7 @@ export async function getNews(): Promise<NewsItem[]> {
     }),
   );
 }
+
+export const getElections = cache(unstable_cache(fetchElections, ['elections', DEPLOY_KEY], CACHE_OPTIONS));
+export const getLegislation = cache(unstable_cache(fetchLegislation, ['legislation', DEPLOY_KEY], CACHE_OPTIONS));
+export const getNews = cache(unstable_cache(fetchNews, ['news', DEPLOY_KEY], CACHE_OPTIONS));

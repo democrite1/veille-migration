@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getParties } from '@/lib/queries';
+import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -40,7 +42,14 @@ const COUNTRY_LABELS: Record<string, string> = {
   JP: 'Japon',
 };
 
-export default async function HomePage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return pageMetadata({ locale, path: '' });
+}
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const parties = await getParties();
   return <HomePageInner countries={Array.from(new Set(parties.map((p) => p.countryCode)))} />;
 }

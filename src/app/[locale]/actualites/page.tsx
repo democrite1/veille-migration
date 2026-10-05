@@ -1,9 +1,19 @@
 import { useTranslations } from 'next-intl';
 import { getNews } from '@/lib/queries';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import SourceCite from '@/components/SourceCite';
 import FlagIcon from '@/components/FlagIcon';
 
-export default async function NewsPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'news' });
+  return pageMetadata({ locale, path: '/actualites', title: t('title'), description: t('intro') });
+}
+
+export default async function NewsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const news = await getNews();
   const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
   return <NewsPageInner sorted={sorted} />;

@@ -1,6 +1,20 @@
 import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 
-export default function MethodologyPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'methodology' });
+  return pageMetadata({ locale, path: '/methodologie', title: t('title'), description: t('intro') });
+}
+
+export default async function MethodologyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <MethodologyPageInner />;
+}
+
+function MethodologyPageInner() {
   const t = useTranslations('methodology');
 
   return (

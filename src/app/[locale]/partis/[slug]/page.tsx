@@ -9,6 +9,8 @@ import {
 } from '@/components/ClassificationBadges';
 import SourceCite from '@/components/SourceCite';
 import CountryBanner from '@/components/CountryBanner';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -53,12 +55,26 @@ export async function generateStaticParams() {
   return parties.map((p) => ({ slug: p.slug }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  const party = await getPartyBySlug(slug);
+  if (!party) return {};
+  const country = new Intl.DisplayNames([locale], { type: 'region' }).of(party.countryCode) ?? party.countryCode;
+  return pageMetadata({
+    locale,
+    path: `/partis/${slug}`,
+    title: party.name,
+    description: `${country} — ${party.positioning}`,
+  });
+}
+
 export default async function PartyPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const party = await getPartyBySlug(slug);
   if (!party) notFound();
 

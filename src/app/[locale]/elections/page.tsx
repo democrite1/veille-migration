@@ -1,5 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getElections } from '@/lib/queries';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import SourceCite from '@/components/SourceCite';
 import FlagIcon from '@/components/FlagIcon';
 
@@ -48,7 +50,15 @@ const LEVEL_LABELS: Record<string, string> = {
   partial: 'Partielle',
 };
 
-export default async function ElectionsPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'elections' });
+  return pageMetadata({ locale, path: '/elections', title: t('title'), description: t('intro') });
+}
+
+export default async function ElectionsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const elections = await getElections();
   const sorted = [...elections].sort((a, b) => b.date.localeCompare(a.date));
   return <ElectionsPageInner sorted={sorted} />;
