@@ -23,6 +23,36 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-suisse-initiative',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/actualites',
+    summary: {
+      fr: "Votation suisse du 14 juin 2026 : l'initiative s'intitulait « Pas de Suisse à 10 millions ! » et non « Stop à la surpopulation ! ». Elle a été rejetée par 54,8 % des votants ; le titre parlait d'un rejet « de justesse », inexact pour un écart de près de dix points.",
+      en: 'Swiss vote of 14 June 2026: the initiative was titled "No to a 10-million Switzerland!", not "Stop overpopulation!". It was rejected by 54.8% of voters; the headline called it a "narrow" rejection, inaccurate for a margin of nearly ten points.',
+    },
+    source: {
+      name: "RTS — Non à 54,8 % à l'initiative « Pas de Suisse à 10 millions »",
+      url: 'https://www.rts.ch/info/suisse/2026/article/l-initiative-udc-pas-de-suisse-a-10-millions-rejetee-a-54-5-29273820.html',
+      accessedOn: '2026-10-05',
+    },
+  },
+  {
+    id: '2026-10-20-orania-naissances',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/actualites',
+    summary: {
+      fr: "Orania : le titre annonçait un record de « taux de natalité » alors que la source rapporte un nombre de naissances (36 en 2025).",
+      en: 'Orania: the headline announced a record "birth rate" whereas the source reports a number of births (36 in 2025).',
+    },
+    source: {
+      name: "France 24 — South Africa's closed white enclave attracting Afrikaner youth",
+      url: 'https://www.france24.com/en/live-news/20260604-south-africa-s-closed-white-enclave-attracting-afrikaner-youth',
+      accessedOn: '2026-08-18',
+    },
+  },
+  {
     id: '2026-10-20-hrvatski-suverenisti-split',
     date: '2026-10-20',
     kind: 'retrait',

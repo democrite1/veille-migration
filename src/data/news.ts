@@ -27,7 +27,7 @@ export const news: NewsItem[] = [
     countries: ['US'],
     date: '2026-08-24',
     summary:
-      "Fondée en septembre 2023 par Eric Orwoll dans l'Arkansas, Return to the Land (RTTL) est une organisation privée qui réserve l'installation sur ses terrains aux personnes vetted comme d'ascendance européenne et partageant ses vues séparatistes ; les personnes juives en sont explicitement exclues. Le mouvement a ouvert une deuxième implantation en 2025 et prévoit quatre nouveaux sites (Ozarks, Appalaches). Une conférence internationale rassemblant des figures de l'extrême droite de France, d'Allemagne, d'Afrique du Sud, de Suède, du Royaume-Uni et des États-Unis s'est tenue le 7 février 2026 pour coordonner ce type d'initiatives à l'échelle mondiale.",
+      "Fondée en septembre 2023 par Eric Orwoll dans l'Arkansas, Return to the Land (RTTL) est une organisation privée qui réserve l'installation sur ses terrains aux personnes reconnues, après examen, comme d'ascendance européenne et partageant ses vues séparatistes ; les personnes juives en sont explicitement exclues. Le mouvement a ouvert une deuxième implantation en 2025 et prévoit quatre nouveaux sites (Ozarks, Appalaches). Une conférence internationale rassemblant des figures de l'extrême droite de France, d'Allemagne, d'Afrique du Sud, de Suède, du Royaume-Uni et des États-Unis s'est tenue le 7 février 2026 pour coordonner ce type d'initiatives à l'échelle mondiale.",
     legalStatus:
       "Poursuivie en justice pour discrimination depuis mai 2026 après le refus de vendre un terrain à une candidate d'ascendance juive. Les cofondateurs (Eric Orwoll, Peter Csere) ont depuis contre-attaqué : plainte déposée le 24 août 2026 contre le ministère de la Justice américain, le régulateur des valeurs mobilières de l'Arkansas et le procureur général de l'État pour faire cesser les enquêtes à leur encontre ; plainte distincte en diffamation déposée le 28 juillet 2026 contre Sky News (Royaume-Uni) au sujet d'un documentaire de 2025, réclamant 1,2 million de dollars de dommages compensatoires et 1,5 million de dommages punitifs.",
     source: {
@@ -38,7 +38,7 @@ export const news: NewsItem[] = [
   },
   {
     id: 'orania-croissance',
-    title: 'Orania : la ville autonome afrikaner enregistre son taux de natalité le plus élevé depuis sa fondation',
+    title: 'Orania : la ville autonome afrikaner enregistre son plus grand nombre de naissances depuis sa fondation',
     countries: ['ZA'],
     date: '2026-02-20',
     summary:
@@ -113,17 +113,18 @@ export const news: NewsItem[] = [
   },
   {
     id: 'suisse-referendum-10-millions',
-    title: "Suisse : le peuple rejette de justesse l'initiative de l'UDC plafonnant la population à 10 millions d'habitants",
+    title: "Suisse : l'initiative de l'UDC « Pas de Suisse à 10 millions ! » rejetée par 54,8 % des votants",
     countries: ['CH'],
     date: '2026-06-14',
     summary:
-      "Portée par l'UDC (SVP) sous le nom « Stop à la surpopulation ! (Initiative pour la durabilité) », l'initiative populaire proposait d'inscrire dans la Constitution suisse l'obligation de ne pas dépasser 10 millions de résidents permanents avant 2050 — la population du pays étant passée de 7,3 millions en 2002 (date de l'accord de libre circulation avec l'UE) à plus de 9 millions en 2025. Son adoption aurait potentiellement contraint le gouvernement à dénoncer cet accord. Soumise au vote le 14 juin 2026 dans le cadre du système de démocratie directe suisse, l'initiative a été rejetée avec 55% de « non » contre 45% de « oui », le clivage villes/campagnes et linguistique étant très marqué : le « oui » l'a emporté dans les zones rurales alémaniques (jusqu'à 65,9% dans le canton d'Appenzell Rhodes-Intérieures), le « non » dominant dans les villes romandes.",
+      "Portée par l'UDC (SVP) sous le nom « Pas de Suisse à 10 millions ! (initiative pour la durabilité) », l'initiative populaire proposait d'inscrire dans la Constitution suisse l'obligation de ne pas dépasser 10 millions de résidents permanents avant 2050 — la population du pays étant passée de 7,3 millions en 2002 (date de l'accord de libre circulation avec l'UE) à plus de 9 millions en 2025. Son adoption aurait potentiellement contraint le gouvernement à dénoncer cet accord. Soumise au vote le 14 juin 2026 dans le cadre du système de démocratie directe suisse, l'initiative a été rejetée par 54,8 % des votants. Le clivage entre villes et campagnes est net : le « oui » l'emporte dans une dizaine de cantons, dont Appenzell Rhodes-Intérieures (65,9 %), Schwytz (63,1 %) et Uri (59,9 %), tandis que tous les cantons romands la rejettent.",
     legalStatus:
       "Initiative rejetée par le peuple suisse le 14 juin 2026 ; sans suite constitutionnelle. L'accord de libre circulation UE-Suisse reste inchangé.",
     source: {
       name: 'SWI swissinfo.ch — Swiss voters reject proposal to cap population at ten million',
       url: 'https://www.swissinfo.ch/eng/votes/swiss-voters-reject-proposal-to-cap-population-at-ten-million/91548146',
       accessedOn: '2026-09-09',
+      note: "Nom officiel de l'initiative, pourcentage définitif et résultats cantonaux : RTS (https://www.rts.ch/info/suisse/2026/article/l-initiative-udc-pas-de-suisse-a-10-millions-rejetee-a-54-5-29273820.html), consulté le 2026-10-05.",
     },
   },
   {
