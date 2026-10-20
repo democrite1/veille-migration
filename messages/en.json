@@ -54,7 +54,8 @@
   },
   "footer": {
     "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
-    "donate": "Support this project"
+    "donate": "Support this project",
+    "legal": "Legal notice"
   },
   "meta": {
     "siteName": "Migration Policy Watch",
@@ -62,5 +63,15 @@
     "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
     "partiesTitle": "Party directory",
     "partiesDescription": "Sourced profiles of parties whose platform or academic classification centres on reducing immigration or on remigration: electoral standing, history, footprint."
+  },
+  "legal": {
+    "title": "Legal notice",
+    "publisherHeading": "Publisher and publication director",
+    "contactHeading": "Contact",
+    "hostHeading": "Hosting",
+    "hostText": "The site is hosted by {name}, {address}, United States.",
+    "databaseText": "The data shown is stored in a database operated by {provider}.",
+    "lawText": "Notice provided under French law no. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN).",
+    "missing": "To be completed before publication"
   }
 }

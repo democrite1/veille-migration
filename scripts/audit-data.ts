@@ -14,6 +14,7 @@ import { parties } from '../src/data/parties';
 import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
+import { PUBLISHER } from '../src/lib/publisher';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -222,6 +223,11 @@ for (const n of news) {
   if (!n.countries?.length) warn(w, 'aucun pays associé');
   checkSource(w, n.source);
 }
+
+// ------------------------------------------------------------- legal notice
+// An incomplete legal notice must never reach main (LCEN, decision 3).
+if (!PUBLISHER.director?.trim()) err('mentions légales', 'directeur de la publication non renseigné (src/lib/publisher.ts)');
+if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
 
 // ------------------------------------------------- country labels across UI
 const usedCodes = new Set<string>([...parties.map((p) => p.countryCode), ...elections.map((e) => e.countryCode)]);

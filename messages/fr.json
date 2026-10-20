@@ -54,7 +54,8 @@
   },
   "footer": {
     "sources": "Sources : Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
-    "donate": "Soutenir ce projet"
+    "donate": "Soutenir ce projet",
+    "legal": "Mentions légales"
   },
   "meta": {
     "siteName": "Observatoire des politiques migratoires",
@@ -62,5 +63,15 @@
     "siteDescription": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties occidentales.",
     "partiesTitle": "Annuaire des partis",
     "partiesDescription": "Fiches sourcées des partis dont le programme ou la classification académique porte sur la réduction de l'immigration ou la remigration : statut électoral, historique, implantation."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "publisherHeading": "Éditeur et directeur de la publication",
+    "contactHeading": "Contact",
+    "hostHeading": "Hébergement",
+    "hostText": "Le site est hébergé par {name}, {address}, États-Unis.",
+    "databaseText": "Les données affichées sont stockées dans une base gérée par {provider}.",
+    "lawText": "Mentions établies en application de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
+    "missing": "À compléter avant publication"
   }
 }
