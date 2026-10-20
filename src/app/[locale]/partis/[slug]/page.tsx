@@ -9,7 +9,7 @@ import {
 } from '@/components/ClassificationBadges';
 import SourceCite from '@/components/SourceCite';
 import CountryBanner from '@/components/CountryBanner';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
 
 const COUNTRY_LABELS: Record<string, string> = {

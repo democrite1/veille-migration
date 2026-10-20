@@ -9,7 +9,7 @@ export default function Footer() {
         <p>{t('sources')}</p>
         <p className="mt-2">
           Contenu à but journalistique et documentaire. Aucune donnée personnelle
-          n'est collectée à des fins de ciblage. Toute classification est sourcée
+          n’est collectée à des fins de ciblage. Toute classification est sourcée
           et vérifiable — voir la méthodologie.
         </p>
       </div>

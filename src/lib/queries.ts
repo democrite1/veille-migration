@@ -13,7 +13,23 @@ import type {
   CountryCode,
 } from '@/data/types';
 
-function toSource(row: any): Source {
+/** Row shapes read from Supabase (the client is untyped: no generated types). */
+interface SourceRow {
+  id: string;
+  name: string;
+  url: string;
+  accessed_on: string | null;
+  note: string | null;
+}
+interface ClassificationRow {
+  party_id: string;
+  axis: 'intention' | 'action_status';
+  tag: Classification['tag'];
+  note: string | null;
+  source_id: string | null;
+}
+
+function toSource(row: SourceRow | undefined): Source {
   if (!row) {
     // Defensive: a missing source row should degrade one citation, not crash
     // the whole page. Should not happen with a consistent database, but a
@@ -39,7 +55,7 @@ function toSource(row: any): Source {
  */
 async function fetchSourcesByIds(supabase: ReturnType<typeof getSupabaseClient>, ids: string[]) {
   const chunkSize = 150;
-  const rows: any[] = [];
+  const rows: SourceRow[] = [];
   for (let i = 0; i < ids.length; i += chunkSize) {
     const chunk = ids.slice(i, i + chunkSize);
     const { data, error } = await supabase.from('sources').select('*').in('id', chunk);
@@ -110,10 +126,10 @@ async function fetchParties(): Promise<Party[]> {
     const partyHistory = (history ?? []).filter((h) => h.party_id === row.id);
     const partyElectoralHistory = (electoralHistory ?? []).filter((e) => e.party_id === row.id);
 
-    const buildClassification = (r: any): Classification => ({
+    const buildClassification = (r: ClassificationRow): Classification => ({
       tag: r.tag,
       note: r.note ?? undefined,
-      source: toSource(sourceMap.get(r.source_id)),
+      source: toSource(r.source_id ? sourceMap.get(r.source_id) : undefined),
     });
 
     return {

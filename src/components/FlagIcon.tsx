@@ -17,6 +17,7 @@ export default function FlagIcon({
   if (!/^[a-z]{2}$/.test(code)) return null;
 
   return (
+    // eslint-disable-next-line @next/next/no-img-element -- small SVG flag: next/image cannot optimise SVG
     <img
       src={`https://flagcdn.com/${code}.svg`}
       alt={title ?? ''}

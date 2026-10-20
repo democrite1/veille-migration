@@ -38,7 +38,7 @@ function MethodologyPageInner() {
         <h2 className="font-serif text-lg font-semibold">Annuaire des partis</h2>
         <p className="text-sm">
           Un parti est inclus si (a) son programme officiel se revendique explicitement
-          de la réduction ou de l'arrêt de l'immigration / de la remigration, ou (b) une
+          de la réduction ou de l’arrêt de l’immigration / de la remigration, ou (b) une
           source tierce académique reconnue (Manifesto Project, ParlGov, PopuList, CHES)
           le classe dans la famille populiste radicale de droite / nationaliste avec
           positionnement anti-immigration. Chaque fiche cite sa source de classification.
@@ -56,10 +56,10 @@ function MethodologyPageInner() {
           retours). Toujours sourcé — y compris lorsque le parti conteste ou rejette
           explicitement le terme.
         </p>
-        <p className="text-sm font-medium">Axe 2 — Statut d'action</p>
+        <p className="text-sm font-medium">Axe 2 — Statut d’action</p>
         <p className="text-sm">
           <strong>Programme</strong> (engagement électoral, rien de déposé formellement)
-          vs <strong>Mesures concrètes</strong> (dès qu'un texte formel existe :
+          vs <strong>Mesures concrètes</strong> (dès qu’un texte formel existe :
           proposition de loi déposée même non votée, décret, mesure administrative, loi
           votée). Le tag « mesures concrètes » reste actif tant que la mesure est en
           vigueur, indépendamment du parti au pouvoir ou non. Si la mesure est abrogée ou
@@ -84,7 +84,7 @@ function MethodologyPageInner() {
           Pas de mise en avant séparée des structures jeunesse des partis. Pour les
           initiatives non partisanes (section actualités), traitement journalistique
           uniquement : nature, développements, statut légal, couverture presse — jamais
-          de fiche-annuaire ni de liens de contact ou d'adhésion.
+          de fiche-annuaire ni de liens de contact ou d’adhésion.
         </p>
       </section>
     </div>
