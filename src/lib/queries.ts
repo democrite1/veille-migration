@@ -1,280 +1,45 @@
-import { cache } from 'react';
-import { unstable_cache } from 'next/cache';
-import { getSupabaseClient } from './supabase';
-import type {
-  Party,
-  Election,
-  Legislation,
-  NewsItem,
-  Source,
-  Classification,
-  StatusHistoryEntry,
-  ElectoralResult,
-  CountryCode,
-} from '@/data/types';
-
-/** Row shapes read from Supabase (the client is untyped: no generated types). */
-interface SourceRow {
-  id: string;
-  name: string;
-  url: string;
-  accessed_on: string | null;
-  note: string | null;
-}
-interface ClassificationRow {
-  party_id: string;
-  axis: 'intention' | 'action_status';
-  tag: Classification['tag'];
-  note: string | null;
-  source_id: string | null;
-}
-
-function toSource(row: SourceRow | undefined): Source {
-  if (!row) {
-    // Defensive: a missing source row should degrade one citation, not crash
-    // the whole page. Should not happen with a consistent database, but a
-    // hard crash here previously took down the entire /partis listing.
-    return { name: 'Source indisponible', url: '#' };
-  }
-  return {
-    name: row.name,
-    url: row.url,
-    accessedOn: row.accessed_on ?? undefined,
-    note: row.note ?? undefined,
-  };
-}
+import type { Election, Legislation, NewsItem, Party } from '@/data/types';
+import { parties } from '@/data/parties';
+import { elections } from '@/data/elections';
+import { legislation } from '@/data/legislation';
+import { news } from '@/data/news';
 
 /**
- * Fetches rows from `sources` by id. Chunked and sequential (not
- * Promise.all) on purpose: a single request with the full id list works
- * fine in practice, but as the dataset keeps growing this keeps any one
- * request's `.in()` list bounded, without adding extra concurrent load on
- * Supabase's free-tier API — the thing that actually caused intermittent
- * 500s here (fixed properly by removing the redundant double getParties()
- * call in the party listing page; this is defense in depth).
+ * Data access for every page, read from the repository at build time.
+ *
+ * Until October 2026 these functions queried Supabase on each request. When
+ * the free-tier project was paused for inactivity, its domain stopped
+ * resolving and the party directory returned HTTP 500 in production. The
+ * files in src/data are the editorial source of truth anyway — Supabase only
+ * ever held a copy pushed by scripts/seed-supabase.ts — so the site now reads
+ * them directly: no database on the request path, nothing to pause, and a
+ * data change ships with the deployment that carries it.
+ *
+ * The functions stay async and keep their signatures so pages are unchanged.
  */
-async function fetchSourcesByIds(supabase: ReturnType<typeof getSupabaseClient>, ids: string[]) {
-  const chunkSize = 150;
-  const rows: SourceRow[] = [];
-  for (let i = 0; i < ids.length; i += chunkSize) {
-    const chunk = ids.slice(i, i + chunkSize);
-    const { data, error } = await supabase.from('sources').select('*').in('id', chunk);
-    if (error) throw new Error(`fetchSourcesByIds: ${error.message}`);
-    rows.push(...(data ?? []));
-  }
-  return rows;
+
+const byDateDesc = <T extends { date: string }>(a: T, b: T) => b.date.localeCompare(a.date);
+
+const sortedParties: Party[] = [...parties]
+  .sort((a, b) => a.name.localeCompare(b.name, 'fr'))
+  .map((p) => (p.electoralHistory ? { ...p, electoralHistory: [...p.electoralHistory].sort(byDateDesc) } : p));
+
+export async function getParties(): Promise<Party[]> {
+  return sortedParties;
 }
-
-/**
- * Cached per request/build with React's `cache()`: `getPartyBySlug` (called
- * once per static party page) and `generateStaticParams` both call this with
- * the same (no) arguments, so without dedup a 43-party build fired off ~44
- * redundant full fetches concurrently — wasteful, and the likely source of
- * an intermittent "Cannot read properties of undefined" crash when two of
- * those concurrent fetches interleaved.
- */
-async function fetchParties(): Promise<Party[]> {
-  const supabase = getSupabaseClient();
-
-  const { data: partyRows, error: partyErr } = await supabase.from('parties').select('*').order('name');
-  if (partyErr) throw new Error(`getParties: ${partyErr.message}`);
-  if (!partyRows || partyRows.length === 0) return [];
-
-  const partyIds = partyRows.map((p) => p.id);
-
-  const [
-    { data: classifications, error: classErr },
-    { data: socials, error: socErr },
-    { data: history, error: histErr },
-    { data: electoralHistory, error: ehErr },
-  ] = await Promise.all([
-    supabase.from('party_classifications').select('*').in('party_id', partyIds),
-    supabase.from('party_social_accounts').select('*').in('party_id', partyIds),
-    supabase.from('party_status_history').select('*').in('party_id', partyIds),
-    supabase.from('party_electoral_history').select('*').in('party_id', partyIds).order('date', { ascending: false }),
-  ]);
-  if (classErr) throw new Error(`getParties classifications: ${classErr.message}`);
-  if (socErr) throw new Error(`getParties socials: ${socErr.message}`);
-  if (histErr) throw new Error(`getParties history: ${histErr.message}`);
-  if (ehErr) throw new Error(`getParties electoral history: ${ehErr.message}`);
-
-  // Fetch only the sources actually referenced (never the whole table — it
-  // grows with every seed run and PostgREST silently caps unbounded
-  // `select('*')` queries at 1000 rows, which orphaned real references once
-  // the table passed that size).
-  const sourceIds = Array.from(
-    new Set(
-      [
-        ...partyRows.map((p) => p.electoral_status_source_id),
-        ...partyRows.map((p) => p.classification_source_id),
-        ...partyRows.map((p) => p.meps_source_id),
-        ...partyRows.map((p) => p.local_implantation_source_id),
-        ...(classifications ?? []).map((c) => c.source_id),
-        ...(history ?? []).map((h) => h.source_id),
-        ...(electoralHistory ?? []).map((e) => e.source_id),
-      ].filter(Boolean),
-    ),
-  );
-  const sourcesAll = await fetchSourcesByIds(supabase, sourceIds);
-
-  const sourceMap = new Map(sourcesAll.map((s) => [s.id, s]));
-
-  return partyRows.map((row): Party => {
-    const intentionRow = classifications?.find((c) => c.party_id === row.id && c.axis === 'intention');
-    const actionRow = classifications?.find((c) => c.party_id === row.id && c.axis === 'action_status');
-    const partySocials = (socials ?? []).filter((s) => s.party_id === row.id);
-    const partyHistory = (history ?? []).filter((h) => h.party_id === row.id);
-    const partyElectoralHistory = (electoralHistory ?? []).filter((e) => e.party_id === row.id);
-
-    const buildClassification = (r: ClassificationRow): Classification => ({
-      tag: r.tag,
-      note: r.note ?? undefined,
-      source: toSource(r.source_id ? sourceMap.get(r.source_id) : undefined),
-    });
-
-    return {
-      slug: row.slug,
-      name: row.name,
-      countryCode: row.country_code as CountryCode,
-      positioning: row.positioning,
-      electoralStatus: row.electoral_status,
-      electoralStatusDetail: row.electoral_status_detail,
-      electoralStatusSource: toSource(sourceMap.get(row.electoral_status_source_id)),
-      officialWebsite: row.official_website,
-      socialAccounts: partySocials.map((s) => ({ platform: s.platform, url: s.url })),
-      classificationSource: toSource(sourceMap.get(row.classification_source_id)),
-      intention: buildClassification(intentionRow),
-      actionStatus: buildClassification(actionRow),
-      actionStatusHistory: partyHistory.length
-        ? partyHistory.map(
-            (h): StatusHistoryEntry => ({
-              date: h.date,
-              tag: h.tag,
-              note: h.note,
-              source: h.source_id ? toSource(sourceMap.get(h.source_id)) : undefined,
-            }),
-          )
-        : undefined,
-      electoralHistory: partyElectoralHistory.length
-        ? partyElectoralHistory.map(
-            (e): ElectoralResult => ({
-              label: e.label,
-              chamber: e.chamber ?? undefined,
-              date: e.date,
-              seats: e.seats,
-              totalSeats: e.total_seats,
-              votePercent: e.vote_percent ?? undefined,
-              source: toSource(sourceMap.get(e.source_id)),
-            }),
-          )
-        : undefined,
-      europeanRepresentation:
-        row.meps_count != null
-          ? {
-              meps: row.meps_count,
-              totalCountryMeps: row.meps_total_country ?? undefined,
-              europeanGroup: row.meps_group ?? undefined,
-              source: toSource(sourceMap.get(row.meps_source_id)),
-            }
-          : undefined,
-      localImplantation: row.local_implantation_summary
-        ? {
-            summary: row.local_implantation_summary,
-            mayors: row.local_implantation_mayors ?? undefined,
-            regionalCouncillors: row.local_implantation_regional_councillors ?? undefined,
-            source: toSource(sourceMap.get(row.local_implantation_source_id)),
-          }
-        : undefined,
-      founded: row.founded ?? undefined,
-      description: row.description,
-    };
-  });
-}
-
-/**
- * Supabase results are kept in Next's data cache for an hour, so a page view
- * never waits on the database and a Supabase outage (or free-tier pause)
- * serves the last good data instead of an error page. The cache key carries
- * the deployed commit: data only changes through seed + push, and each push
- * deploys a new commit, so fresh data is fetched once per deployment.
- */
-const DEPLOY_KEY = process.env.VERCEL_GIT_COMMIT_SHA ?? 'local';
-const CACHE_OPTIONS = { revalidate: 3600, tags: ['supabase'] };
-
-export const getParties = cache(unstable_cache(fetchParties, ['parties', DEPLOY_KEY], CACHE_OPTIONS));
 
 export async function getPartyBySlug(slug: string): Promise<Party | undefined> {
-  const all = await getParties();
-  return all.find((p) => p.slug === slug);
+  return sortedParties.find((p) => p.slug === slug);
 }
 
-async function fetchElections(): Promise<Election[]> {
-  const supabase = getSupabaseClient();
-  const { data: rows, error } = await supabase.from('elections').select('*').order('date', { ascending: false });
-  if (error) throw new Error(`getElections: ${error.message}`);
-  const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const sources = await fetchSourcesByIds(supabase, sourceIds);
-  const sourceMap = new Map(sources.map((s) => [s.id, s]));
-
-  return (rows ?? []).map(
-    (row): Election => ({
-      id: row.id,
-      countryCode: row.country_code,
-      level: row.level,
-      scopeName: row.scope_name,
-      mandateDuration: row.mandate_duration,
-      powers: row.powers,
-      date: row.date,
-      status: row.status,
-      result: row.result ?? undefined,
-      totalSeats: row.total_seats ?? undefined,
-      source: toSource(sourceMap.get(row.source_id)),
-    }),
-  );
+export async function getElections(): Promise<Election[]> {
+  return [...elections].sort(byDateDesc);
 }
 
-async function fetchLegislation(): Promise<Legislation[]> {
-  const supabase = getSupabaseClient();
-  const { data: rows, error } = await supabase.from('legislation').select('*').order('date', { ascending: false });
-  if (error) throw new Error(`getLegislation: ${error.message}`);
-  const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const sources = await fetchSourcesByIds(supabase, sourceIds);
-  const sourceMap = new Map(sources.map((s) => [s.id, s]));
-
-  return (rows ?? []).map(
-    (row): Legislation => ({
-      id: row.id,
-      countryOrLevel: row.country_or_level,
-      title: row.title,
-      status: row.status,
-      date: row.date,
-      description: row.description,
-      source: toSource(sourceMap.get(row.source_id)),
-    }),
-  );
+export async function getLegislation(): Promise<Legislation[]> {
+  return [...legislation].sort(byDateDesc);
 }
 
-async function fetchNews(): Promise<NewsItem[]> {
-  const supabase = getSupabaseClient();
-  const { data: rows, error } = await supabase.from('news_items').select('*').order('date', { ascending: false });
-  if (error) throw new Error(`getNews: ${error.message}`);
-  const sourceIds = Array.from(new Set((rows ?? []).map((r) => r.source_id).filter(Boolean)));
-  const sources = await fetchSourcesByIds(supabase, sourceIds);
-  const sourceMap = new Map(sources.map((s) => [s.id, s]));
-
-  return (rows ?? []).map(
-    (row): NewsItem => ({
-      id: row.id,
-      title: row.title,
-      countries: row.countries ?? [],
-      date: row.date,
-      summary: row.summary,
-      legalStatus: row.legal_status,
-      source: toSource(sourceMap.get(row.source_id)),
-    }),
-  );
+export async function getNews(): Promise<NewsItem[]> {
+  return [...news].sort(byDateDesc);
 }
-
-export const getElections = cache(unstable_cache(fetchElections, ['elections', DEPLOY_KEY], CACHE_OPTIONS));
-export const getLegislation = cache(unstable_cache(fetchLegislation, ['legislation', DEPLOY_KEY], CACHE_OPTIONS));
-export const getNews = cache(unstable_cache(fetchNews, ['news', DEPLOY_KEY], CACHE_OPTIONS));

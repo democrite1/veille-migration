@@ -11,15 +11,16 @@ de classification et de sourçage.
 
 ## État actuel
 
-- **Stack** : Next.js 14 (App Router) + TypeScript + Tailwind + next-intl
-  (FR/EN), déployé sur Vercel, dépôt GitHub `democrite1/veille-migration`.
-- **Supabase** : connecté à un vrai projet (région Ireland). Schéma appliqué
-  (`supabase/migrations/0001_init.sql`), RLS activée avec policies de lecture
-  publique. Toutes les pages (`src/lib/queries.ts`) lisent en direct depuis
-  Supabase via la clé anon.
-- **`src/data/*.ts`** : source de vérité éditoriale. C'est le fichier qu'on
-  édite pour ajouter/corriger un fait sourcé ; `scripts/seed-supabase.ts`
-  pousse ensuite tout vers Supabase avec la clé `service_role`.
+- **Stack** : Next.js 15 (App Router) + React 19 + TypeScript + Tailwind +
+  next-intl 4 (FR/EN), déployé sur Vercel, dépôt GitHub
+  `democrite1/veille-migration`.
+- **Données** : `src/data/*.ts` est la source de vérité éditoriale et la
+  seule source lue par le site, au moment du build (`src/lib/queries.ts`).
+  Aucune base de données sur le chemin des requêtes.
+- **Supabase** (facultatif) : une copie des données peut y être poussée par
+  `scripts/seed-supabase.ts`, mais le site ne la lit plus depuis octobre
+  2026 : la mise en pause du projet gratuit pour inactivité avait mis
+  l'annuaire des partis en erreur 500.
 - **28 pays couverts** : France, Allemagne, Royaume-Uni, Italie, Pays-Bas,
   États-Unis, Suède, Autriche, Espagne, Hongrie, Finlande, Belgique, Suisse,
   Portugal, Pologne, Norvège, République tchèque, Grèce, Roumanie, Slovaquie,
@@ -34,14 +35,6 @@ de classification et de sourçage.
   par pays + niveau UE.
 - **Sections** : annuaire des partis, suivi électoral, suivi législatif,
   actualités des initiatives, méthodologie.
-- **⚠️ Piège plan gratuit Supabase** : un projet Supabase gratuit se met en
-  pause après une semaine d'inactivité (aucune requête). Si le site renvoie
-  des erreurs de connexion après une pause, ouvrir le dashboard Supabase et
-  cliquer sur « Resume project » (gratuit, restaure les données telles
-  qu'au moment de la pause). Le cron GitHub Actions quotidien (voir plus
-  bas) touche Supabase indirectement via le déploiement, ce qui limite le
-  risque une fois le pipeline pleinement rodé.
-
 ## Démarrer en local
 
 ```bash
@@ -53,16 +46,17 @@ Le site tourne sur http://localhost:3000 et redirige vers `/fr`.
 
 ## Mettre à jour les données
 
-Éditer `src/data/{parties,elections,legislation,news}.ts` (chaque fait doit
-rester sourcé), vérifier que le build passe, puis :
+Éditer `src/data/{parties,elections,legislation,news,corrections}.ts`
+(chaque fait doit rester sourcé, avec sa date de consultation), puis vérifier :
 
 ```bash
-npx tsx scripts/seed-supabase.ts
-git add -A && git commit -m "..." && git push
+npm run audit
+npm run lint
+npm run build
 ```
 
-Le push déclenche un redéploiement automatique sur Vercel (webhook GitHub
-déjà connecté).
+Le push déclenche un redéploiement automatique sur Vercel, qui embarque les
+données modifiées.
 
 ## Scripts de fetch (`scripts/fetch/*.ts`)
 

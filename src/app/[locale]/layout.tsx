@@ -8,11 +8,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SITE_URL } from '@/lib/metadata';
 
-// Pages are prerendered and regenerated at most hourly. Without this and
-// setRequestLocale below, every visit was rendered on demand and queried
-// Supabase 5-8 times (1.5-2.3 s server time, no CDN caching).
-export const revalidate = 3600;
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
