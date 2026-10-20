@@ -26,16 +26,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/RNational_off' },
     ],
     classificationSource: {
-      name: 'The PopuList',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste radical de droite / anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Front National / Rassemblement National » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: "Programme officiel RN — élections législatives 2024",
-        url: 'https://rassemblementnational.fr',
-        note: 'Réduction drastique de l\'immigration légale et de l\'accès à la nationalité ("priorité nationale"). Le terme "remigration" a été explicitement écarté par la direction du parti (Bardella, Le Pen), qui s\'en distingue publiquement de Reconquête.',
+        name: "LCP — Législatives 2024 : le programme du Rassemblement national en matière d'immigration à l'épreuve de la Constitution",
+        url: 'https://lcp.fr/actualites/legislatives-2024-le-programme-du-rassemblement-national-en-matiere-d-immigration-a-l',
+        accessedOn: '2026-10-20',
+        note: "Programme des législatives de 2024 présenté par Jordan Bardella (article du 28 juin 2024) : suppression du droit du sol, durcissement du regroupement familial, « priorité nationale », allocations familiales réservées aux Français, rétablissement du délit de séjour irrégulier, remplacement de l'aide médicale d'État par une aide d'urgence vitale. Le compte rendu ne fait état d'aucune mesure de remigration. En janvier 2024, Marine Le Pen s'est déclarée en total désaccord avec le projet d'expulsions massives discuté à Potsdam sous ce nom (AFP, via The Times of Israel, 30 janvier 2024 : https://www.timesofisrael.com/germanys-afd-sets-up-talks-with-frances-le-pen-to-clarify-immigrant-expulsion-spat/).",
       },
     },
     actionStatus: {
@@ -115,9 +117,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/Reconquete_off' },
     ],
     classificationSource: {
-      name: 'The PopuList',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti d\'extrême droite / anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Reconquete » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -197,9 +200,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/ECiotti' },
     ],
     classificationSource: {
-      name: "Ministère de l'Intérieur — nuance politique UXD",
-      url: 'https://fr.wikipedia.org/wiki/Union_des_droites_pour_la_R%C3%A9publique',
-      note: "Cas particulier dans cet annuaire : la classification ne vient pas des bases universitaires habituelles (Manifesto Project, ParlGov, PopuList, CHES), trop lentes pour un parti fondé en 2024, mais de l'État lui-même. Le ministère de l'Intérieur attribue à ses candidats la nuance « UXD » (union de l'extrême droite). L'UDR a contesté ce classement lors des municipales de 2026 ; le Conseil constitutionnel a rejeté son recours.",
+      name: "The PopuList 4.0 — entrée « Union des droites pour la République » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. Pour les municipales de 2026, la circulaire du ministère de l'Intérieur du 2 février 2026 range l'UDR dans le bloc « extrême droite » ; le Conseil d'État a rejeté le recours de l'UDR et d'Éric Ciotti contre ce classement le 27 février 2026 (n° 512694 et autres ; Le Monde du droit, 3 mars 2026 : https://www.lemondedudroit.fr/public/282-droit-public-general/103261-municipales-lfi-a-l-extreme-gauche-udr-a-l-extreme-droite.html, consulté le 2026-10-20).",
     },
     intention: {
       tag: 'reduction',
@@ -259,9 +263,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/AfD' },
     ],
     classificationSource: {
-      name: 'Manifesto Project / The PopuList / CHES',
-      url: 'https://manifesto-project.wzb.eu',
-      note: 'Classifié parti de la famille nationaliste / populiste radical de droite.',
+      name: "The PopuList 4.0 — entrée « Alternative für Deutschland » (Allemagne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite depuis 2015. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -530,16 +535,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/reformparty_uk' },
     ],
     classificationSource: {
-      name: 'The PopuList (successeur du Brexit Party) / Wikipedia',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Brexit Party / Reform » (Royaume-Uni)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: "Manifeste Reform UK 2024 (« Contract with You »)",
-        url: 'https://www.reformparty.uk',
-        note: "Objectif de « net zero » migration nette, gel de l'immigration non essentielle et expulsion de tous les arrivants illégaux par petits bateaux. Ne mentionne pas explicitement la « remigration » de populations déjà installées légalement.",
+        name: "Reform UK — Our Contract with You (programme des élections générales de 2024)",
+        url: 'https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf',
+        accessedOn: '2026-10-20',
+        note: "Premier des cinq engagements : gel de toute immigration « non essentielle », les compétences essentielles, surtout dans la santé, faisant exception. Détention et expulsion des migrants arrivés illégalement, renvoi des embarcations vers la France si nécessaire, sortie de la Convention européenne des droits de l'homme. Le document n'emploie pas le terme « remigration ».",
       },
     },
     actionStatus: {
@@ -709,9 +716,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/FratellidItalia' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti de droite radicale ; héritier direct du MSI (Movimento Sociale Italiano) via Alleanza Nazionale.",
+      name: "The PopuList 4.0 — entrée « Fratelli d'Italia » (Italie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -786,9 +794,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/LegaSalvini' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti populiste de droite radicale. Fondé en 1989 sous le nom Lega Nord, à l'origine régionaliste et autonomiste (indépendance du « Nord » de l'Italie), le parti s'est renommé Lega en 2018 sous la direction de Matteo Salvini et a recentré son discours sur l'immigration et le nationalisme italien plutôt que sur le régionalisme.",
+      name: "The PopuList 4.0 — entrée « Lega (Nord) » (Italie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -928,9 +937,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/geertwilderspvv' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Partij voor de Vrijheid » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1018,9 +1028,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/JA21NL' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti national-conservateur de droite radicale. Fondé en 2020 par des dissidents de Forum voor Democratie (FvD), sur une ligne jugée plus modérée dans la forme mais tout aussi ferme sur l'immigration.",
+      name: "The PopuList 4.0 — entrée « Juiste Antwoord 21 » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -1099,9 +1110,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/fvdemocratie' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti populiste de droite radicale. Fondé en 2016 par Thierry Baudet, qui reste président du parti après avoir cédé la tête de liste à Lidewij de Vos pour les élections de 2025.",
+      name: "The PopuList 4.0 — entrée « Forum voor Democratie » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1187,9 +1199,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/GOP' },
     ],
     classificationSource: {
-      name: 'Manifesto Project',
-      url: 'https://manifesto-project.wzb.eu',
-      note: "Inclusion sur auto-déclaration : le programme officiel 2024 du parti (RNC Platform) fait de l'immigration sa priorité affichée n°1-2.",
+      name: "The American Presidency Project (UC Santa Barbara) — 2024 Republican Party Platform",
+      url: 'https://www.presidency.ucsb.edu/documents/2024-republican-party-platform',
+      accessedOn: '2026-10-20',
+      note: "Aucun des jeux de données de référence ne couvre les États-Unis (The PopuList se limite à l'Europe, ParlGov n'inclut pas les États-Unis). Inclusion sur autodéclaration : les deux premiers des vingt engagements du programme adopté le 15 juillet 2024 sont « Seal the border, and stop the migrant invasion » et « Carry out the largest deportation operation in American history ».",
     },
     intention: {
       tag: 'remigration',
@@ -1275,9 +1288,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/sdriks' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale ; fondé en 1988 avec des racines documentées dans des mouvements néonazis suédois.',
+      name: "The PopuList 4.0 — entrée « Sverigedemokraterna » (Suède)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2001 et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1379,9 +1393,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/fpoe_at' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale ; fondé en 1956, avec d\'anciens cadres nazis et du VdU parmi ses fondateurs.',
+      name: "The PopuList 4.0 — entrée « Freiheitliche Partei Österreichs » (Autriche)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1394,9 +1409,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Wahlprogramm FPÖ',
-        url: 'https://www.fpoe.at',
-        note: "Parti d'opposition depuis mars 2025 : aucune loi FPÖ promulguée. Le programme prévoit la suspension du droit d'asile par « loi d'urgence » (Notgesetz), non déposée faute de majorité gouvernementale.",
+        name: "ORF — FPÖ-Programm: Neue Schlagwörter zu bekannten Standpunkten",
+        url: 'https://orf.at/stories/3367177/',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition depuis mars 2025 : aucune loi FPÖ promulguée. Son programme de 2024, « Festung Österreich, Festung der Freiheit », prévoit un asile limité dans le temps et la fin des demandes d'asile en Autriche (compte rendu de l'ORF, 21 août 2024).",
       },
     },
     electoralHistory: [
@@ -1470,9 +1486,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/vox_es' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Vox » (Espagne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1684,9 +1701,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/fidesz_hu' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Fidesz » (Hongrie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2002 et d'extrême droite depuis 2010. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -1775,9 +1793,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/mihazankmozgalom' },
     ],
     classificationSource: {
-      name: 'The Times of Israel / The PopuList',
-      url: 'https://www.timesofisrael.com/hungarys-most-radical-nationalist-party-since-wwii-just-won-7-seats-in-parliament/',
-      note: "Classifié parti d'extrême droite ultranationaliste. Fondé en 2018 par László Toroczkai, maire d'Ásotthalom (localité frontalière symbole de la fermeture des frontières hongroises), après son exclusion du Jobbik qu'il jugeait trop modéré.",
+      name: "The PopuList 4.0 — entrée « Mi Hazánk Mozgalom » (Hongrie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -1857,9 +1876,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/perussuomalaiset' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Suomen Maaseudun Puolue | Perussuomalaiset » (Finlande)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite avant 2017). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -1946,9 +1966,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/vlbelang' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti d'extrême droite ; héritier direct du Vlaams Blok, dissous en 2004 pour racisme par la justice belge.",
+      name: "The PopuList 4.0 — entrée « Vlaams Belang » (Belgique)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -2037,24 +2058,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/svp_ch' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Schweizerische Volkspartei » (Suisse)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'UDC — svp.ch',
-        url: 'https://www.svp.ch',
-        note: "Programme centré sur la limitation de l'immigration et la préférence nationale à l'embauche, sans politique de remigration de résidents déjà installés légalement.",
+        name: "UDC/SVP — Parteiprogramm 2023 bis 2027, chapitre « Ausländerpolitik »",
+        url: 'https://www.svp.ch/wp-content/uploads/230523_Parteiprogramm.pdf',
+        accessedOn: '2026-10-20',
+        note: "Le programme demande l'application conséquente de l'article constitutionnel issu de l'initiative contre l'immigration de masse, pour que la Suisse décide elle-même qui peut immigrer et en quel nombre, et juge démesurée l'arrivée de 1,5 million d'immigrés en vingt ans. Le terme « Remigration » n'y figure pas.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Confédération suisse',
-        url: 'https://www.admin.ch',
-        note: "Initiative populaire « contre l'immigration de masse » portée par l'UDC, acceptée en votation le 9 février 2014 (50,3%), inscrivant des plafonds et contingents d'immigration dans la Constitution. Sa mise en œuvre législative de 2016 a été fortement atténuée (mécanisme de préférence indigène « light ») pour rester compatible avec l'accord de libre circulation UE-Suisse, sous la pression du Parlement et du risque de rupture des accords bilatéraux.",
+        name: "Swissvotes (Université de Berne) — votation n° 580, initiative populaire « Contre l'immigration de masse »",
+        url: 'https://swissvotes.ch/vote/580.00',
+        accessedOn: '2026-10-20',
+        note: "Initiative lancée par l'UDC, acceptée le 9 février 2014 par 50,3 % des votants et une majorité de cantons. Elle inscrit à l'article 121a de la Constitution des plafonds et contingents annuels d'immigration. Le Parlement l'a mise en œuvre en décembre 2016 sans contingents, par l'obligation d'annoncer les postes vacants aux offices de l'emploi dans les secteurs à fort chômage (swissinfo, 16 juin 2017 : https://www.swissinfo.ch/eng/politics/domestic-and-foreign-labour_cabinet-sets-details-for-hiring-preference-rules/43258282).",
       },
     },
     electoralHistory: [
@@ -2119,9 +2143,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/partido_chega' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Chega » (Portugal)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -2211,9 +2236,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/pisorgpl' },
     ],
     classificationSource: {
-      name: 'The PopuList — fiche Pologne',
-      url: 'https://popu-list.org/wp-content/uploads/2023/09/Poland.pdf',
-      note: "Classifié parti populiste d'extrême droite (populist far-right) par la base PopuList, l'une des quatre références méthodologiques de ce site. Également répertorié comme populiste de droite radicale (populist radical right) dans la littérature académique comparative.",
+      name: "The PopuList 4.0 — entrée « Prawo i Sprawiedliwosc » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2005 (cas limite avant 2015) et d'extrême droite depuis 2005 (cas limite avant 2015). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2340,9 +2366,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/KONFEDERACJA_' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Konfederacja Wolność i Niepodległość » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2431,9 +2458,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/GrzegorzBraun_' },
     ],
     classificationSource: {
-      name: 'Balkan Insight / Wikipedia',
-      url: 'https://balkaninsight.com/2026/07/01/impossible-to-discredit-the-far-right-theatre-of-polands-grzegorz-braun/rd/',
-      note: "Classifié parti d'extrême droite, national-catholique et ultranationaliste. Son président Grzegorz Braun a fait l'objet de cinq levées d'immunité parlementaire européenne pour des faits liés à des actions et propos antisémites, anti-ukrainiens et anti-LGBT, dont l'extinction en direct de bougies de Hanouca au Parlement polonais en décembre 2023.",
+      name: "The PopuList 4.0 — entrée « Konfederacja Korony Polskiej » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2484,9 +2512,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/Fremskrittsp' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Fremskrittspartiet » (Norvège)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2565,16 +2594,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/SPD_CZ' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et anti-UE.',
+      name: "The PopuList 4.0 — entrée « Svoboda a prímá demokracie » (Tchéquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'SPD.cz',
-        url: 'https://www.spd.cz',
-        note: "Programme centré sur l'arrêt de l'immigration extra-européenne et le rejet du Pacte européen sur la migration et l'asile, sans politique explicite de remigration de résidents déjà installés légalement.",
+        name: "ČTK (České noviny) — Program SPD se soustředí na zlevnění energií či potravin, bydlení či bezpečnost",
+        url: 'https://www.ceskenoviny.cz/zpravy/2718106',
+        accessedOn: '2026-10-20',
+        note: "Programme des législatives de 2025 (dépêche du 8 septembre 2025) : rejet de la migration et du pacte européen sur la migration et l'asile, révision des titres de séjour de tous les migrants. Le député Jaroslav Foldyna a promis le renvoi de tous les migrants en situation irrégulière.",
       },
     },
     actionStatus: {
@@ -2659,9 +2690,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/kvelopoulos' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Elliniki Lisi » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2739,9 +2771,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/NIKI_official_' },
     ],
     classificationSource: {
-      name: 'Al Jazeera / The PopuList',
-      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
-      note: "Classifié parti d'extrême droite par les observateurs, aux côtés d'Elliniki Lisi et de Spartiates : la Grèce est devenue en 2023 le seul pays européen avec trois partis d'extrême droite représentés simultanément au Parlement.",
+      name: "The PopuList 4.0 — entrée « Δημοκρατικό Πατριωτικό Κίνημα \"ΝΙΚΗ\" » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2808,9 +2841,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/spartiates_gr' },
     ],
     classificationSource: {
-      name: 'Al Jazeera / Wikipedia',
-      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
-      note: "Classifié parti d'extrême droite, présenté par les observateurs comme un successeur informel d'Aube dorée (Chrysi Avgi), parti dissous par la justice grecque en 2020 pour appartenance à une organisation criminelle.",
+      name: "The PopuList 4.0 — entrée « Σπαρτιάτες » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -2875,9 +2909,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/AUR_Romania' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-souverainiste de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Alianța pentru Unirea Românilor » (Roumanie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -2944,9 +2979,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/sosoacadiana' },
     ],
     classificationSource: {
-      name: 'European Conservatism and Populism Studies (ECPS) / Wikipedia',
-      url: 'https://www.populismstudies.org',
-      note: "Classifié parti ultra-nationaliste et populiste radical. Fondé en 2021 par Diana Șoșoacă après son exclusion d'AUR ; ligne combinant souverainisme, anti-européisme (appel au « RO-exit »), positions anti-vaccins et rhétorique régulièrement qualifiée d'antisémite par des observateurs.",
+      name: "The PopuList 4.0 — entrée « S.O.S Romǎnia » (Roumanie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3012,9 +3048,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/SNSoficialne' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti de droite radicale, ultra-nationaliste. Doyen des partis nationalistes slovaques (fondé en 1990), déjà partenaire de coalition à plusieurs reprises depuis les années 1990.",
+      name: "The PopuList 4.0 — entrée « Slovenská Národná Strana » (Slovaquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3079,9 +3116,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/hnutierepublika' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Republika » (Slovaquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -3148,9 +3186,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/Danmarksdem' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Danmarksdemokraterne » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3230,9 +3269,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/MrMesserschmidt' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti national-conservateur de droite radicale. Fondé en 1995 par Pia Kjærsgaard, historiquement le parti anti-immigration de référence au Danemark, à l'origine de l'inflexion restrictive de la politique migratoire danoise adoptée ensuite par les gouvernements sociaux-démocrates successifs.",
+      name: "The PopuList 4.0 — entrée « Dansk Folkeparti » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -3312,9 +3352,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/borgernesparti' },
     ],
     classificationSource: {
-      name: 'Wikipedia — Citizens\' Party (Denmark)',
-      url: 'https://en.wikipedia.org/wiki/Citizens%27_Party_(Denmark)',
-      note: "Classifié parti d'extrême droite, national-conservateur et libertarien. Fondé en août 2024 par Lars Boje Mathiesen après son exclusion du Nye Borgerlige (Nouvelle Droite), dont il avait pris la présidence en février 2023 avant d'en être écarté un mois plus tard pour des différends sur le financement de campagne.",
+      name: "The PopuList 4.0 — entrée « Borgernes Parti » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -3370,9 +3411,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/PaulineHansonOz' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « One Nation Party » (ID 386), Australie",
+      url: 'https://parlgov.fly.dev/data/parties/aus/386/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Right-wing » par ParlGov. The PopuList, limitée à l'Europe, ne code pas ce parti.",
     },
     intention: {
       tag: 'reduction',
@@ -3477,9 +3519,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/peoplespca' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « People's Party of Canada » (ID 2791), Canada",
+      url: 'https://parlgov.fly.dev/data/parties/can/2791/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Right-wing » par ParlGov. The PopuList, limitée à l'Europe, ne code pas ce parti.",
     },
     intention: {
       tag: 'reduction',
@@ -3549,9 +3592,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/domovinskipokret' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Domovinski Pokret » (Croatie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3626,9 +3670,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/hrsuverenisti' },
     ],
     classificationSource: {
-      name: 'Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
-      note: "Classifié national-conservateur, christiano-fondamentaliste, droite radicale à extrême droite. Né en 2019 de la fusion du Parti conservateur croate, de Hrast (Mouvement pour une Croatie réussie) et de la Génération du renouveau.",
+      name: "The PopuList 4.0 — entrée « Hrvatski Suverenisti » (Croatie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3717,9 +3762,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/SDS_Slovenija' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Slovenska Demokratska Stranka » (Slovénie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2000 et d'extrême droite depuis 2015. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3797,9 +3843,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/vazrazhdane_bg' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et pro-russe.',
+      name: "The PopuList 4.0 — entrée « Vazrazhdane » (Bulgarie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -3877,9 +3924,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/nzfirst' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « New Zealand First Party » (ID 891), Nouvelle-Zélande",
+      url: 'https://parlgov.fly.dev/data/parties/nzl/891/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Conservative » par ParlGov, et non dans la famille « Right-wing ». The PopuList, limitée à l'Europe, ne code pas ce parti. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
     },
     intention: {
       tag: 'reduction',
@@ -3944,9 +3992,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/LLibertadAvanza' },
     ],
     classificationSource: {
-      name: 'Manifesto Project',
-      url: 'https://manifesto-project.wzb.eu',
-      note: "Inclusion sur mesures concrètes en matière migratoire prises par l'administration Milei, bien que le parti se définisse avant tout comme libertarien plutôt qu'anti-immigration au sens classique européen.",
+      name: "Perfil — La Justicia frenó su reforma migratoria, pero Milei insiste con un nuevo DNU contra extranjeros",
+      url: 'https://www.perfil.com/noticias/politica/la-justicia-freno-su-reforma-migratoria-pero-milei-insiste-con-un-nuevo-dnu-contra-extranjeros.phtml',
+      accessedOn: '2026-10-20',
+      note: "Aucun des jeux de données de référence ne code ce parti (The PopuList se limite à l'Europe, ParlGov n'inclut pas l'Argentine). L'inclusion repose sur les mesures migratoires de l'administration Milei, dont le décret n° 681/2026 qui permet de refuser l'entrée ou d'annuler la résidence d'étrangers pour des « messages de haine » contre les Argentins (article du 30 juillet 2026), et non sur une classification du parti.",
     },
     intention: {
       tag: 'reduction',
@@ -4015,16 +4064,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/EKRE_erakond' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Eesti Konservatiivne Rahvaerakond » (Estonie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'EKRE.ee',
-        url: 'https://ekre.ee',
-        note: "Programme centré sur la limitation stricte de l'immigration extra-européenne et la défense de « l'État-nation estonien », sans politique explicite de remigration de résidents déjà installés légalement.",
+        name: "ERR News — EKRE vows national focus and an end to 'Russifying' immigration",
+        url: 'https://news.err.ee/1609967681/ekre-vows-national-focus-and-an-end-to-russifying-immigration',
+        accessedOn: '2026-10-20',
+        note: "Déclaration adoptée par le conseil du parti en mars 2026 en vue des législatives de 2027 : refonte radicale de la politique migratoire et fin de l'immigration qualifiée de « russifiante ».",
       },
     },
     actionStatus: {
@@ -4096,9 +4147,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/nacionalaap' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Nacionālā Apvienība » (Lettonie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -4177,9 +4229,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/adr_lu' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Alternativ Demokratesch Reformpartei » (Luxembourg)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite depuis 2022 (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -4246,9 +4299,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/ELAM_official' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti d'extrême droite, historiquement lié au parti grec Aube dorée (Chrysi Avgi).",
+      name: "The PopuList 4.0 — entrée « Ethniko Laiko Metopo » (Chypre)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
@@ -4328,9 +4382,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/independentirl' },
     ],
     classificationSource: {
-      name: 'Wikipedia / presse irlandaise',
-      url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
-      note: "Classifié parti populiste de droite radicale par la presse et les observateurs politiques irlandais. Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne rurale et anti-establishment progressivement recentrée sur l'immigration.",
+      name: "The PopuList 4.0 — entrée « Independent Ireland » (Irlande)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
     },
     intention: {
       tag: 'reduction',
@@ -4404,9 +4459,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/midflokkurinn' },
     ],
     classificationSource: {
-      name: 'Wikipedia / presse islandaise',
-      url: 'https://en.wikipedia.org/wiki/Centre_Party_(Iceland)',
-      note: "Classifié parti national-conservateur, populiste de droite et eurosceptique. Fondé en 2017 par Sigmundur Davíð Gunnlaugsson, ancien Premier ministre islandais (2013-2016), après sa rupture avec le Parti du progrès.",
+      name: "The PopuList 4.0 — entrée « Miðflokkurinn » (Islande)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
     },
     intention: {
       tag: 'reduction',
@@ -4465,7 +4521,7 @@ export const parties: Party[] = [
     classificationSource: {
       name: 'The Asia-Pacific Journal (Cambridge University Press) — Zaitokukai, Sanseito, and the Sudden Emergence of Anti-Foreigner Populism',
       url: 'https://www.cambridge.org/core/journals/asia-pacific-journal/article/zaitokukai-sanseito-and-the-sudden-emergence-of-antiforeigner-populism-in-the-july-2025-house-of-councilors-election-has-japan-reached-a-tipping-point/5252E99245D15FD900599683401E96A0',
-      note: "Classifié parti populiste de droite radicale à extrême droite, nationaliste et anti-immigration, par la littérature académique évaluée par les pairs. Critère d'inclusion doublement satisfait : classification universitaire, et revendication explicite du parti lui-même, dont le slogan de campagne est « 日本人ファースト » (« les Japonais d'abord »). Les bases de données de référence utilisées ailleurs sur ce site (Manifesto Project, ParlGov, PopuList, CHES) ne couvrant pas le Japon, la classification s'appuie ici sur les sources académiques et de presse équivalentes.",
+      note: "Classifié parti populiste de droite radicale à extrême droite, nationaliste et anti-immigration, par la littérature académique évaluée par les pairs. Critère d'inclusion doublement satisfait : classification universitaire, et revendication explicite du parti lui-même, dont le slogan de campagne est « 日本人ファースト » (« les Japonais d'abord »). Sanseitō n'est codé ni par The PopuList, limitée à l'Europe, ni par ParlGov, qui couvre le Japon mais dont les données s'arrêtent en 2023 (vérifié le 2026-10-20) : la classification s'appuie ici sur la littérature académique.",
     },
     intention: {
       tag: 'reduction',

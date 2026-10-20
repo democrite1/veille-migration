@@ -23,6 +23,76 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-sources-classification',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Sources de classification : 39 fiches renvoyaient à la page d'accueil de The PopuList ou du Manifesto Project, sans désigner d'entrée. Chaque fiche couverte par The PopuList 4.0 (mai 2026) cite désormais l'entrée du parti et son codage ; hors d'Europe, la fiche cite l'entrée ParlGov ou le document sur lequel repose l'inclusion.",
+      en: "Classification sources: 39 entries linked to the home page of The PopuList or the Manifesto Project without naming an entry. Every party coded by The PopuList 4.0 (May 2026) now cites its record and coding; outside Europe, the entry cites the ParlGov record or the document the inclusion rests on.",
+    },
+    source: {
+      name: "The PopuList 4.0 (CSV)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-classification-hors-europe',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "One Nation, le Parti populaire du Canada et New Zealand First étaient présentés comme classés par The PopuList, qui ne couvre que l'Europe. ParlGov range One Nation et le PPC dans la famille « Right-wing », New Zealand First dans la famille « Conservative ».",
+      en: "One Nation, the People's Party of Canada and New Zealand First were presented as classified by The PopuList, which only covers Europe. ParlGov places One Nation and the PPC in the \"Right-wing\" family and New Zealand First in the \"Conservative\" family.",
+    },
+    source: {
+      name: "ParlGov 2024 — New Zealand First Party",
+      url: 'https://parlgov.fly.dev/data/parties/nzl/891/',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-classification-populistes',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Independent Ireland et Miðflokkurinn étaient présentés comme classés à la droite radicale : The PopuList 4.0 les code populistes, mais pas d'extrême droite. Sanseitō : la fiche affirmait que ParlGov ne couvre pas le Japon ; ParlGov couvre le Japon mais ne code pas ce parti.",
+      en: "Independent Ireland and Miðflokkurinn were presented as classified radical right: The PopuList 4.0 codes them populist but not far right. Sanseitō: the entry said ParlGov does not cover Japan; ParlGov covers Japan but has no record for this party.",
+    },
+    source: {
+      name: "The PopuList 4.0 (CSV)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-udr-conseil-etat',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/udr',
+    summary: {
+      fr: "UDR : le recours contre son classement dans le bloc « extrême droite » pour les municipales de 2026 a été rejeté par le Conseil d'État le 27 février 2026, et non par le Conseil constitutionnel. La mention de la nuance « UXD », non vérifiée pour ce scrutin, est retirée.",
+      en: "UDR: its challenge to being placed in the \"far right\" bloc for the 2026 municipal elections was rejected by the Conseil d'État on 27 February 2026, not by the Constitutional Council. The mention of the \"UXD\" label, unverified for that election, has been removed.",
+    },
+    source: {
+      name: "Le Monde du droit — Municipales : LFI à l'extrême-gauche, UDR à l'extrême-droite",
+      url: 'https://www.lemondedudroit.fr/public/282-droit-public-general/103261-municipales-lfi-a-l-extreme-gauche-udr-a-l-extreme-droite.html',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-programmes-sources',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Programmes cités sans document : les intentions du RN, de Reform UK, de l'UDC, du SPD tchèque et d'EKRE, et les statuts d'action de l'UDC et du FPÖ, renvoient désormais à un document ou à un compte rendu précis. Ont été retirées les affirmations absentes de ces documents : objectif de « migration nette zéro » (Reform UK), « préférence nationale à l'embauche » (UDC), « arrêt » ou « limitation stricte » de l'immigration extra-européenne (SPD, EKRE), suspension de l'asile par « loi d'urgence » (FPÖ), « réduction drastique de l'immigration légale » (RN) et rejet du terme « remigration » attribué à Jordan Bardella, faute de source.",
+      en: "Programmes cited without a document: the intentions of the RN, Reform UK, the SVP, the Czech SPD and EKRE, and the action statuses of the SVP and the FPÖ, now point to a specific document or report. Claims absent from those documents have been removed: a \"net zero migration\" target (Reform UK), \"national preference in hiring\" (SVP), \"stopping\" or \"strictly limiting\" non-European immigration (SPD, EKRE), suspending asylum by \"emergency law\" (FPÖ), \"drastic reduction of legal immigration\" (RN), and a rejection of the word \"remigration\" attributed to Jordan Bardella, for want of a source.",
+    },
+  },
+  {
     id: '2026-10-20-chega-remigration',
     date: '2026-10-20',
     kind: 'reclassement',

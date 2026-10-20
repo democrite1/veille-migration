@@ -45,13 +45,14 @@ checkDuplicates(news, (n) => n.id, 'news');
 
 // ------------------------------------------------------------------- sources
 /**
- * `factBearing` marks citations that back a precise figure (a seat count, a
- * vote share). For those, a bare domain is a real defect: the reader cannot
- * check the number. Elsewhere — an institution's homepage cited for "this
- * party has passed no law", or a classification database cited as a database —
- * a bare domain is the correct citation, so it is not flagged.
+ * `onBare` says what a bare domain means for this citation. A figure (a seat
+ * count, a vote share) or a classification must point at the page or dataset
+ * entry that states it: a home page leaves the reader nothing to check, so it
+ * is an error for classifications and intentions and a warning for figures.
+ * An institution's homepage cited for "this party has passed no law" is still
+ * tolerated with a warning until each fiche names the register consulted.
  */
-function checkSource(where: string, s: Source | undefined, factBearing = false) {
+function checkSource(where: string, s: Source | undefined, onBare: 'ok' | 'warn' | 'err' = 'ok') {
   if (!s) return;
   if (!s.name?.trim()) err(where, 'source sans nom');
   if (!s.url?.trim()) {
@@ -66,8 +67,8 @@ function checkSource(where: string, s: Source | undefined, factBearing = false) 
     return;
   }
   const path = u.pathname.replace(/\/+$/, '');
-  if (factBearing && (path === '' || path === '/')) {
-    warn(where, `chiffre sourcé sur un domaine nu, non vérifiable en l'état : ${s.url}`);
+  if (onBare !== 'ok' && (path === '' || path === '/')) {
+    (onBare === 'err' ? err : warn)(where, `source sur un domaine nu, non vérifiable en l'état : ${s.url}`);
   }
   // Live blogs and exit polls carry election-night estimates that are routinely
   // revised. A Fidesz seat count taken from one was wrong by three seats.
@@ -88,9 +89,9 @@ for (const p of parties) {
     err(w, `année de fondation invraisemblable : ${p.founded}`);
 
   checkSource(`${w} / electoralStatusSource`, p.electoralStatusSource);
-  checkSource(`${w} / classificationSource`, p.classificationSource);
-  checkSource(`${w} / intention`, p.intention?.source);
-  checkSource(`${w} / actionStatus`, p.actionStatus?.source);
+  checkSource(`${w} / classificationSource`, p.classificationSource, 'err');
+  checkSource(`${w} / intention`, p.intention?.source, 'err');
+  checkSource(`${w} / actionStatus`, p.actionStatus?.source, 'warn');
   for (const h of p.actionStatusHistory ?? []) {
     if (!isIsoDate(h.date)) err(w, `actionStatusHistory : date mal formée ${h.date}`);
     checkSource(`${w} / actionStatusHistory ${h.date}`, h.source);
@@ -115,7 +116,7 @@ for (const p of parties) {
     if (r.seats > r.totalSeats) err(rw, `${r.seats} sièges sur une assemblée de ${r.totalSeats}`);
     if (r.votePercent != null && (r.votePercent < 0 || r.votePercent > 100))
       err(rw, `pourcentage hors bornes : ${r.votePercent}`);
-    checkSource(rw, r.source, true);
+    checkSource(rw, r.source, 'warn');
 
     const dupKey = `${r.label}|${r.date}`;
     if (seenResults.has(dupKey)) err(rw, 'entrée dupliquée dans electoralHistory');
@@ -199,7 +200,7 @@ for (const e of elections) {
   // A by-election fills one seat: without seatsContested the page would
   // present the whole chamber as up for election.
   if (e.level === 'partial' && e.seatsContested == null) err(w, 'élection partielle sans seatsContested');
-  checkSource(w, e.source, e.status === 'resultat_connu');
+  checkSource(w, e.source, e.status === 'resultat_connu' ? 'warn' : 'ok');
 }
 
 // Elections and party fiches must agree on the size of the body being elected —
