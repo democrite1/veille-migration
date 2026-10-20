@@ -3979,78 +3979,6 @@ export const parties: Party[] = [
       "Fondé en 1993 par Winston Peters, ancien député du National Party. A participé à plusieurs gouvernements de coalition, travaillistes et nationaux, depuis sa fondation.",
   },
   {
-    slug: 'la-libertad-avanza',
-    name: 'La Libertad Avanza (LLA)',
-    countryCode: 'AR',
-    positioning: 'Libertarien, droite radicale',
-    electoralStatus: 'pouvoir',
-    electoralStatusDetail:
-      "Javier Milei, fondateur du parti, est président de la Nation argentine depuis décembre 2023. La Libertad Avanza est arrivée en tête des élections législatives de 2025, renforçant sa position au Congrès.",
-    electoralStatusSource: {
-      name: 'Diario de Cuyo',
-      url: 'https://www.diariodecuyo.com.ar/argentina/milei-lanza-lla-nacional-y-pone-primera-hacia-la-campana-2025-1665742.html',
-      accessedOn: '2026-09-07',
-    },
-    officialWebsite: 'https://www.lalibertadavanza.com.ar',
-    socialAccounts: [
-      { platform: 'X', url: 'https://x.com/LLibertadAvanza' },
-    ],
-    classificationSource: {
-      name: "Perfil — La Justicia frenó su reforma migratoria, pero Milei insiste con un nuevo DNU contra extranjeros",
-      url: 'https://www.perfil.com/noticias/politica/la-justicia-freno-su-reforma-migratoria-pero-milei-insiste-con-un-nuevo-dnu-contra-extranjeros.phtml',
-      accessedOn: '2026-10-20',
-      note: "Aucun des jeux de données de référence ne code ce parti (The PopuList se limite à l'Europe, ParlGov n'inclut pas l'Argentine). L'inclusion repose sur les mesures migratoires de l'administration Milei, dont le décret n° 681/2026 qui permet de refuser l'entrée ou d'annuler la résidence d'étrangers pour des « messages de haine » contre les Argentins (article du 30 juillet 2026), et non sur une classification du parti.",
-    },
-    intention: {
-      tag: 'reduction',
-      source: {
-        name: 'La República / El Cronista',
-        url: 'https://larepublica.pe/mundo/2026/07/30/milei-modifica-la-ley-de-migraciones-para-prohibir-el-ingreso-de-extranjeros-que-expresen-mensajes-de-odio-contra-argentina-1356360',
-        note: "Restrictions ciblées sur l'entrée et le séjour des étrangers jugés « hostiles » envers l'Argentine, plutôt qu'une politique de réduction généralisée de l'immigration ou de remigration de résidents déjà installés légalement.",
-      },
-    },
-    actionStatus: {
-      tag: 'mesures_concretes',
-      source: {
-        name: 'Perfil',
-        url: 'https://www.perfil.com/noticias/politica/la-justicia-freno-su-reforma-migratoria-pero-milei-insiste-con-un-nuevo-dnu-contra-extranjeros.phtml',
-        note: "Décret présidentiel (DNU) n°681/2026 modifiant la loi sur les migrations pour interdire l'entrée aux étrangers tenant des propos jugés hostiles envers l'Argentine, en vigueur. Une réforme migratoire plus large avait auparavant été bloquée par la justice argentine.",
-      },
-    },
-    electoralHistory: [
-      {
-        label: 'Élections législatives de mi-mandat 2025',
-        chamber: 'Chambre des députés (renouvellement partiel)',
-        date: '2025-10-26',
-        seats: 92,
-        totalSeats: 257,
-        votePercent: 40.68,
-        source: {
-          name: 'Buenos Aires Herald — LLA gets landslide win, reaches key number of Congress seats',
-          url: 'https://buenosairesherald.com/politics/argentina-2025-midterms-lla-gets-landslide-win-reaches-key-number-of-congress-seats',
-          accessedOn: '2026-09-09',
-          note: "92 sièges au total après ce scrutin partiel (127 des 257 sièges étaient renouvelés), franchissant le seuil du tiers de la chambre nécessaire pour bloquer une destitution ou soutenir un décret présidentiel. Le pourcentage indiqué correspond au scrutin partiel, non au total national.",
-        },
-      },
-      {
-        label: 'Élections générales 2023',
-        chamber: 'Chambre des députés',
-        date: '2023-10-22',
-        seats: 35,
-        totalSeats: 257,
-        source: {
-          name: "Wikipedia — 2023 Argentine general election",
-          url: 'https://en.wikipedia.org/wiki/2023_Argentine_general_election',
-          accessedOn: '2026-09-15',
-          note: "Une version antérieure de cette fiche indiquait 37 sièges. Le décompte des sièges effectivement remportés par La Libertad Avanza à ce scrutin est de 35 ; les chiffres plus élevés que l'on rencontre correspondent à la taille du bloc parlementaire après ralliements de députés alliés. Javier Milei avait obtenu 26,51% au premier tour de la présidentielle tenue le même jour, puis 55,65% au second tour du 19 novembre 2023.",
-        },
-      },
-    ],
-    founded: 2021,
-    description:
-      "Fondé en 2021 par l'économiste Javier Milei, élu président de l'Argentine en décembre 2023 sur une ligne libertarienne et anti-establishment.",
-  },
-  {
     slug: 'ekre',
     name: 'Eesti Konservatiivne Rahvaerakond (EKRE)',
     countryCode: 'EE',
@@ -4370,83 +4298,6 @@ export const parties: Party[] = [
       "Fondé en 2008. Troisième force politique de Chypre depuis les élections législatives de mai 2026, en forte progression électorale depuis sa création.",
   },
   {
-    slug: 'independent-ireland',
-    name: 'Independent Ireland',
-    countryCode: 'IE',
-    positioning: 'National-populiste, droite radicale',
-    electoralStatus: 'opposition',
-    electoralStatusDetail:
-      "Quatre députés (TDs) au Dáil depuis les élections de novembre 2024, dont le co-fondateur Michael Collins, arrivé en tête dans sa circonscription de Cork South-West. Environ 23-24 conseillers locaux. Candidat arrivé en tête au premier décompte de l'élection partielle de Galway West (mai 2026) avant de s'incliner de justesse après répartition des préférences.",
-    electoralStatusSource: {
-      name: 'The Irish Times — Galway West byelection live results',
-      url: 'https://www.irishtimes.com/politics/2026/05/23/galway-west-byelection-live-latest-results/',
-      accessedOn: '2026-09-10',
-    },
-    officialWebsite: 'https://www.independentireland.ie',
-    socialAccounts: [
-      { platform: 'X', url: 'https://x.com/independentirl' },
-    ],
-    classificationSource: {
-      name: "The PopuList 4.0 — entrée « Independent Ireland » (Irlande)",
-      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
-      accessedOn: '2026-10-20',
-      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
-    },
-    intention: {
-      tag: 'reduction',
-      source: {
-        name: 'Irish Times — Fifth of Dublin Central votes went to candidates who had used anti-immigration rhetoric',
-        url: 'https://www.irishtimes.com/politics/2026/05/25/fifth-of-dublin-central-votes-went-to-candidates-who-had-used-anti-immigration-rhetoric/',
-        note: "Programme incluant une interdiction de la burqa dans l'espace public et la création de centres de rétention de type « australien » pour les demandeurs d'asile déboutés. Pas de politique explicite de remigration de résidents en situation régulière.",
-      },
-    },
-    actionStatus: {
-      tag: 'programme',
-      source: {
-        name: 'Oireachtas (Parlement irlandais)',
-        url: 'https://www.oireachtas.ie',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Independent Ireland promulguée à ce jour.",
-      },
-    },
-    electoralHistory: [
-      {
-        label: 'Élections générales 2024',
-        chamber: 'Dáil Éireann',
-        date: '2024-11-29',
-        seats: 4,
-        totalSeats: 174,
-        source: {
-          name: 'RTE — The TDs elected to the 34th Dáil',
-          url: 'https://www.rte.ie/news/election-24/2024/1201/1484007-elected-candidates/',
-          accessedOn: '2026-09-10',
-        },
-      },
-    ],
-    europeanRepresentation: {
-      meps: 1,
-      totalCountryMeps: 14,
-      europeanGroup: 'Renew Europe',
-      source: {
-        name: 'Wikipedia — Independent Ireland',
-        url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
-        accessedOn: '2026-09-10',
-        note: "Positionnement européen atypique pour un parti de cette liste : son unique élu européen siège dans le groupe centriste Renew Europe plutôt que dans un groupe de droite radicale.",
-      },
-    },
-    localImplantation: {
-      summary:
-        "Environ 23 à 24 conseillers municipaux et de comté élus depuis 2024. Quasi-victoire à l'élection partielle de Galway West en mai 2026 : son candidat Noel Thomas a devancé le Fine Gael au premier décompte (20,9% contre 20,1%) avant de perdre après répartition des préférences.",
-      source: {
-        name: 'RTE — Galway West bye-election',
-        url: 'https://www.rte.ie/news/bye-election-2026/2026/0523/1574863-galway-west-bye-election/',
-        accessedOn: '2026-09-10',
-      },
-    },
-    founded: 2023,
-    description:
-      "Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne d'abord rurale et anti-establishment, de plus en plus centrée sur l'immigration depuis 2025-2026.",
-  },
-  {
     slug: 'midflokkurinn',
     name: 'Miðflokkurinn (Parti du centre)',
     countryCode: 'IS',
@@ -4467,14 +4318,15 @@ export const parties: Party[] = [
       name: "The PopuList 4.0 — entrée « Miðflokkurinn » (Islande)",
       url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
       accessedOn: '2026-10-20',
-      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
+      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. Inclusion au titre du critère (a) de la méthodologie : le programme du parti demande de réduire le flux d'immigrants vers l'Islande « dans tous les domaines » (voir « Intention »).",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Politpro — Miðflokkurinn',
-        url: 'https://politpro.eu/en/iceland/political-parties/midflokkurinn',
-        note: "Positionnement national-conservateur défendant une gestion stricte de l'immigration et de l'octroi de l'asile, dans un pays historiquement marginal sur ces enjeux mais où le parti en a fait un thème central de campagne. Pas de politique explicite de remigration de résidents en situation régulière.",
+        name: "Miðflokkurinn — Gæsla landamæra og málefni hælisleitenda og flóttamanna (programme du parti)",
+        url: 'https://midflokkurinn.is/stefna/gaesla-landamaera-og-malefni-haelisleitenda-og-flottamanna/',
+        accessedOn: '2026-10-20',
+        note: "Le parti demande une nouvelle loi sur les étrangers fondée sur « la volonté et les intérêts de la nation », un arrêt temporaire de cinq ans de l'octroi de l'asile, l'exclusion du droit d'asile pour les personnes entrées irrégulièrement, et de « réduire le flux d'immigrants vers l'Islande dans tous les domaines ».",
       },
     },
     actionStatus: {

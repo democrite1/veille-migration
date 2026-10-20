@@ -286,6 +286,9 @@ for (const c of corrections) {
   else if (c.date > TODAY) err(w, `datée du futur : ${c.date}`);
   if (!c.summary.fr?.trim() || !c.summary.en?.trim()) err(w, 'résumé FR ou EN manquant');
   if (!c.page.startsWith('/')) err(w, `chemin de page invalide : ${c.page}`);
+  // A withdrawn fiche must not leave the journal pointing at a 404.
+  const fiche = /^\/partis\/([^/]+)$/.exec(c.page)?.[1];
+  if (fiche && !parties.some((p) => p.slug === fiche)) err(w, `la fiche ${c.page} n'existe pas`);
   checkSource(w, c.source);
 }
 // An incomplete legal notice must never reach main (LCEN, decision 3).

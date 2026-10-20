@@ -23,6 +23,36 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-retrait-independent-ireland',
+    date: '2026-10-20',
+    kind: 'retrait',
+    page: '/partis',
+    summary: {
+      fr: "Retrait de la fiche Independent Ireland. Le parti ne remplit aucun des deux critères d'inclusion : The PopuList 4.0 le code populiste mais pas d'extrême droite, et son programme soutient l'immigration légale sans demander de la réduire ; ses propositions portent sur l'asile et l'expulsion des étrangers condamnés.",
+      en: "Independent Ireland entry withdrawn. The party meets neither inclusion criterion: The PopuList 4.0 codes it populist but not far right, and its programme supports legal immigration without calling for less of it; its proposals concern asylum and deporting convicted foreigners.",
+    },
+    source: {
+      name: "Independent Ireland — Immigration (programme du parti)",
+      url: 'https://www.independentireland.ie/immigration',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-retrait-la-libertad-avanza',
+    date: '2026-10-20',
+    kind: 'retrait',
+    page: '/partis',
+    summary: {
+      fr: "Retrait de la fiche La Libertad Avanza. Elle avait été incluse pour les décrets migratoires du gouvernement Milei, critère qui ne figure pas dans la méthodologie. Aucun jeu de données de référence ne code le parti, et sa plateforme électorale nationale de 2023 ne demande pas de réduire l'immigration : elle vise l'entrée des étrangers ayant des antécédents pénaux et l'expulsion de ceux qui commettent des délits. Les élections argentines restent suivies dans le calendrier.",
+      en: "La Libertad Avanza entry withdrawn. It had been included for the Milei government's migration decrees, a criterion the methodology does not contain. No reference dataset codes the party, and its 2023 national election platform does not call for less immigration: it targets the entry of foreigners with criminal records and the deportation of those who commit offences. Argentine elections remain in the calendar.",
+    },
+    source: {
+      name: "La Libertad Avanza — Bases de acción política y plataforma electoral nacional 2023 (copie déposée par le Partido Renovador Federal, Jujuy)",
+      url: 'https://media-front.elmostrador.cl/2023/11/JUJUY-79-PARTIDO-RENOVADOR-FEDERAL-PLATAFORMA-LA-LIBERTAD-AVANZA.pdf',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-mesures-concretes-definition',
     date: '2026-10-20',
     kind: 'reclassement',
@@ -441,7 +471,7 @@ export const corrections: Correction[] = [
     id: '2026-09-15-lla-2023',
     date: '2026-09-15',
     kind: 'correction',
-    page: '/partis/la-libertad-avanza',
+    page: '/partis',
     summary: {
       fr: 'La Libertad Avanza : 35 sièges remportés aux élections de 2023, et non 37. Les chiffres plus élevés correspondent au bloc parlementaire après ralliements de députés alliés.',
       en: 'La Libertad Avanza: 35 seats won in the 2023 election, not 37. Higher figures are the size of the parliamentary bloc after allied deputies joined.',
