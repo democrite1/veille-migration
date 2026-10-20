@@ -236,7 +236,6 @@ for (const c of corrections) {
   checkSource(w, c.source);
 }
 // An incomplete legal notice must never reach main (LCEN, decision 3).
-if (!PUBLISHER.director?.trim()) err('mentions légales', 'directeur de la publication non renseigné (src/lib/publisher.ts)');
 if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
 
 // ------------------------------------------------- country labels across UI

@@ -69,13 +69,13 @@
   },
   "legal": {
     "title": "Mentions légales",
-    "publisherHeading": "Éditeur et directeur de la publication",
+    "publisherHeading": "Éditeur",
     "contactHeading": "Contact",
     "hostHeading": "Hébergement",
     "hostText": "Le site est hébergé par {name}, {address}, États-Unis.",
-    "databaseText": "Les données affichées sont stockées dans une base gérée par {provider}.",
     "lawText": "Mentions établies en application de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
-    "missing": "À compléter avant publication"
+    "missing": "À compléter avant publication",
+    "publisherText": "Le site est édité à titre non professionnel par une personne physique qui, comme la loi le permet, a choisi de ne pas rendre son identité publique et l’a communiquée à l’hébergeur."
   },
   "contact": {
     "title": "Contact et corrections",
@@ -83,7 +83,7 @@
     "reportHeading": "Signaler une erreur",
     "reportText": "Écrivez à <mail>{email}</mail> en indiquant la page concernée, l’affirmation contestée et, si possible, une source. Chaque signalement est vérifié contre une source précise. Une erreur avérée est corrigée sur la page et consignée dans le journal des corrections, avec sa date et sa nature.",
     "replyHeading": "Droit de réponse",
-    "replyText": "Toute personne nommée ou désignée sur ce site peut exercer le droit de réponse prévu par la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, en adressant sa demande au directeur de la publication, {director}, à la même adresse.",
+    "replyText": "Toute personne nommée ou désignée sur ce site peut exercer le droit de réponse prévu par la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, en écrivant à l’adresse ci-dessus.",
     "journalLink": "Consulter le journal des corrections →"
   },
   "corrections": {

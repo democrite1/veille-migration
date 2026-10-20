@@ -1,12 +1,15 @@
 /**
  * Legal identity of the site (LCEN, loi n° 2004-575 du 21 juin 2004).
  *
- * Decision 3 of the October 2026 audit: named publisher. `director` and
- * `email` must both be filled in before merging to main — `npm run audit`
- * fails while either is null, so an incomplete legal notice cannot ship.
+ * The publisher edits the site on a non-professional basis and keeps their
+ * identity private, as the law allows, on condition that the host (Vercel)
+ * holds their identification details. Only the host and a contact address
+ * are published. Keeping this status assumes the site is not monetised.
+ *
+ * `email` must be a dedicated address, not a personal one. `npm run audit`
+ * fails while it is null, so the notice cannot be merged incomplete.
  */
-export const PUBLISHER: { director: string | null; email: string | null } = {
-  director: null,
+export const PUBLISHER: { email: string | null } = {
   email: null,
 };
 
@@ -16,5 +19,3 @@ export const HOST = {
   address: '440 N Barranca Avenue #4133, Covina, CA 91723',
   source: 'https://vercel.com/legal/privacy-policy',
 };
-
-export const DATABASE_PROVIDER = 'Supabase Inc.';

@@ -43,7 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
       <section className="card space-y-2">
         <h2 className="font-serif text-lg font-semibold">{t('replyHeading')}</h2>
-        <p className="text-sm">{t('replyText', { director: PUBLISHER.director ?? missing })}</p>
+        <p className="text-sm">{t('replyText')}</p>
       </section>
 
       <Link href="/corrections" className="text-sm font-medium hover:text-accent">

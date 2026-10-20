@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
-import { DATABASE_PROVIDER, HOST, PUBLISHER } from '@/lib/publisher';
+import { HOST, PUBLISHER } from '@/lib/publisher';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -12,7 +12,6 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('legal');
-  const missing = <span className="font-medium text-accent">{t('missing')}</span>;
 
   return (
     <div className="space-y-8">
@@ -20,7 +19,7 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
 
       <section className="card space-y-2">
         <h2 className="font-serif text-lg font-semibold">{t('publisherHeading')}</h2>
-        <p className="text-sm">{PUBLISHER.director ?? missing}</p>
+        <p className="text-sm">{t('publisherText')}</p>
       </section>
 
       <section className="card space-y-2">
@@ -31,7 +30,7 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
               {PUBLISHER.email}
             </a>
           ) : (
-            missing
+            <span className="font-medium text-accent">{t('missing')}</span>
           )}
         </p>
       </section>
@@ -39,7 +38,6 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
       <section className="card space-y-2">
         <h2 className="font-serif text-lg font-semibold">{t('hostHeading')}</h2>
         <p className="text-sm">{t('hostText', { name: HOST.name, address: HOST.address })}</p>
-        <p className="text-sm">{t('databaseText', { provider: DATABASE_PROVIDER })}</p>
       </section>
 
       <p className="text-sm text-muted">{t('lawText')}</p>
