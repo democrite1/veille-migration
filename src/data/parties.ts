@@ -284,7 +284,7 @@ export const parties: Party[] = [
       source: {
         name: 'Deutscher Bundestag',
         url: 'https://www.bundestag.de/parlament/fraktionen/afd/afd-inhalt-527374',
-        note: "Parti d'opposition au niveau fédéral, exclu de toute coalition : aucune loi AfD promulguée au Bundestag à ce jour.",
+        note: "Groupe d'opposition au Bundestag, tenu à l'écart de toute coalition. Statut à vérifier : le registre DIP du Bundestag n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -442,9 +442,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Deutscher Bundestag',
-        url: 'https://www.bundestag.de',
-        note: "Absent du Bundestag depuis 2025 : aucune loi BSW promulguée au niveau fédéral à ce jour.",
+        name: "Bundestag — registre DIP",
+        url: "https://dip.bundestag.de/suche",
+        note: "Absent du Bundestag depuis les élections de 2025. Statut à vérifier : le registre DIP du Bundestag n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé). Les mesures adoptées au niveau des Länder n'ont pas été examinées.",
       },
     },
     electoralHistory: [
@@ -893,9 +893,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Camera dei Deputati',
-        url: 'https://www.camera.it',
-        note: "Parti d'opposition depuis mars 2026 : aucune loi Futuro Nazionale promulguée, et aucun exécutif local détenu à ce jour.",
+        name: "Camera dei Deputati — données ouvertes (dati.camera.it), actes de la XIXe législature",
+        url: "https://dati.camera.it/sparql",
+        accessedOn: '2026-10-20',
+        note: "Composante du groupe mixte de la Chambre depuis le 27 mai 2026, avec quatre députés. Aucune des propositions de loi qu'ils ont déposées en premier signataire depuis février 2026 ne porte sur l'immigration.",
       },
     },
     europeanRepresentation: {
@@ -1511,9 +1512,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: "Vox — moción « Prioridad nacional » (Congreso de los Diputados, avril 2026)",
-        url: 'https://www.voxespana.es/wp-content/uploads/2026/04/MCIU-VOX-Prioridad-nacional.pdf',
-        note: "Motion « Prioridad nacional » déposée au Congreso des députés en avril 2026, demandant l'expulsion des migrants en situation irrégulière : texte non contraignant. Parti d'opposition au niveau national.",
+        name: "Congreso de los Diputados — données ouvertes, propositions de loi de la XVe législature",
+        url: "https://www.congreso.es/es/opendata/iniciativas",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition au niveau national. Aucune des 48 propositions de loi de son groupe au Congreso depuis 2023 n'a abouti : elles ont été rejetées ou sont devenues caduques, dont une réforme de la nationalité (rejetée le 15 octobre 2024) et une modification de la loi sur les étrangers pour restreindre la régularisation (rejetée le 16 septembre 2025). En avril 2026, il a déposé une motion « Prioridad nacional », texte non contraignant.",
       },
     },
     electoralHistory: [
@@ -1655,9 +1657,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Congreso de los Diputados',
-        url: 'https://www.congreso.es',
-        note: "Parti sans élu au Congreso de los Diputados : aucune loi SALF promulguée à ce jour en Espagne.",
+        name: "Congreso de los Diputados — données ouvertes, propositions de loi de la XVe législature",
+        url: "https://www.congreso.es/es/opendata/iniciativas",
+        accessedOn: '2026-10-20',
+        note: "Parti sans député au Congreso : aucune proposition de loi à son nom dans le registre de la législature ouverte en 2023.",
       },
     },
     electoralHistory: [
@@ -1817,9 +1820,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Országgyűlés',
-        url: 'https://www.parlament.hu',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Mi Hazánk promulguée à ce jour.",
+        name: "Országgyűlés — recherche dans les documents parlementaires (irományok)",
+        url: "https://www.parlament.hu/web/guest/iromanyok-egyszerusitett-lekerdezese",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de l'Országgyűlés, qui ne s'interroge que par formulaire, n'a pas pu être exploité le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -1993,7 +1996,7 @@ export const parties: Party[] = [
       source: {
         name: "Vlaams Belang",
         url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
-        note: "Résolution non contraignante déposée au Parlement européen avec 36 autres eurodéputés, appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière. Le parti est tenu à l'écart des coalitions par le « cordon sanitaire ».",
+        note: "Résolution non contraignante déposée au Parlement européen avec 36 autres eurodéputés, appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière. Le parti est tenu à l'écart des coalitions par le « cordon sanitaire ». Statut à vérifier : le registre de la Chambre des représentants n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2170,7 +2173,7 @@ export const parties: Party[] = [
       source: {
         name: 'Diário da Cidadania',
         url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
-        note: "Parti d'opposition sans participation gouvernementale : propositions présentées (durcissement de la résidence et de la nationalité) mais aucune loi Chega promulguée. Le durcissement effectif du régime d'expulsion en vigueur depuis mars 2026 (« pacote retorno ») a été porté par le gouvernement AD, sous la pression politique de Chega, non par Chega lui-même.",
+        note: "Parti d'opposition sans participation gouvernementale : propositions présentées sur la résidence et la nationalité. Le durcissement du régime d'expulsion en vigueur depuis mars 2026 (« pacote retorno ») a été porté par le gouvernement AD, non par Chega. Statut à vérifier : le registre de l'Assemblée de la République n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2624,7 +2627,7 @@ export const parties: Party[] = [
       source: {
         name: 'iRozhlas',
         url: 'https://www.irozhlas.cz/zpravy-domov/okamura-chce-aby-se-spd-podilelo-na-vlade-s-ano-zminil-ministerstva-vnitra_2510051407_job',
-        note: "Entré au gouvernement fin 2025 : aucune loi migratoire spécifiquement portée par le SPD promulguée à ce jour, le ministère de l'Intérieur restant hors de son portefeuille.",
+        note: "Au gouvernement depuis fin 2025, sans le ministère de l'Intérieur. Statut à vérifier : le registre de la Chambre des députés (psp.cz) n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé). Les textes migratoires adoptés depuis son entrée au gouvernement n'ont pas été examinés.",
       },
     },
     electoralHistory: [
@@ -2719,7 +2722,7 @@ export const parties: Party[] = [
       source: {
         name: 'Newsit.gr',
         url: 'https://www.newsit.gr/politikh/vouli-me-tis-psifous-tis-nd-perase-apo-tin-epitropi-to-nomosxedio-gia-to-asylo-kai-ti-metanasteysi/4694513/',
-        note: "Parti d'opposition sans participation gouvernementale : a voté contre le projet de loi sur l'asile et la migration porté par le gouvernement ND en 2026, le jugeant insuffisamment restrictif ; aucune loi Elliniki Lisi promulguée.",
+        note: "Parti d'opposition sans participation gouvernementale : a voté contre le projet de loi sur l'asile et la migration porté par le gouvernement ND en 2026, le jugeant insuffisamment restrictif. Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2798,9 +2801,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hellenic Parliament',
-        url: 'https://www.hellenicparliament.gr',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi NIKI promulguée à ce jour.",
+        name: "Parlement hellénique — projets et propositions de loi déposés",
+        url: "https://www.hellenicparliament.gr/Nomothetiko-Ergo/Katatethenta-Nomosxedia",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2868,9 +2871,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hellenic Parliament',
-        url: 'https://www.hellenicparliament.gr',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Spartiates promulguée à ce jour.",
+        name: "Parlement hellénique — projets et propositions de loi déposés",
+        url: "https://www.hellenicparliament.gr/Nomothetiko-Ergo/Katatethenta-Nomosxedia",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2939,7 +2942,7 @@ export const parties: Party[] = [
       source: {
         name: 'Digi24',
         url: 'https://www.digi24.ro/video/george-simion-dupa-votul-din-parlament-pe-bugetul-2026-opozitie-totala-aur-contesta-legea-la-ccr-3687189',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi migratoire AUR promulguée à ce jour.",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de la Chambre des députés roumaine n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3006,9 +3009,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Camera Deputaților',
-        url: 'https://www.cdep.ro',
-        note: "Parti d'opposition entré au Parlement fin 2024 : aucune loi S.O.S. România promulguée à ce jour.",
+        name: "Camera Deputaților — registre des propositions législatives",
+        url: "https://www.cdep.ro/pls/proiecte/upl_pck2015.home",
+        note: "Parti d'opposition entré au Parlement fin 2024. Statut à vérifier : le registre de la Chambre des députés roumaine n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3143,9 +3146,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hnutie-republika.sk',
-        url: 'https://www.hnutie-republika.sk',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Republika promulguée à ce jour.",
+        name: "Národná rada — registre des projets de loi",
+        url: "https://www.nrsr.sk/web/?sid=zakony/zakony",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Conseil national slovaque n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3441,9 +3444,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Parlement australien',
-        url: 'https://www.aph.gov.au',
-        note: "Parti minoritaire d'opposition (4 sièges sur 76 au Sénat) : aucune loi One Nation promulguée à ce jour.",
+        name: "Parlement australien — Bills and Legislation",
+        url: "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation",
+        note: "Parti minoritaire d'opposition (4 sièges sur 76 au Sénat). Statut à vérifier : le registre des projets de loi du Parlement australien n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3700,9 +3703,9 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Sabor',
-        url: 'https://www.sabor.hr',
-        note: "Parti d'opposition minoritaire au niveau national (2 sièges) : aucune loi Hrvatski suverenisti promulguée à ce jour au Parlement croate.",
+        name: "Sabor — registre e-doc des actes",
+        url: "https://edoc.sabor.hr/Akti.aspx",
+        note: "Parti d'opposition minoritaire au niveau national (2 sièges). Statut à vérifier : le registre e-doc du Sabor, qui ne s'interroge que par formulaire, n'a pas pu être exploité le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -3957,7 +3960,7 @@ export const parties: Party[] = [
       source: {
         name: '1News',
         url: 'https://www.1news.co.nz/2026/09/07/peters-signals-benefits-as-well-as-super-require-citizenship-under-nz-first-policy/',
-        note: "Propositions de campagne pour les élections d'octobre 2026 (document de valeurs, conditionnalité des prestations) : non encore déposées comme texte de loi.",
+        note: "Propositions de campagne pour les élections d'octobre 2026 (document de valeurs, conditionnalité des prestations), non déposées comme texte de loi. Au gouvernement depuis 2023 : les mesures adoptées par ce gouvernement n'ont pas été examinées, et l'inclusion du parti reste à trancher, son programme officiel n'ayant pas pu être consulté.",
       },
     },
     electoralHistory: [
@@ -4192,7 +4195,7 @@ export const parties: Party[] = [
       source: {
         name: 'Le Quotidien',
         url: 'https://lequotidien.lu/politique-societe/ladr-veut-stopper-la-migration-irreguliere/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi ADR promulguée à ce jour.",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de la Chambre des députés n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -4262,7 +4265,7 @@ export const parties: Party[] = [
       source: {
         name: 'Anixneuseis.gr',
         url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi ELAM promulguée à ce jour.",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de la Chambre des représentants de Chypre n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -4344,9 +4347,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Althingi',
-        url: 'https://www.althingi.is',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Miðflokkurinn promulguée à ce jour.",
+        name: "Althingi — þingmál 158/35 « veiting íslensks ríkisborgararéttar » (registre officiel, XML)",
+        url: "https://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=158&malnr=35",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Sa proposition de résolution sur l'octroi de la nationalité islandaise (Snorri Másson et sept autres députés), non examinée lors de la session 2025-2026, a été redéposée en septembre 2026 et attend sa première lecture. Aucun texte migratoire de ses députés n'a été adopté depuis 2024.",
       },
     },
     electoralHistory: [
@@ -4403,9 +4407,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'The Japan Times — Will foreign-national policies return to the spotlight in the snap election?',
-        url: 'https://www.japantimes.co.jp/news/2026/01/20/japan/politics/election-immigration-policy/',
-        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Sanseitō promulguée à ce jour. Son influence est indirecte — la pression électorale exercée depuis juillet 2025 a conduit les partis de gouvernement à inscrire à leur tour le dossier des résidents étrangers à l'agenda de la campagne de février 2026.",
+        name: "参議院 — 外国人総合政策庁の設置等による外国人政策の総合的な推進に関する法律案 (proposition de loi n° 9, 221e session)",
+        url: "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221100221009.htm",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement. Le 17 juin 2026, son président Sohei Kamiya et trois autres sénateurs ont déposé une proposition de loi créant une agence chargée de la politique des étrangers ; au dernier relevé du registre du Sénat (19 juin 2026), elle n'avait été ni renvoyée en commission ni votée.",
       },
     },
     electoralHistory: [

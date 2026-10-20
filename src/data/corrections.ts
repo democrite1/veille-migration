@@ -23,6 +23,16 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-registres-non-consultes',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Statut « programme » : la mention « aucune loi promulguée » a été retirée de quinze fiches dont le registre parlementaire n'a pas pu être consulté (Allemagne, Australie, Chypre, Croatie, Grèce, Hongrie, Luxembourg, Portugal, Roumanie, Slovaquie, Tchéquie). Ces fiches, comme celles de Vlaams Belang et de New Zealand First, indiquent désormais que leur statut reste à vérifier.",
+      en: "\"Programme\" status: the words \"no law enacted\" were removed from fifteen entries whose parliamentary register could not be consulted (Germany, Australia, Cyprus, Croatia, Greece, Hungary, Luxembourg, Portugal, Romania, Slovakia, Czechia). These entries, like those of Vlaams Belang and New Zealand First, now state that their status remains to be checked.",
+    },
+  },
+  {
     id: '2026-10-20-gouvernement-mesures-en-vigueur',
     date: '2026-10-20',
     kind: 'reclassement',
