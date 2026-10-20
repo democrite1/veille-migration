@@ -306,12 +306,12 @@ export const elections: Election[] = [
     date: '2026-09-06',
     status: 'resultat_connu',
     result:
-      "Meilleur score de l'AfD dans un scrutin régional allemand : 43,8% et 39 sièges sur 83, loin devant la CDU du chancelier Merz (moins de 18%). Le BSW obtient 5,3%, un appoint qui rend arithmétiquement possible une majorité avec l'AfD — hypothèse d'une première direction de Land par l'extrême droite depuis 1945.",
+      "Meilleur score de l'AfD dans un scrutin régional allemand : 43,8 % et 39 sièges sur 83, loin devant la CDU (17,2 %). Le BSW obtient 5,3 % ; AfD et BSW totaliseraient 44 sièges, soit la majorité absolue.",
     totalSeats: 83,
     source: {
-      name: 'NPR — Germany\'s far-right achieves an electoral breakthrough in key state election',
-      url: 'https://www.npr.org/2026/09/06/nx-s1-5955677/german-afd-far-right',
-      accessedOn: '2026-09-13',
+      name: "ZDFheute — Wahl in Sachsen-Anhalt : AfD liegt klar vor CDU",
+      url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+      accessedOn: '2026-10-20',
     },
   },
   {

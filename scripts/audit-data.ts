@@ -230,6 +230,23 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
+// A news item about an election must not quote different figures from the
+// election entry: the AfD Saxony-Anhalt item said 44.4% (election-night
+// article) while the election and the party fiche said 43.8%.
+const percents = (text: string) =>
+  new Set([...text.matchAll(/(\d{1,2}(?:[.,]\d{1,2})?)\s?%/g)].map((m) => m[1].replace(',', '.')));
+for (const n of news) {
+  for (const e of elections) {
+    if (e.date !== n.date || !n.countries.includes(e.countryCode) || !e.result) continue;
+    const inElection = percents(e.result);
+    for (const p of percents(`${n.title} ${n.summary}`)) {
+      if (!inElection.has(p)) {
+        warn(`actualité ${n.id}`, `cite ${p.replace('.', ',')} % ; ce chiffre n'apparaît pas dans le résultat de l'élection ${e.id} du même jour`);
+      }
+    }
+  }
+}
+
 // ------------------------------------------------- corrections log, legal notice
 checkDuplicates(corrections, (c) => c.id, 'corrections');
 for (const c of corrections) {

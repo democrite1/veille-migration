@@ -23,6 +23,21 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-afd-saxe-anhalt',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/actualites',
+    summary: {
+      fr: "Saxe-Anhalt : l'actualité donnait 44,4 % à l'AfD et 18,3 % à la « CDU/CSU », chiffres d'un article publié avant la fin du dépouillement, en contradiction avec la fiche du parti. Résultat publié : 43,8 % pour l'AfD, 17,2 % pour la CDU. La mention d'un sondage national INSA de septembre, introuvable, a été retirée.",
+      en: 'Saxony-Anhalt: the news item gave the AfD 44.4% and the "CDU/CSU" 18.3%, figures from an article published before counting ended, contradicting the party profile. Published result: 43.8% for the AfD, 17.2% for the CDU. A reference to a September INSA national poll that could not be found was withdrawn.',
+    },
+    source: {
+      name: "ZDFheute — Wahl in Sachsen-Anhalt : AfD liegt klar vor CDU",
+      url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-cz-municipales',
     date: '2026-10-20',
     kind: 'retrait',

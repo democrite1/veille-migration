@@ -98,17 +98,17 @@ export const news: NewsItem[] = [
   },
   {
     id: 'afd-saxe-anhalt-record',
-    title: "Allemagne : l'AfD remporte largement l'élection régionale de Saxe-Anhalt et prend une avance inédite dans les sondages nationaux",
+    title: "Allemagne : l'AfD arrive en tête de l'élection régionale de Saxe-Anhalt avec 43,8 % des voix",
     countries: ['DE'],
     date: '2026-09-06',
     summary:
-      "L'AfD arrive en tête de l'élection régionale de Saxe-Anhalt du 6 septembre 2026 avec 44,4% des voix, contre 18,3% pour les conservateurs du chancelier Friedrich Merz (CDU/CSU) — un parti d'extrême droite au bord du pouvoir régional pour la première fois depuis la Seconde Guerre mondiale. Ce résultat confirme une tendance nationale : plusieurs instituts de sondage (dont INSA) placent désormais l'AfD en tête des intentions de vote au niveau fédéral avec environ 28% des voix, un écart inédit avec la CDU/CSU (20-21%), les instituts anticipant que le parti pourrait arriver en tête des prochaines élections fédérales prévues en 2029.",
-    legalStatus:
-      "Résultat électoral légal et définitif ; la formation d'un gouvernement régional en Saxe-Anhalt reste bloquée par le refus de tous les autres partis de gouverner avec l'AfD (« Brandmauer »), malgré son score.",
+      "L'AfD remporte l'élection régionale de Saxe-Anhalt du 6 septembre 2026 avec 43,8 % des voix et 39 sièges sur 83, loin devant la CDU (17,2 %). C'est le meilleur score du parti dans une élection régionale. Avec le BSW (5,3 %), il disposerait arithmétiquement d'une majorité absolue de 44 sièges.",
+    legalStatus: 'Résultat électoral publié le 6 septembre 2026.',
     source: {
-      name: 'CNBC — Germany\'s far-right AfD seeks landmark state victory',
-      url: 'https://www.cnbc.com/2026/09/06/germanys-far-right-afd-seeks-landmark-state-victory.html',
-      accessedOn: '2026-09-09',
+      name: "ZDFheute — Wahl in Sachsen-Anhalt : AfD liegt klar vor CDU",
+      url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+      accessedOn: '2026-10-20',
+      note: "Une version antérieure de cette actualité donnait 44,4 % à l'AfD et 18,3 % à la « CDU/CSU », d'après un article publié avant la fin du dépouillement, et citait un sondage national INSA de septembre qui n'a pu être retrouvé : ces éléments ont été corrigés ou retirés.",
     },
   },
   {
