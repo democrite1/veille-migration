@@ -1207,9 +1207,10 @@ export const parties: Party[] = [
     intention: {
       tag: 'remigration',
       source: {
-        name: 'Axios — « Trump\'s self-deportation machine »',
-        url: 'https://www.axios.com/2026/07/28/trump-self-deportation-ice',
-        note: "Le programme officiel du parti promet « la plus grande opération d'expulsion de l'histoire américaine ». Le dispositif de « self-deportation » mis en œuvre par l'administration incite financièrement au départ volontaire, avec des objectifs chiffrés de retours (plus de 200 000 départs attendus via ce seul programme) — critère de remigration au sens de la méthodologie de ce site, même si le mot lui-même n'est pas employé officiellement.",
+        name: "NPR — 'Remigration,' once a fringe idea, becomes a mantra for the Trump administration",
+        url: 'https://www.npr.org/2025/12/09/nx-s1-5630505/remigration-once-a-fringe-idea-becomes-a-mantra-for-the-trump-administration',
+        accessedOn: '2026-10-20',
+        note: "Usage du terme par l'administration du parti : le plan de réorganisation du département d'État présenté en mai 2025 crée un « Office of Remigration », et le département de la Sécurité intérieure (DHS) a appelé à la « remigration » sur ses réseaux sociaux ; le 27 novembre 2025, Donald Trump a écrit que seule une « reverse migration » pourrait remédier à la situation (article du 9 décembre 2025). Critère (a) de la méthodologie : terme employé par le parti ou ses dirigeants.",
       },
     },
     actionStatus: {

@@ -23,6 +23,21 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-critere-remigration-b',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/methodologie',
+    summary: {
+      fr: "Méthodologie : le critère « politique équivalente » du tag « remigration » vise désormais les départs de personnes en séjour régulier. L'expulsion de personnes en situation irrégulière, même chiffrée, relève de la réduction : Reform UK et One Nation restent en « réduction ». Le Parti républicain garde le tag « remigration », désormais au titre de l'usage du terme par son administration et non plus des départs « volontaires » de migrants en situation irrégulière.",
+      en: "Methodology: the \"equivalent policy\" criterion of the \"remigration\" tag now covers departures of people with legal residence. Deporting people without legal status, even with a numeric target, counts as reduction: Reform UK and One Nation stay at \"reduction\". The Republican Party keeps the \"remigration\" tag, now because its administration uses the word rather than because of \"voluntary\" departures of undocumented migrants.",
+    },
+    source: {
+      name: "NPR — 'Remigration,' once a fringe idea, becomes a mantra for the Trump administration",
+      url: 'https://www.npr.org/2025/12/09/nx-s1-5630505/remigration-once-a-fringe-idea-becomes-a-mantra-for-the-trump-administration',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-sources-classification',
     date: '2026-10-20',
     kind: 'correction',

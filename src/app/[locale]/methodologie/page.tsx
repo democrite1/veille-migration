@@ -52,9 +52,11 @@ function MethodologyPageInner() {
           <strong>Stop / réduction immigration</strong> vs <strong>Remigration</strong>.
           Le tag « remigration » est appliqué si le terme est utilisé explicitement par
           le parti ou ses dirigeants, OU si la politique décrite est équivalente sur le
-          fond (retour « volontaire » massif incité financièrement, objectifs chiffrés de
-          retours). Toujours sourcé — y compris lorsque le parti conteste ou rejette
-          explicitement le terme.
+          fond pour des personnes en séjour régulier (retours « volontaires » massifs
+          incités financièrement, objectifs chiffrés de départs). L’expulsion de
+          personnes en situation irrégulière, même assortie d’un objectif chiffré, relève
+          de la réduction. Toujours sourcé — y compris lorsque le parti conteste ou
+          rejette explicitement le terme.
         </p>
         <p className="text-sm font-medium">Axe 2 — Statut d’action</p>
         <p className="text-sm">
