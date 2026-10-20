@@ -174,6 +174,7 @@ export const elections: Election[] = [
     result:
       'Première victoire de One Nation dans une circonscription de la Chambre des représentants : David Farley devient le premier député du parti directement élu à la chambre basse fédérale, les précédents y étant arrivés par défection.',
     totalSeats: 150,
+    seatsContested: 1,
     source: {
       name: 'The Conversation',
       url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
@@ -211,6 +212,7 @@ export const elections: Election[] = [
     result:
       "Partielle provoquée par le départ d'Andy Burnham, élu député six semaines plus tôt. La travailliste Bev Craig l'emporte. Restore Britain, parti remigrationniste fondé cinq mois auparavant, arrive quatrième sur sept avec 46 289 voix (8,7%), devant les conservateurs sur ce scrutin.",
     totalSeats: 1,
+    seatsContested: 1,
     source: {
       name: 'Wikipedia — 2026 Greater Manchester mayoral by-election',
       url: 'https://en.wikipedia.org/wiki/2026_Greater_Manchester_mayoral_by-election',
@@ -229,6 +231,7 @@ export const elections: Election[] = [
     result:
       "Andy Burnham (Labour) conserve le siège pour son parti avec 54,8%, devant Reform UK (34,5%). Restore Britain, pour sa première législative partielle, obtient 6,84% (3 111 voix) et se classe troisième sur quatorze candidats. Participation : 58,75%.",
     totalSeats: 650,
+    seatsContested: 1,
     source: {
       name: 'Wikipedia — 2026 Makerfield by-election',
       url: 'https://en.wikipedia.org/wiki/2026_Makerfield_by-election',
@@ -267,6 +270,7 @@ export const elections: Election[] = [
     result:
       "Scrutin de bascule : Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
     totalSeats: 248,
+    seatsContested: 125,
     source: {
       name: 'Wikipedia — 2025 Japanese House of Councillors election',
       url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
@@ -355,6 +359,8 @@ export const elections: Election[] = [
     status: 'resultat_connu',
     result:
       "27 des 81 sièges renouvelés, au premier tour les 9 et 10 octobre puis au second les 16 et 17 octobre. STAN remporte 9 sièges (14 au total) et l'ODS 7 (20 au total, premier groupe du Sénat). L'ANO, au gouvernement, ne gagne aucun des 27 sièges en jeu. Le SPD obtient 4,96 % des voix au premier tour et n'accède à aucun second tour. Participation : 43,31 % au premier tour, 21,12 % au second.",
+    totalSeats: 81,
+    seatsContested: 27,
     source: {
       name: 'Wikipedia — 2026 Czech Senate election',
       url: 'https://en.wikipedia.org/wiki/2026_Czech_Senate_election',

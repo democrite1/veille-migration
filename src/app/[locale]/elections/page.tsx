@@ -92,7 +92,11 @@ function ElectionsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getE
             </div>
             <p className="text-sm text-muted">
               {e.date} — mandat : {e.mandateDuration}
-              {e.totalSeats ? ` — ${e.totalSeats} sièges à pourvoir` : ''}
+              {e.seatsContested && e.totalSeats
+                ? ` — ${e.seatsContested} siège${e.seatsContested > 1 ? 's' : ''} à pourvoir sur ${e.totalSeats}`
+                : e.totalSeats
+                  ? ` — assemblée de ${e.totalSeats} sièges`
+                  : ''}
             </p>
             <p className="text-sm"><span className="font-medium">Pouvoirs : </span>{e.powers}</p>
             {e.result ? (

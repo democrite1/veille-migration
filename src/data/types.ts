@@ -132,8 +132,14 @@ export interface Election {
   date: string; // ISO date
   status: ElectionStatus;
   result?: string;
-  /** Size of the assembly/chamber being elected, so "X sièges" can be read as "X sur Y". */
+  /** Size of the whole assembly or chamber, so a seat count reads as "X sur Y". */
   totalSeats?: number;
+  /**
+   * Seats actually filled at this election, when fewer than the whole body:
+   * by-elections (1), partial renewals (e.g. half the Japanese upper house).
+   * Absent means the whole body is renewed.
+   */
+  seatsContested?: number;
   source: Source;
 }
 

@@ -164,6 +164,11 @@ for (const e of elections) {
     warn(w, 'marquée « résultat connu » mais sans texte de résultat');
   if (e.status === 'a_venir' && e.result) warn(w, 'un résultat est renseigné pour un scrutin à venir');
   if (e.totalSeats != null && e.totalSeats <= 0) err(w, `totalSeats invalide : ${e.totalSeats}`);
+  if (e.seatsContested != null && e.totalSeats != null && e.seatsContested > e.totalSeats)
+    err(w, `${e.seatsContested} sièges à pourvoir sur une assemblée de ${e.totalSeats}`);
+  // A by-election fills one seat: without seatsContested the page would
+  // present the whole chamber as up for election.
+  if (e.level === 'partial' && e.seatsContested == null) err(w, 'élection partielle sans seatsContested');
   checkSource(w, e.source, e.status === 'resultat_connu');
 }
 
