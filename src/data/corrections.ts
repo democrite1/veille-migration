@@ -23,6 +23,51 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-chega-remigration',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/partis/chega',
+    summary: {
+      fr: "Chega : tag d'intention passé de « réduction » à « remigration », en application littérale de la méthodologie : le parti a inscrit un « Programme national de remigration » dans ses propositions pour le budget 2026.",
+      en: "Chega: intention tag changed from \"reduction\" to \"remigration\", applying the methodology literally: the party put a \"National Remigration Programme\" in its 2026 budget proposals.",
+    },
+    source: {
+      name: "Diário de Notícias — Aproximação do Chega ao grupo Reconquista leva tema da remigração ao Parlamento",
+      url: 'https://www.dn.pt/sociedade/aproximao-do-chega-ao-grupo-reconquista-leva-tema-da-remigrao-ao-parlamento',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-lega-remigration',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/partis/lega',
+    summary: {
+      fr: "Lega : tag d'intention passé de « réduction » à « remigration », en application littérale de la méthodologie : son groupe au conseil régional de Lombardie a présenté une motion sur la « remigrazione » en août 2026.",
+      en: "Lega: intention tag changed from \"reduction\" to \"remigration\", applying the methodology literally: its group in the Lombardy regional council tabled a \"remigrazione\" motion in August 2026.",
+    },
+    source: {
+      name: "Il Giornale — « Della Lega la proposta per la remigrazione »",
+      url: 'https://www.ilgiornale.it/news/politica/della-lega-la-proposta-per-la-remigrazione/',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-aur-remigration',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/partis/aur',
+    summary: {
+      fr: "AUR : tag d'intention passé de « réduction » à « remigration », en application littérale de la méthodologie : son président George Simion a présenté la remigration comme « une politique nécessaire » le 20 juin 2026.",
+      en: "AUR: intention tag changed from \"reduction\" to \"remigration\", applying the methodology literally: its president George Simion called remigration \"a necessary policy\" on 20 June 2026.",
+    },
+    source: {
+      name: "Realitatea — George Simion : Pentru milioane de europeni, remigrația a devenit o politică necesară",
+      url: 'https://www.realitatea.net/stiri/politica/george-simion-pentru-milioane-de-europeni-remigratia-a-devenit-o-politica-necesara-snhudo',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-suisse-initiative',
     date: '2026-10-20',
     kind: 'correction',

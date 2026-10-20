@@ -791,11 +791,12 @@ export const parties: Party[] = [
       note: "Classifié parti populiste de droite radicale. Fondé en 1989 sous le nom Lega Nord, à l'origine régionaliste et autonomiste (indépendance du « Nord » de l'Italie), le parti s'est renommé Lega en 2018 sous la direction de Matteo Salvini et a recentré son discours sur l'immigration et le nationalisme italien plutôt que sur le régionalisme.",
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Ministero dell\'Interno / Lega.salvinipremier.it',
-        url: 'https://www.legasalvinipremier.it',
-        note: "Programme centré sur la fermeture des routes migratoires méditerranéennes et l'expulsion des personnes en situation irrégulière. Salvini a été condamné en première instance en 2024 pour avoir bloqué en 2019 le débarquement de 147 migrants du navire Open Arms (jugement annulé en appel en décembre 2024). Pas de politique explicite de remigration de résidents en situation régulière.",
+        name: "Il Giornale — « Della Lega la proposta per la remigrazione »",
+        url: 'https://www.ilgiornale.it/news/politica/della-lega-la-proposta-per-la-remigrazione/',
+        accessedOn: '2026-10-20',
+        note: "Le groupe de la Lega au conseil régional de Lombardie a présenté une motion sur la « remigrazione » visant les détenus étrangers (article du 9 août 2026), son chef de groupe Alessandro Corbetta revendiquant le terme pour le parti. Une proposition de loi nationale sur la remigration avait été annoncée en février 2026 par le député Rossano Sasso, qui a quitté la Lega pour Futuro Nazionale quelques jours plus tard. Usage explicite du terme par le parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
@@ -2123,11 +2124,12 @@ export const parties: Party[] = [
       note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Diário da Cidadania',
-        url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
-        note: "Programme centré sur la fin de l'immigration « à portes ouvertes », l'expulsion des personnes en situation irrégulière et le durcissement de l'accès à la résidence et à la nationalité, sans politique explicite de remigration de résidents en situation régulière.",
+        name: "Diário de Notícias — Aproximação do Chega ao grupo Reconquista leva tema da remigração ao Parlamento",
+        url: 'https://www.dn.pt/sociedade/aproximao-do-chega-ao-grupo-reconquista-leva-tema-da-remigrao-ao-parlamento',
+        accessedOn: '2026-10-20',
+        note: "Chega a inscrit un « Programme national de remigration » (Programa Nacional de Remigração), prévoyant une unité nationale d'exécution forcée, parmi ses propositions pour le budget de l'État 2026 (article du 21 novembre 2025). Le député Ricardo Reis a défendu la remigration au Parlement le 7 novembre 2025. Usage explicite du terme par le parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
@@ -2878,11 +2880,12 @@ export const parties: Party[] = [
       note: 'Classifié parti national-souverainiste de droite radicale.',
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'AUR.ro',
-        url: 'https://www.aur.ro',
-        note: "Positionnement souverainiste et anti-immigration général, moins centré sur des mesures migratoires spécifiques que d'autres partis de cette liste (la Roumanie reste un pays d'émigration nette avec une immigration extra-européenne limitée). Pas de politique explicite de remigration.",
+        name: "Realitatea — George Simion : Pentru milioane de europeni, remigrația a devenit o politică necesară",
+        url: 'https://www.realitatea.net/stiri/politica/george-simion-pentru-milioane-de-europeni-remigratia-a-devenit-o-politica-necesara-snhudo',
+        accessedOn: '2026-10-20',
+        note: "Le 20 juin 2026, lors d'une conférence coorganisée par le parti au Parlement roumain, le président de l'AUR George Simion a déclaré que « pour des millions d'Européens, la remigration est devenue une politique nécessaire », en la définissant comme le retour des personnes en situation irrégulière. Usage explicite du terme par le dirigeant du parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
