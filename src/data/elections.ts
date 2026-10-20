@@ -345,19 +345,21 @@ export const elections: Election[] = [
     },
   },
   {
-    id: 'cz-komunalni-senatni-volby-2026',
+    id: 'cz-senatni-volby-2026',
     countryCode: 'CZ',
-    level: 'local',
-    scopeName: 'Komunální a senátní volby (élections municipales et sénatoriales)',
-    mandateDuration: '4 ans (communes), 6 ans (Sénat)',
-    powers:
-      "Renouvellement des conseils municipaux du pays et d'un tiers du Sénat, chambre haute disposant d'un veto suspensif.",
+    level: 'national',
+    scopeName: 'Senátní volby (élections sénatoriales, renouvellement d’un tiers)',
+    mandateDuration: '6 ans',
+    powers: 'Chambre haute, dotée d’un veto suspensif sur les lois ordinaires et d’un veto absolu sur les révisions constitutionnelles.',
     date: '2026-10-09',
-    status: 'a_venir',
+    status: 'resultat_connu',
+    result:
+      "27 des 81 sièges renouvelés, au premier tour les 9 et 10 octobre puis au second les 16 et 17 octobre. STAN remporte 9 sièges (14 au total) et l'ODS 7 (20 au total, premier groupe du Sénat). L'ANO, au gouvernement, ne gagne aucun des 27 sièges en jeu. Le SPD obtient 4,96 % des voix au premier tour et n'accède à aucun second tour. Participation : 43,31 % au premier tour, 21,12 % au second.",
     source: {
-      name: 'Wikipedia — List of elections in 2026',
-      url: 'https://en.wikipedia.org/wiki/List_of_elections_in_2026',
-      accessedOn: '2026-09-13',
+      name: 'Wikipedia — 2026 Czech Senate election',
+      url: 'https://en.wikipedia.org/wiki/2026_Czech_Senate_election',
+      accessedOn: '2026-10-20',
+      note: "Les municipales tenues les mêmes jours ne sont pas reprises : aucun résultat consolidé n'a pu être vérifié à la date de consultation.",
     },
   },
   {
