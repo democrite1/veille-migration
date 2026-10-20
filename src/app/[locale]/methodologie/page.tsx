@@ -60,10 +60,12 @@ function MethodologyPageInner() {
         </p>
         <p className="text-sm font-medium">Axe 2 — Statut d’action</p>
         <p className="text-sm">
-          <strong>Programme</strong> (engagement électoral, rien de déposé formellement)
-          vs <strong>Mesures concrètes</strong> (dès qu’un texte formel existe :
-          proposition de loi déposée même non votée, décret, mesure administrative, loi
-          votée). Le tag « mesures concrètes » reste actif tant que la mesure est en
+          <strong>Programme</strong> (engagements du parti, sans texte adopté) vs{' '}
+          <strong>Mesures concrètes</strong> (texte adopté ou mesure en vigueur : loi
+          votée, décret, mesure administrative). Une proposition de loi déposée mais non
+          adoptée, ou une résolution non contraignante, laisse la fiche en « programme » ;
+          elle y est mentionnée avec sa date, et la fiche cite le registre du parlement
+          consulté. Le tag « mesures concrètes » reste actif tant que la mesure est en
           vigueur, indépendamment du parti au pouvoir ou non. Si la mesure est abrogée ou
           son application arrêtée → « mesures concrètes (historique, abrogée le [date]) »,
           avec un historique daté conservé sur la fiche.

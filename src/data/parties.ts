@@ -953,9 +953,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Rijksoverheid.nl',
-        url: 'https://www.rijksoverheid.nl/documenten/kamerstukken/2024/10/25/brief-over-nadere-afspraken-uitvoering-hoofdstuk-2-hoofdlijnenakkoord-grip-op-asiel-en-migratie',
-        note: "Projet de loi « asielnoodmaatregelenwet » (loi de mesures d'urgence sur l'asile) déposé le 25 octobre 2024 par le cabinet Schoof, sous l'impulsion du PVV, pour permettre l'invocation d'un régime de crise migratoire. Le texte n'a jamais été voté avant la chute du gouvernement en juin 2025 ; son sort sous le cabinet Jetten reste incertain.",
+        name: "Eerste Kamer — Wet invoering tweestatusstelsel (36.703)",
+        url: 'https://www.eerstekamer.nl/wetsvoorstel/36703_wet_invoering',
+        accessedOn: '2026-10-20',
+        note: "Loi instaurant un double statut d'asile et durcissant le regroupement familial, déposée le 7 mars 2025 par la ministre de l'Asile et des Migrations Marjolein Faber (PVV), adoptée par le Sénat le 21 avril 2026 (41 voix contre 34) et publiée le 9 juin 2026 ; son entrée en vigueur est fixée par décret royal. La loi de mesures d'urgence sur l'asile (Asielnoodmaatregelenwet, 36.704), déposée le même jour, a été rejetée par le Sénat le 21 avril 2026 (44 voix contre 31).",
       },
     },
     electoralHistory: [
@@ -1502,11 +1503,11 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Vox España',
+        name: "Vox — moción « Prioridad nacional » (Congreso de los Diputados, avril 2026)",
         url: 'https://www.voxespana.es/wp-content/uploads/2026/04/MCIU-VOX-Prioridad-nacional.pdf',
-        note: "Proposition déposée au Congreso de los Diputados en avril 2026 (« Prioridad nacional ») demandant l'expulsion des migrants en situation irrégulière ; non contraignante et non votée, mais formellement déposée — parti minoritaire sans capacité de faire adopter une loi.",
+        note: "Motion « Prioridad nacional » déposée au Congreso des députés en avril 2026, demandant l'expulsion des migrants en situation irrégulière : texte non contraignant. Parti d'opposition au niveau national.",
       },
     },
     electoralHistory: [
@@ -1982,11 +1983,11 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Vlaams Belang',
+        name: "Vlaams Belang",
         url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
-        note: "Résolution déposée au Parlement européen avec 36 autres eurodéputés appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière ; non contraignante, parti d'opposition sans capacité de faire adopter une loi au niveau fédéral belge.",
+        note: "Résolution non contraignante déposée au Parlement européen avec 36 autres eurodéputés, appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière. Le parti est tenu à l'écart des coalitions par le « cordon sanitaire ».",
       },
     },
     electoralHistory: [
@@ -2381,11 +2382,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Konfederacja.pl',
-        url: 'https://konfederacja.pl/chcemy-aby-sejm-zobowiazal-rzad-od-odrzucenia-paktu-migracyjnego/',
-        note: "Proposition de loi déposée à la Diète pour supprimer le système de caution (kaucja) pour demandeurs d'asile instauré par le gouvernement PiS puis maintenu par le gouvernement Tusk ; non votée, parti minoritaire d'opposition sans capacité de faire adopter une loi seul.",
+        name: "Sejm — impression n° 1043 (Xe législature) : projet de résolution sur la non-mise en œuvre du pacte sur la migration et l'asile",
+        url: 'https://api.sejm.gov.pl/sejm/term10/prints/1043/1043.pdf',
+        accessedOn: '2026-10-20',
+        note: "Projet de résolution déposé le 6 février 2025 par les députés de Konfederacja contre la mise en œuvre du pacte européen sur la migration et l'asile. Examiné avec deux autres projets, il a abouti le 9 juillet 2025 à une résolution non contraignante du Sejm « sur la politique migratoire et la protection de la frontière orientale » (M.P. 2025 poz. 683). Aucune proposition de loi migratoire déposée par des députés n'a été adoptée au cours de la législature ouverte en novembre 2023 (registre du Sejm : https://api.sejm.gov.pl/sejm/term10/processes?limit=5000).",
       },
     },
     electoralHistory: [
@@ -2475,9 +2477,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Sejm Rzeczypospolitej Polskiej',
-        url: 'https://www.sejm.gov.pl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi KKP promulguée à ce jour.",
+        name: "Sejm — registre des procédures législatives de la Xe législature (API officielle)",
+        url: 'https://api.sejm.gov.pl/sejm/term10/processes?limit=5000',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition sans participation gouvernementale. Aucune proposition de loi migratoire déposée par des députés n'a été adoptée au cours de la législature ouverte en novembre 2023.",
       },
     },
     europeanRepresentation: {
@@ -3777,11 +3780,11 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: '24ur.com',
+        name: "24ur.com",
         url: 'https://www.24ur.com/novice/slovenija/golob-dotok-ilegalnih-migrantov-je-minimalen-mahnic-bi-ustanovil-urad-za-deportacije.html',
-        note: "Dès sa prise de fonction, le Premier ministre Janša a signé une lettre avec les dirigeants de 18 États membres de l'UE demandant le retour des migrants illégaux vers des pays tiers ; un « bureau des déportations » est annoncé par le député SDS Branko Mahnič.",
+        note: "Statut à revérifier. Les éléments documentés ne sont pas des textes adoptés : la lettre cosignée en juin 2026 par Janez Janša et les dirigeants de 18 États membres pour le renvoi des migrants en situation irrégulière vers des pays tiers, et le « bureau des déportations » annoncé par le député SDS Žan Mahnič. L'adoption d'une loi migratoire par le gouvernement Janša n'a pas pu être établie à la date de consultation.",
       },
     },
     electoralHistory: [
@@ -4164,9 +4167,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'LSM.lv',
-        url: 'https://www.lsm.lv/raksts/zinas/latvija/04.09.2026-koalicija-nogludinajusi-domstarpibas-un-solas-imigracijas-ierobezosanas-planu-apstiprinat-divu-nedelu-laika.a661835/',
-        note: "En tant que partenaire de la coalition gouvernementale, a obtenu l'inscription au programme du nouveau gouvernement d'un plan de restriction de l'immigration, dont l'adoption formelle était annoncée pour la mi-septembre 2026.",
+        name: "LV portāls — Valdība atbalsta Iekšlietu ministrijas sagatavoto visaptverošo imigrācijas ierobežošanas plānu",
+        url: 'https://lvportals.lv/dienaskartiba/394845-valdiba-atbalsta-iekslietu-ministrijas-sagatavoto-visaptveroso-imigracijas-ierobezosanas-planu-2026',
+        accessedOn: '2026-10-20',
+        note: "Le Conseil des ministres a approuvé le 22 septembre 2026 le plan global de restriction de l'immigration (71 mesures : quotas d'entrée de ressortissants de pays tiers, conditions renforcées pour les étudiants étrangers et les titres de séjour) préparé par le ministère de l'Intérieur de Jānis Dombrava (Alliance nationale), en poste depuis le 29 mai 2026.",
       },
     },
     electoralHistory: [

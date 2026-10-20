@@ -23,6 +23,61 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-mesures-concretes-definition',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/methodologie',
+    summary: {
+      fr: "Méthodologie : « mesures concrètes » désigne désormais un texte adopté ou une mesure en vigueur. Une proposition de loi déposée mais non adoptée, ou une résolution non contraignante, laisse la fiche en « programme ». Vox, Vlaams Belang et Konfederacja, classés en « mesures concrètes » pour des textes de ce type, passent en « programme ». Le SDS slovène aussi : les éléments cités (une lettre européenne, un bureau annoncé) ne sont pas des textes adoptés.",
+      en: "Methodology: \"concrete measures\" now means an adopted text or a measure in force. A bill filed but not adopted, or a non-binding resolution, leaves the entry at \"programme\". Vox, Vlaams Belang and Konfederacja, tagged \"concrete measures\" for texts of that kind, move to \"programme\". So does the Slovenian SDS: the items cited (a European letter, an announced office) are not adopted texts.",
+    },
+  },
+  {
+    id: '2026-10-20-konfederacja-caution',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/konfederacja',
+    summary: {
+      fr: "Konfederacja : la fiche évoquait une proposition de loi visant à supprimer un « système de caution » pour demandeurs d'asile, système dont l'existence n'a pas pu être établie (retiré de la page Législation le 5 octobre), et la page citée ne répond plus. Le registre du Sejm montre un projet de résolution du 6 février 2025 contre le pacte européen sur la migration et l'asile.",
+      en: "Konfederacja: the entry mentioned a bill to abolish a \"bail system\" for asylum seekers, a system whose existence could not be established (removed from the Legislation page on 5 October), and the cited page no longer responds. The Sejm register shows a draft resolution of 6 February 2025 against the EU Pact on Migration and Asylum.",
+    },
+    source: {
+      name: "Sejm — impression n° 1043",
+      url: 'https://api.sejm.gov.pl/sejm/term10/prints/1043/1043.pdf',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-pvv-asielwetten',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/pvv',
+    summary: {
+      fr: "PVV : la fiche disait que la loi d'urgence sur l'asile n'avait jamais été votée et que son sort restait incertain. Le Sénat l'a rejetée le 21 avril 2026 ; il a adopté le même jour la loi sur le double statut d'asile, déposée par la ministre PVV Marjolein Faber, qui fonde désormais le statut « mesures concrètes ».",
+      en: "PVV: the entry said the emergency asylum law had never been voted on and its fate was uncertain. The Senate rejected it on 21 April 2026; the same day it adopted the two-status asylum law, filed by PVV minister Marjolein Faber, which now supports the \"concrete measures\" status.",
+    },
+    source: {
+      name: "Eerste Kamer — Senaat verwerpt strafbaarstelling illegaliteit, stemt in met tweestatusstelsel",
+      url: 'https://www.eerstekamer.nl/nieuws/20260421/senaat_verwerpt_strafbaarstelling',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-alliance-nationale-plan',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/nacionala-apvieniba',
+    summary: {
+      fr: "Alliance nationale (Lettonie) : la fiche annonçait l'adoption d'un plan de restriction de l'immigration pour la mi-septembre 2026. Le Conseil des ministres l'a approuvé le 22 septembre 2026 ; la fiche cite désormais cette décision.",
+      en: "National Alliance (Latvia): the entry announced the adoption of an immigration restriction plan for mid-September 2026. The Cabinet approved it on 22 September 2026; the entry now cites that decision.",
+    },
+    source: {
+      name: "LV portāls — 22 septembre 2026",
+      url: 'https://lvportals.lv/dienaskartiba/394845-valdiba-atbalsta-iekslietu-ministrijas-sagatavoto-visaptveroso-imigracijas-ierobezosanas-planu-2026',
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-critere-remigration-b',
     date: '2026-10-20',
     kind: 'reclassement',
