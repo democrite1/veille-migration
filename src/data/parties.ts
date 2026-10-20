@@ -3612,7 +3612,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale à extrême droite',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Deux sièges au Sabor (8,02% en coalition avec Most aux élections de 2024), mais surtout une victoire locale retentissante : son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025, mettant fin à onze années de règne d'Ivan Penava (Domovinski pokret) sur ce bastion symbolique du nationalisme croate, avec seulement 184 voix d'avance. Poursuit sa progression en 2026 via une coalition électorale (« Vukovarska koalicija ») avec DOMiNO et le HSP pour les élections des conseils d'arrondissement de Split, prévues le 27 septembre 2026.",
+      "Deux sièges au Sabor (8,02% en coalition avec Most aux élections de 2024), mais surtout une victoire locale retentissante : son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025, mettant fin à onze années de règne d'Ivan Penava (Domovinski pokret) sur ce bastion symbolique du nationalisme croate, avec seulement 184 voix d'avance.",
     electoralStatusSource: {
       name: 'HRT',
       url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
@@ -3863,7 +3863,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'pouvoir',
     electoralStatusDetail:
-      "Partenaire de la coalition gouvernementale avec le National Party depuis les élections d'octobre 2023. Winston Peters, chef du parti, a occupé le poste de vice-Premier ministre. Des tensions existent avec son partenaire de coalition sur plusieurs aspects de la politique migratoire, à l'approche des élections d'octobre 2026.",
+      "Partenaire de la coalition gouvernementale avec le National Party depuis les élections d'octobre 2023. Winston Peters, chef du parti, a occupé le poste de vice-Premier ministre. Des tensions existent avec son partenaire de coalition sur plusieurs aspects de la politique migratoire, à l'approche des élections générales de 2026.",
     electoralStatusSource: {
       name: 'NZ Herald',
       url: 'https://www.nzherald.co.nz/nz/politics/new-zealand-first-national-at-odds-on-immigration-policy-whether-new-zealand-a-launch-pad-to-australia-jamie-ensor/5XMNMNSUURDOLBYMUU36ZLC5HI/',

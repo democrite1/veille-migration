@@ -23,6 +23,31 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-hrvatski-suverenisti-split',
+    date: '2026-10-20',
+    kind: 'retrait',
+    page: '/partis/hrvatski-suverenisti',
+    summary: {
+      fr: "Hrvatski suverenisti : retrait d'une phrase annonçant une coalition « Vukovarska koalicija » pour les élections de quartiers de Split du 27 septembre 2026. La source citée ne la mentionnait pas et ce nom de coalition n'a pu être retrouvé dans aucune source.",
+      en: 'Hrvatski suverenisti: withdrawal of a sentence announcing a "Vukovarska koalicija" coalition for the Split district elections of 27 September 2026. The cited source did not mention it and the coalition name could not be found in any source.',
+    },
+  },
+  {
+    id: '2026-10-20-nz-first-date',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/nz-first',
+    summary: {
+      fr: "NZ First : la fiche plaçait les élections générales néo-zélandaises en octobre 2026 ; elles sont fixées au 7 novembre 2026.",
+      en: 'NZ First: the profile placed the New Zealand general election in October 2026; it is set for 7 November 2026.',
+    },
+    source: {
+      name: 'Beehive.govt.nz — General election to be held 7 November',
+      url: 'https://www.beehive.govt.nz/release/general-election-be-held-7-november',
+      accessedOn: '2026-09-07',
+    },
+  },
+  {
     id: '2026-10-20-afd-saxe-anhalt',
     date: '2026-10-20',
     kind: 'correction',

@@ -135,6 +135,36 @@ for (const p of parties) {
   }
 }
 
+// A text updated without its source: the Sweden Democrats' status described
+// the election of 13 September 2026 while citing a source consulted in
+// August. Flag any party whose status text names a date later than the day
+// its source was consulted, and any result whose source predates the vote.
+const MONTHS: Record<string, string> = {
+  janvier: '01', février: '02', fevrier: '02', mars: '03', avril: '04', mai: '05', juin: '06',
+  juillet: '07', août: '08', aout: '08', septembre: '09', octobre: '10', novembre: '11', décembre: '12', decembre: '12',
+};
+function latestDateIn(text: string): string | null {
+  let latest: string | null = null;
+  for (const m of text.matchAll(/(?:(\d{1,2})(?:er)?\s+)?(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(20\d{2})/gi)) {
+    const day = m[1] ? m[1].padStart(2, '0') : '01';
+    const iso = `${m[3]}-${MONTHS[m[2].toLowerCase()]}-${day}`;
+    if (!latest || iso > latest) latest = iso;
+  }
+  return latest;
+}
+for (const p of parties) {
+  const consulted = p.electoralStatusSource.accessedOn;
+  const mentioned = latestDateIn(p.electoralStatusDetail);
+  if (consulted && mentioned && mentioned <= TODAY && mentioned > consulted) {
+    warn(`parti ${p.slug} / electoralStatusSource`, `le texte cite un fait du ${mentioned} mais la source a été consultée le ${consulted}`);
+  }
+  for (const r of p.electoralHistory ?? []) {
+    if (r.source.accessedOn && r.source.accessedOn < r.date) {
+      err(`parti ${p.slug} / « ${r.label} »`, `source consultée le ${r.source.accessedOn}, avant le scrutin du ${r.date}`);
+    }
+  }
+}
+
 // MEP totals per country must not exceed the national allocation.
 const mepsByCountry = new Map<string, { sum: number; total?: number }>();
 for (const p of parties) {
