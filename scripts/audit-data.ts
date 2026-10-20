@@ -14,7 +14,6 @@ import { parties } from '../src/data/parties';
 import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
-import { countryProfiles } from '../src/data/countryProfiles';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -83,7 +82,6 @@ const chamberSizes = new Map<string, { total: number; who: string[] }>();
 
 for (const p of parties) {
   const w = `parti ${p.slug}`;
-  if (!countryProfiles[p.countryCode]) err(w, `aucun countryProfile pour ${p.countryCode}`);
   if (p.founded != null && (p.founded < 1800 || p.founded > Number(TODAY.slice(0, 4))))
     err(w, `année de fondation invraisemblable : ${p.founded}`);
 
@@ -164,7 +162,6 @@ for (const e of elections) {
     warn(w, 'marquée « résultat connu » mais sans texte de résultat');
   if (e.status === 'a_venir' && e.result) warn(w, 'un résultat est renseigné pour un scrutin à venir');
   if (e.totalSeats != null && e.totalSeats <= 0) err(w, `totalSeats invalide : ${e.totalSeats}`);
-  if (!countryProfiles[e.countryCode]) err(w, `aucun countryProfile pour ${e.countryCode}`);
   checkSource(w, e.source, e.status === 'resultat_connu');
 }
 
@@ -247,7 +244,6 @@ for (const f of labelFiles) {
     if (!new RegExp(`\\b${cc}:\\s`).test(src)) err('labels', `${cc} absent de ${f}`);
   }
 }
-for (const cc of usedCodes) if (!countryProfiles[cc as never]) err('labels', `${cc} absent de countryProfiles`);
 
 // -------------------------------------------------------------------- report
 const errors = findings.filter((f) => f.level === 'ERROR');

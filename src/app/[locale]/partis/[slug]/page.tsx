@@ -86,7 +86,7 @@ function PartyPageInner({ party }: { party: Party }) {
 
   return (
     <article className="space-y-8">
-      <CountryBanner countryCode={party.countryCode} countryLabel={COUNTRY_LABELS[party.countryCode] ?? party.countryCode} />
+      <CountryBanner countryLabel={COUNTRY_LABELS[party.countryCode] ?? party.countryCode} />
 
       <header className="space-y-3">
         <h1 className="font-serif text-3xl font-semibold tracking-tight">{party.name}</h1>
