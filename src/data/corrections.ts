@@ -23,6 +23,36 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-20-gouvernement-mesures-en-vigueur',
+    date: '2026-10-20',
+    kind: 'reclassement',
+    page: '/methodologie',
+    summary: {
+      fr: "Méthodologie : une mesure compte pour un parti si elle a été adoptée quand il avait des ministres, ou si elle figure dans un accord de soutien écrit qu'il a signé, et tant qu'elle reste en vigueur. FrP (exigence d'âge de 24 ans pour le regroupement familial, loi de 2016), FPÖ (saisie de l'argent liquide et lecture des téléphones des demandeurs d'asile, loi de 2018) et DF (loi dite du « changement de paradigme » de 2019, issue de son accord budgétaire) passent de « programme » à « mesures concrètes ».",
+      en: "Methodology: a measure counts for a party if it was adopted while the party held ministries, or if it appears in a written support agreement the party signed, for as long as it stays in force. FrP (24-year age rule for family reunification, 2016 law), FPÖ (seizure of cash and reading of asylum seekers' phones, 2018 law) and DF (the 2019 \"paradigm shift\" law, from its budget agreement) move from \"programme\" to \"concrete measures\".",
+    },
+    source: {
+      name: "Folketinget — L 140 (2018-19)",
+      url: "https://oda.ft.dk/api/Sag(78454)?$format=json",
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
+    id: '2026-10-20-vazrazhdane-loi-2024',
+    date: '2026-10-20',
+    kind: 'correction',
+    page: '/partis/vazrazhdane',
+    summary: {
+      fr: "Vazrazhdane : la fiche affirmait qu'aucune loi du parti n'avait été promulguée. Le Parlement bulgare a adopté le 7 août 2024 un amendement de Vazrazhdane à la loi sur l'éducation, sans rapport avec l'immigration. La fiche précise désormais qu'aucun projet de loi sur les étrangers n'a été déposé par ses députés depuis 2026.",
+      en: "Vazrazhdane: the entry said no law of the party had been enacted. The Bulgarian parliament adopted a Vazrazhdane amendment to the education law on 7 August 2024, unrelated to immigration. The entry now states that its MPs have filed no bill on foreigners since 2026.",
+    },
+    source: {
+      name: "RFE/RL — Bulgarian Parliament Adopts Amendment Banning LGBT \"Promotion\" In Schools",
+      url: "https://www.rferl.org/a/bulgaria-lgbt-sexual-orientation-amendment-schools/33069623.html",
+      accessedOn: '2026-10-20',
+    },
+  },
+  {
     id: '2026-10-20-retrait-independent-ireland',
     date: '2026-10-20',
     kind: 'retrait',

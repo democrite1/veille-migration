@@ -1415,12 +1415,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: "ORF — FPÖ-Programm: Neue Schlagwörter zu bekannten Standpunkten",
-        url: 'https://orf.at/stories/3367177/',
+        name: "RIS — BFA-Verfahrensgesetz § 39 « Sicherstellen von Beweismitteln und Bargeld », texte consolidé",
+        url: "https://www.ris.bka.gv.at/eli/bgbl/i/2012/87/P39/NOR40278170",
         accessedOn: '2026-10-20',
-        note: "Parti d'opposition depuis mars 2025 : aucune loi FPÖ promulguée. Son programme de 2024, « Festung Österreich, Festung der Freiheit », prévoit un asile limité dans le temps et la fin des demandes d'asile en Autriche (compte rendu de l'ORF, 21 août 2024).",
+        note: "Loi de 2018 sur le droit des étrangers (FrÄG 2018, BGBl. I Nr. 56/2018), projet du gouvernement ÖVP-FPÖ dont le ministère de l'Intérieur était tenu par Herbert Kickl (FPÖ), adoptée en juillet 2018 : saisie de l'argent liquide des demandeurs d'asile jusqu'à 840 €, lecture de leurs téléphones en cas de doute sur leur identité ou leur itinéraire, délai minimal de naturalisation des réfugiés porté de six à dix ans (Parlement autrichien : https://www.parlament.gv.at/aktuelles/pk/jahr_2018/pk0870). Les articles 39 et 39a de la loi BFA-VG qui en sont issus figurent toujours dans le texte consolidé, modifié en dernier lieu en 2026. Le parti est dans l'opposition depuis 2019 ; son programme de 2024 prévoit la fin des demandes d'asile en Autriche.",
       },
     },
     electoralHistory: [
@@ -2536,11 +2536,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: 'Storting',
-        url: 'https://www.stortinget.no',
-        note: "Parti d'opposition sans participation gouvernementale depuis 2020 : aucune loi FrP promulguée à ce jour au niveau national.",
+        name: "Lovdata — utlendingsloven § 41 a (24-årskrav for familieetablering), texte consolidé",
+        url: "https://lovdata.no/dokument/NL/lov/2008-05-15-35/KAPITTEL_6",
+        accessedOn: '2026-10-20',
+        note: "Exigence d'âge de 24 ans pour l'installation en Norvège d'un conjoint ou concubin (article 41 a de la loi sur les étrangers), introduite par la loi du 17 juin 2016 n° 58 « innstramninger II » (Prop. 90 L (2015-2016)), projet du gouvernement Solberg dont le FrP était membre, en vigueur depuis le 1er janvier 2017 et toujours présente dans le texte consolidé (Lovdata : https://lovdata.no/dokument/LTI/lov/2016-06-17-58). Le parti est dans l'opposition depuis 2020.",
       },
     },
     electoralHistory: [
@@ -3212,9 +3213,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Kristeligt Dagblad',
-        url: 'https://www.kristeligt-dagblad.dk/danmark/stoejberg-skoser-regerings-udlaendingepolitik-et-svigt-af-danmark',
-        note: "Parti d'opposition depuis 2026 : aucune loi Danmarksdemokraterne promulguée à ce jour.",
+        name: "Folketinget — B (2025-26) « Om at gennemføre en håndfast hjemsendelsespolitik » (registre officiel, données ouvertes)",
+        url: "https://oda.ft.dk/api/Sag(103780)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Depuis 2022, ses députés ont déposé au Folketing plusieurs propositions de résolution sur l'immigration (politique de retour « ferme », suppression de l'asile spontané au profit d'un centre d'accueil dans un pays tiers, durcissement de la naturalisation) ; aucune n'a été adoptée, l'une a fait l'objet d'un rapport de commission et une autre est pendante.",
       },
     },
     electoralHistory: [
@@ -3293,11 +3295,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: 'Folketinget',
-        url: 'https://www.ft.dk',
-        note: "Parti d'opposition depuis 2026 : aucune loi Dansk Folkeparti promulguée à ce jour dans ce nouveau mandat. Le parti revendique toutefois avoir directement inspiré, lors de ses précédentes participations gouvernementales (2001-2011, puis soutien parlementaire 2015-2019), plusieurs des dispositifs restrictifs toujours en vigueur dans la loi danoise sur les étrangers.",
+        name: "Folketinget — L 140 (2018-19), loi dite du « changement de paradigme »",
+        url: "https://oda.ft.dk/api/Sag(78454)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Loi promulguée après son adoption le 21 février 2019. Elle met en œuvre le volet migratoire de l'accord budgétaire pour 2019 conclu le 30 novembre 2018 entre le gouvernement et le DF : titres de séjour des réfugiés délivrés en vue d'un séjour temporaire et retirés dès que possible, plafond pour le regroupement familial des réfugiés. Aucune abrogation n'a été relevée à la date de consultation. Depuis 2022, les propositions de résolution migratoires de ses députés ont toutes été rejetées ou sont devenues caduques, deux restant pendantes.",
       },
     },
     electoralHistory: [
@@ -3378,9 +3381,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Folketinget',
-        url: 'https://www.ft.dk',
-        note: "Parti d'opposition entré au Parlement en mars 2026 : aucune loi Borgernes Parti promulguée à ce jour.",
+        name: "Folketinget — B (2024-25) « Om at fjerne udgifterne til ikkevestlige udlændinge og efterkommere » (registre officiel, données ouvertes)",
+        url: "https://oda.ft.dk/api/Sag(101135)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Parti entré au Parlement en mars 2026. Sa seule proposition sur l'immigration, une résolution de Lars Boje Mathiesen visant à supprimer les dépenses publiques liées aux immigrés non occidentaux et à leurs descendants (session 2024-25), a été rejetée.",
       },
     },
     electoralHistory: [
@@ -3869,9 +3873,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale bulgare',
-        url: 'https://www.parliament.bg',
-        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Vazrazhdane promulguée à ce jour.",
+        name: "Народно събрание — registre des projets de loi de la 52e Assemblée nationale",
+        url: "https://www.parliament.bg/bg/bills",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement. Aucun projet de loi sur les étrangers n'a été déposé par ses députés depuis l'élection de l'Assemblée en 2026 (les deux textes de juillet 2026 viennent du gouvernement et de PP-DB). Le parti a en revanche fait adopter le 7 août 2024 un amendement à la loi sur l'éducation, sans rapport avec l'immigration (RFE/RL : https://www.rferl.org/a/bulgaria-lgbt-sexual-orientation-amendment-schools/33069623.html).",
       },
     },
     electoralHistory: [
@@ -4019,9 +4024,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Riigikogu',
-        url: 'https://www.riigikogu.ee/fraktsioonide-teated/eesti-konservatiivse-rahvaerakonna-fraktsioon/ekre-alustab-riigikogus-taiemahulist-obstruktsiooni-valitsuse-poliitika-pidurdamiseks/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi EKRE promulguée à ce jour.",
+        name: "Riigikogu — eelnõu 145 SE (2020), registre officiel",
+        url: "https://api.riigikogu.ee/api/volumes/drafts/7c3765b5-b4be-4fab-a037-1711e4603961?lang=ET",
+        accessedOn: '2026-10-20',
+        note: "Statut à revérifier. Le parti a participé au gouvernement d'avril 2019 à janvier 2021, avec le ministère de l'Intérieur. Une loi de 2020 visant à limiter le détournement des règles de travail des étrangers (salaire au moins égal au salaire moyen estonien) a été adoptée sur projet de ce gouvernement ; les règles ont été modifiées depuis et son maintien en vigueur n'a pas pu être établi. En 2022, sa proposition de loi 628 SE sur les étrangers et l'enseignement supérieur a été rejetée.",
       },
     },
     electoralHistory: [

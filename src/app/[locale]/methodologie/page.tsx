@@ -65,7 +65,9 @@ function MethodologyPageInner() {
           votée, décret, mesure administrative). Une proposition de loi déposée mais non
           adoptée, ou une résolution non contraignante, laisse la fiche en « programme » ;
           elle y est mentionnée avec sa date, et la fiche cite le registre du parlement
-          consulté. Le tag « mesures concrètes » reste actif tant que la mesure est en
+          consulté. Une mesure est attribuée à un parti si elle a été adoptée quand il
+          avait des ministres, ou si elle figure dans un accord de soutien écrit qu’il a
+          signé. Le tag « mesures concrètes » reste actif tant que la mesure est en
           vigueur, indépendamment du parti au pouvoir ou non. Si la mesure est abrogée ou
           son application arrêtée → « mesures concrètes (historique, abrogée le [date]) »,
           avec un historique daté conservé sur la fiche.
