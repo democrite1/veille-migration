@@ -43,9 +43,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale',
-        url: 'https://www2.assemblee-nationale.fr/17/les-groupes-politiques/rassemblement-national',
-        note: "Parti d'opposition sans majorité : aucune loi RN promulguée à ce jour au niveau national. Des propositions de loi portées par des députés RN sont déposées ponctuellement — voir la section Suivi législatif pour le détail texte par texte.",
+        name: "Assemblée nationale — données ouvertes, dossiers législatifs de la XVIIe législature",
+        url: 'https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip',
+        accessedOn: '2026-10-20',
+        note: "Groupe d'opposition. Aucune des propositions de loi déposées par des députés RN depuis juillet 2024 n'a été promulguée, dont deux visant à rétablir le délit de séjour irrégulier (19 décembre 2024 et 16 septembre 2025) et une visant à abroger le titre de séjour pour soins (26 mai 2026). Le 30 octobre 2025, l'Assemblée a adopté une résolution non contraignante du député RN Guillaume Bigot appelant à dénoncer les accords franco-algériens de 1968 (https://www.assemblee-nationale.fr/dyn/17/dossiers/denoncer_accords_franco_algeriens_27_decembre_1968).",
       },
     },
     electoralHistory: [
@@ -216,9 +217,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale',
-        url: 'https://www2.assemblee-nationale.fr',
-        note: "Groupe d'opposition de dix-sept députés : aucune loi UDR promulguée. Le parti dispose en revanche, depuis mars 2026, d'un pouvoir exécutif local réel à Nice et Montauban.",
+        name: "Assemblée nationale — données ouvertes, dossiers législatifs de la XVIIe législature",
+        url: 'https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip',
+        accessedOn: '2026-10-20',
+        note: "Groupe d'opposition. Aucune des propositions de loi déposées par ses députés depuis 2024 n'a été promulguée, dont une proposition de loi constitutionnelle « relative à la priorité nationale et locale » (11 décembre 2025) et une proposition visant à suspendre le regroupement familial des étrangers bénéficiaires de la protection subsidiaire (12 mai 2026). Le parti dispose en revanche, depuis mars 2026, d'un pouvoir exécutif local à Nice et Montauban.",
       },
     },
     europeanRepresentation: {
@@ -552,9 +554,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'UK Parliament',
-        url: 'https://members.parliament.uk/member/5091/career',
-        note: "Parti d'opposition, 8 sièges sur 650 : aucune loi Reform UK promulguée à ce jour.",
+        name: "UK Parliament — Bills : Universal Credit (British Citizens) Bill",
+        url: 'https://bills.parliament.uk/bills/4056',
+        accessedOn: '2026-10-20',
+        note: "Huit députés sur 650. Aucun projet de loi déposé par ses députés n'est devenu loi depuis les élections de 2024, dont le Universal Credit (British Citizens) Bill de Richard Tice (première lecture le 6 janvier 2026) et le Deprivation of Citizenship (Promotion of Terrorism or Violence) Bill de Sarah Pochin (7 janvier 2026). Parmi ses députés actuels, Suella Braverman avait porté l'Illegal Migration Act 2023 comme ministre de l'Intérieur d'un gouvernement conservateur.",
       },
     },
     electoralHistory: [
@@ -649,9 +652,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'UK Parliament — Restore Britain',
-        url: 'https://en.wikipedia.org/wiki/Restore_Britain',
-        note: "Parti d'opposition disposant d'un seul siège aux Communes : aucune loi Restore Britain promulguée, et aucune possibilité arithmétique d'en faire adopter une. Son influence est celle d'un aiguillon exercé sur Reform UK et sur le Parti conservateur.",
+        name: "UK Parliament — Rupert Lowe, fiche de député",
+        url: 'https://members.parliament.uk/member/5158/career',
+        accessedOn: '2026-10-20',
+        note: "Un seul député, Rupert Lowe. Son seul projet de loi depuis 2024, le Quantitative Easing (Prohibition) Bill, ne porte pas sur l'immigration ; aucun texte du parti n'a été adopté (registre des projets de loi du Parlement britannique).",
       },
     },
     electoralHistory: [
@@ -1045,9 +1049,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Tweede Kamer',
-        url: 'https://www.tweedekamer.nl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi JA21 promulguée à ce jour.",
+        name: "Tweede Kamer — initiative de loi 2026Z11062 (registre officiel, données ouvertes)",
+        url: 'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Zaak?$filter=Nummer%20eq%20%272026Z11062%27',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Des députés JA21 ont cosigné deux initiatives de loi encore pendantes : l'abrogation de la loi sur la répartition de l'accueil des demandeurs d'asile entre communes (« Spreidingswet », déposée le 27 mai 2026 avec FvD et BBB) et l'interdiction de la priorité au logement pour les réfugiés statutaires (23 avril 2026). Aucune n'a été adoptée.",
       },
     },
     electoralHistory: [
@@ -1127,9 +1132,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Tweede Kamer',
-        url: 'https://www.tweedekamer.nl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi FvD promulguée à ce jour au niveau national.",
+        name: "Tweede Kamer — initiative de loi 2026Z11062 (registre officiel, données ouvertes)",
+        url: 'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Zaak?$filter=Nummer%20eq%20%272026Z11062%27',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Un député FvD a cosigné le 27 mai 2026 une initiative de loi abrogeant la loi sur la répartition de l'accueil des demandeurs d'asile entre communes (« Spreidingswet ») ; elle n'a pas été adoptée à ce jour.",
       },
     },
     electoralHistory: [
