@@ -14,6 +14,7 @@ import { parties } from '../src/data/parties';
 import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
+import { corrections } from '../src/data/corrections';
 import { PUBLISHER } from '../src/lib/publisher';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
@@ -224,7 +225,16 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
-// ------------------------------------------------------------- legal notice
+// ------------------------------------------------- corrections log, legal notice
+checkDuplicates(corrections, (c) => c.id, 'corrections');
+for (const c of corrections) {
+  const w = `correction ${c.id}`;
+  if (!isIsoDate(c.date)) err(w, `date mal formée : ${c.date}`);
+  else if (c.date > TODAY) err(w, `datée du futur : ${c.date}`);
+  if (!c.summary.fr?.trim() || !c.summary.en?.trim()) err(w, 'résumé FR ou EN manquant');
+  if (!c.page.startsWith('/')) err(w, `chemin de page invalide : ${c.page}`);
+  checkSource(w, c.source);
+}
 // An incomplete legal notice must never reach main (LCEN, decision 3).
 if (!PUBLISHER.director?.trim()) err('mentions légales', 'directeur de la publication non renseigné (src/lib/publisher.ts)');
 if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');

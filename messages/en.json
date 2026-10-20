@@ -55,7 +55,10 @@
   "footer": {
     "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
     "donate": "Support this project",
-    "legal": "Legal notice"
+    "notice": "Journalistic and documentary content. No personal data is collected for targeting. Every classification is sourced and verifiable — see the methodology.",
+    "legal": "Legal notice",
+    "contact": "Contact and corrections",
+    "corrections": "Corrections log"
   },
   "meta": {
     "siteName": "Migration Policy Watch",
@@ -73,5 +76,22 @@
     "databaseText": "The data shown is stored in a database operated by {provider}.",
     "lawText": "Notice provided under French law no. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN).",
     "missing": "To be completed before publication"
+  },
+  "contact": {
+    "title": "Contact and corrections",
+    "intro": "This site is a monitoring tool: a reported error that proves real is corrected, and the correction is made public.",
+    "reportHeading": "Report an error",
+    "reportText": "Write to <mail>{email}</mail> stating the page, the contested statement and, if possible, a source. Every report is checked against a specific source. A confirmed error is corrected on the page and recorded in the corrections log, with its date and nature.",
+    "replyHeading": "Right of reply",
+    "replyText": "Anyone named or referred to on this site may exercise the right of reply provided for by French law no. 2004-575 of 21 June 2004 (LCEN), by sending a request to the publication director, {director}, at the same address.",
+    "journalLink": "See the corrections log →"
+  },
+  "corrections": {
+    "title": "Corrections log",
+    "intro": "Every published error later corrected, every fact withdrawn and every change of classification, newest first, with the source the correction rests on. Rewording, new data and design changes are not listed.",
+    "kind_correction": "Correction",
+    "kind_reclassement": "Reclassification",
+    "kind_retrait": "Withdrawal",
+    "page": "Page"
   }
 }
