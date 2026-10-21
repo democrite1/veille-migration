@@ -20,7 +20,12 @@ de classification et de sourçage.
 - **Supabase** (facultatif) : une copie des données peut y être poussée par
   `scripts/seed-supabase.ts`, mais le site ne la lit plus depuis octobre
   2026 : la mise en pause du projet gratuit pour inactivité avait mis
-  l'annuaire des partis en erreur 500.
+  l'annuaire des partis en erreur 500. Pour recréer la base, exécuter les
+  migrations de `supabase/migrations` dans l'ordre ; la dernière
+  (`0004_access_rules.sql`) active la sécurité au niveau des lignes sur
+  toutes les tables (lecture publique, écriture réservée à la clé
+  `service_role`) et crée la fonction `exec_sql` utilisée par
+  `scripts/run-sql.ts`.
 - **28 pays couverts** : France, Allemagne, Royaume-Uni, Italie, Pays-Bas,
   États-Unis, Suède, Autriche, Espagne, Hongrie, Finlande, Belgique, Suisse,
   Portugal, Pologne, Norvège, République tchèque, Grèce, Roumanie, Slovaquie,
