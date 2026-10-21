@@ -119,12 +119,13 @@
   },
   "footer": {
     "sources": "Sources : sites officiels, jeux de données académiques (The PopuList, ParlGov), Wikipédia et presse, chacune datée et archivée. Détail dans la méthodologie.",
-    "donate": "Soutenir ce projet",
+    "donate": "Faire un don",
     "notice": "Contenu à but journalistique et documentaire. Aucune donnée personnelle n’est collectée à des fins de ciblage. Toute classification est sourcée et vérifiable — voir la méthodologie.",
     "legal": "Mentions légales",
     "contact": "Contact et corrections",
     "corrections": "Journal des corrections",
-    "updated": "Contenu mis à jour le {date}."
+    "updated": "Contenu mis à jour le {date}.",
+    "about": "À propos"
   },
   "meta": {
     "siteName": "Observatoire des politiques migratoires",
@@ -141,7 +142,8 @@
     "hostText": "Le site est hébergé par {name}, {address}, États-Unis.",
     "lawText": "Mentions établies en application de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
     "missing": "À compléter avant publication",
-    "publisherText": "Le site est édité à titre non professionnel par une personne physique qui, comme la loi le permet, a choisi de ne pas rendre son identité publique et l’a communiquée à l’hébergeur."
+    "publisherText": "Le site est édité à titre non professionnel par une personne physique qui, comme la loi le permet, a choisi de ne pas rendre son identité publique et l’a communiquée à l’hébergeur.",
+    "publisherNamed": "Le site est édité à titre non professionnel par {name}, directeur de la publication, domicilié {address}, téléphone {phone}."
   },
   "contact": {
     "title": "Contact et corrections",
@@ -170,5 +172,26 @@
     "text": "La page n'a pas pu s'afficher. Réessayez ; si le problème persiste, signalez-le.",
     "retry": "Réessayer",
     "report": "Signaler le problème"
+  },
+  "about": {
+    "title": "À propos",
+    "intro": "L'Observatoire des politiques migratoires recense, avec leurs sources, les partis, les lois et les élections liés aux politiques de réduction de l'immigration dans des démocraties pluralistes. Il décrit ce que ces partis proposent et font adopter ; il ne soutient ni ne combat aucun d'entre eux.",
+    "publisherTitle": "Qui édite le site",
+    "publisherNamed": "Le site est édité à titre personnel et non professionnel par {name}, directeur de la publication.",
+    "publisherAnonymous": "Le site est édité à titre personnel et non professionnel par une personne physique dont l'identité est connue de l'hébergeur, comme la loi le prévoit. Elle répond à l'adresse de la page contact.",
+    "legalLink": "Mentions légales →",
+    "fundingTitle": "Financement",
+    "fundingNone": "Le site ne perçoit aucun revenu : ni publicité, ni subvention, ni don.",
+    "fundingDonations": "Le site est financé par les dons de ses lecteurs, reçus sur Liberapay. Les donateurs n'ont aucun droit sur le contenu. Les dons d'un parti, d'un élu ou d'une organisation qui leur est liée ne sont pas acceptés. Le total des dons reçus est publié ici chaque année.",
+    "donate": "Faire un don sur Liberapay →",
+    "independenceTitle": "Indépendance",
+    "independence": "Aucun parti, mouvement, organisation militante ou donateur n'a de droit de regard sur le contenu. Le site ne publie aucun lien d'adhésion ou de don vers un parti, et ses liens vers des sites extérieurs ne leur transmettent pas de référencement. Les initiatives non partisanes sont traitées comme des actualités, sans fiche.",
+    "inclusionTitle": "Ce que signifie figurer dans l'annuaire",
+    "inclusion": "Un parti figure dans l'annuaire parce que sa position sur l'immigration répond aux critères de la méthodologie et qu'elle est documentée par des sources. Ce n'est un jugement ni sur ce parti ni sur ses électeurs, et ce n'est pas une recommandation.",
+    "methodologyLink": "Méthodologie →",
+    "correctionsTitle": "Corrections",
+    "corrections": "Les erreurs corrigées, les changements de classement et les retraits de fiches sont inscrits au journal des corrections, avec leur date et leur source. Pour signaler une erreur, écrire à l'adresse de la page contact.",
+    "correctionsLink": "Journal des corrections →",
+    "contactLink": "Contact →"
   }
 }

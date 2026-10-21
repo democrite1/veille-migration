@@ -15,7 +15,7 @@ import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
 import { corrections } from '../src/data/corrections';
-import { PUBLISHER } from '../src/lib/publisher';
+import { PUBLISHER, isNamed } from '../src/lib/publisher';
 import { SCOPE } from '../src/lib/scope';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
@@ -356,6 +356,10 @@ for (const c of corrections) {
 }
 // An incomplete legal notice must never reach main (LCEN, decision 3).
 if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
+// Donations only with a named publisher (decision 3): name, home address and phone.
+if (PUBLISHER.liberapay && !isNamed()) err('mentions légales', 'dons activés sans éditeur nommé : renseigner nom, adresse et téléphone (src/lib/publisher.ts)');
+if (PUBLISHER.liberapay && !/^https:\/\/liberapay\.com\/[^/]+\/?$/.test(PUBLISHER.liberapay)) err('mentions légales', `adresse Liberapay invalide : ${PUBLISHER.liberapay}`);
+if (!isNamed()) warn('mentions légales', "éditeur nommé non renseigné (décision 3) : les mentions gardent la formule anonyme et les dons restent désactivés");
 
 // A country outside the scope stated in the methodology (src/lib/scope.ts).
 for (const p of parties) if (!SCOPE.includes(p.countryCode)) err(`parti ${p.slug}`, `pays hors périmètre : ${p.countryCode}`);

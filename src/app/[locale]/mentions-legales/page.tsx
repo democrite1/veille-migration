@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
-import { HOST, PUBLISHER } from '@/lib/publisher';
+import { HOST, PUBLISHER, isNamed } from '@/lib/publisher';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -19,7 +19,11 @@ export default async function LegalNoticePage({ params }: { params: Promise<{ lo
 
       <section className="card space-y-2">
         <h2 className="font-serif text-lg font-semibold">{t('publisherHeading')}</h2>
-        <p className="text-sm">{t('publisherText')}</p>
+        <p className="text-sm">
+          {isNamed()
+            ? t('publisherNamed', { name: PUBLISHER.name!, address: PUBLISHER.address!, phone: PUBLISHER.phone! })
+            : t('publisherText')}
+        </p>
       </section>
 
       <section className="card space-y-2">

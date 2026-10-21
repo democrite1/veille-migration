@@ -119,12 +119,13 @@
   },
   "footer": {
     "sources": "Sources: official sites, academic datasets (The PopuList, ParlGov), Wikipedia and the press, each dated and archived. Details in the methodology.",
-    "donate": "Support this project",
+    "donate": "Donate",
     "notice": "Journalistic and documentary content. No personal data is collected for targeting. Every classification is sourced and verifiable — see the methodology.",
     "legal": "Legal notice",
     "contact": "Contact and corrections",
     "corrections": "Corrections log",
-    "updated": "Content updated on {date}."
+    "updated": "Content updated on {date}.",
+    "about": "About"
   },
   "meta": {
     "siteName": "Migration Policy Watch",
@@ -141,7 +142,8 @@
     "hostText": "The site is hosted by {name}, {address}, United States.",
     "lawText": "Notice provided under French law no. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN).",
     "missing": "To be completed before publication",
-    "publisherText": "The site is published on a non-professional basis by a private individual who, as the law allows, has chosen not to make their identity public and has disclosed it to the host."
+    "publisherText": "The site is published on a non-professional basis by a private individual who, as the law allows, has chosen not to make their identity public and has disclosed it to the host.",
+    "publisherNamed": "The site is published on a non-professional basis by {name}, publication director, residing at {address}, telephone {phone}."
   },
   "contact": {
     "title": "Contact and corrections",
@@ -170,5 +172,26 @@
     "text": "The page could not be displayed. Try again; if the problem persists, report it.",
     "retry": "Try again",
     "report": "Report the problem"
+  },
+  "about": {
+    "title": "About",
+    "intro": "The Migration Policy Watch tracks, with their sources, parties, laws and elections related to policies to reduce immigration in pluralist democracies. It describes what these parties propose and get adopted; it neither supports nor opposes any of them.",
+    "publisherTitle": "Who publishes the site",
+    "publisherNamed": "The site is published in a personal, non-professional capacity by {name}, publication director.",
+    "publisherAnonymous": "The site is published in a personal, non-professional capacity by an individual whose identity is known to the host, as French law provides. They answer at the address on the contact page.",
+    "legalLink": "Legal notice →",
+    "fundingTitle": "Funding",
+    "fundingNone": "The site has no income: no advertising, no grants, no donations.",
+    "fundingDonations": "The site is funded by donations from its readers, received on Liberapay. Donors have no say over the content. Donations from a party, an elected official or an organisation linked to them are not accepted. The total received is published here every year.",
+    "donate": "Donate on Liberapay →",
+    "independenceTitle": "Independence",
+    "independence": "No party, movement, campaigning organisation or donor has any say over the content. The site publishes no membership or donation link to any party, and its links to external sites pass on no search ranking. Non-partisan initiatives are covered as news, with no profile.",
+    "inclusionTitle": "What being in the directory means",
+    "inclusion": "A party is in the directory because its position on immigration meets the criteria of the methodology and is documented by sources. It is a judgment neither on that party nor on its voters, and it is not an endorsement.",
+    "methodologyLink": "Methodology →",
+    "correctionsTitle": "Corrections",
+    "corrections": "Errors corrected, changes of classification and removed profiles are recorded in the corrections log, with their date and source. To report an error, write to the address on the contact page.",
+    "correctionsLink": "Corrections log →",
+    "contactLink": "Contact →"
   }
 }
