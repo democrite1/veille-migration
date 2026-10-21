@@ -18,6 +18,9 @@ export default function Footer() {
           <Link href="/mentions-legales" className="hover:text-accent">
             {t('legal')}
           </Link>
+          <Link href="/confidentialite" className="hover:text-accent">
+            {t('privacy')}
+          </Link>
           <Link href="/contact" className="hover:text-accent">
             {t('contact')}
           </Link>

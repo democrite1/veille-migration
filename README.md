@@ -54,7 +54,9 @@ Le site tourne sur http://localhost:3000 et redirige vers `/fr`.
 Éditer `src/data/{parties,elections,legislation,news,corrections}.ts`
 (chaque fait doit rester sourcé, avec sa date de consultation). Tout texte
 français modifié ou ajouté doit recevoir sa traduction anglaise dans
-`src/data/i18n/en/` : l'audit échoue sinon. Puis vérifier :
+`src/data/i18n/en/` : l'audit échoue sinon. Un nouveau pays demande aussi son drapeau :
+`npm run flags` le copie dans `public/flags` depuis le paquet `flag-icons`
+(licence MIT), les drapeaux étant servis par le site lui-même. Puis vérifier :
 
 ```bash
 npm run audit

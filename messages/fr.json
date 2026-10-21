@@ -160,7 +160,8 @@
     "contact": "Contact et corrections",
     "corrections": "Journal des corrections",
     "updated": "Contenu mis à jour le {date}.",
-    "about": "À propos"
+    "about": "À propos",
+    "privacy": "Confidentialité"
   },
   "meta": {
     "siteName": "Observatoire des politiques migratoires",
@@ -232,5 +233,20 @@
   "common": {
     "field": "{label} : ",
     "skipLink": "Aller au contenu principal"
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "intro": "Ce site n'affiche aucune publicité, ne mesure pas son audience et ne dépose aucun cookie de suivi. Voici les seules données traitées lors d'une visite.",
+    "hostTitle": "Journaux de l'hébergeur",
+    "host": "Comme tout serveur web, l'hébergeur {host}, établi aux États-Unis, enregistre des données techniques de connexion (adresse IP, date, page demandée, navigateur) pour faire fonctionner et sécuriser le service. Ces journaux relèvent de la politique de confidentialité de Vercel ; l'éditeur ne les utilise pas.",
+    "hostLink": "Politique de confidentialité de Vercel",
+    "cookieTitle": "Cookie de langue",
+    "cookie": "Le cookie NEXT_LOCALE mémorise la langue choisie (français ou anglais). C'est un cookie de session, effacé à la fermeture du navigateur. Strictement nécessaire au service demandé, il n'est pas soumis au consentement (article 82 de la loi Informatique et libertés).",
+    "thirdTitle": "Aucun tiers pendant la visite",
+    "third": "Les pages, les drapeaux et les icônes sont servis par le site lui-même, et aucune police n'est chargée depuis un autre serveur : la visite n'envoie de requête à aucun tiers. Les liens vers les sources et les sites des partis ouvrent ces sites, qui appliquent leurs propres règles.",
+    "contactTitle": "Messages et droits",
+    "contact": "Les messages envoyés à l'adresse de contact servent uniquement à y répondre. Pour toute question ou pour exercer vos droits d'accès, de rectification ou d'effacement, écrire à cette adresse ; vous pouvez aussi saisir la CNIL.",
+    "donations": "Les dons sont traités par Liberapay, selon sa propre politique de confidentialité ; l'éditeur ne reçoit que ce que Liberapay lui transmet.",
+    "contactLink": "Contact →"
   }
 }

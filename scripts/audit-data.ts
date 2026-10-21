@@ -19,6 +19,9 @@ import { PUBLISHER, isNamed } from '../src/lib/publisher';
 import { SCOPE, countryName } from '../src/lib/scope';
 import { englishPairs, hasEnglish, sourceNamePairs, translatable } from '../src/data/i18n';
 import { allSources } from '../src/lib/sourceStats';
+import { usedFlagCodes } from '../src/lib/flags';
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import type { Source } from '../src/data/types';
 
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -378,6 +381,11 @@ for (const cc of usedCodes) {
   for (const locale of ['fr', 'en']) {
     if (countryName(cc, locale) === cc) err('pays', `aucun nom ${locale} pour le code ${cc}`);
   }
+}
+
+// Flags are served from public/flags (J3): a new country needs `npm run flags`.
+for (const code of usedFlagCodes()) {
+  if (!existsSync(resolve(__dirname, '../public/flags', `${code}.svg`))) err('drapeaux', `public/flags/${code}.svg manquant : lancer npm run flags`);
 }
 
 // ----------------------------------------------------- English content (P2)

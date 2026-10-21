@@ -160,7 +160,8 @@
     "contact": "Contact and corrections",
     "corrections": "Corrections log",
     "updated": "Content updated on {date}.",
-    "about": "About"
+    "about": "About",
+    "privacy": "Privacy"
   },
   "meta": {
     "siteName": "Migration Policy Watch",
@@ -232,5 +233,20 @@
   "common": {
     "field": "{label}: ",
     "skipLink": "Skip to main content"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "This site shows no advertising, does not measure its audience and sets no tracking cookie. These are the only data processed during a visit.",
+    "hostTitle": "Host logs",
+    "host": "Like any web server, the host {host}, based in the United States, records technical connection data (IP address, date, page requested, browser) to run and secure the service. These logs fall under Vercel's privacy policy; the publisher does not use them.",
+    "hostLink": "Vercel privacy policy",
+    "cookieTitle": "Language cookie",
+    "cookie": "The NEXT_LOCALE cookie remembers the language chosen (French or English). It is a session cookie, deleted when the browser closes. As it is strictly necessary for the service requested, it does not require consent (Article 82 of the French Data Protection Act).",
+    "thirdTitle": "No third party during a visit",
+    "third": "Pages, flags and icons are served by the site itself, and no font is loaded from another server: a visit sends no request to any third party. Links to sources and party websites open those sites, which apply their own rules.",
+    "contactTitle": "Messages and rights",
+    "contact": "Messages sent to the contact address are used only to reply to them. For any question, or to exercise your rights of access, rectification or erasure, write to that address; you may also complain to the CNIL, the French data protection authority.",
+    "donations": "Donations are processed by Liberapay under its own privacy policy; the publisher receives only what Liberapay passes on.",
+    "contactLink": "Contact →"
   }
 }

@@ -15,6 +15,7 @@ const PAGES = [
   '/a-propos',
   '/contact',
   '/mentions-legales',
+  '/confidentialite',
 ];
 
 // Every page in both languages, each entry listing its translation (audit P5).
