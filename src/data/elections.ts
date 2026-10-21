@@ -961,7 +961,7 @@ export const elections: Election[] = [
     id: 'us-midterms-2024',
     countryCode: 'US',
     level: 'national',
-    scopeName: 'Élections de mi-mandat (Chambre des représentants et Sénat)',
+    scopeName: 'Élections au Congrès (Chambre des représentants et un tiers du Sénat)',
     mandateDuration: '2 ans (Chambre), 6 ans par tiers (Sénat)',
     powers: 'Élection de la Chambre des représentants et renouvellement partiel du Sénat, aux côtés de la présidentielle.',
     date: '2024-11-05',

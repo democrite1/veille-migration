@@ -23,6 +23,21 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-21-us-2024',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/gop-trump',
+    summary: {
+      fr: "États-Unis : les élections au Congrès de novembre 2024 étaient présentées comme « de mi-mandat » ; elles se sont tenues le même jour que l'élection présidentielle. Le nombre de sièges et les résultats ne changent pas.",
+      en: "United States: the congressional elections of November 2024 were described as \"midterm\" elections; they were held on the same day as the presidential election. The seat counts and results are unchanged.",
+    },
+    source: {
+      name: 'Ballotpedia — Election results, 2024: U.S. Congress',
+      url: 'https://ballotpedia.org/Election_results,_2024:_U.S._Congress',
+      accessedOn: '2026-09-10',
+    },
+  },
+  {
     id: '2026-10-21-mi-hazank-2026',
     date: '2026-10-21',
     kind: 'correction',

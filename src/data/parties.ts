@@ -1266,7 +1266,7 @@ export const parties: Party[] = [
     ],
     electoralHistory: [
       {
-        label: 'Élections de mi-mandat 2024 — Chambre des représentants',
+        label: 'Élections au Congrès 2024 — Chambre des représentants',
         chamber: 'Chambre des représentants',
         date: '2024-11-05',
         seats: 220,
@@ -1278,7 +1278,7 @@ export const parties: Party[] = [
         },
       },
       {
-        label: 'Élections de mi-mandat 2024 — Sénat',
+        label: 'Élections au Congrès 2024 — Sénat',
         chamber: 'Sénat',
         date: '2024-11-05',
         seats: 53,
