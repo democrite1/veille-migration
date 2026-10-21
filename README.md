@@ -126,5 +126,5 @@ npx tsx scripts/fetch/parties.ts
    `fetch:news`.
 3. **Monétisation** : dons (Stripe/Liberapay/Ko-fi) à intégrer en pied de
    page ; éviter AdSense (cf. brief).
-4. **i18n complète** : les libellés de pays (`COUNTRY_LABELS`) et le
-   contenu de la page méthodologie restent en français même en version EN.
+4. **i18n complète** : les libellés de pays (`COUNTRY_LABELS`) restent en
+   français même en version EN.

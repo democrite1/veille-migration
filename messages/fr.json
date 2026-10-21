@@ -9,9 +9,9 @@
   },
   "home": {
     "title": "Observatoire des politiques migratoires",
-    "subtitle": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties occidentales.",
+    "subtitle": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties pluralistes.",
     "scopeTitle": "Périmètre",
-    "scopeText": "UE27, Royaume-Uni, Norvège, Suisse, Islande, États-Unis, Canada, Australie, Nouvelle-Zélande, Argentine. Sélection sur critère politique (démocraties occidentales avec mouvements anti-immigration actifs), pas ethnique.",
+    "scopeText": "UE27, Royaume-Uni, Norvège, Suisse, Islande, États-Unis, Canada, Australie, Nouvelle-Zélande, Argentine, Japon. Sélection sur un critère politique : démocraties pluralistes où des partis ou des gouvernements portent des politiques de réduction de l'immigration. Ni géographique ni ethnique.",
     "countriesLive": "Pays actuellement couverts",
     "explorePartiesLink": "Explorer l'annuaire des partis →",
     "readMethodology": "Lire la méthodologie →"
@@ -42,7 +42,57 @@
   },
   "methodology": {
     "title": "Méthodologie",
-    "intro": "Ce site documente les partis, lois et élections liés aux politiques migratoires dans les démocraties occidentales. Chaque classification est sourcée et vérifiable.",
+    "intro": "Ce site recense les partis, les lois et les élections liés aux politiques de réduction de l'immigration dans des démocraties pluralistes. Cette page décrit ce qu'il fait réellement : qui est inclus et pourquoi, comment les partis sont classés, d'où viennent les informations et comment les erreurs sont corrigées.",
+    "scope": {
+      "title": "Périmètre",
+      "text": "Le site couvre des démocraties pluralistes, c'est-à-dire des pays dont le parlement est issu d'élections où plusieurs partis sont en concurrence, dans lesquelles des partis ou des gouvernements portent des politiques de réduction de l'immigration : les 27 États de l'Union européenne, le Royaume-Uni, la Norvège, la Suisse, l'Islande, les États-Unis, le Canada, l'Australie, la Nouvelle-Zélande, l'Argentine et le Japon. Le critère est politique, ni géographique ni ethnique : un autre pays qui le remplit peut être ajouté.",
+      "covered": "{count} pays du périmètre ont aujourd'hui au moins une fiche de parti. Sans fiche à ce jour : {missing}."
+    },
+    "directory": {
+      "title": "Annuaire des partis",
+      "criteria": "Un parti est inclus s'il remplit l'une de ces deux conditions : (a) son programme officiel demande explicitement de réduire ou d'arrêter l'immigration, ou la « remigration » ; (b) un jeu de données académique de référence le classe à l'extrême droite : The PopuList en Europe, et hors d'Europe, que The PopuList ne couvre pas, ParlGov (famille « Right-wing »). Un parti qui ne remplit aucune des deux conditions est retiré, et le retrait est inscrit au journal des corrections.",
+      "notJudgment": "L'inclusion d'un parti signifie que sa position sur l'immigration est documentée et sourcée. Ce n'est ni un jugement sur ce parti ni une recommandation.",
+      "basesIntro": "Chaque fiche cite la source de son classement. Répartition actuelle des {count} fiches :",
+      "basis": {
+        "popuList": "The PopuList 4.0 (Europe) : {count} partis",
+        "parlGov": "ParlGov, pour les pays que The PopuList ne couvre pas : {count, plural, one {# parti} other {# partis}} ({names})",
+        "secondary": "Description d'une encyclopédie ou de la presse, quand aucun jeu de données ne code le parti : {count, plural, one {# parti} other {# partis}} ({names})",
+        "programme": "Programme du parti lui-même, aucun jeu de données ne couvrant le pays : {count, plural, one {# parti} other {# partis}} ({names})"
+      }
+    },
+    "grid": {
+      "title": "Grille de classification",
+      "axis1Title": "Axe 1 — Intention",
+      "axis1": "<strong>Stop / réduction de l'immigration</strong> ou <strong>remigration</strong>. Le tag « remigration » s'applique si le parti ou ses dirigeants emploient explicitement le terme, ou si la politique décrite est équivalente sur le fond pour des personnes en séjour régulier : retours « volontaires » massifs incités financièrement, objectifs chiffrés de départs. L'expulsion de personnes en situation irrégulière, même assortie d'un objectif chiffré, relève de la réduction. Le tag est toujours sourcé, y compris lorsque le parti conteste ou rejette le terme.",
+      "axis2Title": "Axe 2 — Statut d'action",
+      "axis2": "<strong>Programme</strong> (engagements du parti, sans texte adopté) ou <strong>mesures concrètes</strong> (texte adopté ou mesure en vigueur : loi votée, décret, mesure administrative). Une proposition de loi déposée mais non adoptée, ou une résolution non contraignante, laisse la fiche en « programme » ; elle y est mentionnée avec sa date. Une mesure est attribuée à un parti si elle a été adoptée quand il avait des ministres, ou si elle figure dans un accord de soutien écrit qu'il a signé. Le statut « mesures concrètes » reste actif tant que la mesure est en vigueur, que le parti soit au pouvoir ou non ; si elle est abrogée ou cesse d'être appliquée, la fiche passe en « mesures concrètes (historique, abrogée le [date]) » et garde un historique daté.",
+      "registers": "Pour établir qu'un parti n'a fait adopter aucun texte, la fiche cite le registre du parlement consulté. Quand ce registre n'a pas pu être consulté, la fiche le signale au lieu de conclure."
+    },
+    "sources": {
+      "title": "Sources",
+      "preference": "Les sources officielles (parlements, gouvernements, administrations électorales, Union européenne) et les jeux de données académiques sont privilégiés. Faute de source officielle accessible, le site cite Wikipédia ou la presse. Un parti ou une organisation militante n'est cité que pour ses propres positions, ou en complément d'une source neutre. Les chiffres d'un gouvernement ou d'un parti sont attribués à leur auteur.",
+      "breakdownIntro": "Répartition réelle des {total} sources citées sur le site :",
+      "kind": {
+        "official": "Sources officielles",
+        "dataset": "Jeux de données et travaux académiques",
+        "wikipedia": "Wikipédia",
+        "press": "Presse",
+        "party": "Documents et comptes des partis"
+      },
+      "kindLine": "{label} : {count} ({percent})",
+      "dates": "Chaque source porte sa date de consultation et un lien vers sa copie archivée dans la Wayback Machine. Les liens sont contrôlés et archivés chaque semaine. Une source qui n'a pas pu être vérifiée est signalée comme telle sur la page, avec la raison : {count, plural, one {# source} other {# sources}} aujourd'hui."
+    },
+    "corrections": {
+      "title": "Politique de correction",
+      "text": "Toute erreur corrigée, tout changement de classement et tout retrait de fiche sont inscrits au journal des corrections, avec la date, ce que le site affirmait, ce qu'il affirme désormais et la source de la correction. Les reformulations qui ne changent aucun fait n'y figurent pas.",
+      "report": "Pour signaler une erreur, utiliser la page contact. Chaque signalement est vérifié à partir des sources, quelle que soit son origine.",
+      "log": "Journal des corrections →",
+      "contact": "Contact →"
+    },
+    "notDone": {
+      "title": "Ce que ce site ne fait pas",
+      "text": "Il ne met pas en avant les structures jeunesse des partis et ne publie aucun lien d'adhésion ou de don vers un parti. Les initiatives non partisanes (section actualités) sont traitées comme des actualités : nature, développements, statut légal, couverture de presse, sans fiche ni lien de contact ou d'adhésion."
+    },
     "charter": {
       "title": "Charte de vocabulaire",
       "intro": "Les textes du site décrivent, ils ne qualifient pas. Ces règles valent pour toutes les fiches, élections, lois et actualités :",
@@ -67,7 +117,7 @@
     "intro": "Développements liés aux politiques migratoires qui ne relèvent pas de l'annuaire : initiatives citoyennes et militantes, communautés fermées, procédures judiciaires, scrutins et votations. Traitement journalistique : nature, développements, statut légal."
   },
   "footer": {
-    "sources": "Sources : Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
+    "sources": "Sources : sites officiels, jeux de données académiques (The PopuList, ParlGov), Wikipédia et presse, chacune datée et archivée. Détail dans la méthodologie.",
     "donate": "Soutenir ce projet",
     "notice": "Contenu à but journalistique et documentaire. Aucune donnée personnelle n’est collectée à des fins de ciblage. Toute classification est sourcée et vérifiable — voir la méthodologie.",
     "legal": "Mentions légales",
@@ -78,7 +128,7 @@
   "meta": {
     "siteName": "Observatoire des politiques migratoires",
     "siteTitle": "Observatoire des politiques migratoires — partis, lois et élections",
-    "siteDescription": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties occidentales.",
+    "siteDescription": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties pluralistes.",
     "partiesTitle": "Annuaire des partis",
     "partiesDescription": "Fiches sourcées des partis dont le programme ou la classification académique porte sur la réduction de l'immigration ou la remigration : statut électoral, historique, implantation."
   },

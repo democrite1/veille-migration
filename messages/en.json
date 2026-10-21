@@ -9,9 +9,9 @@
   },
   "home": {
     "title": "Migration Policy Watch",
-    "subtitle": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "subtitle": "Factual, sourced tracking of parties, laws and elections related to immigration policy in pluralist democracies.",
     "scopeTitle": "Scope",
-    "scopeText": "EU27, United Kingdom, Norway, Switzerland, Iceland, United States, Canada, Australia, New Zealand, Argentina. Selection by political criterion (Western democracies with active anti-immigration movements), not ethnic.",
+    "scopeText": "EU27, United Kingdom, Norway, Switzerland, Iceland, United States, Canada, Australia, New Zealand, Argentina, Japan. Selected on a political criterion: pluralist democracies where parties or governments pursue policies to reduce immigration. Neither geographic nor ethnic.",
     "countriesLive": "Currently covered countries",
     "explorePartiesLink": "Explore the party directory →",
     "readMethodology": "Read the methodology →"
@@ -42,7 +42,57 @@
   },
   "methodology": {
     "title": "Methodology",
-    "intro": "This site documents parties, laws and elections related to migration policy across Western democracies. Every classification is sourced and verifiable.",
+    "intro": "This site tracks parties, laws and elections related to policies to reduce immigration in pluralist democracies. This page describes what it actually does: who is included and why, how parties are classified, where the information comes from and how errors are corrected.",
+    "scope": {
+      "title": "Scope",
+      "text": "The site covers pluralist democracies, that is countries whose parliament comes out of elections in which several parties compete, where parties or governments pursue policies to reduce immigration: the 27 member states of the European Union, the United Kingdom, Norway, Switzerland, Iceland, the United States, Canada, Australia, New Zealand, Argentina and Japan. The criterion is political, neither geographic nor ethnic: another country that meets it can be added.",
+      "covered": "{count} countries in scope currently have at least one party profile. None yet: {missing}."
+    },
+    "directory": {
+      "title": "Party directory",
+      "criteria": "A party is included if it meets one of two conditions: (a) its official programme explicitly calls for reducing or stopping immigration, or for \"remigration\"; (b) a reference academic dataset classifies it as far right: The PopuList in Europe and, outside Europe, which The PopuList does not cover, ParlGov (\"Right-wing\" family). A party that meets neither condition is removed, and the removal is recorded in the corrections log.",
+      "notJudgment": "Including a party means that its position on immigration is documented and sourced. It is neither a judgment on that party nor an endorsement.",
+      "basesIntro": "Each profile cites the source of its classification. Current breakdown of the {count} profiles:",
+      "basis": {
+        "popuList": "The PopuList 4.0 (Europe): {count} parties",
+        "parlGov": "ParlGov, for countries The PopuList does not cover: {count, plural, one {# party} other {# parties}} ({names})",
+        "secondary": "Description in an encyclopedia or the press, when no dataset codes the party: {count, plural, one {# party} other {# parties}} ({names})",
+        "programme": "The party's own programme, as no dataset covers the country: {count, plural, one {# party} other {# parties}} ({names})"
+      }
+    },
+    "grid": {
+      "title": "Classification grid",
+      "axis1Title": "Axis 1 — Intention",
+      "axis1": "<strong>Stop / reduce immigration</strong> or <strong>remigration</strong>. The \"remigration\" tag applies if the party or its leaders explicitly use the term, or if the policy described is substantively equivalent for people residing legally: large-scale, financially encouraged \"voluntary\" returns, numerical departure targets. Deporting people without legal status, even with a numerical target, counts as reduction. The tag is always sourced, including when the party disputes or rejects the term.",
+      "axis2Title": "Axis 2 — Action status",
+      "axis2": "<strong>Programme</strong> (the party's commitments, with no adopted text) or <strong>concrete measures</strong> (an adopted text or a measure in force: a law passed, a decree, an administrative measure). A bill filed but not adopted, or a non-binding resolution, leaves the profile at \"programme\"; it is mentioned there with its date. A measure is attributed to a party if it was adopted while the party held ministerial posts, or if it is part of a written support agreement the party signed. The \"concrete measures\" status remains while the measure is in force, whether or not the party is in power; if it is repealed or no longer applied, the profile moves to \"concrete measures (historical, repealed on [date])\" and keeps a dated history.",
+      "registers": "To establish that a party has had no text adopted, the profile cites the parliamentary register consulted. When that register could not be consulted, the profile says so instead of drawing a conclusion."
+    },
+    "sources": {
+      "title": "Sources",
+      "preference": "Official sources (parliaments, governments, electoral administrations, the European Union) and academic datasets come first. Where no official source is accessible, the site cites Wikipedia or the press. A party or a campaigning organisation is cited only for its own positions, or as a complement to a neutral source. Figures from a government or a party are attributed to their author.",
+      "breakdownIntro": "Actual breakdown of the {total} sources cited on the site:",
+      "kind": {
+        "official": "Official sources",
+        "dataset": "Datasets and academic work",
+        "wikipedia": "Wikipedia",
+        "press": "Press",
+        "party": "Party documents and accounts"
+      },
+      "kindLine": "{label}: {count} ({percent})",
+      "dates": "Each source shows the date it was checked and a link to its archived copy in the Wayback Machine. Links are checked and archived every week. A source that could not be verified is marked as such on the page, with the reason: {count, plural, one {# source} other {# sources}} today."
+    },
+    "corrections": {
+      "title": "Corrections policy",
+      "text": "Every error corrected, every change of classification and every profile removed is recorded in the corrections log, with the date, what the site said, what it says now and the source of the correction. Rewording that changes no fact is not logged.",
+      "report": "To report an error, use the contact page. Every report is checked against the sources, whoever sends it.",
+      "log": "Corrections log →",
+      "contact": "Contact →"
+    },
+    "notDone": {
+      "title": "What this site does not do",
+      "text": "It does not feature party youth organisations and publishes no membership or donation link to any party. Non-partisan initiatives (news section) are covered as news: nature, developments, legal status, press coverage, with no profile and no contact or membership link."
+    },
     "charter": {
       "title": "Vocabulary charter",
       "intro": "The texts on this site describe; they do not characterise. These rules apply to every party profile, election, law and news item:",
@@ -67,7 +117,7 @@
     "intro": "Developments in migration policy outside the directory: citizen and activist initiatives, closed communities, court cases, elections and referendums. Journalistic treatment: nature, developments, legal status."
   },
   "footer": {
-    "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
+    "sources": "Sources: official sites, academic datasets (The PopuList, ParlGov), Wikipedia and the press, each dated and archived. Details in the methodology.",
     "donate": "Support this project",
     "notice": "Journalistic and documentary content. No personal data is collected for targeting. Every classification is sourced and verifiable — see the methodology.",
     "legal": "Legal notice",
@@ -78,7 +128,7 @@
   "meta": {
     "siteName": "Migration Policy Watch",
     "siteTitle": "Migration Policy Watch — parties, laws and elections",
-    "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy in pluralist democracies.",
     "partiesTitle": "Party directory",
     "partiesDescription": "Sourced profiles of parties whose platform or academic classification centres on reducing immigration or on remigration: electoral standing, history, footprint."
   },

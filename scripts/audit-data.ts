@@ -16,6 +16,7 @@ import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
 import { corrections } from '../src/data/corrections';
 import { PUBLISHER } from '../src/lib/publisher';
+import { SCOPE } from '../src/lib/scope';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -355,6 +356,10 @@ for (const c of corrections) {
 }
 // An incomplete legal notice must never reach main (LCEN, decision 3).
 if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
+
+// A country outside the scope stated in the methodology (src/lib/scope.ts).
+for (const p of parties) if (!SCOPE.includes(p.countryCode)) err(`parti ${p.slug}`, `pays hors périmètre : ${p.countryCode}`);
+for (const e of elections) if (!SCOPE.includes(e.countryCode)) err(`élection ${e.id}`, `pays hors périmètre : ${e.countryCode}`);
 
 // ------------------------------------------------- country labels across UI
 const usedCodes = new Set<string>([...parties.map((p) => p.countryCode), ...elections.map((e) => e.countryCode)]);
