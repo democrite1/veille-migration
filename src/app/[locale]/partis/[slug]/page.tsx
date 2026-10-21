@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useFormatter, useTranslations } from 'next-intl';
 import { getPartyBySlug, getParties } from '@/lib/queries';
 import type { Party } from '@/data/types';
 import {
@@ -11,6 +11,7 @@ import SourceCite from '@/components/SourceCite';
 import CountryBanner from '@/components/CountryBanner';
 import { setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
+import { isoDay, lastChecked } from '@/lib/freshness';
 
 const COUNTRY_LABELS: Record<string, string> = {
   FR: 'France',
@@ -83,6 +84,8 @@ export default async function PartyPage({
 
 function PartyPageInner({ party }: { party: Party }) {
   const t = useTranslations('parties');
+  const format = useFormatter();
+  const checked = lastChecked(party);
 
   return (
     <article className="space-y-8">
@@ -96,6 +99,9 @@ function PartyPageInner({ party }: { party: Party }) {
           <IntentionBadge classification={party.intention} />
           <ActionStatusBadge classification={party.actionStatus} />
         </div>
+        {checked ? (
+          <p className="text-xs text-muted">{t('lastChecked', { date: format.dateTime(isoDay(checked), { dateStyle: 'long' }) })}</p>
+        ) : null}
       </header>
 
       <section className="card space-y-2">

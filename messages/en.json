@@ -37,7 +37,8 @@
     "history": "Status history",
     "verifiedOn": "checked on {date}",
     "unverified": "not checked: {reason}",
-    "archive": "archived copy"
+    "archive": "archived copy",
+    "lastChecked": "Sources last checked on {date}."
   },
   "methodology": {
     "title": "Methodology",
@@ -61,7 +62,8 @@
     "notice": "Journalistic and documentary content. No personal data is collected for targeting. Every classification is sourced and verifiable — see the methodology.",
     "legal": "Legal notice",
     "contact": "Contact and corrections",
-    "corrections": "Corrections log"
+    "corrections": "Corrections log",
+    "updated": "Content updated on {date}."
   },
   "meta": {
     "siteName": "Migration Policy Watch",

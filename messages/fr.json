@@ -37,7 +37,8 @@
     "history": "Historique du statut",
     "verifiedOn": "vérifié le {date}",
     "unverified": "non vérifié : {reason}",
-    "archive": "archive"
+    "archive": "archive",
+    "lastChecked": "Sources vérifiées pour la dernière fois le {date}."
   },
   "methodology": {
     "title": "Méthodologie",
@@ -61,7 +62,8 @@
     "notice": "Contenu à but journalistique et documentaire. Aucune donnée personnelle n’est collectée à des fins de ciblage. Toute classification est sourcée et vérifiable — voir la méthodologie.",
     "legal": "Mentions légales",
     "contact": "Contact et corrections",
-    "corrections": "Journal des corrections"
+    "corrections": "Journal des corrections",
+    "updated": "Contenu mis à jour le {date}."
   },
   "meta": {
     "siteName": "Observatoire des politiques migratoires",

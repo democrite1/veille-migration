@@ -1,8 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { useFormatter, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { CONTENT_UPDATED, isoDay } from '@/lib/freshness';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const format = useFormatter();
 
   return (
     <footer className="mt-16 border-t border-line py-8">
@@ -18,6 +20,7 @@ export default function Footer() {
             {t('corrections')}
           </Link>
         </nav>
+        <p>{t('updated', { date: format.dateTime(isoDay(CONTENT_UPDATED), { dateStyle: 'long' }) })}</p>
         <p>{t('sources')}</p>
         <p>{t('notice')}</p>
       </div>
