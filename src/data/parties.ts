@@ -79,11 +79,12 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 30,
       totalCountryMeps: 81,
-      europeanGroup: "Patriotes pour l'Europe (qu'il préside via Jordan Bardella)",
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Touteleurope.eu',
-        url: 'https://www.touteleurope.eu/institutions/patriotes-pour-l-europe-quatre-questions-sur-ce-groupe-politique-du-parlement-europeen-preside-par-jordan-bardella/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, France",
+        url: "https://results.elections.europa.eu/en/national-results/france/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -401,11 +402,12 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Premier Landrat (préfet de district) du parti obtenu à Sonneberg (Thuringe) en juin 2023, puis premier maire à Raguhn-Jeßnitz (Saxe-Anhalt) la même année. Percée confirmée à l'Ouest lors des élections municipales (Kommunalwahlen) de mars 2026 : 12,2% en Bavière (contre 4,5% en 2020) et 14,8% en Hesse (contre 6,8% en 2021), en plus des victoires régionales en Saxe-Anhalt, Rhénanie-Palatinat et Bade-Wurtemberg.",
+        "Robert Sesselmann, premier Landrat (administrateur de district) issu du parti, est en fonction à Sonneberg (Thuringe) depuis le 3 juillet 2023 ; Hannes Loth, élu en juillet 2023 à Raguhn-Jeßnitz (Saxe-Anhalt), est le premier maire AfD élu à plein temps. Aux élections municipales de Hesse de mars 2026, le parti obtient 14,8 % des voix selon le résultat provisoire, contre 6,8 % en 2021.",
       source: {
-        name: 'ZDFheute / Tagesspiegel',
-        url: 'https://www.zdfheute.de/politik/deutschland/sesselmann-afd-landrat-thueringen-sonneberg-100.html',
-        accessedOn: '2026-09-09',
+        name: 'hessenschau — Vorläufiges Landesergebnis der Kommunalwahl sieht CDU vor SPD und AfD',
+        url: 'https://www.hessenschau.de/politik/kommunalwahlen/vorlaeufiges-landesergebnis-der-kommunalwahl-sieht-cdu-vor-spd-und-afd-v6,vorlaeufiges-ergebnis-kom-hessen-100.html',
+        accessedOn: '2026-10-21',
+        note: "Article du 20 mars 2026. Robert Sesselmann : https://en.wikipedia.org/wiki/Robert_Sesselmann ; Hannes Loth : https://de.wikipedia.org/wiki/Hannes_Loth (consultés le 2026-10-21).",
       },
     },
     founded: 2013,
@@ -427,7 +429,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://bsw-vg.de',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/BSW_Bund' },
+      { platform: 'X', url: 'https://x.com/BSWbund' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Bündnis Sahra Wagenknecht » (Allemagne)",
@@ -612,11 +614,11 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Percée aux élections locales de mai 2025 : plus de 600 conseillers élus et prise de contrôle de plusieurs conseils de comté (dont le Kent, le Lincolnshire et Durham), ainsi que deux mairies avec scrutin direct (Greater Lincolnshire et Hull and East Yorkshire). Confirmée et amplifiée aux élections locales anglaises de mai 2026 (plus de 1 450 conseillers), puis par l'entrée simultanée au Senedd gallois et au Parlement écossais début mai 2026 — le parti est désormais représenté dans les quatre nations du Royaume-Uni.",
+        "Aux élections locales du 1er mai 2025, le parti gagne 677 sièges de conseillers, prend le contrôle de dix conseils (dont le Kent, le Lincolnshire et le comté de Durham) et remporte les deux mairies élues au suffrage direct de Greater Lincolnshire et de Hull and East Yorkshire. Aux élections locales de mai 2026, il gagne 1 451 sièges ; il entre la même année au Senedd et au Parlement écossais (voir le calendrier électoral).",
       source: {
-        name: 'The Guardian — Local elections 2025 results',
-        url: 'https://www.theguardian.com/politics/2025/may/02/local-elections-results-2025-reform-uk',
-        accessedOn: '2026-09-09',
+        name: 'Wikipedia — 2025 United Kingdom local elections',
+        url: 'https://en.wikipedia.org/wiki/2025_United_Kingdom_local_elections',
+        accessedOn: '2026-10-21',
       },
     },
     founded: 2018,
@@ -770,11 +772,12 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 24,
       totalCountryMeps: 76,
-      europeanGroup: 'Conservateurs et réformistes européens (ECR), que Giorgia Meloni préside',
+      europeanGroup: "Conservateurs et réformistes européens (ECR)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Italie',
-        url: 'https://elections-results.eu/national-results/italy/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Italie",
+        url: "https://results.elections.europa.eu/en/national-results/italy/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -803,7 +806,7 @@ export const parties: Party[] = [
       url: 'https://www.governo.it',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://www.leganord.org',
+    officialWebsite: 'https://www.legaonline.it',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/LegaSalvini' },
     ],
@@ -848,13 +851,15 @@ export const parties: Party[] = [
       },
     ],
     europeanRepresentation: {
-      meps: 8,
+      meps: 7,
       totalCountryMeps: 76,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'eunews.it — The Patriots for Europe group springs up in the EU Parliament',
-        url: 'https://www.eunews.it/en/2024/07/08/the-patriots-for-europe-group-springs-up-in-the-eu-parliament-it-is-the-third-largest-the-league-is-also-a-part/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Italie",
+        url: "https://results.elections.europa.eu/en/national-results/italy/2024-2029/",
+        accessedOn: '2026-10-21',
+        note: "8 élus en 2024 sur la liste de la Lega. Roberto Vannacci, parti fonder Futuro Nazionale, siège depuis 2026 au groupe ENS (Parlement européen, données ouvertes : https://data.europarl.europa.eu/api/v2/meps/show-current, consultées le 2026-10-21).",
+
       },
     },
     localImplantation: {
@@ -1012,9 +1017,10 @@ export const parties: Party[] = [
       totalCountryMeps: 31,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Pays-Bas',
-        url: 'https://elections-results.eu/national-results/netherlands/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Pays-Bas",
+        url: "https://results.elections.europa.eu/en/national-results/netherlands/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1045,7 +1051,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://ja21.nl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/JA21NL' },
+      { platform: 'X', url: 'https://x.com/JuisteAntwoord' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Juiste Antwoord 21 » (Pays-Bas)",
@@ -1480,9 +1486,10 @@ export const parties: Party[] = [
       totalCountryMeps: 20,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Autriche',
-        url: 'https://elections-results.eu/national-results/austria/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Autriche",
+        url: "https://results.elections.europa.eu/en/national-results/austria/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1627,9 +1634,10 @@ export const parties: Party[] = [
       totalCountryMeps: 61,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Espagne',
-        url: 'https://elections-results.eu/national-results/spain/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Espagne",
+        url: "https://results.elections.europa.eu/en/national-results/spain/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1658,9 +1666,8 @@ export const parties: Party[] = [
       url: 'https://www.france24.com/en/live-news/20251012-spanish-social-media-star-launches-new-far-right-party',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://seacabolafiesta.es',
+    officialWebsite: 'https://www.seacabolafiesta.com',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/vamosalvise' },
     ],
     classificationSource: {
       name: 'Wikipedia / presse espagnole',
@@ -1732,7 +1739,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://fidesz.hu',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/fidesz_hu' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Fidesz » (Hongrie)",
@@ -1791,11 +1797,13 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 11,
       totalCountryMeps: 21,
-      europeanGroup: "Patriotes pour l'Europe (PfE), rejoint en juillet 2024 après la rupture avec le PPE en 2021",
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Hongrie',
-        url: 'https://elections-results.eu/national-results/hungary/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Hongrie",
+        url: "https://results.elections.europa.eu/en/national-results/hungary/2024-2029/",
+        accessedOn: '2026-10-21',
+        note: "Sièges de la liste commune Fidesz-KDNP.",
+
       },
     },
     localImplantation: {
@@ -1826,7 +1834,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://mihazank.hu',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/mihazankmozgalom' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Mi Hazánk Mozgalom » (Hongrie)",
@@ -1911,7 +1918,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.perussuomalaiset.fi',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/perussuomalaiset' },
+      { platform: 'X', url: 'https://x.com/persut' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Suomen Maaseudun Puolue | Perussuomalaiset » (Finlande)",
@@ -1966,13 +1973,14 @@ export const parties: Party[] = [
       },
     ],
     europeanRepresentation: {
-      meps: 2,
+      meps: 1,
       totalCountryMeps: 15,
       europeanGroup: 'Conservateurs et réformistes européens (ECR)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Finlande',
-        url: 'https://elections-results.eu/national-results/finland/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Finlande",
+        url: "https://results.elections.europa.eu/en/national-results/finland/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -2063,9 +2071,10 @@ export const parties: Party[] = [
       totalCountryMeps: 22,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Belgique',
-        url: 'https://elections-results.eu/national-results/belgium/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Belgique",
+        url: "https://results.elections.europa.eu/en/national-results/belgium/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -2096,7 +2105,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.svp.ch',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/svp_ch' },
+      { platform: 'X', url: 'https://x.com/SVPch' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Schweizerische Volkspartei » (Suisse)",
@@ -2129,12 +2138,12 @@ export const parties: Party[] = [
         date: '2023-10-22',
         seats: 62,
         totalSeats: 200,
-        votePercent: 28.6,
+        votePercent: 27.9,
         source: {
-          name: 'Chancellerie fédérale — admin.ch',
-          url: 'https://www.bfs.admin.ch/bfs/fr/home/statistiques/politique/elections/conseil-national.html',
-          accessedOn: '2026-09-09',
-          note: 'Meilleur score du parti à une élection fédérale depuis 2015.',
+          name: 'Wikipedia — 2023 Swiss federal election',
+          url: 'https://en.wikipedia.org/wiki/2023_Swiss_federal_election',
+          accessedOn: '2026-10-21',
+          note: "En hausse par rapport à 2019 (25,6 %).",
         },
       },
       {
@@ -2181,7 +2190,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://partidochega.pt',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/partido_chega' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Chega » (Portugal)",
@@ -2242,9 +2250,10 @@ export const parties: Party[] = [
       totalCountryMeps: 21,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Portugal',
-        url: 'https://elections-results.eu/national-results/portugal/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Portugal",
+        url: "https://results.elections.europa.eu/en/national-results/portugal/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -2819,7 +2828,7 @@ export const parties: Party[] = [
       url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://www.niki.gr',
+    officialWebsite: 'https://nikh.gr',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/NIKI_official_' },
     ],
@@ -2893,7 +2902,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://spartiates.gr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/spartiates_gr' },
+      { platform: 'X', url: 'https://x.com/spartiates_PO' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Σπαρτιάτες » (Grèce)",
@@ -2961,9 +2970,9 @@ export const parties: Party[] = [
       url: 'https://www.euronews.ro/articole/george-simion-nu-suntem-in-alianta-cu-psd-nici-cu-pnl',
       accessedOn: '2026-09-07',
     },
-    officialWebsite: 'https://www.aur.ro',
+    officialWebsite: 'https://partidulaur.ro',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/AUR_Romania' },
+      { platform: 'X', url: 'https://x.com/partidulaur' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Alianța pentru Unirea Românilor » (Roumanie)",
@@ -3032,7 +3041,7 @@ export const parties: Party[] = [
       url: 'https://www.rferl.org/a/sosoaca-romania-far-right-presidential-election/33209702.html',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://sosromania.eu',
+    officialWebsite: 'https://sosro.ro',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/sosoacadiana' },
     ],
@@ -3105,7 +3114,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.sns.sk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/SNSoficialne' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Slovenská Národná Strana » (Slovaquie)",
@@ -3247,7 +3255,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://danmarksdemokraterne.dk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/Danmarksdem' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Danmarksdemokraterne » (Danemark)",
@@ -3663,7 +3670,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://dp.hr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/domovinskipokret' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Domovinski Pokret » (Croatie)",
@@ -3741,9 +3747,8 @@ export const parties: Party[] = [
       url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
       accessedOn: '2026-09-10',
     },
-    officialWebsite: 'https://hrvatski-suverenisti.hr',
+    officialWebsite: 'https://suverenisti.hr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/hrsuverenisti' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Hrvatski Suverenisti » (Croatie)",
@@ -3837,7 +3842,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.sds.si',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/SDS_Slovenija' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Slovenska Demokratska Stranka » (Slovénie)",
@@ -3920,7 +3924,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://vazrazhdane.bg',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/vazrazhdane_bg' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Vazrazhdane » (Bulgarie)",
@@ -4073,7 +4076,6 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://ekre.ee',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/EKRE_erakond' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Eesti Konservatiivne Rahvaerakond » (Estonie)",
@@ -4157,7 +4159,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.nacionalaapvieniba.lv',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/nacionalaap' },
+      { platform: 'X', url: 'https://x.com/vl_tblnnk' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Nacionālā Apvienība » (Lettonie)",
@@ -4305,11 +4307,11 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Progression spectaculaire aux élections législatives du 24 mai 2026 : le parti double sa représentation parlementaire, passant de 4 à 8 sièges (environ 11% des voix, contre 6,8% en 2021), devenant la troisième force politique du pays derrière le DISY (au pouvoir) et l'AKEL.",
+      "Aux élections législatives du 24 mai 2026, le parti passe de 4 à 8 sièges (10,9 % des voix, contre 6,8 % en 2021) et devient, à égalité de sièges avec le DIKO, la troisième force derrière le DISY et l'AKEL.",
     electoralStatusSource: {
-      name: 'Anixneuseis.gr',
-      url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
-      accessedOn: '2026-09-08',
+      name: 'Wikipedia — 2026 Cypriot legislative election',
+      url: 'https://en.wikipedia.org/wiki/2026_Cypriot_legislative_election',
+      accessedOn: '2026-10-21',
     },
     officialWebsite: 'https://elamcy.com',
     socialAccounts: [

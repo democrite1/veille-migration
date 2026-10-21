@@ -733,12 +733,12 @@ export const elections: Election[] = [
     date: '2023-10-22',
     status: 'resultat_connu',
     result:
-      "L'UDC (SVP) confirme sa place de premier parti du pays avec 62 sièges (28,6%), son meilleur score depuis 2015. Conserve ses 2 sièges au Conseil fédéral (Guy Parmelin, Albert Rösti).",
+      "L'UDC (SVP) reste le premier parti du pays avec 62 sièges et 27,9 % des voix, contre 25,6 % en 2019.",
     totalSeats: 200,
     source: {
-      name: 'Chancellerie fédérale',
-      url: 'https://www.bfs.admin.ch/bfs/fr/home/statistiques/politique/elections/conseil-national.html',
-      accessedOn: '2026-09-10',
+      name: 'Wikipedia — 2023 Swiss federal election',
+      url: 'https://en.wikipedia.org/wiki/2023_Swiss_federal_election',
+      accessedOn: '2026-10-21',
     },
   },
   {

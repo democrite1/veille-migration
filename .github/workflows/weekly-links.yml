@@ -1,0 +1,63 @@
+name: Weekly link check
+
+# Checks every URL cited in src/data (scripts/check-links.ts), asks the Wayback
+# Machine to archive the ones without a recent copy (scripts/archive-sources.ts),
+# and keeps one open issue labelled "liens" with the report while links are
+# broken. The run fails in that case, so a red badge shows on the repository.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays, 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Check links
+        id: check
+        continue-on-error: true
+        run: npx tsx scripts/check-links.ts links-report.md
+
+      - name: Archive sources in the Wayback Machine
+        continue-on-error: true
+        run: npx tsx scripts/archive-sources.ts
+
+      - name: Keep the report in an issue
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create liens --color B60205 --description "Contrôle hebdomadaire des liens" --force
+          n=$(gh issue list --label liens --state open --json number --jq '.[0].number')
+          if [ -n "$n" ]; then
+            gh issue edit "$n" --body-file links-report.md
+            gh issue comment "$n" --body "Rapport mis à jour le $(date -u +%F)."
+          else
+            gh issue create --title "Liens cassés dans les sources" --label liens --body-file links-report.md
+          fi
+
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: links-report-${{ github.run_id }}
+          path: links-report.md
+          retention-days: 90
+
+      - name: Fail when links are broken
+        if: steps.check.outcome == 'failure'
+        run: exit 1

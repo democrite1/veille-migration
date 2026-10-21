@@ -36,7 +36,8 @@
     "socialAccounts": "Comptes officiels",
     "history": "Historique du statut",
     "verifiedOn": "vérifié le {date}",
-    "unverified": "non vérifié : {reason}"
+    "unverified": "non vérifié : {reason}",
+    "archive": "archive"
   },
   "methodology": {
     "title": "Méthodologie",

@@ -11,7 +11,9 @@
     "fetch:elections": "tsx scripts/fetch/elections.ts",
     "fetch:legislation": "tsx scripts/fetch/legislation.ts",
     "fetch:news": "tsx scripts/fetch/news.ts",
-    "audit": "tsx scripts/audit-data.ts"
+    "audit": "tsx scripts/audit-data.ts",
+    "links": "tsx scripts/check-links.ts",
+    "archive": "tsx scripts/archive-sources.ts"
   },
   "dependencies": {
     "next": "^15.5.27",

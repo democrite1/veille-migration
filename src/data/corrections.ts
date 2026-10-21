@@ -23,6 +23,61 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-21-liens-morts',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Liens : les sources européennes de dix fiches pointaient vers un site qui refuse désormais toute connexion ; elles citent le site officiel des résultats du Parlement européen. Six sites officiels de partis ont changé d'adresse, et dix-huit comptes X cités n'existaient pas : sept ont été remplacés par le compte publié sur le site du parti, les onze autres retirés faute de compte vérifiable. Quatre articles disparus ont été remplacés.",
+      en: "Links: the European sources of ten entries pointed to a site that now refuses connections; they cite the European Parliament official results site instead. Six party websites have moved, and eighteen cited X accounts did not exist: seven were replaced by the account published on the party website, the other eleven removed for want of a verifiable account. Four vanished articles were replaced.",
+    },
+  },
+  {
+    id: '2026-10-21-eurodeputes',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/perussuomalaiset',
+    summary: {
+      fr: "Vrais Finlandais : 1 eurodéputé élu en 2024, et non 2. Lega : 7 eurodéputés aujourd'hui, et non 8, Roberto Vannacci siégeant depuis 2026 avec Futuro Nazionale au groupe ENS.",
+      en: "Finns Party: 1 MEP elected in 2024, not 2. Lega: 7 MEPs today, not 8, as Roberto Vannacci has sat with Futuro Nazionale in the ESN group since 2026.",
+    },
+    source: {
+      name: "Parlement européen — résultats des élections européennes 2024, Finlande",
+      url: 'https://results.elections.europa.eu/en/national-results/finland/2024-2029/',
+      accessedOn: '2026-10-21',
+    },
+  },
+  {
+    id: '2026-10-21-udc-2023',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/elections',
+    summary: {
+      fr: "Élections fédérales suisses de 2023 : l'UDC a obtenu 27,9 % des voix, et non 28,6 %.",
+      en: "2023 Swiss federal election: the SVP won 27.9% of the vote, not 28.6%.",
+    },
+    source: {
+      name: "Wikipedia — 2023 Swiss federal election",
+      url: 'https://en.wikipedia.org/wiki/2023_Swiss_federal_election',
+      accessedOn: '2026-10-21',
+    },
+  },
+  {
+    id: '2026-10-21-afd-implantation',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/afd',
+    summary: {
+      fr: "AfD : la fiche parlait de « victoires régionales » en Rhénanie-Palatinat et au Bade-Wurtemberg, où le parti a obtenu 19,5 % et 18,8 % (troisième place). Le score de 12,2 % aux municipales bavaroises de 2026, sans source vérifiable, est retiré ; celui de la Hesse (14,8 %, résultat provisoire) est sourcé. Hannes Loth est le premier maire AfD élu à plein temps, pas le premier maire AfD.",
+      en: "AfD: the entry spoke of \"regional victories\" in Rhineland-Palatinate and Baden-Württemberg, where the party won 19.5% and 18.8% (third place). The 12.2% figure for the 2026 Bavarian municipal elections, without a verifiable source, is removed; the Hesse figure (14.8%, provisional) is sourced. Hannes Loth is the first full-time AfD mayor, not the first AfD mayor.",
+    },
+    source: {
+      name: "hessenschau — Vorläufiges Landesergebnis der Kommunalwahl",
+      url: 'https://www.hessenschau.de/politik/kommunalwahlen/vorlaeufiges-landesergebnis-der-kommunalwahl-sieht-cdu-vor-spd-und-afd-v6,vorlaeufiges-ergebnis-kom-hessen-100.html',
+      accessedOn: '2026-10-21',
+    },
+  },
+  {
     id: '2026-10-21-remigration-non-etablie',
     date: '2026-10-21',
     kind: 'reclassement',
