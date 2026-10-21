@@ -10,9 +10,17 @@ export default function LocaleSwitcher() {
 
   const other = locale === 'fr' ? 'en' : 'fr';
 
+  // The query (the directory's ?country= filter) is read at click time and
+  // kept, which avoids useSearchParams and the Suspense boundary it requires
+  // on statically rendered pages.
+  const switchLocale = () => {
+    const query = Object.fromEntries(new URLSearchParams(window.location.search));
+    router.replace({ pathname, query }, { locale: other });
+  };
+
   return (
     <button
-      onClick={() => router.replace(pathname, { locale: other })}
+      onClick={switchLocale}
       className="rounded border border-line px-2 py-1 text-xs uppercase tracking-wide hover:border-accent hover:text-accent"
       aria-label="Switch language"
     >

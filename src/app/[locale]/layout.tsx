@@ -36,13 +36,14 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const tc = await getTranslations('common');
 
   return (
     <html lang={locale}>
       <body className="min-h-screen font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <a href="#main-content" className="skip-link">
-            {locale === 'en' ? 'Skip to main content' : 'Aller au contenu principal'}
+            {tc('skipLink')}
           </a>
           <Header />
           <main id="main-content" className="mx-auto max-w-5xl px-4 py-10">

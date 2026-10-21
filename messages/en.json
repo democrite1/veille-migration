@@ -5,7 +5,8 @@
     "elections": "Elections",
     "legislation": "Legislation",
     "news": "News",
-    "methodology": "Methodology"
+    "methodology": "Methodology",
+    "brand": "Migration Policy Watch"
   },
   "home": {
     "title": "Migration Policy Watch",
@@ -39,7 +40,20 @@
     "unverified": "not checked: {reason}",
     "archive": "archived copy",
     "lastChecked": "Sources last checked on {date}.",
-    "leaderAccount": "personal account: {name}, party leader"
+    "leaderAccount": "personal account: {name}, party leader",
+    "sectionElectoral": "Electoral status",
+    "sectionHistory": "Electoral history",
+    "sectionPresence": "Presence",
+    "europeanParliament": "European Parliament",
+    "meps": "{count, plural, one {# MEP} other {# MEPs}}",
+    "mepsOfTotal": "{count, plural, one {# MEP} other {# MEPs}} of the country's {total}",
+    "europeanGroup": "group: {group}",
+    "localPresence": "Local presence",
+    "mayors": "{count, plural, one {# mayor} other {# mayors}}",
+    "seats": "{seats} / {total} seats",
+    "sectionProfile": "Profile",
+    "founded": "Founded",
+    "viewProfile": "View profile →"
   },
   "methodology": {
     "title": "Methodology",
@@ -107,15 +121,36 @@
   },
   "elections": {
     "title": "Electoral tracker",
-    "intro": "National, regional, local and by-elections, all levels."
+    "intro": "National, regional, local and by-elections, all levels.",
+    "level": {
+      "national": "National",
+      "regional": "Regional",
+      "local": "Local",
+      "partial": "By-election"
+    },
+    "statusKnown": "Result known",
+    "statusUpcoming": "Upcoming",
+    "mandate": "term: {duration}",
+    "seatsContested": "{count, plural, one {# seat} other {# seats}} up for election out of {total}",
+    "assembly": "assembly of {total} seats",
+    "powers": "Powers",
+    "result": "Result"
   },
   "legislation": {
     "title": "Legislative tracker",
-    "intro": "Immigration legislation (laws, decrees, EU acts) adopted or under advanced discussion, by country and at EU level."
+    "intro": "Immigration legislation (laws, decrees, EU acts) adopted or under advanced discussion, by country and at EU level.",
+    "status": {
+      "promulguee": "Enacted",
+      "en_discussion": "Under discussion",
+      "invalidee": "Struck down by the courts",
+      "abrogee": "Repealed",
+      "caduque": "Lapsed"
+    }
   },
   "news": {
     "title": "News",
-    "intro": "Developments in migration policy outside the directory: citizen and activist initiatives, closed communities, court cases, elections and referendums. Journalistic treatment: nature, developments, legal status."
+    "intro": "Developments in migration policy outside the directory: citizen and activist initiatives, closed communities, court cases, elections and referendums. Journalistic treatment: nature, developments, legal status.",
+    "legalStatus": "Legal status"
   },
   "footer": {
     "sources": "Sources: official sites, academic datasets (The PopuList, ParlGov), Wikipedia and the press, each dated and archived. Details in the methodology.",
@@ -193,5 +228,9 @@
     "corrections": "Errors corrected, changes of classification and removed profiles are recorded in the corrections log, with their date and source. To report an error, write to the address on the contact page.",
     "correctionsLink": "Corrections log →",
     "contactLink": "Contact →"
+  },
+  "common": {
+    "field": "{label}: ",
+    "skipLink": "Skip to main content"
   }
 }

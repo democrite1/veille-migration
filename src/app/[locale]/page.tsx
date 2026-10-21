@@ -1,46 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getParties } from '@/lib/queries';
 import { setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
-
-const COUNTRY_LABELS: Record<string, string> = {
-  FR: 'France',
-  DE: 'Allemagne',
-  GB: 'Royaume-Uni',
-  IT: 'Italie',
-  NL: 'Pays-Bas',
-  US: 'États-Unis',
-  SE: 'Suède',
-  AT: 'Autriche',
-  ES: 'Espagne',
-  HU: 'Hongrie',
-  FI: 'Finlande',
-  BE: 'Belgique',
-  CH: 'Suisse',
-  PT: 'Portugal',
-  PL: 'Pologne',
-  NO: 'Norvège',
-  CZ: 'République tchèque',
-  GR: 'Grèce',
-  RO: 'Roumanie',
-  SK: 'Slovaquie',
-  DK: 'Danemark',
-  AU: 'Australie',
-  CA: 'Canada',
-  HR: 'Croatie',
-  SI: 'Slovénie',
-  BG: 'Bulgarie',
-  NZ: 'Nouvelle-Zélande',
-  AR: 'Argentine',
-  EE: 'Estonie',
-  LV: 'Lettonie',
-  LU: 'Luxembourg',
-  CY: 'Chypre',
-  IE: 'Irlande',
-  IS: 'Islande',
-  JP: 'Japon',
-};
+import { countryName } from '@/lib/scope';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -56,6 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
 function HomePageInner({ countries }: { countries: string[] }) {
   const t = useTranslations('home');
+  const locale = useLocale();
 
   return (
     <div className="space-y-12">
@@ -74,9 +38,11 @@ function HomePageInner({ countries }: { countries: string[] }) {
       <section>
         <h2 className="font-serif text-lg font-semibold">{t('countriesLive')}</h2>
         <ul className="mt-3 flex flex-wrap gap-3">
-          {countries.map((c) => (
+          {[...countries]
+            .sort((a, b) => countryName(a, locale).localeCompare(countryName(b, locale), locale))
+            .map((c) => (
             <li key={c} className="badge badge-programme">
-              {COUNTRY_LABELS[c] ?? c}
+              {countryName(c, locale)}
             </li>
           ))}
         </ul>

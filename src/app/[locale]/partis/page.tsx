@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getParties } from '@/lib/queries';
 import {
@@ -9,44 +9,7 @@ import {
 import FlagIcon from '@/components/FlagIcon';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
-
-const COUNTRY_LABELS: Record<string, string> = {
-  FR: 'France',
-  DE: 'Allemagne',
-  GB: 'Royaume-Uni',
-  IT: 'Italie',
-  NL: 'Pays-Bas',
-  US: 'États-Unis',
-  SE: 'Suède',
-  AT: 'Autriche',
-  ES: 'Espagne',
-  HU: 'Hongrie',
-  FI: 'Finlande',
-  BE: 'Belgique',
-  CH: 'Suisse',
-  PT: 'Portugal',
-  PL: 'Pologne',
-  NO: 'Norvège',
-  CZ: 'République tchèque',
-  GR: 'Grèce',
-  RO: 'Roumanie',
-  SK: 'Slovaquie',
-  DK: 'Danemark',
-  AU: 'Australie',
-  CA: 'Canada',
-  HR: 'Croatie',
-  SI: 'Slovénie',
-  BG: 'Bulgarie',
-  NZ: 'Nouvelle-Zélande',
-  AR: 'Argentine',
-  EE: 'Estonie',
-  LV: 'Lettonie',
-  LU: 'Luxembourg',
-  CY: 'Chypre',
-  IE: 'Irlande',
-  IS: 'Islande',
-  JP: 'Japon',
-};
+import { countryName } from '@/lib/scope';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -64,7 +27,7 @@ export default async function PartiesPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const { country } = await searchParams;
-  const allParties = await getParties();
+  const allParties = await getParties(locale);
   const filtered = country ? allParties.filter((p) => p.countryCode === country) : allParties;
   return <PartiesPageInner country={country} allParties={allParties} filtered={filtered} />;
 }
@@ -79,7 +42,10 @@ function PartiesPageInner({
   filtered: Awaited<ReturnType<typeof getParties>>;
 }) {
   const t = useTranslations('parties');
-  const countries = Array.from(new Set(allParties.map((p) => p.countryCode)));
+  const locale = useLocale();
+  const countries = Array.from(new Set(allParties.map((p) => p.countryCode))).sort((a, b) =>
+    countryName(a, locale).localeCompare(countryName(b, locale), locale),
+  );
 
   return (
     <div className="space-y-8">
@@ -98,7 +64,7 @@ function PartiesPageInner({
             href={{ pathname: '/partis', query: { country: c } }}
             className={`badge ${country === c ? 'badge-mesures' : 'badge-programme'}`}
           >
-            <FlagIcon countryCode={c} className="h-3.5 w-auto rounded-[1px]" /> {COUNTRY_LABELS[c] ?? c}
+            <FlagIcon countryCode={c} className="h-3.5 w-auto rounded-[1px]" /> {countryName(c, locale)}
           </Link>
         ))}
       </nav>
@@ -113,7 +79,7 @@ function PartiesPageInner({
                 </Link>
                 <p className="flex items-center gap-1.5 text-sm text-muted">
                   <FlagIcon countryCode={party.countryCode} className="h-3.5 w-auto rounded-[1px]" />
-                  {COUNTRY_LABELS[party.countryCode] ?? party.countryCode} — {party.positioning}
+                  {countryName(party.countryCode, locale)} — {party.positioning}
                 </p>
               </div>
               <ElectoralStatusBadge status={party.electoralStatus} />
@@ -123,7 +89,7 @@ function PartiesPageInner({
               <ActionStatusBadge classification={party.actionStatus} />
             </div>
             <Link href={`/partis/${party.slug}`} className="text-sm text-accent hover:underline">
-              Voir la fiche →
+              {t('viewProfile')}
             </Link>
           </li>
         ))}

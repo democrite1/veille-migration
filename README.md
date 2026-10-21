@@ -52,7 +52,9 @@ Le site tourne sur http://localhost:3000 et redirige vers `/fr`.
 ## Mettre à jour les données
 
 Éditer `src/data/{parties,elections,legislation,news,corrections}.ts`
-(chaque fait doit rester sourcé, avec sa date de consultation), puis vérifier :
+(chaque fait doit rester sourcé, avec sa date de consultation). Tout texte
+français modifié ou ajouté doit recevoir sa traduction anglaise dans
+`src/data/i18n/en/` : l'audit échoue sinon. Puis vérifier :
 
 ```bash
 npm run audit
@@ -126,5 +128,3 @@ npx tsx scripts/fetch/parties.ts
    `fetch:news`.
 3. **Monétisation** : dons (Stripe/Liberapay/Ko-fi) à intégrer en pied de
    page ; éviter AdSense (cf. brief).
-4. **i18n complète** : les libellés de pays (`COUNTRY_LABELS`) restent en
-   français même en version EN.

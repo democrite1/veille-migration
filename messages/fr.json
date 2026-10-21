@@ -5,7 +5,8 @@
     "elections": "Élections",
     "legislation": "Législation",
     "news": "Actualités",
-    "methodology": "Méthodologie"
+    "methodology": "Méthodologie",
+    "brand": "Observatoire Migration"
   },
   "home": {
     "title": "Observatoire des politiques migratoires",
@@ -39,7 +40,20 @@
     "unverified": "non vérifié : {reason}",
     "archive": "archive",
     "lastChecked": "Sources vérifiées pour la dernière fois le {date}.",
-    "leaderAccount": "compte personnel : {name}, à la tête du parti"
+    "leaderAccount": "compte personnel : {name}, à la tête du parti",
+    "sectionElectoral": "Statut électoral",
+    "sectionHistory": "Historique électoral",
+    "sectionPresence": "Implantation",
+    "europeanParliament": "Parlement européen",
+    "meps": "{count, plural, one {# député européen} other {# députés européens}}",
+    "mepsOfTotal": "{count, plural, one {# député européen} other {# députés européens}} sur {total} pour le pays",
+    "europeanGroup": "groupe {group}",
+    "localPresence": "Maillage local",
+    "mayors": "{count, plural, one {# maire} other {# maires}}",
+    "seats": "{seats} / {total} sièges",
+    "sectionProfile": "Fiche",
+    "founded": "Fondation",
+    "viewProfile": "Voir la fiche →"
   },
   "methodology": {
     "title": "Méthodologie",
@@ -107,15 +121,36 @@
   },
   "elections": {
     "title": "Suivi électoral",
-    "intro": "Élections nationales, régionales, locales et partielles, tous niveaux confondus."
+    "intro": "Élections nationales, régionales, locales et partielles, tous niveaux confondus.",
+    "level": {
+      "national": "National",
+      "regional": "Régional",
+      "local": "Local",
+      "partial": "Partielle"
+    },
+    "statusKnown": "Résultat connu",
+    "statusUpcoming": "À venir",
+    "mandate": "mandat : {duration}",
+    "seatsContested": "{count, plural, one {# siège à pourvoir} other {# sièges à pourvoir}} sur {total}",
+    "assembly": "assemblée de {total} sièges",
+    "powers": "Pouvoirs",
+    "result": "Résultat"
   },
   "legislation": {
     "title": "Suivi législatif",
-    "intro": "Textes sur l'immigration (lois, décrets, actes européens) adoptés ou en discussion avancée, par pays et au niveau de l'Union européenne."
+    "intro": "Textes sur l'immigration (lois, décrets, actes européens) adoptés ou en discussion avancée, par pays et au niveau de l'Union européenne.",
+    "status": {
+      "promulguee": "Promulguée",
+      "en_discussion": "En discussion",
+      "invalidee": "Invalidée par la justice",
+      "abrogee": "Abrogée",
+      "caduque": "Caduque"
+    }
   },
   "news": {
     "title": "Actualités",
-    "intro": "Développements liés aux politiques migratoires qui ne relèvent pas de l'annuaire : initiatives citoyennes et militantes, communautés fermées, procédures judiciaires, scrutins et votations. Traitement journalistique : nature, développements, statut légal."
+    "intro": "Développements liés aux politiques migratoires qui ne relèvent pas de l'annuaire : initiatives citoyennes et militantes, communautés fermées, procédures judiciaires, scrutins et votations. Traitement journalistique : nature, développements, statut légal.",
+    "legalStatus": "Statut légal"
   },
   "footer": {
     "sources": "Sources : sites officiels, jeux de données académiques (The PopuList, ParlGov), Wikipédia et presse, chacune datée et archivée. Détail dans la méthodologie.",
@@ -193,5 +228,9 @@
     "corrections": "Les erreurs corrigées, les changements de classement et les retraits de fiches sont inscrits au journal des corrections, avec leur date et leur source. Pour signaler une erreur, écrire à l'adresse de la page contact.",
     "correctionsLink": "Journal des corrections →",
     "contactLink": "Contact →"
+  },
+  "common": {
+    "field": "{label} : ",
+    "skipLink": "Aller au contenu principal"
   }
 }

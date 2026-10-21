@@ -16,10 +16,10 @@ import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
 import { corrections } from '../src/data/corrections';
 import { PUBLISHER, isNamed } from '../src/lib/publisher';
-import { SCOPE } from '../src/lib/scope';
+import { SCOPE, countryName } from '../src/lib/scope';
+import { englishPairs, hasEnglish, sourceNamePairs, translatable } from '../src/data/i18n';
+import { allSources } from '../src/lib/sourceStats';
 import type { Source } from '../src/data/types';
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -365,26 +365,48 @@ if (!isNamed()) warn('mentions légales', "éditeur nommé non renseigné (déci
 for (const p of parties) if (!SCOPE.includes(p.countryCode)) err(`parti ${p.slug}`, `pays hors périmètre : ${p.countryCode}`);
 for (const e of elections) if (!SCOPE.includes(e.countryCode)) err(`élection ${e.id}`, `pays hors périmètre : ${e.countryCode}`);
 
-// ------------------------------------------------- country labels across UI
-const usedCodes = new Set<string>([...parties.map((p) => p.countryCode), ...elections.map((e) => e.countryCode)]);
-const labelFiles = [
-  'src/app/[locale]/page.tsx',
-  'src/app/[locale]/partis/page.tsx',
-  'src/app/[locale]/partis/[slug]/page.tsx',
-  'src/app/[locale]/elections/page.tsx',
-  'scripts/seed-supabase.ts',
-];
-for (const f of labelFiles) {
-  let src = '';
-  try {
-    src = readFileSync(resolve(__dirname, '..', f), 'utf8');
-  } catch {
-    warn('labels', `fichier introuvable : ${f}`);
-    continue;
+// ------------------------------------------------------ country names (P2)
+// Country names come from Intl.DisplayNames, one table for the whole site.
+// An unknown code comes back unchanged, which would show "DK" on a page.
+const usedCodes = new Set<string>([
+  ...parties.map((p) => p.countryCode),
+  ...elections.map((e) => e.countryCode),
+  ...legislation.map((l) => l.countryOrLevel),
+  ...news.flatMap((n) => n.countries),
+]);
+for (const cc of usedCodes) {
+  for (const locale of ['fr', 'en']) {
+    if (countryName(cc, locale) === cc) err('pays', `aucun nom ${locale} pour le code ${cc}`);
   }
-  for (const cc of usedCodes) {
-    if (!new RegExp(`\\b${cc}:\\s`).test(src)) err('labels', `${cc} absent de ${f}`);
-  }
+}
+
+// ----------------------------------------------------- English content (P2)
+// Every French string shown on the site needs its English pair in
+// src/data/i18n/en. A French edit makes the old pair unused and the new text
+// untranslated, so this catches stale translations too.
+const frStrings = new Set(translatable([parties, elections, legislation, news]));
+const untranslated = [...frStrings].filter((fr) => !hasEnglish(fr));
+if (untranslated.length) {
+  err('traduction', `${untranslated.length} texte(s) sans traduction anglaise, dont : « ${untranslated[0].slice(0, 90)} »`);
+}
+const pairs = englishPairs();
+const orphans = pairs.filter(([fr]) => !frStrings.has(fr));
+if (orphans.length) warn('traduction', `${orphans.length} traduction(s) orpheline(s), dont : « ${orphans[0][0].slice(0, 90)} »`);
+for (const [fr, en] of pairs) {
+  if (!en.trim()) err('traduction', `traduction vide pour « ${fr.slice(0, 90)} »`);
+  for (const m of unquoted(en).matchAll(BANNED.en)) err('traduction', `charte de vocabulaire : « ${m[1]} » dans « ${en.slice(0, 90)} »`);
+}
+// Source titles: optional pairs, but a pair whose title is no longer cited is dead.
+const citedNames = new Set([...allSources(), ...corrections.flatMap((c) => (c.source ? [c.source] : []))].map((x) => x.name));
+const deadNames = sourceNamePairs().filter(([fr]) => !citedNames.has(fr));
+if (deadNames.length) {
+  warn('traduction', `${deadNames.length} titre(s) de source traduit(s) mais plus cité(s), dont : « ${deadNames[0][0].slice(0, 90)} »`);
+}
+
+const seenFr = new Set<string>();
+for (const [fr] of pairs) {
+  if (seenFr.has(fr)) err('traduction', `texte traduit deux fois : « ${fr.slice(0, 90)} »`);
+  seenFr.add(fr);
 }
 
 // -------------------------------------------------------------------- report
