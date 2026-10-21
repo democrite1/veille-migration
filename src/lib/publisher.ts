@@ -6,11 +6,12 @@
  * holds their identification details. Only the host and a contact address
  * are published. Keeping this status assumes the site is not monetised.
  *
- * `email` must be a dedicated address, not a personal one. `npm run audit`
- * fails while it is null, so the notice cannot be merged incomplete.
+ * `email` is the publisher's contact address, chosen by them on 2026-10-21.
+ * `npm run audit` fails while it is null, so the notice cannot be merged
+ * incomplete.
  */
 export const PUBLISHER: { email: string | null } = {
-  email: null,
+  email: 'blancdemocrate@protonmail.com',
 };
 
 /** Source: Vercel privacy notice, contact block (opened 2026-10-20). Vercel publishes no phone number. */
