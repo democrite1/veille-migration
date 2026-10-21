@@ -200,7 +200,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.udr.fr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/ECiotti' },
+      { platform: 'X', url: 'https://x.com/ECiotti', leader: 'Éric Ciotti' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Union des droites pour la République » (France)",
@@ -641,8 +641,8 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.restorebritain.org.uk',
     socialAccounts: [
-      { platform: 'X (parti)', url: 'https://x.com/RestoreBritain' },
-      { platform: 'X (Rupert Lowe)', url: 'https://x.com/RupertLowe10' },
+      { platform: 'X', url: 'https://x.com/RestoreBritain' },
+      { platform: 'X', url: 'https://x.com/RupertLowe10', leader: 'Rupert Lowe' },
     ],
     classificationSource: {
       name: 'Wikipedia — Restore Britain',
@@ -890,8 +890,8 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.futuronazionale.it',
     socialAccounts: [
-      { platform: 'X (Roberto Vannacci)', url: 'https://x.com/RoVannacci' },
-      { platform: 'Instagram (parti)', url: 'https://www.instagram.com/futuro_nazionale_ufficiale/' },
+      { platform: 'X', url: 'https://x.com/RoVannacci', leader: 'Roberto Vannacci' },
+      { platform: 'Instagram', url: 'https://www.instagram.com/futuro_nazionale_ufficiale/' },
     ],
     classificationSource: {
       name: 'Wikipedia — National Future (Futuro Nazionale)',
@@ -957,7 +957,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.pvv.nl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/geertwilderspvv' },
+      { platform: 'X', url: 'https://x.com/geertwilderspvv', leader: 'Geert Wilders' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Partij voor de Vrijheid » (Pays-Bas)",
@@ -2511,7 +2511,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://konfederacjakoronypolskiej.pl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/GrzegorzBraun_' },
+      { platform: 'X', url: 'https://x.com/GrzegorzBraun_', leader: 'Grzegorz Braun' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Konfederacja Korony Polskiej » (Pologne)",
@@ -2748,7 +2748,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://elliniki-lisi.gr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/kvelopoulos' },
+      { platform: 'X', url: 'https://x.com/kvelopoulos', leader: 'Kyriakos Velopoulos' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Elliniki Lisi » (Grèce)",
@@ -3044,7 +3044,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://sosro.ro',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/sosoacadiana' },
+      { platform: 'X', url: 'https://x.com/sosoacadiana', leader: 'Diana Șoșoacă' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « S.O.S Romǎnia » (Roumanie)",
@@ -3340,7 +3340,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://danskfolkeparti.dk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/MrMesserschmidt' },
+      { platform: 'X', url: 'https://x.com/MrMesserschmidt', leader: 'Morten Messerschmidt' },
     ],
     classificationSource: {
       name: "The PopuList 4.0 — entrée « Dansk Folkeparti » (Danemark)",
@@ -3486,7 +3486,7 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.onenation.org.au',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/PaulineHansonOz' },
+      { platform: 'X', url: 'https://x.com/PaulineHansonOz', leader: 'Pauline Hanson' },
     ],
     classificationSource: {
       name: "ParlGov 2024 (Döring & Manow) — entrée « One Nation Party » (ID 386), Australie",

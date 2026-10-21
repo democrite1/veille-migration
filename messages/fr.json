@@ -38,7 +38,8 @@
     "verifiedOn": "vérifié le {date}",
     "unverified": "non vérifié : {reason}",
     "archive": "archive",
-    "lastChecked": "Sources vérifiées pour la dernière fois le {date}."
+    "lastChecked": "Sources vérifiées pour la dernière fois le {date}.",
+    "leaderAccount": "compte personnel : {name}, à la tête du parti"
   },
   "methodology": {
     "title": "Méthodologie",
@@ -91,7 +92,7 @@
     },
     "notDone": {
       "title": "Ce que ce site ne fait pas",
-      "text": "Il ne met pas en avant les structures jeunesse des partis et ne publie aucun lien d'adhésion ou de don vers un parti. Les initiatives non partisanes (section actualités) sont traitées comme des actualités : nature, développements, statut légal, couverture de presse, sans fiche ni lien de contact ou d'adhésion."
+      "text": "Il ne met pas en avant les structures jeunesse des partis et ne publie aucun lien d'adhésion ou de don vers un parti. Les initiatives non partisanes (section actualités) sont traitées comme des actualités : nature, développements, statut légal, couverture de presse, sans fiche ni lien de contact ou d'adhésion. Ses liens vers des sites extérieurs portent l'attribut « nofollow » : ils ne transmettent pas de référencement aux partis."
     },
     "charter": {
       "title": "Charte de vocabulaire",

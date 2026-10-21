@@ -84,6 +84,8 @@ export interface StatusHistoryEntry {
 export interface SocialAccount {
   platform: string;
   url: string;
+  /** Set when the account is the party leader's own, not the party's. */
+  leader?: string;
 }
 
 /** One past result for a given assembly/chamber — the building block of a party's electoral history. */

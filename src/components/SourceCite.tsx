@@ -10,13 +10,13 @@ export default function SourceCite({ source, label }: { source: Source; label?: 
   return (
     <p className="source-cite">
       {label ?? t('source')} :{' '}
-      <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
+      <a href={source.url} target="_blank" rel="nofollow noopener noreferrer" className="underline hover:text-accent">
         {source.name}
       </a>
       {source.accessedOn ? (
         <>
           {` (${t('verifiedOn', { date: source.accessedOn })} · `}
-          <a href={archiveUrl(source.url, source.accessedOn)} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
+          <a href={archiveUrl(source.url, source.accessedOn)} target="_blank" rel="nofollow noopener noreferrer" className="underline hover:text-accent">
             {t('archive')}
           </a>
           )

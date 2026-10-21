@@ -38,7 +38,8 @@
     "verifiedOn": "checked on {date}",
     "unverified": "not checked: {reason}",
     "archive": "archived copy",
-    "lastChecked": "Sources last checked on {date}."
+    "lastChecked": "Sources last checked on {date}.",
+    "leaderAccount": "personal account: {name}, party leader"
   },
   "methodology": {
     "title": "Methodology",
@@ -91,7 +92,7 @@
     },
     "notDone": {
       "title": "What this site does not do",
-      "text": "It does not feature party youth organisations and publishes no membership or donation link to any party. Non-partisan initiatives (news section) are covered as news: nature, developments, legal status, press coverage, with no profile and no contact or membership link."
+      "text": "It does not feature party youth organisations and publishes no membership or donation link to any party. Non-partisan initiatives (news section) are covered as news: nature, developments, legal status, press coverage, with no profile and no contact or membership link. Its links to external sites carry the \"nofollow\" attribute: they pass on no search ranking to the parties."
     },
     "charter": {
       "title": "Vocabulary charter",

@@ -206,24 +206,25 @@ function PartyPageInner({ party }: { party: Party }) {
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
           <dt className="text-muted">{t('officialSite')}</dt>
           <dd>
-            <a href={party.officialWebsite} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href={party.officialWebsite} target="_blank" rel="nofollow noopener noreferrer" className="text-accent hover:underline">
               {party.officialWebsite}
             </a>
           </dd>
-          <dt className="text-muted">{t('socialAccounts')}</dt>
-          <dd className="flex flex-wrap gap-3">
-            {party.socialAccounts.map((s) => (
-              <a
-                key={s.url}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                {s.platform}
-              </a>
-            ))}
-          </dd>
+          {party.socialAccounts.length ? (
+            <>
+              <dt className="text-muted">{t('socialAccounts')}</dt>
+              <dd className="flex flex-wrap gap-x-4 gap-y-1">
+                {party.socialAccounts.map((s) => (
+                  <span key={s.url}>
+                    <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="text-accent hover:underline">
+                      {s.platform}
+                    </a>
+                    {s.leader ? <span className="text-muted"> · {t('leaderAccount', { name: s.leader })}</span> : null}
+                  </span>
+                ))}
+              </dd>
+            </>
+          ) : null}
           {party.founded ? (
             <>
               <dt className="text-muted">Fondation</dt>
