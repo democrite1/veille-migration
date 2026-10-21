@@ -23,6 +23,26 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-21-remigration-non-etablie',
+    date: '2026-10-21',
+    kind: 'reclassement',
+    page: '/partis',
+    summary: {
+      fr: "Republika (Slovaquie) et Borgernes Parti (Danemark) passent de « remigration » à « réduction » : aucune source accessible n'établit que le parti ou ses dirigeants emploient le terme. La source de Republika est inaccessible ; celle de Borgernes Parti ne mentionnait pas la remigration.",
+      en: "Republika (Slovakia) and Borgernes Parti (Denmark) move from \"remigration\" to \"reduction\": no accessible source shows the party or its leaders using the word. The Republika source is unreachable; the Borgernes Parti source did not mention remigration.",
+    },
+  },
+  {
+    id: '2026-10-21-reverification-sources',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis',
+    summary: {
+      fr: "Revérification des 73 sources d'intention, de statut et de classification qui n'avaient pas de date de consultation. Les notes ne gardent plus que ce que leur source établit. Fratelli d'Italia et Lega : l'article cité ne décrivait pas les mesures attribuées ; les fiches citent désormais les textes en vigueur (loi italienne n° 14/2024, décret-loi n° 20/2023). Fidesz : les zones de transit, fermées en 2020, étaient présentées comme en vigueur. One Nation : les chiffres de 570 000 et de 75 000 expulsions ne figuraient pas dans la source. FPÖ : « Remigration » relève du vocabulaire d'Herbert Kickl, pas du programme. SD, PiS, SNS, Domovinski pokret, Vrais Finlandais : dates, coûts ou dispositifs non établis par la source, remplacés par les textes officiels. Vingt sources inaccessibles sont désormais marquées « non vérifié » sur les fiches.",
+      en: "Re-check of the 73 intention, status and classification sources that had no consultation date. Notes now keep only what their source establishes. Fratelli d'Italia and Lega: the cited article did not describe the measures attributed to them; the entries now cite the laws in force (Italian Law 14/2024, Decree-Law 20/2023). Fidesz: transit zones, closed in 2020, were presented as in force. One Nation: the 570,000 and 75,000-deportation figures were not in the source. FPÖ: \"Remigration\" is Herbert Kickl's vocabulary, not the programme's. SD, PiS, SNS, Domovinski pokret, Finns Party: dates, costs or measures not established by the source, replaced by official texts. Twenty unreachable sources are now marked \"not checked\" on the entries.",
+    },
+  },
+  {
     id: '2026-10-20-registres-non-consultes',
     date: '2026-10-20',
     kind: 'correction',

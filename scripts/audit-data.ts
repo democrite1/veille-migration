@@ -75,8 +75,13 @@ function checkSource(where: string, s: Source | undefined, onBare: 'ok' | 'warn'
   if (/live-blog|\/live\/|ultima-hora|-directo-|exit-poll/i.test(s.url)) {
     warn(where, `citation vers un direct / une estimation de soir de scrutin : ${s.url}`);
   }
-  if (s.accessedOn && !isIsoDate(s.accessedOn)) err(where, `accessedOn mal formé : ${s.accessedOn}`);
-  if (s.accessedOn && s.accessedOn > TODAY) err(where, `accessedOn dans le futur : ${s.accessedOn}`);
+  // Every source carries either the date it was checked or the reason it could not be.
+  if (s.unverified !== undefined) {
+    if (!s.unverified.trim()) err(where, 'source non vérifiée sans raison indiquée');
+    else warn(where, `source non vérifiée : ${s.unverified}`);
+  } else if (!s.accessedOn) err(where, 'source sans date de consultation');
+  else if (!isIsoDate(s.accessedOn)) err(where, `accessedOn mal formé : ${s.accessedOn}`);
+  else if (s.accessedOn > TODAY) err(where, `accessedOn dans le futur : ${s.accessedOn}`);
 }
 
 // ------------------------------------------------- chamber size cross-checks

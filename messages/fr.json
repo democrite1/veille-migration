@@ -34,7 +34,9 @@
     "classificationSource": "Source de classification",
     "officialSite": "Site officiel",
     "socialAccounts": "Comptes officiels",
-    "history": "Historique du statut"
+    "history": "Historique du statut",
+    "verifiedOn": "vérifié le {date}",
+    "unverified": "non vérifié : {reason}"
   },
   "methodology": {
     "title": "Méthodologie",

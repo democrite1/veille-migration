@@ -34,7 +34,9 @@
     "classificationSource": "Classification source",
     "officialSite": "Official website",
     "socialAccounts": "Official accounts",
-    "history": "Status history"
+    "history": "Status history",
+    "verifiedOn": "checked on {date}",
+    "unverified": "not checked: {reason}"
   },
   "methodology": {
     "title": "Methodology",

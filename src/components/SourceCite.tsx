@@ -10,7 +10,9 @@ export default function SourceCite({ source, label }: { source: Source; label?: 
       <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
         {source.name}
       </a>
-      {source.accessedOn ? ` (vérifié le ${source.accessedOn})` : ''}
+      {source.accessedOn
+        ? ` (${t('verifiedOn', { date: source.accessedOn })})`
+        : ` (${t('unverified', { reason: source.unverified ?? '' })})`}
       {source.note ? <span className="block italic">{source.note}</span> : null}
     </p>
   );

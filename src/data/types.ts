@@ -44,12 +44,29 @@ export type ActionStatusTag =
   | 'mesures_concretes'
   | 'mesures_concretes_abrogee';
 
-export interface Source {
+interface SourceBase {
   name: string;
   url: string;
-  accessedOn?: string; // ISO date the fact was last verified against this source
   note?: string;
 }
+
+/** A source the fact was checked against: accessedOn is the ISO date of that check. */
+export interface CheckedSource extends SourceBase {
+  accessedOn: string;
+  unverified?: never;
+}
+
+/**
+ * A source that could not be checked (dead link, blocked site, register
+ * refusing automated access). Readers see the reason instead of a date, so
+ * nothing is presented as verified when it was not.
+ */
+export interface UncheckedSource extends SourceBase {
+  accessedOn?: never;
+  unverified: string;
+}
+
+export type Source = CheckedSource | UncheckedSource;
 
 export interface Classification {
   tag: IntentionTag | ActionStatusTag;
