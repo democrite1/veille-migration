@@ -1826,11 +1826,11 @@ export const parties: Party[] = [
     positioning: 'Extrême droite, ultranationaliste',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Six sièges à l'Országgyűlés, un score stable entre les élections de 2022 et celles d'avril 2026 (5,6-6,2% des voix selon le mode de scrutin). Décrit par les observateurs comme le parti le plus radical à entrer au Parlement hongrois depuis la Seconde Guerre mondiale. Troisième force parlementaire depuis 2026, loin derrière Tisza (141 sièges) et le Fidesz (55 sièges), sans participation gouvernementale.",
+      "Six sièges à l'Országgyűlés, un score stable entre les élections de 2022 et celles d'avril 2026 (5,6 à 5,9 % des voix selon le mode de scrutin). Décrit par les observateurs comme le parti le plus radical à entrer au Parlement hongrois depuis la Seconde Guerre mondiale. Troisième force parlementaire depuis 2026, loin derrière Tisza (141 sièges) et le Fidesz (52 sièges), sans participation gouvernementale.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
-      accessedOn: '2026-09-10',
+      accessedOn: '2026-10-21',
     },
     officialWebsite: 'https://mihazank.hu',
     socialAccounts: [

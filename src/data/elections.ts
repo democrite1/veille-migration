@@ -523,12 +523,12 @@ export const elections: Election[] = [
     date: '2026-04-12',
     status: 'resultat_connu',
     result:
-      "Défaite du Fidesz-KDNP de Viktor Orbán (52 sièges sur 199, 38,61% des voix de liste) face au parti Tisza de Péter Magyar (141 sièges, 53,18%), qui obtient à son tour une majorité des deux tiers. Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) se maintient au Parlement mais recule de 7 à 6 sièges (5,63%). Participation de 78,99%, la plus forte depuis 1990.",
+      "Défaite du Fidesz-KDNP de Viktor Orbán (52 sièges sur 199, 38,61% des voix de liste) face au parti Tisza de Péter Magyar (141 sièges, 53,18%), qui obtient à son tour une majorité des deux tiers. Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) se maintient au Parlement avec 6 sièges, comme en 2022 (5,63 %). Participation de 78,99%, la plus forte depuis 1990.",
     totalSeats: 199,
     source: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
-      accessedOn: '2026-09-15',
+      accessedOn: '2026-10-21',
     },
   },
   {

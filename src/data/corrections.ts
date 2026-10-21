@@ -23,6 +23,21 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-21-mi-hazank-2026',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/mi-hazank',
+    summary: {
+      fr: "Mi Hazánk et législatives hongroises de 2026 : le parti conserve ses 6 sièges de 2022, et ne « recule » pas de 7 à 6 ; ses scores vont de 5,6 à 5,9 % selon le mode de scrutin, et non jusqu'à 6,2 % ; le Fidesz a obtenu 52 sièges, et non 55, comme la fiche l'indiquait encore.",
+      en: "Mi Hazánk and the 2026 Hungarian election: the party kept its 6 seats from 2022 and did not \"fall\" from 7 to 6; its share ranges from 5.6% to 5.9% depending on the ballot, not up to 6.2%; Fidesz won 52 seats, not 55 as the profile still said.",
+    },
+    source: {
+      name: 'Wikipedia — 2026 Hungarian parliamentary election',
+      url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
+      accessedOn: '2026-10-21',
+    },
+  },
+  {
     id: '2026-10-21-manifestations-uk',
     date: '2026-10-21',
     kind: 'correction',
