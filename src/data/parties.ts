@@ -710,7 +710,7 @@ export const parties: Party[] = [
     },
     founded: 2026,
     description:
-      "Lancé le 30 juin 2025 comme simple groupe de pression par Rupert Lowe, député de Great Yarmouth exclu de Reform UK trois mois plus tôt, puis converti en parti politique le 13 février 2026 et enregistré auprès de l'Electoral Commission le 20 mars. Le parti le plus jeune de ce répertoire, et l'un des rares en Europe de l'Ouest à faire de la remigration un axe programmatique assumé plutôt qu'un sous-entendu. Il a disputé trois scrutins durant son premier semestre d'existence.",
+      "Lancé le 30 juin 2025 comme simple groupe de pression par Rupert Lowe, député de Great Yarmouth exclu de Reform UK trois mois plus tôt, puis converti en parti politique le 13 février 2026 et enregistré auprès de l'Electoral Commission le 20 mars. Le parti le plus jeune de ce répertoire. Il a disputé trois scrutins durant son premier semestre d'existence.",
   },
   {
     slug: 'fratelli-italia',
@@ -1660,7 +1660,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'extra-parlementaire',
     electoralStatusDetail:
-      "Créé en 2024 par la personnalité des réseaux sociaux Luis « Alvise » Pérez comme simple groupement électoral pour les européennes de juin 2024, où il crée la surprise avec 3 sièges. Formellement enregistré comme parti politique le 31 janvier 2025 puis officiellement lancé comme force nationale le 12 octobre 2025 ; ne s'est pas encore présenté à des élections législatives espagnoles et ne siège donc pas au Congreso de los Diputados.",
+      "Créé en 2024 par la personnalité des réseaux sociaux Luis « Alvise » Pérez comme simple groupement électoral pour les européennes de juin 2024, où il obtient 3 sièges. Formellement enregistré comme parti politique le 31 janvier 2025 puis officiellement lancé comme force nationale le 12 octobre 2025 ; ne s'est pas encore présenté à des élections législatives espagnoles et ne siège donc pas au Congreso de los Diputados.",
     electoralStatusSource: {
       name: 'France 24 — Spanish social media star launches new far-right party',
       url: 'https://www.france24.com/en/live-news/20251012-spanish-social-media-star-launches-new-far-right-party',
@@ -2324,7 +2324,7 @@ export const parties: Party[] = [
       {
         date: '2022-06-30',
         tag: 'mesures_concretes',
-        note: "Achèvement du mur frontalier avec la Biélorussie, mesure anti-immigration la plus lourde jamais engagée par un gouvernement polonais.",
+        note: "Achèvement du mur frontalier avec la Biélorussie (186 km).",
         source: {
           name: 'Euronews',
           url: 'https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute',
@@ -3742,7 +3742,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale à extrême droite',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Deux sièges au Sabor (8,02% en coalition avec Most aux élections de 2024), mais surtout une victoire locale retentissante : son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025, mettant fin à onze années de règne d'Ivan Penava (Domovinski pokret) sur ce bastion symbolique du nationalisme croate, avec seulement 184 voix d'avance.",
+      "Deux sièges au Sabor (8,02 % en coalition avec Most aux élections de 2024). Au niveau local, son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025 avec 184 voix d'avance sur Ivan Penava (Domovinski pokret), qui la dirigeait depuis 2013.",
     electoralStatusSource: {
       name: 'HRT',
       url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
@@ -3817,7 +3817,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Détient la mairie de Vukovar depuis mai 2025 (Marijan Pavliček), la principale ville symbolique de la mémoire nationale croate — une victoire directement arrachée à Domovinski pokret. Étend son implantation via une coalition locale à Split pour les élections d'arrondissement de septembre 2026.",
+        "Détient la mairie de Vukovar depuis mai 2025 (Marijan Pavliček), ville symbole de la mémoire nationale croate, prise à Domovinski pokret. Étend son implantation via une coalition locale à Split pour les élections d'arrondissement de septembre 2026.",
       source: {
         name: 'Nacional.hr',
         url: 'https://www.nacional.hr/primopredaja-pavlicek-postao-gradonacelnik-vukovara-penava-ovdje-stvari-nisu-jednostavne/',
@@ -4454,7 +4454,7 @@ export const parties: Party[] = [
     positioning: 'Nationaliste japonais, populiste de droite radicale à extrême droite',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Dans l'opposition aux deux chambres de la Diète, avec 15 sièges sur 465 à la Chambre des représentants et 15 sur 248 à la Chambre des conseillers. Le parti a doublé sa présence parlementaire en sept mois, à la faveur de deux scrutins nationaux successifs : les sénatoriales du 20 juillet 2025 (de 1 à 15 conseillers) puis les élections générales anticipées du 8 février 2026 (de 3 à 15 députés). Malgré la supermajorité obtenue par le PLD de Sanae Takaichi lors de ce dernier scrutin, Sanseitō est devenu l'une des principales forces d'opposition et a imposé l'immigration au centre du débat public japonais.",
+      "Dans l'opposition aux deux chambres de la Diète, avec 15 sièges sur 465 à la Chambre des représentants et 15 sur 248 à la Chambre des conseillers. Le parti est passé de 4 à 30 parlementaires en sept mois, à la faveur de deux scrutins nationaux successifs : les sénatoriales du 20 juillet 2025 (de 1 à 15 conseillers) puis les élections générales anticipées du 8 février 2026 (de 3 à 15 députés). Malgré la supermajorité obtenue par le PLD de Sanae Takaichi lors de ce dernier scrutin, Sanseitō est devenu l'une des principales forces d'opposition.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Japanese general election',
       url: 'https://en.wikipedia.org/wiki/2026_Japanese_general_election',
@@ -4544,7 +4544,7 @@ export const parties: Party[] = [
     },
     founded: 2020,
     description:
-      "Fondé le 17 mars 2020 par Sohei Kamiya, ancien conseiller municipal de Suita (préfecture d'Osaka), d'abord comme une chaîne YouTube contestataire pendant la pandémie de Covid-19. Devenu en deux scrutins la principale force anti-immigration du Japon sous le slogan « les Japonais d'abord », il est le premier parti de ce type à peser sur la vie politique nationale d'un pays d'Asie membre du G7.",
+      "Fondé le 17 mars 2020 par Sohei Kamiya, ancien conseiller municipal de Suita (préfecture d'Osaka), d'abord comme une chaîne YouTube contestataire pendant la pandémie de Covid-19. Il a fait campagne en 2025 et 2026 sous le slogan « les Japonais d'abord ».",
   },
 ];
 
