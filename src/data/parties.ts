@@ -4515,7 +4515,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2025 Japanese House of Councillors election',
           url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
           accessedOn: '2026-09-13',
-          note: "14 sièges remportés sur les 125 renouvelés ce jour-là, portant le groupe à 15 sur 248. Troisième score national à la proportionnelle. Scrutin considéré comme le point de bascule de l'entrée de la question migratoire dans le débat électoral japonais.",
+          note: "14 sièges remportés sur les 125 renouvelés ce jour-là, portant le groupe à 15 sur 248. Troisième score national à la proportionnelle.",
         },
       },
       {

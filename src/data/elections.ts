@@ -192,7 +192,7 @@ export const elections: Election[] = [
     date: '2026-05-16',
     status: 'resultat_connu',
     result:
-      "Net basculement à droite de la capitale : le Miðflokkurinn entre pour la première fois au conseil municipal de Reykjavik avec 11,36% et 3 sièges sur 23, après un score nul en 2022.",
+      "Le Miðflokkurinn entre pour la première fois au conseil municipal de Reykjavik avec 11,36% et 3 sièges sur 23, après un score nul en 2022.",
     source: {
       name: 'Iceland Review — Major changes ahead for Reykjavik City Council',
       url: 'https://www.icelandreview.com/news/major-changes-ahead-for-reykjavik-city-council-after-election-results/',
@@ -268,7 +268,7 @@ export const elections: Election[] = [
     date: '2025-07-20',
     status: 'resultat_connu',
     result:
-      "Scrutin de bascule : Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
+      "Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
     totalSeats: 248,
     seatsContested: 125,
     source: {
