@@ -266,6 +266,34 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
+// ------------------------------------------------------- partisan sources (E8)
+// A party or a campaigning organisation may be cited for its own positions,
+// or in a source note as a complement, but never as the main source of a
+// result, a law or a news item: Mi Hazánk's 2022 seat count came from a
+// campaigning organisation and was wrong by one seat.
+const CAMPAIGNING = /(^|\.)(hopenothate\.org\.uk|searchlightmagazine\.com|errc\.org|ecre\.org|hungarianconservative\.com|washingtontimes\.com)$/;
+const partyHosts = new Set(
+  parties.flatMap((p) => (p.officialWebsite ? [new URL(p.officialWebsite).hostname.replace(/^www\./, '')] : [])),
+);
+function checkNeutral(where: string, s: Source | undefined) {
+  if (!s?.url) return;
+  let host: string;
+  try {
+    host = new URL(s.url).hostname.replace(/^www\./, '');
+  } catch {
+    return;
+  }
+  if (CAMPAIGNING.test(host)) err(where, `source principale militante (${host}) : citer une source neutre, celle-ci en complément`);
+  else if (partyHosts.has(host)) err(where, `source principale partisane (${host}) : citer une source neutre, le parti en complément`);
+}
+for (const p of parties) {
+  checkNeutral(`parti ${p.slug} / electoralStatusSource`, p.electoralStatusSource);
+  for (const r of p.electoralHistory ?? []) checkNeutral(`parti ${p.slug} / « ${r.label} »`, r.source);
+}
+for (const e of elections) checkNeutral(`élection ${e.id}`, e.source);
+for (const l of legislation) checkNeutral(`législation ${l.id}`, l.source);
+for (const n of news) checkNeutral(`actualité ${n.id}`, n.source);
+
 // ---------------------------------------------------------------- vocabulary
 // Vocabulary charter (E7, methodology page): words that dramatise a result
 // instead of stating it. Quoted words are someone else's and may stay, as may

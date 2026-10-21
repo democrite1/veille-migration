@@ -53,13 +53,13 @@ export const news: NewsItem[] = [
   },
   {
     id: 'afrikaner-refugee-resettlement',
-    title: "Réfugiés afrikaners : Washington accueille des milliers de Blancs sud-africains, malgré le refus des organisations qui les représentent",
+    title: "Réfugiés afrikaners : les États-Unis accueillent des milliers de Sud-Africains blancs ; AfriForum et Solidarity ont refusé l'offre",
     countries: ['US', 'ZA'],
     date: '2026-05-10',
     summary:
-      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : 59 premiers réfugiés arrivés le 12 mai 2025, puis plus de 4 500 admis entre octobre 2025 et avril 2026 — près des trois quarts des 6 069 réfugiés admis aux États-Unis sur cette période, dans un contexte de plafond national des admissions humanitaires ramené à 7 500 places pour l'année budgétaire 2026, le niveau le plus bas depuis la création du programme. Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
+      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : les 59 premiers réfugiés sont arrivés le 12 mai 2025. Selon des chiffres du gouvernement américain cités par Reuters, environ 6 000 Sud-Africains blancs avaient été admis fin avril 2026, alors que le plafond annuel des admissions de réfugiés était fixé à 7 500 places pour l'année budgétaire 2026, le plus bas jamais fixé ; une décision présidentielle du 21 mai 2026 l'a relevé à 17 500. Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
     legalStatus:
-      "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour. Des données de suivi début 2026 indiquent que 63% des Afrikaners admis depuis octobre 2025 restaient sans emploi six mois après leur arrivée.",
+      "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour.",
     source: {
       name: 'PassBlue — Cracks Are Showing in Trump\'s Special "Refugee" Program for Afrikaners',
       url: 'https://passblue.com/2026/05/10/cracks-are-showing-in-trumps-special-refugee-program-for-afrikaners/',
@@ -79,6 +79,7 @@ export const news: NewsItem[] = [
       name: 'JURIST — Germany federal court lifts ban on right-wing Compact magazine',
       url: 'https://www.jurist.org/news/2025/06/germany-federal-court-lifts-ban-on-right-wing-compact-magazine/',
       accessedOn: '2026-09-09',
+      note: "Chiffres d'admission et relèvement du plafond : Reuters, 26 mai 2026, repris par TimesLIVE (https://www.timeslive.co.za/news/world/2026-05-26-trump-raises-refugee-cap-to-admit-more-white-south-africans/), consulté le 2026-10-21. PassBlue n'a pas pu être revérifié le 21 octobre 2026 (vérification anti-robot).",
     },
   },
   {
@@ -87,13 +88,14 @@ export const news: NewsItem[] = [
     countries: ['GB'],
     date: '2026-08-28',
     summary:
-      "Déclenchée par une série de rassemblements à Epping (Essex) à partir du 13 juillet 2025 — après qu'un demandeur d'asile hébergé dans un hôtel local a été inculpé d'agression sexuelle sur une adolescente de 14 ans —, la contestation contre l'hébergement de demandeurs d'asile en hôtel s'est étendue à l'ensemble du Royaume-Uni. L'organisation antiraciste HOPE not hate a recensé au moins 251 rassemblements dans 77 localités entre juin et décembre 2025, en Angleterre, en Écosse, au pays de Galles et en Irlande du Nord, avec des points chauds à Londres, Epping, Norwich, Altrincham et sur la côte sud. Ces manifestations, parfois marquées par des débordements et des arrestations, ont été relayées ou organisées par divers acteurs — dont des sections locales de Reform UK, Britain First, UKIP, Homeland Party et Patriotic Alternative — sans qu'aucune organisation unique ne pilote le mouvement dans son ensemble.",
+      "Déclenchée par une série de rassemblements devant le Bell Hotel d'Epping (Essex) à partir du 13 juillet 2025 — après qu'un demandeur d'asile hébergé dans cet hôtel a été inculpé d'agressions sexuelles sur une femme et une adolescente, faits pour lesquels il a été reconnu coupable le 4 septembre 2025 —, la contestation contre l'hébergement de demandeurs d'asile en hôtel s'est étendue à l'ensemble du Royaume-Uni. Plusieurs rassemblements ont donné lieu à des violences et à des arrestations. Ils ont été organisés ou rejoints par divers groupes, dont Reform UK, Britain First, UKIP, Homeland Party et Patriotic Alternative. L'organisation antiraciste HOPE not hate dit avoir recensé au moins 251 rassemblements dans 77 localités entre juin et décembre 2025, avec des points chauds à Londres, Epping, Norwich, Altrincham et sur la côte sud.",
     legalStatus:
-      "Plusieurs autorités locales ont engagé des procédures judiciaires pour faire cesser l'hébergement de demandeurs d'asile dans des hôtels contestés (dont Epping) ; une décision de justice favorable en ce sens a été obtenue puis annulée en appel par le gouvernement britannique fin août 2025. Situation juridique évolutive, hôtel par hôtel.",
+      "Le conseil du district d'Epping Forest a obtenu de la Haute Cour, le 19 août 2025, une injonction provisoire imposant de cesser l'hébergement de demandeurs d'asile au Bell Hotel ; la Cour d'appel l'a annulée le 29 août, et la Haute Cour a refusé une injonction définitive le 11 novembre 2025. Plusieurs autres conseils, dont les douze dirigés par Reform UK, ont annoncé vouloir mettre fin à cet hébergement dans leurs hôtels.",
     source: {
-      name: 'HOPE not hate — State of Hate 2026: A Year of Anti-Migrant Protests',
-      url: 'https://hopenothate.org.uk/state-of-hate-2026-anti-migrant-protests/',
-      accessedOn: '2026-09-09',
+      name: "Wikipedia — United Kingdom anti-immigration protests (2025–present)",
+      url: "https://en.wikipedia.org/wiki/United_Kingdom_anti-immigration_protests_(2025%E2%80%93present)",
+      accessedOn: "2026-10-21",
+      note: "Décompte des rassemblements : HOPE not hate, organisation antiraciste, « State of Hate 2026: A Year of Anti-Migrant Protests » (https://hopenothate.org.uk/state-of-hate-2026-anti-migrant-protests/), consulté le 2026-10-21.",
     },
   },
   {

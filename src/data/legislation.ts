@@ -8,12 +8,12 @@ export const legislation: Legislation[] = [
     status: 'promulguee',
     date: '2019-02-21',
     description:
-      "Adopté par le Folketing le 21 février 2019 au sein d'un ensemble de 114 restrictions migratoires votées cette année-là. Le texte inverse la finalité du droit d'asile danois : la protection devient temporaire par principe pour tous les réfugiés, y compris réinstallés, avec réexamen périodique du statut et possibilité de révocation dès que la situation du pays d'origine est jugée sûre ; les prestations sociales versées aux réfugiés sont rebaptisées « aide au retour ». Deux particularités en font un cas à part dans cet annuaire. D'abord, il a été voté par la coalition libérale-conservatrice au pouvoir, par le Dansk Folkeparti — seul parti anti-immigration de cet annuaire à y avoir contribué — et par les sociaux-démocrates alors dans l'opposition. Ensuite, ce sont ces derniers qui l'ont approfondi une fois arrivés au pouvoir : le gouvernement de Mette Frederiksen, en fonction depuis juin 2019, a poursuivi ce durcissement, sa ministre de l'Immigration annonçant en 2021 l'objectif de « zéro demandeur d'asile ». Les demandes d'asile sont depuis tombées à leur plus bas niveau depuis quarante ans et 95% des déboutés sont effectivement éloignés.",
+      "Adopté par le Folketing le 21 février 2019. Le texte, présenté comme un « changement de paradigme », déplace la finalité de l'accueil des réfugiés de l'intégration vers le retour : la protection devient temporaire par principe, y compris pour les réfugiés réinstallés au titre des quotas de l'ONU, et les réfugiés doivent être renvoyés lorsque la situation de leur pays d'origine est jugée suffisamment sûre. Deux particularités en font un cas à part dans cet annuaire. D'abord, il a été voté par la coalition libérale-conservatrice au pouvoir, par le Dansk Folkeparti — seul parti anti-immigration de cet annuaire à y avoir contribué — et par les sociaux-démocrates alors dans l'opposition. Ensuite, ce sont ces derniers qui ont poursuivi ce durcissement une fois arrivés au pouvoir : le gouvernement de Mette Frederiksen, en fonction depuis juin 2019, a annoncé en 2021 l'objectif de « zéro demandeur d'asile ». Selon la BBC, les demandes d'asile au Danemark avaient atteint au début de 2025 leur plus bas niveau depuis les années 1980.",
     source: {
       name: "The Local Denmark — Denmark's parliament passes 'paradigm change' asylum bill",
-      url: 'https://www.thelocal.dk/20190221/denmarks-parliament-passes-paradigm-change-asylum-bill',
-      accessedOn: '2026-09-15',
-      note: "Analyses complémentaires : ECRE (https://ecre.org/denmark-paradigm-shift-takes-race-to-the-bottom-to-a-new-low/) et le profil pays du Migration Policy Institute (https://www.migrationpolicy.org/journal/country-profile/denmarks-turn-temporary-protection-has-made-it-pioneer-restrictive).",
+      url: "https://www.thelocal.dk/20190221/denmarks-parliament-passes-paradigm-change-asylum-bill",
+      accessedOn: "2026-10-21",
+      note: "Gouvernement Frederiksen, objectif « zéro demandeur d'asile » et niveau des demandes d'asile : Wikipédia, Immigration policy of Mette Frederiksen (https://en.wikipedia.org/wiki/Immigration_policy_of_Mette_Frederiksen), consulté le 2026-10-21, qui cite la BBC. Analyse complémentaire : profil pays du Migration Policy Institute (https://www.migrationpolicy.org/journal/country-profile/denmarks-turn-temporary-protection-has-made-it-pioneer-restrictive).",
     },
   },
   {
@@ -121,11 +121,12 @@ export const legislation: Legislation[] = [
     status: 'promulguee',
     date: '2026-01-01',
     description:
-      "Règlement gouvernemental adopté le 30 octobre 2025, porté par Sverigedemokraterna dans l'accord de Tidö, revalorisant l'allocation au retour volontaire à 350 000 couronnes par adulte (jusqu'à 600 000 par foyer), entré en vigueur le 1er janvier 2026. Coût estimé à environ 2,5 milliards de couronnes sur trois ans.",
+      "Règlement gouvernemental annoncé par Migrationsverket le 31 octobre 2025 et en vigueur depuis le 1er janvier 2026 : l'aide au retour volontaire (återvandringsbidrag) passe à 350 000 couronnes par adulte et 25 000 par enfant, dans la limite de 500 000 couronnes par couple et de 600 000 par foyer. Elle s'adresse aux personnes résidant en Suède avec un titre de séjour obtenu au plus tard le 12 septembre 2024, notamment au titre de la protection. Le projet avait été présenté le 23 avril 2025 par le ministre des Migrations Johan Forssell et le porte-parole de Sverigedemokraterna Ludvig Aspling, dans un communiqué commun.",
     source: {
-      name: 'Regeringen.se',
-      url: 'https://www.regeringen.se/pressmeddelanden/2025/04/ett-kraftigt-hojt-atervandringsbidrag/',
-      accessedOn: '2026-09-07',
+      name: "Migrationsverket — Återvandringsbidraget höjs den 1 januari 2026",
+      url: "https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html",
+      accessedOn: "2026-10-21",
+      note: "Communiqué du gouvernement du 23 avril 2025 : https://www.regeringen.se/pressmeddelanden/2025/04/ett-kraftigt-hojt-atervandringsbidrag/ (consulté le 2026-10-21).",
     },
   },
   {
@@ -193,11 +194,11 @@ export const legislation: Legislation[] = [
     status: 'promulguee',
     date: '2025-05-01',
     description:
-      "Dispositif administratif de l'administration Trump (DHS/ICE) incitant financièrement au départ volontaire des personnes sans statut légal, avec objectif chiffré de plus de 200 000 départs. Plus de 605 000 expulsions et 1,9 million de départs « volontaires » recensés depuis janvier 2025, sans nécessiter de vote du Congrès.",
+      "Dispositif administratif du DHS (« Project Homecoming ») qui paie le voyage et une allocation aux personnes sans statut légal qui quittent les États-Unis : 1 000 dollars au lancement, 2 600 dollars en juillet 2026. Selon des données internes communiquées à Axios, environ 132 000 personnes étaient parties par ce dispositif au 16 juillet 2026 et 70 000 autres étaient inscrites ; le DHS n'avait alors publié aucune statistique officielle.",
     source: {
-      name: 'Axios / Washington Times',
-      url: 'https://www.axios.com/2026/07/28/trump-self-deportation-ice',
-      accessedOn: '2026-09-07',
+      name: "Axios — How Trump's \"self-deportation\" push has ramped up",
+      url: "https://www.axios.com/2026/07/28/trump-self-deportation-ice",
+      accessedOn: "2026-10-21",
     },
   },
   {

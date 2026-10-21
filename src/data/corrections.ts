@@ -23,6 +23,111 @@ export interface Correction {
 
 export const corrections: Correction[] = [
   {
+    id: '2026-10-21-manifestations-uk',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/actualites',
+    summary: {
+      fr: "Manifestations britanniques contre les hôtels de demandeurs d'asile : l'entrée reposait sur la seule organisation militante HOPE not hate ; elle cite désormais une source générale, et le décompte de HOPE not hate lui est attribué. L'affirmation qu'aucune organisation ne pilotait le mouvement est retirée. La décision de justice est précisée : injonction accordée par la Haute Cour le 19 août 2025, annulée par la Cour d'appel le 29 août, et non « par le gouvernement britannique ».",
+      en: "UK protests against asylum hotels: the entry rested solely on the campaigning organisation HOPE not hate; it now cites a general source, and HOPE not hate's count is attributed to it. The claim that no single organisation led the movement is withdrawn. The court decision is stated precisely: an injunction granted by the High Court on 19 August 2025 and overturned by the Court of Appeal on 29 August, not \"by the British government\".",
+    },
+    source: {
+      name: "Wikipedia — United Kingdom anti-immigration protests (2025–present)",
+      url: "https://en.wikipedia.org/wiki/United_Kingdom_anti-immigration_protests_(2025%E2%80%93present)",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-afrikaners',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/actualites',
+    summary: {
+      fr: "Réfugiés afrikaners : les chiffres « plus de 4 500 admis entre octobre 2025 et avril 2026, près des trois quarts des 6 069 réfugiés admis » n'ont pas pu être revérifiés ; ils sont remplacés par le chiffre gouvernemental cité par Reuters (environ 6 000 Sud-Africains blancs admis fin avril 2026). Le taux de 63 % d'Afrikaners sans emploi, sans auteur identifié, est retiré.",
+      en: "Afrikaner refugees: the figures \"more than 4,500 admitted between October 2025 and April 2026, nearly three quarters of the 6,069 refugees admitted\" could not be re-checked; they are replaced by the government figure reported by Reuters (about 6,000 white South Africans admitted by the end of April 2026). The 63% unemployment rate among Afrikaners, with no identified author, is withdrawn.",
+    },
+    source: {
+      name: "Reuters via TimesLIVE — Trump raises refugee cap to admit more white South Africans",
+      url: "https://www.timeslive.co.za/news/world/2026-05-26-trump-raises-refugee-cap-to-admit-more-white-south-africans/",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-self-deportation',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/legislation',
+    summary: {
+      fr: "Programme américain de « self-deportation » : les chiffres « 605 000 expulsions et 1,9 million de départs volontaires », chiffres du DHS présentés sans attribution (via le Washington Times), sont retirés. L'« objectif de plus de 200 000 départs » était une projection tirée de données internes. L'entrée cite désormais ces données, attribuées : environ 132 000 départs au 16 juillet 2026 selon Axios.",
+      en: "US \"self-deportation\" programme: the figures \"605,000 deportations and 1.9 million voluntary departures\", DHS figures presented without attribution (via the Washington Times), are withdrawn. The \"target of more than 200,000 departures\" was a projection from internal data. The entry now cites that data, attributed: about 132,000 departures by 16 July 2026 according to Axios.",
+    },
+    source: {
+      name: "Axios — How Trump's \"self-deportation\" push has ramped up",
+      url: "https://www.axios.com/2026/07/28/trump-self-deportation-ice",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-danemark-paradigme',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/legislation',
+    summary: {
+      fr: "Danemark, « changement de paradigme » de 2019 : trois affirmations absentes des sources citées sont retirées (« 114 restrictions votées cette année-là », « 95 % des déboutés effectivement éloignés », prestations « rebaptisées aide au retour »). « Plus bas niveau depuis quarante ans » est remplacé par la donnée attribuée à la BBC (plus bas niveau depuis les années 1980, au début de 2025). L'objectif « zéro demandeur d'asile » a été annoncé par le gouvernement, et non par « sa ministre de l'Immigration ».",
+      en: "Denmark, 2019 \"paradigm shift\": three claims absent from the cited sources are withdrawn (\"114 restrictions passed that year\", \"95% of rejected applicants actually removed\", benefits \"renamed return aid\"). \"Lowest level in forty years\" is replaced by the figure attributed to the BBC (lowest level since the 1980s, in early 2025). The \"zero asylum seekers\" goal was announced by the government, not by \"its immigration minister\".",
+    },
+    source: {
+      name: "Wikipedia — Immigration policy of Mette Frederiksen",
+      url: "https://en.wikipedia.org/wiki/Immigration_policy_of_Mette_Frederiksen",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-suede-aide-retour',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/legislation',
+    summary: {
+      fr: "Suède, aide au retour volontaire : le coût « d'environ 2,5 milliards de couronnes sur trois ans » et la date d'adoption « 30 octobre 2025 », absents des sources officielles, sont retirés. L'entrée cite le communiqué de Migrationsverket du 31 octobre 2025.",
+      en: "Sweden, voluntary return grant: the cost \"about 2.5 billion kronor over three years\" and the adoption date \"30 October 2025\", absent from the official sources, are withdrawn. The entry cites the Migrationsverket notice of 31 October 2025.",
+    },
+    source: {
+      name: "Migrationsverket — Återvandringsbidraget höjs den 1 januari 2026",
+      url: "https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-dansk-folkeparti',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/dansk-folkeparti',
+    summary: {
+      fr: "Dansk Folkeparti : en 2026, le parti fait plus que tripler son score (de 2,6 % à 9,1 %), et non « quasiment ». La condition de participation au gouvernement prêtée à Morten Messerschmidt, rapportée par un seul média militant et non confirmée ailleurs, est retirée. Les résultats citent désormais une source générale.",
+      en: "Danish People's Party: in 2026 the party more than tripled its share (from 2.6% to 9.1%), not \"nearly\". The condition for joining a government attributed to Morten Messerschmidt, reported by a single campaigning outlet and not confirmed elsewhere, is withdrawn. The results now cite a general source.",
+    },
+    source: {
+      name: "Wikipedia — 2026 Danish general election",
+      url: "https://en.wikipedia.org/wiki/2026_Danish_general_election",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
+    id: '2026-10-21-mi-hazank-2022',
+    date: '2026-10-21',
+    kind: 'correction',
+    page: '/partis/mi-hazank',
+    summary: {
+      fr: "Mi Hazánk : 6 sièges et 5,88 % des voix de liste aux législatives de 2022, et non 7 sièges et 6,17 %, chiffres repris d'une organisation de défense des droits des Roms.",
+      en: "Mi Hazánk: 6 seats and 5.88% of the list vote in the 2022 legislative election, not 7 seats and 6.17%, figures taken from a Roma rights organisation.",
+    },
+    source: {
+      name: "Wikipedia — 2022 Hungarian parliamentary election",
+      url: "https://en.wikipedia.org/wiki/2022_Hungarian_parliamentary_election",
+      accessedOn: "2026-10-21",
+    },
+  },
+  {
     id: '2026-10-21-liens-morts',
     date: '2026-10-21',
     kind: 'correction',
