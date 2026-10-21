@@ -54,7 +54,11 @@
   },
   "footer": {
     "sources": "Sources : Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
-    "donate": "Soutenir ce projet"
+    "donate": "Soutenir ce projet",
+    "notice": "Contenu à but journalistique et documentaire. Aucune donnée personnelle n’est collectée à des fins de ciblage. Toute classification est sourcée et vérifiable — voir la méthodologie.",
+    "legal": "Mentions légales",
+    "contact": "Contact et corrections",
+    "corrections": "Journal des corrections"
   },
   "meta": {
     "siteName": "Observatoire des politiques migratoires",
@@ -62,5 +66,32 @@
     "siteDescription": "Suivi factuel et sourcé des partis, lois et élections liés aux politiques d'immigration dans les démocraties occidentales.",
     "partiesTitle": "Annuaire des partis",
     "partiesDescription": "Fiches sourcées des partis dont le programme ou la classification académique porte sur la réduction de l'immigration ou la remigration : statut électoral, historique, implantation."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "publisherHeading": "Éditeur",
+    "contactHeading": "Contact",
+    "hostHeading": "Hébergement",
+    "hostText": "Le site est hébergé par {name}, {address}, États-Unis.",
+    "lawText": "Mentions établies en application de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
+    "missing": "À compléter avant publication",
+    "publisherText": "Le site est édité à titre non professionnel par une personne physique qui, comme la loi le permet, a choisi de ne pas rendre son identité publique et l’a communiquée à l’hébergeur."
+  },
+  "contact": {
+    "title": "Contact et corrections",
+    "intro": "Ce site est un outil de veille : une erreur signalée et avérée est corrigée, et la correction est rendue publique.",
+    "reportHeading": "Signaler une erreur",
+    "reportText": "Écrivez à <mail>{email}</mail> en indiquant la page concernée, l’affirmation contestée et, si possible, une source. Chaque signalement est vérifié contre une source précise. Une erreur avérée est corrigée sur la page et consignée dans le journal des corrections, avec sa date et sa nature.",
+    "replyHeading": "Droit de réponse",
+    "replyText": "Toute personne nommée ou désignée sur ce site peut exercer le droit de réponse prévu par la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, en écrivant à l’adresse ci-dessus.",
+    "journalLink": "Consulter le journal des corrections →"
+  },
+  "corrections": {
+    "title": "Journal des corrections",
+    "intro": "Chaque erreur publiée puis corrigée, chaque fait retiré et chaque changement de classification, du plus récent au plus ancien, avec la source sur laquelle repose la correction. Les reformulations, les ajouts de données et les changements de présentation n’y figurent pas.",
+    "kind_correction": "Correction",
+    "kind_reclassement": "Reclassement",
+    "kind_retrait": "Retrait",
+    "page": "Page concernée"
   }
 }

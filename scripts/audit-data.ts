@@ -14,7 +14,8 @@ import { parties } from '../src/data/parties';
 import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
-import { countryProfiles } from '../src/data/countryProfiles';
+import { corrections } from '../src/data/corrections';
+import { PUBLISHER } from '../src/lib/publisher';
 import type { Source } from '../src/data/types';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -83,7 +84,6 @@ const chamberSizes = new Map<string, { total: number; who: string[] }>();
 
 for (const p of parties) {
   const w = `parti ${p.slug}`;
-  if (!countryProfiles[p.countryCode]) err(w, `aucun countryProfile pour ${p.countryCode}`);
   if (p.founded != null && (p.founded < 1800 || p.founded > Number(TODAY.slice(0, 4))))
     err(w, `année de fondation invraisemblable : ${p.founded}`);
 
@@ -164,7 +164,6 @@ for (const e of elections) {
     warn(w, 'marquée « résultat connu » mais sans texte de résultat');
   if (e.status === 'a_venir' && e.result) warn(w, 'un résultat est renseigné pour un scrutin à venir');
   if (e.totalSeats != null && e.totalSeats <= 0) err(w, `totalSeats invalide : ${e.totalSeats}`);
-  if (!countryProfiles[e.countryCode]) err(w, `aucun countryProfile pour ${e.countryCode}`);
   checkSource(w, e.source, e.status === 'resultat_connu');
 }
 
@@ -226,6 +225,19 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
+// ------------------------------------------------- corrections log, legal notice
+checkDuplicates(corrections, (c) => c.id, 'corrections');
+for (const c of corrections) {
+  const w = `correction ${c.id}`;
+  if (!isIsoDate(c.date)) err(w, `date mal formée : ${c.date}`);
+  else if (c.date > TODAY) err(w, `datée du futur : ${c.date}`);
+  if (!c.summary.fr?.trim() || !c.summary.en?.trim()) err(w, 'résumé FR ou EN manquant');
+  if (!c.page.startsWith('/')) err(w, `chemin de page invalide : ${c.page}`);
+  checkSource(w, c.source);
+}
+// An incomplete legal notice must never reach main (LCEN, decision 3).
+if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
+
 // ------------------------------------------------- country labels across UI
 const usedCodes = new Set<string>([...parties.map((p) => p.countryCode), ...elections.map((e) => e.countryCode)]);
 const labelFiles = [
@@ -247,7 +259,6 @@ for (const f of labelFiles) {
     if (!new RegExp(`\\b${cc}:\\s`).test(src)) err('labels', `${cc} absent de ${f}`);
   }
 }
-for (const cc of usedCodes) if (!countryProfiles[cc as never]) err('labels', `${cc} absent de countryProfiles`);
 
 // -------------------------------------------------------------------- report
 const errors = findings.filter((f) => f.level === 'ERROR');

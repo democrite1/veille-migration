@@ -2585,6 +2585,20 @@ export const parties: Party[] = [
     },
     electoralHistory: [
       {
+        label: 'Élections sénatoriales 2026',
+        chamber: 'Sénat',
+        date: '2026-10-09',
+        seats: 0,
+        totalSeats: 81,
+        votePercent: 4.96,
+        source: {
+          name: 'Wikipedia — 2026 Czech Senate election',
+          url: 'https://en.wikipedia.org/wiki/2026_Czech_Senate_election',
+          accessedOn: '2026-10-20',
+          note: 'Pourcentage du premier tour ; 27 sièges sur 81 étaient renouvelés et aucun candidat du parti ne s’est qualifié pour le second tour.',
+        },
+      },
+      {
         label: 'Élections législatives 2025',
         chamber: 'Chambre des députés',
         date: '2025-10-03',
