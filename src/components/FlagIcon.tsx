@@ -16,12 +16,16 @@ export default function FlagIcon({
   const code = countryCode.toLowerCase() === 'eu' ? 'eu' : countryCode.toLowerCase();
   if (!/^[a-z]{2}$/.test(code)) return null;
 
+  // Explicit 4:3 dimensions reserve the flag's space before it loads: without
+  // them the directory's layout shifted as flags arrived (CLS 0.755, audit P4).
   return (
     // eslint-disable-next-line @next/next/no-img-element -- small SVG flag: next/image cannot optimise SVG
     <img
       src={`https://flagcdn.com/${code}.svg`}
       alt={title ?? ''}
       aria-hidden={title ? undefined : true}
+      width={20}
+      height={15}
       className={className}
       loading="lazy"
     />
