@@ -13,6 +13,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fetchGoogleNewsRss, type NewsCandidate } from './lib/googleNewsRss';
+import { finish } from './lib/outcome';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -50,6 +51,7 @@ const TARGETS: { code: string; query: string; lang: string; country: string }[] 
 
 async function main() {
   const results: Record<string, NewsCandidate[]> = {};
+  let failed = 0;
 
   for (const { code, query, lang, country } of TARGETS) {
     try {
@@ -58,6 +60,7 @@ async function main() {
       console.log(`[fetch:legislation] ${code}: ${candidates.length} article(s)`);
       if (candidates[0]) console.log(`    → ${candidates[0].title} (${candidates[0].source})`);
     } catch (err) {
+      failed++;
       console.error(`[fetch:legislation] failed for ${code}:`, (err as Error).message);
     }
     await sleep(1200);
@@ -67,6 +70,7 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'legislation-candidates.json'), JSON.stringify(results, null, 2));
   console.log(`[fetch:legislation] Done. ${TARGETS.length} targets checked — review scripts/fetch/output/legislation-candidates.json for new bills or laws.`);
+  finish('fetch:legislation', TARGETS.length, failed);
 }
 
 main();

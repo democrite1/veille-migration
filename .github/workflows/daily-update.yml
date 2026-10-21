@@ -1,13 +1,16 @@
 name: Daily data update
 
-# These fetch scripts surface *candidate* news via Google News RSS — they
-# do not write to Supabase and do not need any secrets. Every fact actually
-# published on the site (src/data/*.ts) still goes through manual review:
-# see scripts/fetch/*.ts for why (no free keyless API reliably covers
-# ~28 countries' electoral commissions, EUR-Lex, or party classification
-# databases). Review the candidates artifact below, update src/data/*.ts,
-# then run `npx tsx scripts/seed-supabase.ts` and push — that's what
-# actually updates the live site.
+# These fetch scripts surface *candidate* news via Google News RSS. They
+# write nothing to the site and need no secret. Every fact actually
+# published (src/data/*.ts) still goes through manual review: see
+# scripts/fetch/*.ts for why (no free keyless API reliably covers ~28
+# countries' electoral commissions, EUR-Lex, or party classification
+# databases). Review the candidates, update src/data/*.ts and push: Vercel
+# rebuilds the site from src/data.
+#
+# Each script exits 1 when more than half of its requests fail, so an
+# outage of the feed turns the run red instead of passing unnoticed. The
+# weekly digest workflow gathers the candidates into a GitHub issue.
 
 on:
   schedule:
@@ -24,23 +27,36 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm install
+      - run: npm ci
 
       - name: Fetch party status candidates
+        id: parties
+        continue-on-error: true
         run: npm run fetch:parties
 
       - name: Fetch election candidates
+        id: elections
+        continue-on-error: true
         run: npm run fetch:elections
 
       - name: Fetch legislation candidates
+        id: legislation
+        continue-on-error: true
         run: npm run fetch:legislation
 
       - name: Fetch initiative news candidates
+        id: news
+        continue-on-error: true
         run: npm run fetch:news
 
       - name: Upload candidates for review
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: fetch-candidates-${{ github.run_id }}
           path: scripts/fetch/output/*.json
           retention-days: 14
+
+      - name: Fail if a fetch failed
+        if: steps.parties.outcome == 'failure' || steps.elections.outcome == 'failure' || steps.legislation.outcome == 'failure' || steps.news.outcome == 'failure'
+        run: exit 1

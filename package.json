@@ -13,7 +13,8 @@
     "fetch:news": "tsx scripts/fetch/news.ts",
     "audit": "tsx scripts/audit-data.ts",
     "links": "tsx scripts/check-links.ts",
-    "archive": "tsx scripts/archive-sources.ts"
+    "archive": "tsx scripts/archive-sources.ts",
+    "fetch:digest": "tsx scripts/fetch/digest.ts"
   },
   "dependencies": {
     "next": "^15.5.27",

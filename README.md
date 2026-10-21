@@ -100,7 +100,13 @@ Chaque script écrit un résumé console + `scripts/fetch/output/*.json`
 (non commité). Le workflow `.github/workflows/daily-update.yml` tourne
 quotidiennement (cron 05:00 UTC) et upload ces JSON comme artefact
 GitHub Actions consultable pendant 14 jours — aucun secret requis, ces
-scripts ne touchent pas Supabase.
+scripts ne touchent pas Supabase. Un script sort en erreur quand plus de
+la moitié de ses requêtes échouent, ce qui fait échouer le workflow.
+Chaque lundi, `.github/workflows/weekly-digest.yml` relance la collecte
+et publie les pistes de la semaine dans un ticket GitHub (étiquette
+`veille`, `scripts/fetch/digest.ts`), et `weekly-links.yml` contrôle les
+liens de toutes les sources et les archive dans la Wayback Machine
+(étiquette `liens` en cas de lien cassé).
 
 Tester en local :
 ```bash

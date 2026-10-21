@@ -19,6 +19,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { parties } from '../../src/data/parties';
 import { fetchGoogleNewsRss, type NewsCandidate } from './lib/googleNewsRss';
+import { finish } from './lib/outcome';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -54,6 +55,7 @@ const GOVERNMENT_WORD: Record<string, string> = {
 
 async function main() {
   const results: Record<string, NewsCandidate[]> = {};
+  let failed = 0;
 
   for (const party of parties) {
     const lang = COUNTRY_LANG[party.countryCode] ?? 'en';
@@ -68,6 +70,7 @@ async function main() {
       console.log(`[fetch:parties] ${party.name} (${party.countryCode}): ${candidates.length} article(s)`);
       if (candidates[0]) console.log(`    → ${candidates[0].title} (${candidates[0].source})`);
     } catch (err) {
+      failed++;
       console.error(`[fetch:parties] failed for ${party.name}:`, (err as Error).message);
     }
     await sleep(1200);
@@ -77,6 +80,7 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'parties-candidates.json'), JSON.stringify(results, null, 2));
   console.log(`[fetch:parties] Done. ${Object.keys(results).length} parties checked — review scripts/fetch/output/parties-candidates.json for anything that changed since the fiche was last written.`);
+  finish('fetch:parties', parties.length, failed);
 }
 
 main();
