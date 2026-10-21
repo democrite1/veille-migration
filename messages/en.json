@@ -98,5 +98,16 @@
     "kind_reclassement": "Reclassification",
     "kind_retrait": "Withdrawal",
     "page": "Page"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist or has moved.",
+    "home": "Back to the home page"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "text": "The page could not be displayed. Try again; if the problem persists, report it.",
+    "retry": "Try again",
+    "report": "Report the problem"
   }
 }

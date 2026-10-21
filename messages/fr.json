@@ -98,5 +98,16 @@
     "kind_reclassement": "Reclassement",
     "kind_retrait": "Retrait",
     "page": "Page concernée"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée.",
+    "home": "Retour à l'accueil"
+  },
+  "error": {
+    "title": "Une erreur est survenue",
+    "text": "La page n'a pas pu s'afficher. Réessayez ; si le problème persiste, signalez-le.",
+    "retry": "Réessayer",
+    "report": "Signaler le problème"
   }
 }
