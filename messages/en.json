@@ -42,7 +42,17 @@
   },
   "methodology": {
     "title": "Methodology",
-    "intro": "This site documents parties, laws and elections related to migration policy across Western democracies. Every classification is sourced and verifiable."
+    "intro": "This site documents parties, laws and elections related to migration policy across Western democracies. Every classification is sourced and verifiable.",
+    "charter": {
+      "title": "Vocabulary charter",
+      "intro": "The texts on this site describe; they do not characterise. These rules apply to every party profile, election, law and news item:",
+      "r1": "No dramatising words: no \"breakthrough\", \"earthquake\", \"spectacular\", \"crushing\", \"unprecedented\" or \"collapse\". \"Historic\" is used only in its literal sense.",
+      "r2": "\"Record\", \"best\" or \"worst\" result only with the basis of comparison: since when, for which type of election.",
+      "r3": "Figures from a government, a party or a campaigning organisation are attributed to their author (\"according to the Interior Ministry\").",
+      "r4": "Neutral names (\"immigration legislation\", \"return grant\"); a party's own vocabulary (\"remigration\", \"invasion\") is quoted and attributed.",
+      "r5": "No judgment on the merits of a programme or a measure: the site reports what a party proposes or gets adopted.",
+      "check": "The data audit flags these words when they appear outside a quotation."
+    }
   },
   "elections": {
     "title": "Electoral tracker",
@@ -50,7 +60,7 @@
   },
   "legislation": {
     "title": "Legislative tracker",
-    "intro": "Anti-immigration laws enacted or under advanced discussion, by country and at EU level."
+    "intro": "Immigration legislation (laws, decrees, EU acts) adopted or under advanced discussion, by country and at EU level."
   },
   "news": {
     "title": "News",

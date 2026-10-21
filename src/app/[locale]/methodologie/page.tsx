@@ -85,6 +85,17 @@ function MethodologyPageInner() {
       </section>
 
       <section className="card space-y-2">
+        <h2 className="font-serif text-lg font-semibold">{t('charter.title')}</h2>
+        <p className="text-sm">{t('charter.intro')}</p>
+        <ul className="list-disc space-y-1 pl-5 text-sm">
+          {(['r1', 'r2', 'r3', 'r4', 'r5'] as const).map((k) => (
+            <li key={k}>{t(`charter.${k}`)}</li>
+          ))}
+        </ul>
+        <p className="text-sm text-muted">{t('charter.check')}</p>
+      </section>
+
+      <section className="card space-y-2">
         <h2 className="font-serif text-lg font-semibold">Ce que ce site ne fait pas</h2>
         <p className="text-sm">
           Pas de mise en avant séparée des structures jeunesse des partis. Pour les

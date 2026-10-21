@@ -42,7 +42,17 @@
   },
   "methodology": {
     "title": "Méthodologie",
-    "intro": "Ce site documente les partis, lois et élections liés aux politiques migratoires dans les démocraties occidentales. Chaque classification est sourcée et vérifiable."
+    "intro": "Ce site documente les partis, lois et élections liés aux politiques migratoires dans les démocraties occidentales. Chaque classification est sourcée et vérifiable.",
+    "charter": {
+      "title": "Charte de vocabulaire",
+      "intro": "Les textes du site décrivent, ils ne qualifient pas. Ces règles valent pour toutes les fiches, élections, lois et actualités :",
+      "r1": "Pas de mot dramatisant : ni « percée », « séisme », « spectaculaire », « écrasant », « inédit » ou « effondrement ». « Historique » n'est employé qu'au sens propre.",
+      "r2": "« Record », « meilleur » ou « plus faible » score seulement avec la base de comparaison : depuis quand, pour quel type d'élection.",
+      "r3": "Les chiffres d'un gouvernement, d'un parti ou d'une organisation militante sont attribués à leur auteur (« selon le ministère de l'Intérieur »).",
+      "r4": "Dénominations neutres (« textes sur l'immigration », « aide au retour ») ; le vocabulaire propre à un parti (« remigration », « invasion ») est cité entre guillemets et attribué.",
+      "r5": "Aucun jugement sur le bien-fondé d'un programme ou d'une mesure : le site rapporte ce qu'un parti propose ou fait adopter.",
+      "check": "L'audit des données signale ces mots lorsqu'ils apparaissent hors citation."
+    }
   },
   "elections": {
     "title": "Suivi électoral",
@@ -50,7 +60,7 @@
   },
   "legislation": {
     "title": "Suivi législatif",
-    "intro": "Lois anti-immigration promulguées ou en discussion avancée, par pays et au niveau de l'Union européenne."
+    "intro": "Textes sur l'immigration (lois, décrets, actes européens) adoptés ou en discussion avancée, par pays et au niveau de l'Union européenne."
   },
   "news": {
     "title": "Actualités",

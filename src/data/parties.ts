@@ -15,7 +15,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Premier groupe d'opposition à l'Assemblée nationale (17e législature) : 126 députés sur 577 (record historique du parti), en hausse de 37 sièges par rapport à 2022.",
+      "Premier groupe d'opposition à l'Assemblée nationale (17e législature) : 126 députés sur 577 (le plus grand nombre de députés de son histoire), en hausse de 37 sièges par rapport à 2022.",
     electoralStatusSource: {
       name: 'Touteleurope.eu — résultats définitifs 2024',
       url: 'https://www.touteleurope.eu/vie-politique-des-etats-membres/resultats-des-elections-legislatives-2024-le-rassemblement-national-en-echec-l-assemblee-nationale-partagee-en-trois-blocs/',
@@ -534,7 +534,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices. Percée majeure le 7 mai 2026 : entrée simultanée au Senedd gallois (34 sièges, deuxième force) et au Parlement écossais (17 sièges, deuxième force ex æquo avec le Labour), en plus du contrôle de nombreux conseils locaux anglais.",
+      "8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices. Le 7 mai 2026, entrée simultanée au Senedd gallois (34 sièges, deuxième force) et au Parlement écossais (17 sièges, deuxième force ex æquo avec le Labour), en plus du contrôle de nombreux conseils locaux anglais.",
     electoralStatusSource: {
       name: 'UK Parliament — members.parliament.uk',
       url: 'https://members.parliament.uk/member/5091/career',
@@ -580,7 +580,7 @@ export const parties: Party[] = [
           name: 'Swansea Bay News — Senedd Election 2026',
           url: 'https://swanseabaynews.com/senedd-election-2026-plaid-cymru-largest-party-reform-uk-historic-breakthrough-welsh-labour-reduced-to-nine-seats-the-new-political-map-of-wales/',
           accessedOn: '2026-09-10',
-          note: "Percée historique : première entrée du parti au Senedd (élargi à 96 sièges pour ce scrutin), devenant la deuxième force politique du pays derrière Plaid Cymru, très loin devant le Labour gallois (9 sièges seulement) qui dirigeait le pays depuis la dévolution.",
+          note: "Première entrée du parti au Senedd (élargi à 96 sièges pour ce scrutin), devenant la deuxième force politique du pays derrière Plaid Cymru, très loin devant le Labour gallois (9 sièges seulement) qui dirigeait le pays depuis la dévolution.",
         },
       },
       {
@@ -864,7 +864,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Ancrage historique fort dans le nord de l'Italie (Vénétie, Lombardie), où le parti détient plusieurs présidences de région depuis les années 1990, dont la Vénétie sans interruption depuis 2010.",
+        "Implantation ancienne et forte dans le nord de l'Italie (Vénétie, Lombardie), où le parti détient plusieurs présidences de région depuis les années 1990, dont la Vénétie sans interruption depuis 2010.",
       source: {
         name: 'Regione del Veneto',
         url: 'https://www.regione.veneto.it',
@@ -1127,7 +1127,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Sept sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025, plus que doublant sa représentation (3 sièges auparavant). Percée locale spectaculaire aux élections municipales de mars 2026 : 299 sièges de conseillers municipaux, contre 55 avant le scrutin — la plus forte progression de tous les partis. Parti d'opposition, non associé au gouvernement Jetten.",
+      "Sept sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025, plus que doublant sa représentation (3 sièges auparavant). Aux élections municipales de mars 2026 : 299 sièges de conseillers municipaux, contre 55 avant le scrutin — la plus forte progression de tous les partis. Parti d'opposition, non associé au gouvernement Jetten.",
     electoralStatusSource: {
       name: 'AlleCijfers.nl — Verkiezingsuitslagen voor FvD',
       url: 'https://allecijfers.nl/politieke-partij/fvd/',
@@ -1200,7 +1200,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Percée locale majeure en mars 2026 : 299 conseillers municipaux (contre 55 avant le scrutin), le parti passant de 3,6% à 8,4% de moyenne dans les communes où il se présentait déjà, avec ses meilleurs scores dans le nord du pays (Drenthe, Groningue, Frise).",
+        "En mars 2026 : 299 conseillers municipaux (contre 55 avant le scrutin), le parti passant de 3,6% à 8,4% de moyenne dans les communes où il se présentait déjà, avec ses meilleurs scores dans le nord du pays (Drenthe, Groningue, Frise).",
       source: {
         name: 'StukRoodVlees — Waarom deed Forum het zo goed bij de Raadsverkiezingen?',
         url: 'https://stukroodvlees.nl/waarom-deed-forum-het-zo-goed-bij-de-raadsverkiezingen/',
@@ -1417,7 +1417,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Premier parti aux élections législatives de septembre 2024 — une première historique — mais resté dans l'opposition : les négociations de coalition avec l'ÖVP menées par Herbert Kickl ont échoué début 2025. Le gouvernement Stocker (ÖVP-SPÖ-NEOS, première coalition tripartite du pays) a prêté serment le 3 mars 2025. Herbert Kickl dirige l'opposition au Conseil national (Nationalrat).",
+      "Premier parti aux élections législatives de septembre 2024 — une première — mais resté dans l'opposition : les négociations de coalition avec l'ÖVP menées par Herbert Kickl ont échoué début 2025. Le gouvernement Stocker (ÖVP-SPÖ-NEOS, première coalition tripartite du pays) a prêté serment le 3 mars 2025. Herbert Kickl dirige l'opposition au Conseil national (Nationalrat).",
     electoralStatusSource: {
       name: 'Euronews / t-online',
       url: 'https://www.euronews.com/2025/03/03/centre-right-ovps-christian-stocker-sworn-in-as-new-austrian-chancellor',
@@ -1705,7 +1705,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2024 European Parliament election in Spain',
           url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_Spain',
           accessedOn: '2026-09-09',
-          note: "Percée surprise pour un groupement électoral créé quelques semaines avant le scrutin, sixième force du pays.",
+          note: "Groupement électoral créé quelques semaines avant le scrutin, sixième force du pays.",
         },
       },
     ],
@@ -1730,7 +1730,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Défaite historique aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán tombe à 52 sièges sur 199 (38,61% des voix de liste) face au parti Tisza de Péter Magyar, qui en obtient 141 (53,18%) — soit à son tour une majorité des deux tiers, suffisante pour réviser la Constitution. Orbán a concédé sa défaite le soir même. Participation de 78,99%, la plus forte depuis la transition démocratique de 1990. Fidesz est désormais dans l'opposition.",
+      "Défaite aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán tombe à 52 sièges sur 199 (38,61% des voix de liste) face au parti Tisza de Péter Magyar, qui en obtient 141 (53,18%) — soit à son tour une majorité des deux tiers, suffisante pour réviser la Constitution. Orbán a concédé sa défaite le soir même. Participation de 78,99%, la plus forte depuis la transition démocratique de 1990. Fidesz est désormais dans l'opposition.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
@@ -2344,7 +2344,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2023 Polish parliamentary election',
           url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
           accessedOn: '2026-09-13',
-          note: "Premier parti en sièges et en voix, mais privé de majorité : les trois listes d'opposition réunies forment le gouvernement Tusk. Participation record de 72,9%.",
+          note: "Premier parti en sièges et en voix, mais privé de majorité : les trois listes d'opposition réunies forment le gouvernement Tusk. Participation : 72,9 %.",
         },
       },
       {
@@ -2604,7 +2604,7 @@ export const parties: Party[] = [
           name: 'NRK',
           url: 'https://www.nrk.no/norge/ny-valgstudie_-ideologisk-skifte-mot-hoyre-1.17991477',
           accessedOn: '2026-09-09',
-          note: 'Meilleur résultat historique du parti à une élection législative.',
+          note: 'Meilleur résultat du parti à une élection législative.',
         },
       },
       {
@@ -2885,7 +2885,7 @@ export const parties: Party[] = [
     },
     founded: 2019,
     description:
-      "Fondé en 2019 par Dimitris Natsios, théologien orthodoxe. Parti resté marginal jusqu'à sa percée surprise aux élections législatives de 2023.",
+      "Fondé en 2019 par Dimitris Natsios, théologien orthodoxe. Parti resté marginal jusqu'à son entrée au Parlement aux élections législatives de 2023.",
   },
   {
     slug: 'spartiates',
@@ -2894,7 +2894,7 @@ export const parties: Party[] = [
     positioning: 'Extrême droite, ultranationaliste',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Douze députés à la Vouli, entrés au Parlement dès leur première élection en juin 2023 — une percée largement attribuée au soutien affiché d'Ilias Kasidiaris, ancien député d'Aube dorée condamné pour appartenance à une organisation criminelle, dont le propre parti (Ethniko Komma – Ellines) avait été disqualifié par la justice grecque juste avant le scrutin. Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
+      "Douze députés à la Vouli, entrés au Parlement dès leur première élection en juin 2023 — un résultat largement attribué au soutien affiché d'Ilias Kasidiaris, ancien député d'Aube dorée condamné pour appartenance à une organisation criminelle, dont le propre parti (Ethniko Komma – Ellines) avait été disqualifié par la justice grecque juste avant le scrutin. Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
     electoralStatusSource: {
       name: 'NBC News — Greece election far right Spartans',
       url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
@@ -3331,7 +3331,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Spectaculaire retour électoral aux élections du 24 mars 2026 : le parti quasiment triple son score (9,1% des voix, 16 sièges), après avoir frôlé l'effondrement en 2022 (5 sièges). Dans l'opposition à la coalition gouvernementale de Mette Frederiksen. Le président Morten Messerschmidt a annoncé que le parti ne rejoindrait un gouvernement que si celui-ci garantit que davantage d'immigrés extra-européens quittent le Danemark qu'il n'en arrive.",
+      "Aux élections du 24 mars 2026, le parti quasiment triple son score (9,1 % des voix, 16 sièges), contre 5 sièges en 2022. Dans l'opposition à la coalition gouvernementale de Mette Frederiksen. Le président Morten Messerschmidt a annoncé que le parti ne rejoindrait un gouvernement que si celui-ci garantit que davantage d'immigrés extra-européens quittent le Danemark qu'il n'en arrive.",
     electoralStatusSource: {
       name: 'Searchlight Magazine — Danish Election: DPP comeback as far right vote is reshuffled',
       url: 'https://searchlightmagazine.com/2026/03/danish-election-dpp-comeback-as-far-right-vote-is-reshuffled/',
@@ -3391,7 +3391,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2022 Danish general election',
           url: 'https://en.wikipedia.org/wiki/2022_Danish_general_election',
           accessedOn: '2026-09-09',
-          note: "Quasi-effondrement du parti, en grande partie absorbé par le Danmarksdemokraterne alors nouvellement fondé.",
+          note: "Recul à 5 sièges, en grande partie au profit du Danmarksdemokraterne, alors nouvellement fondé.",
         },
       },
     ],
@@ -3477,7 +3477,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. Percée spectaculaire en 2026 : victoire du parti à l'élection partielle fédérale de Farrer (9 mai) avec David Farley, premier député One Nation directement élu à la Chambre des représentants de son histoire (les précédents élus y étaient arrivés par défection) ; deuxième place à l'élection partielle de Nepean (Victoria, 2 mai) ; et surtout un « séisme électoral » en Australie-Méridionale (21 mars), où le parti dépasse les Libéraux pour la première fois de l'histoire de cet État. Reste un parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
+      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. En 2026 : victoire du parti à l'élection partielle fédérale de Farrer (9 mai) avec David Farley, premier député One Nation directement élu à la Chambre des représentants de son histoire (les précédents élus y étaient arrivés par défection) ; deuxième place à l'élection partielle de Nepean (Victoria, 2 mai) ; et, en Australie-Méridionale (21 mars), un score supérieur à celui des Libéraux, une première dans cet État. Reste un parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
     electoralStatusSource: {
       name: 'The Conversation — Labor easily wins South Australian election with One Nation beating Liberals into second',
       url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
@@ -3537,7 +3537,7 @@ export const parties: Party[] = [
           name: 'The Conversation',
           url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
           accessedOn: '2026-09-10',
-          note: "Meilleur résultat du parti à une élection d'État ou fédérale depuis 1998 (Queensland). Le parti obtient aussi 3 sièges au Conseil législatif (chambre haute) et devance les Libéraux en voix, une première historique dans cet État.",
+          note: "Meilleur résultat du parti à une élection d'État ou fédérale depuis 1998 (Queensland). Le parti obtient aussi 3 sièges au Conseil législatif (chambre haute) et devance les Libéraux en voix, une première dans cet État.",
         },
       },
       {
@@ -3633,7 +3633,7 @@ export const parties: Party[] = [
           name: "CBC News — With less than 1% of the vote, does the PPC have a future?",
           url: 'https://www.cbc.ca/news/politics/peoples-party-of-canada-ppc-maxime-bernier-election-2025-1.7523653',
           accessedOn: '2026-09-09',
-          note: 'Pire résultat historique du parti ; Maxime Bernier arrive quatrième dans sa propre circonscription.',
+          note: 'Plus faible résultat du parti ; Maxime Bernier arrive quatrième dans sa propre circonscription.',
         },
       },
       {
@@ -3732,7 +3732,7 @@ export const parties: Party[] = [
     },
     founded: 2020,
     description:
-      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava. Partenaire de coalition du HDZ depuis 2024, malgré la perte de son fief historique de Vukovar en 2025.",
+      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava. Partenaire de coalition du HDZ depuis 2024, malgré la perte de son fief de Vukovar en 2025.",
   },
   {
     slug: 'hrvatski-suverenisti',
@@ -4392,7 +4392,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Représenté à l'Althing depuis les élections de novembre 2024. Percée inédite aux élections municipales de Reykjavik de mai 2026 : passage de 0 à 3 sièges au conseil municipal de la capitale (11,36% des voix), dans le cadre d'un net basculement à droite de la ville.",
+      "Représenté à l'Althing depuis les élections de novembre 2024. Aux élections municipales de Reykjavik de mai 2026, le parti passe de 0 à 3 sièges au conseil municipal de la capitale (11,36 % des voix).",
     electoralStatusSource: {
       name: 'Iceland Review — Major changes ahead for Reykjavik City Council',
       url: 'https://www.icelandreview.com/news/major-changes-ahead-for-reykjavik-city-council-after-election-results/',
@@ -4534,7 +4534,7 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Maillage local en construction rapide mais encore marginal à l'échelle du pays : environ 200 conseillers municipaux sur les 28 696 que compte le Japon, et 5 conseillers préfectoraux sur 2 614. Le parti s'appuie sur un réseau de sections locales issu de sa base YouTube plutôt que sur des implantations historiques.",
+        "Maillage local en construction rapide mais encore marginal à l'échelle du pays : environ 200 conseillers municipaux sur les 28 696 que compte le Japon, et 5 conseillers préfectoraux sur 2 614. Le parti s'appuie sur un réseau de sections locales issu de sa base YouTube plutôt que sur des implantations anciennes.",
       source: {
         name: 'Wikipedia — Sanseitō',
         url: 'https://en.wikipedia.org/wiki/Sanseit%C5%8D',

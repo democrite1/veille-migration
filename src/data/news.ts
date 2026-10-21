@@ -42,7 +42,7 @@ export const news: NewsItem[] = [
     countries: ['ZA'],
     date: '2026-02-20',
     summary:
-      "Fondée en 1991 après la fin de l'apartheid, Orania (Afrique du Sud, environ 3 000 habitants en 2026) est une ville privée autogérée réservée aux Afrikaners, dotée de ses propres institutions locales et d'une monnaie complémentaire, l'Ora. Le conseil municipal a confirmé le 20 février 2026 un record de 36 naissances sur l'année 2025, le chiffre le plus élevé depuis la création de la colonie, dans un contexte d'installation croissante de jeunes Afrikaners attirés par un nouveau collège et un sentiment d'appartenance communautaire.",
+      "Fondée en 1991 après la fin de l'apartheid, Orania (Afrique du Sud, environ 3 000 habitants en 2026) est une ville privée autogérée réservée aux Afrikaners, dotée de ses propres institutions locales et d'une monnaie complémentaire, l'Ora. Le conseil municipal a confirmé le 20 février 2026 36 naissances sur l'année 2025, le chiffre le plus élevé depuis la création de la colonie, dans un contexte d'installation croissante de jeunes Afrikaners attirés par un nouveau collège et un sentiment d'appartenance communautaire.",
     legalStatus:
       "Statut légal inchangé : structure fondée sur la propriété privée actionnariale (via la société Vluytjeskraal Aandeleblok), permise par le droit sud-africain de la propriété privée ; ne fait pas l'objet de procédure judiciaire connue.",
     source: {
@@ -57,7 +57,7 @@ export const news: NewsItem[] = [
     countries: ['US', 'ZA'],
     date: '2026-05-10',
     summary:
-      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : 59 premiers réfugiés arrivés le 12 mai 2025, puis plus de 4 500 admis entre octobre 2025 et avril 2026 — l'écrasante majorité des 6 069 réfugiés admis aux États-Unis sur cette période, dans un contexte de plafond national des admissions humanitaires ramené à son niveau le plus bas de l'histoire (7 500 places pour l'année budgétaire 2026). Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
+      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : 59 premiers réfugiés arrivés le 12 mai 2025, puis plus de 4 500 admis entre octobre 2025 et avril 2026 — près des trois quarts des 6 069 réfugiés admis aux États-Unis sur cette période, dans un contexte de plafond national des admissions humanitaires ramené à 7 500 places pour l'année budgétaire 2026, le niveau le plus bas depuis la création du programme. Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
     legalStatus:
       "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour. Des données de suivi début 2026 indiquent que 63% des Afrikaners admis depuis octobre 2025 restaient sans emploi six mois après leur arrivée.",
     source: {
@@ -68,7 +68,7 @@ export const news: NewsItem[] = [
   },
   {
     id: 'compact-magazine-allemagne',
-    title: "Allemagne : la justice fédérale annule l'interdiction du magazine d'extrême droite Compact, malgré ses liens documentés avec le concept de « remigration »",
+    title: "Allemagne : la Cour administrative fédérale annule l'interdiction du magazine Compact, jugée disproportionnée",
     countries: ['DE'],
     date: '2025-06-24',
     summary:

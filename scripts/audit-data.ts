@@ -266,6 +266,35 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
+// ---------------------------------------------------------------- vocabulary
+// Vocabulary charter (E7, methodology page): words that dramatise a result
+// instead of stating it. Quoted words are someone else's and may stay, as may
+// the status label "mesures concrètes (historique, abrogée le …)". URLs,
+// identifiers and source titles are not the site's own wording and are skipped.
+// The corrections log quotes earlier wordings by design and is not checked.
+const BANNED = {
+  fr: /(?<!\p{L})(percées?|spectaculaires?|séismes?|écrasante?s?|inédite?s?|effondr\p{L}*|historiques?|records?)(?!\p{L})/giu,
+  en: /(?<!\p{L})(breakthroughs?|spectacular|earthquakes?|landslides?|crushing|unprecedented|collaps\p{L}*|historic|record-breaking)(?!\p{L})/giu,
+};
+const SKIP_KEYS = new Set(['id', 'slug', 'url', 'officialWebsite', 'name', 'handle']);
+const unquoted = (s: string) =>
+  s.replace(/«[^»]*»|“[^”]*”|"[^"]*"/g, ' ').replace(/\(historique, abrog/g, '(');
+function checkWording(where: string, v: unknown, lang: 'fr' | 'en' = 'fr') {
+  if (typeof v === 'string') {
+    for (const m of unquoted(v).matchAll(BANNED[lang])) err(where, `charte de vocabulaire : « ${m[1]} » hors citation`);
+  } else if (Array.isArray(v)) {
+    for (const x of v) checkWording(where, x, lang);
+  } else if (v && typeof v === 'object') {
+    for (const [k, x] of Object.entries(v)) {
+      if (!SKIP_KEYS.has(k)) checkWording(where, x, k === 'en' ? 'en' : k === 'fr' ? 'fr' : lang);
+    }
+  }
+}
+for (const p of parties) checkWording(`parti ${p.slug}`, p);
+for (const e of elections) checkWording(`élection ${e.id}`, e);
+for (const l of legislation) checkWording(`législation ${l.id}`, l);
+for (const n of news) checkWording(`actualité ${n.id}`, n);
+
 // A news item about an election must not quote different figures from the
 // election entry: the AfD Saxony-Anhalt item said 44.4% (election-night
 // article) while the election and the party fiche said 43.8%.

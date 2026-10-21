@@ -35,7 +35,7 @@ de classification et de sourçage.
   sourcés (intention, statut d'action) et historique daté quand pertinent
   (ex. invalidation par la Cour suprême américaine de l'Executive Order
   14160 sur le droit du sol ; retour au pouvoir du SDS en Slovénie ;
-  défaite historique du Fidesz en Hongrie).
+  défaite du Fidesz en Hongrie).
 - **Suivi électoral** : 12 élections. **Suivi législatif** : 14 lois/décrets,
   par pays + niveau UE.
 - **Sections** : annuaire des partis, suivi électoral, suivi législatif,
