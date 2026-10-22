@@ -4018,10 +4018,10 @@ export const parties: Party[] = [
     intention: {
       tag: 'reduction',
       source: {
-        name: 'NZ Herald',
-        url: 'https://www.nzherald.co.nz/nz/politics/nz-firsts-winston-peters-announces-a-new-migrant-values-statement-policy/YRSNUSTEOV2G57XKOYFCWSL3TY/',
-        unverified: "article du NZ Herald réservé aux abonnés et programme officiel inaccessible",
-        note: "Position migratoire à documenter.",
+        name: "Reuters via TimesLIVE — New Zealand First's culture-war policies lack broad appeal, warn analysts",
+        url: 'https://www.timeslive.co.za/news/world/2026-10-12-new-zealand-firsts-culture-war-policies-lack-broad-appeal-warn-analysts/',
+        accessedOn: '2026-10-22',
+        note: "Selon Reuters (12 octobre 2026), Winston Peters a proposé des restrictions à l'immigration pour l'élection du 7 novembre 2026, en dénonçant le niveau élevé de l'immigration. Wikipédia rapporte un plafond annuel de 7 000 à 15 000 migrants « sérieusement qualifiés », d'après une page du programme archivée en 2012 (https://en.wikipedia.org/wiki/New_Zealand_First). Le programme officiel de 2026 n'a pas pu être consulté (vérification anti-robot sur nzfirst.nz). Critère (a) de la méthodologie.",
       },
     },
     actionStatus: {
@@ -4030,7 +4030,7 @@ export const parties: Party[] = [
         name: '1News',
         url: 'https://www.1news.co.nz/2026/09/07/peters-signals-benefits-as-well-as-super-require-citizenship-under-nz-first-policy/',
         accessedOn: '2026-10-20',
-        note: "Campagne de 2026 : réserver la retraite publique (NZ Super) aux citoyens à partir de 2029 ; Winston Peters a évoqué la même condition pour d'autres prestations, sans proposition formelle. Rien n'a été déposé comme texte de loi. Au gouvernement depuis 2023 : les mesures adoptées par ce gouvernement n'ont pas été examinées, et l'inclusion du parti reste à trancher.",
+        note: "Campagne de 2026 : réserver la retraite publique (NZ Super) aux citoyens à partir de 2029 ; Winston Peters a évoqué la même condition pour d'autres prestations, sans proposition formelle. Rien n'a été déposé comme texte de loi. Au gouvernement depuis 2023 : les mesures adoptées par ce gouvernement n'ont pas été examinées.",
       },
     },
     electoralHistory: [
