@@ -12,6 +12,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fetchGoogleNewsRss, type NewsCandidate } from './lib/googleNewsRss';
+import { finish } from './lib/outcome';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -48,6 +49,7 @@ const TARGETS: { code: string; name: string; query: string; lang: string }[] = [
 
 async function main() {
   const results: Record<string, NewsCandidate[]> = {};
+  let failed = 0;
 
   for (const { code, name, query, lang } of TARGETS) {
     try {
@@ -56,6 +58,7 @@ async function main() {
       console.log(`[fetch:elections] ${name}: ${candidates.length} article(s)`);
       if (candidates[0]) console.log(`    → ${candidates[0].title} (${candidates[0].source})`);
     } catch (err) {
+      failed++;
       console.error(`[fetch:elections] failed for ${name}:`, (err as Error).message);
     }
     await sleep(1200);
@@ -65,6 +68,7 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'elections-candidates.json'), JSON.stringify(results, null, 2));
   console.log(`[fetch:elections] Done. ${TARGETS.length} countries checked — review scripts/fetch/output/elections-candidates.json for new results or newly-called elections.`);
+  finish('fetch:elections', TARGETS.length, failed);
 }
 
 main();

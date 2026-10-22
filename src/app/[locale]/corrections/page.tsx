@@ -2,6 +2,7 @@ import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/serve
 import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/metadata';
 import { corrections } from '@/data/corrections';
+import { localize } from '@/data/i18n';
 import SourceCite from '@/components/SourceCite';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -14,6 +15,7 @@ export default async function CorrectionsPage({ params }: { params: Promise<{ lo
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('corrections');
+  const tc = await getTranslations('common');
   const format = await getFormatter();
   const lang = locale === 'en' ? 'en' : 'fr';
   const sorted = [...corrections].sort((a, b) => b.date.localeCompare(a.date));
@@ -36,12 +38,12 @@ export default async function CorrectionsPage({ params }: { params: Promise<{ lo
             </div>
             <p className="text-sm">{c.summary[lang]}</p>
             <p className="text-sm">
-              <span className="text-muted">{t('page')} : </span>
+              <span className="text-muted">{tc('field', { label: t('page') })}</span>
               <Link href={c.page} className="text-accent underline">
                 {c.page}
               </Link>
             </p>
-            {c.source ? <SourceCite source={c.source} /> : null}
+            {c.source ? <SourceCite source={localize(c.source, locale)} /> : null}
           </li>
         ))}
       </ol>

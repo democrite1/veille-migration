@@ -20,7 +20,12 @@ de classification et de sourçage.
 - **Supabase** (facultatif) : une copie des données peut y être poussée par
   `scripts/seed-supabase.ts`, mais le site ne la lit plus depuis octobre
   2026 : la mise en pause du projet gratuit pour inactivité avait mis
-  l'annuaire des partis en erreur 500.
+  l'annuaire des partis en erreur 500. Pour recréer la base, exécuter les
+  migrations de `supabase/migrations` dans l'ordre ; la dernière
+  (`0004_access_rules.sql`) active la sécurité au niveau des lignes sur
+  toutes les tables (lecture publique, écriture réservée à la clé
+  `service_role`) et crée la fonction `exec_sql` utilisée par
+  `scripts/run-sql.ts`.
 - **28 pays couverts** : France, Allemagne, Royaume-Uni, Italie, Pays-Bas,
   États-Unis, Suède, Autriche, Espagne, Hongrie, Finlande, Belgique, Suisse,
   Portugal, Pologne, Norvège, République tchèque, Grèce, Roumanie, Slovaquie,
@@ -30,7 +35,7 @@ de classification et de sourçage.
   sourcés (intention, statut d'action) et historique daté quand pertinent
   (ex. invalidation par la Cour suprême américaine de l'Executive Order
   14160 sur le droit du sol ; retour au pouvoir du SDS en Slovénie ;
-  défaite historique du Fidesz en Hongrie).
+  défaite du Fidesz en Hongrie).
 - **Suivi électoral** : 12 élections. **Suivi législatif** : 14 lois/décrets,
   par pays + niveau UE.
 - **Sections** : annuaire des partis, suivi électoral, suivi législatif,
@@ -47,7 +52,11 @@ Le site tourne sur http://localhost:3000 et redirige vers `/fr`.
 ## Mettre à jour les données
 
 Éditer `src/data/{parties,elections,legislation,news,corrections}.ts`
-(chaque fait doit rester sourcé, avec sa date de consultation), puis vérifier :
+(chaque fait doit rester sourcé, avec sa date de consultation). Tout texte
+français modifié ou ajouté doit recevoir sa traduction anglaise dans
+`src/data/i18n/en/` : l'audit échoue sinon. Un nouveau pays demande aussi son drapeau :
+`npm run flags` le copie dans `public/flags` depuis le paquet `flag-icons`
+(licence MIT), les drapeaux étant servis par le site lui-même. Puis vérifier :
 
 ```bash
 npm run audit
@@ -95,7 +104,13 @@ Chaque script écrit un résumé console + `scripts/fetch/output/*.json`
 (non commité). Le workflow `.github/workflows/daily-update.yml` tourne
 quotidiennement (cron 05:00 UTC) et upload ces JSON comme artefact
 GitHub Actions consultable pendant 14 jours — aucun secret requis, ces
-scripts ne touchent pas Supabase.
+scripts ne touchent pas Supabase. Un script sort en erreur quand plus de
+la moitié de ses requêtes échouent, ce qui fait échouer le workflow.
+Chaque lundi, `.github/workflows/weekly-digest.yml` relance la collecte
+et publie les pistes de la semaine dans un ticket GitHub (étiquette
+`veille`, `scripts/fetch/digest.ts`), et `weekly-links.yml` contrôle les
+liens de toutes les sources et les archive dans la Wayback Machine
+(étiquette `liens` en cas de lien cassé).
 
 Tester en local :
 ```bash
@@ -115,5 +130,3 @@ npx tsx scripts/fetch/parties.ts
    `fetch:news`.
 3. **Monétisation** : dons (Stripe/Liberapay/Ko-fi) à intégrer en pied de
    page ; éviter AdSense (cf. brief).
-4. **i18n complète** : les libellés de pays (`COUNTRY_LABELS`) et le
-   contenu de la page méthodologie restent en français même en version EN.

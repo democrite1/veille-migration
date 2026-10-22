@@ -8,3 +8,4 @@ out
 scripts/fetch/output/
 .swc
 *.tsbuildinfo
+scripts/links-report.md

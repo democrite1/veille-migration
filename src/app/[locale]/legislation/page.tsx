@@ -1,34 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useFormatter, useLocale, useTranslations } from 'next-intl';
 import { getLegislation } from '@/lib/queries';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
 import SourceCite from '@/components/SourceCite';
-
-const LEVEL_LABELS: Record<string, string> = {
-  FR: 'France',
-  DE: 'Allemagne',
-  GB: 'Royaume-Uni',
-  EU: 'Union européenne',
-  CH: 'Suisse',
-  IT: 'Italie',
-  NL: 'Pays-Bas',
-  SE: 'Suède',
-  HU: 'Hongrie',
-  PL: 'Pologne',
-  PT: 'Portugal',
-  US: 'États-Unis',
-  AR: 'Argentine',
-  DK: 'Danemark',
-};
+import { isoDay } from '@/lib/freshness';
+import { countryName } from '@/lib/scope';
 
 // A struck-down or repealed text must never read as being in force.
-const STATUS_LABELS: Record<string, string> = {
-  promulguee: 'Promulguée',
-  en_discussion: 'En discussion',
-  invalidee: 'Invalidée par la justice',
-  abrogee: 'Abrogée',
-  caduque: 'Caduque',
-};
 const STATUS_STYLES: Record<string, string> = {
   promulguee: 'badge-mesures',
   en_discussion: 'badge-programme',
@@ -46,13 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LegislationPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const legislation = await getLegislation();
-  const sorted = [...legislation].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = await getLegislation(locale);
   return <LegislationPageInner sorted={sorted} />;
 }
 
 function LegislationPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getLegislation>> }) {
   const t = useTranslations('legislation');
+  const format = useFormatter();
+  const locale = useLocale();
 
   return (
     <div className="space-y-8">
@@ -67,13 +46,15 @@ function LegislationPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof ge
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h2 className="font-serif text-lg font-semibold">{l.title}</h2>
               <div className="flex gap-2">
-                <span className="badge badge-programme">{LEVEL_LABELS[l.countryOrLevel] ?? l.countryOrLevel}</span>
+                <span className="badge badge-programme">{countryName(l.countryOrLevel, locale)}</span>
                 <span className={`badge ${STATUS_STYLES[l.status] ?? 'badge-programme'}`}>
-                  {STATUS_LABELS[l.status] ?? l.status}
+                  {t(`status.${l.status}`)}
                 </span>
               </div>
             </div>
-            <p className="text-sm text-muted">{l.date}</p>
+            <p className="text-sm text-muted">
+              <time dateTime={l.date}>{format.dateTime(isoDay(l.date), { dateStyle: 'long' })}</time>
+            </p>
             <p className="text-sm">{l.description}</p>
             <SourceCite source={l.source} />
           </li>

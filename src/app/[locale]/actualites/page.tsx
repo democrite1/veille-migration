@@ -1,9 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { useFormatter, useTranslations } from 'next-intl';
 import { getNews } from '@/lib/queries';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
 import SourceCite from '@/components/SourceCite';
 import FlagIcon from '@/components/FlagIcon';
+import { isoDay } from '@/lib/freshness';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -14,13 +15,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function NewsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const news = await getNews();
-  const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = await getNews(locale);
   return <NewsPageInner sorted={sorted} />;
 }
 
 function NewsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getNews>> }) {
   const t = useTranslations('news');
+  const tc = useTranslations('common');
+  const format = useFormatter();
 
   return (
     <div className="space-y-8">
@@ -43,11 +45,13 @@ function NewsPageInner({ sorted }: { sorted: Awaited<ReturnType<typeof getNews>>
                 )}
                 {n.title}
               </h2>
-              <span className="text-sm text-muted">{n.date}</span>
+              <time dateTime={n.date} className="text-sm text-muted">
+                {format.dateTime(isoDay(n.date), { dateStyle: 'long' })}
+              </time>
             </div>
             <p className="text-sm">{n.summary}</p>
             <p className="text-sm">
-              <span className="font-medium">Statut légal : </span>
+              <span className="font-medium">{tc('field', { label: t('legalStatus') })}</span>
               {n.legalStatus}
             </p>
             <SourceCite source={n.source} />

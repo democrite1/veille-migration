@@ -44,12 +44,29 @@ export type ActionStatusTag =
   | 'mesures_concretes'
   | 'mesures_concretes_abrogee';
 
-export interface Source {
+interface SourceBase {
   name: string;
   url: string;
-  accessedOn?: string; // ISO date the fact was last verified against this source
   note?: string;
 }
+
+/** A source the fact was checked against: accessedOn is the ISO date of that check. */
+export interface CheckedSource extends SourceBase {
+  accessedOn: string;
+  unverified?: never;
+}
+
+/**
+ * A source that could not be checked (dead link, blocked site, register
+ * refusing automated access). Readers see the reason instead of a date, so
+ * nothing is presented as verified when it was not.
+ */
+export interface UncheckedSource extends SourceBase {
+  accessedOn?: never;
+  unverified: string;
+}
+
+export type Source = CheckedSource | UncheckedSource;
 
 export interface Classification {
   tag: IntentionTag | ActionStatusTag;
@@ -67,6 +84,8 @@ export interface StatusHistoryEntry {
 export interface SocialAccount {
   platform: string;
   url: string;
+  /** Set when the account is the party leader's own, not the party's. */
+  leader?: string;
 }
 
 /** One past result for a given assembly/chamber — the building block of a party's electoral history. */
@@ -132,8 +151,14 @@ export interface Election {
   date: string; // ISO date
   status: ElectionStatus;
   result?: string;
-  /** Size of the assembly/chamber being elected, so "X sièges" can be read as "X sur Y". */
+  /** Size of the whole assembly or chamber, so a seat count reads as "X sur Y". */
   totalSeats?: number;
+  /**
+   * Seats actually filled at this election, when fewer than the whole body:
+   * by-elections (1), partial renewals (e.g. half the Japanese upper house).
+   * Absent means the whole body is renewed.
+   */
+  seatsContested?: number;
   source: Source;
 }
 

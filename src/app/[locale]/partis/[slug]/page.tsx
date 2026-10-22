@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useFormatter, useLocale, useTranslations } from 'next-intl';
 import { getPartyBySlug, getParties } from '@/lib/queries';
 import type { Party } from '@/data/types';
 import {
@@ -11,44 +11,8 @@ import SourceCite from '@/components/SourceCite';
 import CountryBanner from '@/components/CountryBanner';
 import { setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/metadata';
-
-const COUNTRY_LABELS: Record<string, string> = {
-  FR: 'France',
-  DE: 'Allemagne',
-  GB: 'Royaume-Uni',
-  IT: 'Italie',
-  NL: 'Pays-Bas',
-  US: 'États-Unis',
-  SE: 'Suède',
-  AT: 'Autriche',
-  ES: 'Espagne',
-  HU: 'Hongrie',
-  FI: 'Finlande',
-  BE: 'Belgique',
-  CH: 'Suisse',
-  PT: 'Portugal',
-  PL: 'Pologne',
-  NO: 'Norvège',
-  CZ: 'République tchèque',
-  GR: 'Grèce',
-  RO: 'Roumanie',
-  SK: 'Slovaquie',
-  DK: 'Danemark',
-  AU: 'Australie',
-  CA: 'Canada',
-  HR: 'Croatie',
-  SI: 'Slovénie',
-  BG: 'Bulgarie',
-  NZ: 'Nouvelle-Zélande',
-  AR: 'Argentine',
-  EE: 'Estonie',
-  LV: 'Lettonie',
-  LU: 'Luxembourg',
-  CY: 'Chypre',
-  IE: 'Irlande',
-  IS: 'Islande',
-  JP: 'Japon',
-};
+import { isoDay, lastChecked } from '@/lib/freshness';
+import { countryName } from '@/lib/scope';
 
 export async function generateStaticParams() {
   const parties = await getParties();
@@ -57,14 +21,13 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  const party = await getPartyBySlug(slug);
+  const party = await getPartyBySlug(slug, locale);
   if (!party) return {};
-  const country = new Intl.DisplayNames([locale], { type: 'region' }).of(party.countryCode) ?? party.countryCode;
   return pageMetadata({
     locale,
     path: `/partis/${slug}`,
     title: party.name,
-    description: `${country} — ${party.positioning}`,
+    description: `${countryName(party.countryCode, locale)} — ${party.positioning}`,
   });
 }
 
@@ -75,7 +38,7 @@ export default async function PartyPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const party = await getPartyBySlug(slug);
+  const party = await getPartyBySlug(slug, locale);
   if (!party) notFound();
 
   return <PartyPageInner party={party} />;
@@ -83,10 +46,18 @@ export default async function PartyPage({
 
 function PartyPageInner({ party }: { party: Party }) {
   const t = useTranslations('parties');
+  const tc = useTranslations('common');
+  const format = useFormatter();
+  const locale = useLocale();
+  const checked = lastChecked(party);
+  const day = (d: string) => (
+    <time dateTime={d}>{format.dateTime(isoDay(d), { dateStyle: 'long' })}</time>
+  );
+  const eu = party.europeanRepresentation;
 
   return (
     <article className="space-y-8">
-      <CountryBanner countryLabel={COUNTRY_LABELS[party.countryCode] ?? party.countryCode} />
+      <CountryBanner countryLabel={countryName(party.countryCode, locale)} />
 
       <header className="space-y-3">
         <h1 className="font-serif text-3xl font-semibold tracking-tight">{party.name}</h1>
@@ -96,17 +67,20 @@ function PartyPageInner({ party }: { party: Party }) {
           <IntentionBadge classification={party.intention} />
           <ActionStatusBadge classification={party.actionStatus} />
         </div>
+        {checked ? (
+          <p className="text-xs text-muted">{t('lastChecked', { date: format.dateTime(isoDay(checked), { dateStyle: 'long' }) })}</p>
+        ) : null}
       </header>
 
       <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Statut électoral</h2>
+        <h2 className="font-serif text-lg font-semibold">{t('sectionElectoral')}</h2>
         <p className="text-sm">{party.electoralStatusDetail}</p>
         <SourceCite source={party.electoralStatusSource} />
       </section>
 
       {party.electoralHistory && party.electoralHistory.length > 0 ? (
         <section className="card space-y-4">
-          <h2 className="font-serif text-lg font-semibold">Historique électoral</h2>
+          <h2 className="font-serif text-lg font-semibold">{t('sectionHistory')}</h2>
           <ul className="space-y-3">
             {party.electoralHistory.map((r, i) => {
               const pct = Math.min(100, Math.round((r.seats / r.totalSeats) * 100));
@@ -117,14 +91,15 @@ function PartyPageInner({ party }: { party: Party }) {
                       {r.label}
                       {r.chamber ? ` (${r.chamber})` : ''}
                     </span>
-                    <span className="text-muted">{r.date}</span>
+                    <span className="text-muted">{day(r.date)}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-black/[0.06]">
                       <div className="h-full rounded-full bg-accent/70" style={{ width: `${pct}%` }} />
                     </div>
                     <span className="whitespace-nowrap text-xs text-muted">
-                      {r.seats} / {r.totalSeats} sièges{r.votePercent != null ? ` — ${r.votePercent}%` : ''}
+                      {t('seats', { seats: r.seats, total: r.totalSeats })}
+                      {r.votePercent != null ? ` — ${format.number(r.votePercent / 100, { style: 'percent', maximumFractionDigits: 2 })}` : ''}
                     </span>
                   </div>
                   <SourceCite source={r.source} />
@@ -135,33 +110,28 @@ function PartyPageInner({ party }: { party: Party }) {
         </section>
       ) : null}
 
-      {party.europeanRepresentation || party.localImplantation ? (
+      {eu || party.localImplantation ? (
         <section className="card space-y-4">
-          <h2 className="font-serif text-lg font-semibold">Implantation</h2>
-          {party.europeanRepresentation ? (
+          <h2 className="font-serif text-lg font-semibold">{t('sectionPresence')}</h2>
+          {eu ? (
             <div className="space-y-1">
               <p className="text-sm">
-                <span className="font-medium">Parlement européen : </span>
-                {party.europeanRepresentation.meps} député
-                {party.europeanRepresentation.meps > 1 ? 's' : ''} européen
-                {party.europeanRepresentation.meps > 1 ? 's' : ''}
-                {party.europeanRepresentation.totalCountryMeps
-                  ? ` sur ${party.europeanRepresentation.totalCountryMeps} pour le pays`
-                  : ''}
-                {party.europeanRepresentation.europeanGroup
-                  ? ` — groupe ${party.europeanRepresentation.europeanGroup}`
-                  : ''}
+                <span className="font-medium">{tc('field', { label: t('europeanParliament') })}</span>
+                {eu.totalCountryMeps
+                  ? t('mepsOfTotal', { count: eu.meps, total: eu.totalCountryMeps })
+                  : t('meps', { count: eu.meps })}
+                {eu.europeanGroup ? ` — ${t('europeanGroup', { group: eu.europeanGroup })}` : ''}
               </p>
-              <SourceCite source={party.europeanRepresentation.source} />
+              <SourceCite source={eu.source} />
             </div>
           ) : null}
           {party.localImplantation ? (
             <div className="space-y-1">
               <p className="text-sm">
-                <span className="font-medium">Maillage local : </span>
+                <span className="font-medium">{tc('field', { label: t('localPresence') })}</span>
                 {party.localImplantation.summary}
                 {party.localImplantation.mayors != null
-                  ? ` (${party.localImplantation.mayors} maire${party.localImplantation.mayors > 1 ? 's' : ''})`
+                  ? ` (${t('mayors', { count: party.localImplantation.mayors })})`
                   : ''}
               </p>
               <SourceCite source={party.localImplantation.source} />
@@ -186,7 +156,7 @@ function PartyPageInner({ party }: { party: Party }) {
           <ul className="space-y-2 text-sm">
             {party.actionStatusHistory.map((h, i) => (
               <li key={i} className="border-l-2 border-line pl-3">
-                <p className="font-medium">{h.date} — {h.note}</p>
+                <p className="font-medium">{day(h.date)} — {h.note}</p>
                 {h.source ? <SourceCite source={h.source} /> : null}
               </li>
             ))}
@@ -195,32 +165,33 @@ function PartyPageInner({ party }: { party: Party }) {
       ) : null}
 
       <section className="card space-y-3">
-        <h2 className="font-serif text-lg font-semibold">Fiche</h2>
+        <h2 className="font-serif text-lg font-semibold">{t('sectionProfile')}</h2>
         <p className="text-sm">{party.description}</p>
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
           <dt className="text-muted">{t('officialSite')}</dt>
           <dd>
-            <a href={party.officialWebsite} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href={party.officialWebsite} target="_blank" rel="nofollow noopener noreferrer" className="text-accent hover:underline">
               {party.officialWebsite}
             </a>
           </dd>
-          <dt className="text-muted">{t('socialAccounts')}</dt>
-          <dd className="flex flex-wrap gap-3">
-            {party.socialAccounts.map((s) => (
-              <a
-                key={s.url}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                {s.platform}
-              </a>
-            ))}
-          </dd>
+          {party.socialAccounts.length ? (
+            <>
+              <dt className="text-muted">{t('socialAccounts')}</dt>
+              <dd className="flex flex-wrap gap-x-4 gap-y-1">
+                {party.socialAccounts.map((s) => (
+                  <span key={s.url}>
+                    <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="text-accent hover:underline">
+                      {s.platform}
+                    </a>
+                    {s.leader ? <span className="text-muted"> · {t('leaderAccount', { name: s.leader })}</span> : null}
+                  </span>
+                ))}
+              </dd>
+            </>
+          ) : null}
           {party.founded ? (
             <>
-              <dt className="text-muted">Fondation</dt>
+              <dt className="text-muted">{t('founded')}</dt>
               <dd>{party.founded}</dd>
             </>
           ) : null}

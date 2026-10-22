@@ -15,7 +15,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Premier groupe d'opposition à l'Assemblée nationale (17e législature) : 126 députés sur 577 (record historique du parti), en hausse de 37 sièges par rapport à 2022.",
+      "Premier groupe d'opposition à l'Assemblée nationale (17e législature) : 126 députés sur 577 (le plus grand nombre de députés de son histoire), en hausse de 37 sièges par rapport à 2022.",
     electoralStatusSource: {
       name: 'Touteleurope.eu — résultats définitifs 2024',
       url: 'https://www.touteleurope.eu/vie-politique-des-etats-membres/resultats-des-elections-legislatives-2024-le-rassemblement-national-en-echec-l-assemblee-nationale-partagee-en-trois-blocs/',
@@ -26,24 +26,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/RNational_off' },
     ],
     classificationSource: {
-      name: 'The PopuList',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste radical de droite / anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Front National / Rassemblement National » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: "Programme officiel RN — élections législatives 2024",
-        url: 'https://rassemblementnational.fr',
-        note: 'Réduction drastique de l\'immigration légale et de l\'accès à la nationalité ("priorité nationale"). Le terme "remigration" a été explicitement écarté par la direction du parti (Bardella, Le Pen), qui s\'en distingue publiquement de Reconquête.',
+        name: "LCP — Législatives 2024 : le programme du Rassemblement national en matière d'immigration à l'épreuve de la Constitution",
+        url: 'https://lcp.fr/actualites/legislatives-2024-le-programme-du-rassemblement-national-en-matiere-d-immigration-a-l',
+        accessedOn: '2026-10-20',
+        note: "Programme des législatives de 2024 présenté par Jordan Bardella (article du 28 juin 2024) : suppression du droit du sol, durcissement du regroupement familial, « priorité nationale », allocations familiales réservées aux Français, rétablissement du délit de séjour irrégulier, remplacement de l'aide médicale d'État par une aide d'urgence vitale. Le compte rendu ne fait état d'aucune mesure de remigration. En janvier 2024, Marine Le Pen s'est déclarée en total désaccord avec le projet d'expulsions massives discuté à Potsdam sous ce nom (AFP, via The Times of Israel, 30 janvier 2024 : https://www.timesofisrael.com/germanys-afd-sets-up-talks-with-frances-le-pen-to-clarify-immigrant-expulsion-spat/).",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale',
-        url: 'https://www2.assemblee-nationale.fr/17/les-groupes-politiques/rassemblement-national',
-        note: "Parti d'opposition sans majorité : aucune loi RN promulguée à ce jour au niveau national. Des propositions de loi portées par des députés RN sont déposées ponctuellement — voir la section Suivi législatif pour le détail texte par texte.",
+        name: "Assemblée nationale — données ouvertes, dossiers législatifs de la XVIIe législature",
+        url: 'https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip',
+        accessedOn: '2026-10-20',
+        note: "Groupe d'opposition. Aucune des propositions de loi déposées par des députés RN depuis juillet 2024 n'a été promulguée, dont deux visant à rétablir le délit de séjour irrégulier (19 décembre 2024 et 16 septembre 2025) et une visant à abroger le titre de séjour pour soins (26 mai 2026). Le 30 octobre 2025, l'Assemblée a adopté une résolution non contraignante du député RN Guillaume Bigot appelant à dénoncer les accords franco-algériens de 1968 (https://www.assemblee-nationale.fr/dyn/17/dossiers/denoncer_accords_franco_algeriens_27_decembre_1968).",
       },
     },
     electoralHistory: [
@@ -76,11 +79,12 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 30,
       totalCountryMeps: 81,
-      europeanGroup: "Patriotes pour l'Europe (qu'il préside via Jordan Bardella)",
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Touteleurope.eu',
-        url: 'https://www.touteleurope.eu/institutions/patriotes-pour-l-europe-quatre-questions-sur-ce-groupe-politique-du-parlement-europeen-preside-par-jordan-bardella/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, France",
+        url: "https://results.elections.europa.eu/en/national-results/france/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -115,9 +119,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/Reconquete_off' },
     ],
     classificationSource: {
-      name: 'The PopuList',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti d\'extrême droite / anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Reconquete » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -131,9 +136,10 @@ export const parties: Party[] = [
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale — résultats législatives 2024',
-        url: 'https://www.franceinfo.fr/politique/parti-reconquete/',
-        note: "Aucun élu à l'Assemblée nationale : aucun texte déposé au niveau national à ce jour.",
+        name: "Wikipedia — Reconquête (political party)",
+        url: "https://en.wikipedia.org/wiki/Reconqu%C3%AAte_(political_party)",
+        accessedOn: '2026-10-21',
+        note: "Aucun député à l'Assemblée nationale (0 siège sur 577 depuis les élections législatives de 2024) : aucun texte déposé au niveau national.",
       },
     },
     electoralHistory: [
@@ -194,27 +200,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.udr.fr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/ECiotti' },
+      { platform: 'X', url: 'https://x.com/ECiotti', leader: 'Éric Ciotti' },
     ],
     classificationSource: {
-      name: "Ministère de l'Intérieur — nuance politique UXD",
-      url: 'https://fr.wikipedia.org/wiki/Union_des_droites_pour_la_R%C3%A9publique',
-      note: "Cas particulier dans cet annuaire : la classification ne vient pas des bases universitaires habituelles (Manifesto Project, ParlGov, PopuList, CHES), trop lentes pour un parti fondé en 2024, mais de l'État lui-même. Le ministère de l'Intérieur attribue à ses candidats la nuance « UXD » (union de l'extrême droite). L'UDR a contesté ce classement lors des municipales de 2026 ; le Conseil constitutionnel a rejeté son recours.",
+      name: "The PopuList 4.0 — entrée « Union des droites pour la République » (France)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. Pour les municipales de 2026, la circulaire du ministère de l'Intérieur du 2 février 2026 range l'UDR dans le bloc « extrême droite » ; le Conseil d'État a rejeté le recours de l'UDR et d'Éric Ciotti contre ce classement le 27 février 2026 (n° 512694 et autres ; Le Monde du droit, 3 mars 2026 : https://www.lemondedudroit.fr/public/282-droit-public-general/103261-municipales-lfi-a-l-extreme-gauche-udr-a-l-extreme-droite.html, consulté le 2026-10-20).",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: "LCP — Immigration, natalité, souveraineté : Éric Ciotti tente de réaliser l'union des droites à l'Assemblée",
-        url: 'https://lcp.fr/actualites/immigration-natalite-souverainete-eric-ciotti-tente-de-realiser-l-union-des-droites-a-l',
-        note: "Ligne centrée sur le durcissement des critères d'accès à la nationalité et au titre de séjour et sur la lutte contre les mariages de complaisance, dans une stratégie affichée d'union des droites autour de l'immigration, de la sécurité et de l'identité nationale. Pas de politique de remigration de résidents en situation régulière.",
+        name: "Assemblée nationale — données ouvertes, dossiers législatifs de la XVIIe législature",
+        url: "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
+        accessedOn: '2026-10-20',
+        note: "Propositions de loi déposées par ses députés : interdiction du mariage des personnes visées par une mesure d'éloignement (11 mars 2025), « priorité nationale et locale » (proposition de loi constitutionnelle, 11 décembre 2025), suspension du regroupement familial des étrangers bénéficiaires de la protection subsidiaire (12 mai 2026), exigence de résidence effective en France pour acquérir la nationalité (20 octobre 2026).",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale',
-        url: 'https://www2.assemblee-nationale.fr',
-        note: "Groupe d'opposition de dix-sept députés : aucune loi UDR promulguée. Le parti dispose en revanche, depuis mars 2026, d'un pouvoir exécutif local réel à Nice et Montauban.",
+        name: "Assemblée nationale — données ouvertes, dossiers législatifs de la XVIIe législature",
+        url: 'https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip',
+        accessedOn: '2026-10-20',
+        note: "Groupe d'opposition. Aucune des propositions de loi déposées par ses députés depuis 2024 n'a été promulguée, dont une proposition de loi constitutionnelle « relative à la priorité nationale et locale » (11 décembre 2025) et une proposition visant à suspendre le regroupement familial des étrangers bénéficiaires de la protection subsidiaire (12 mai 2026). Le parti dispose en revanche, depuis mars 2026, d'un pouvoir exécutif local à Nice et Montauban.",
       },
     },
     europeanRepresentation: {
@@ -259,9 +268,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/AfD' },
     ],
     classificationSource: {
-      name: 'Manifesto Project / The PopuList / CHES',
-      url: 'https://manifesto-project.wzb.eu',
-      note: 'Classifié parti de la famille nationaliste / populiste radical de droite.',
+      name: "The PopuList 4.0 — entrée « Alternative für Deutschland » (Allemagne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite depuis 2015. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -277,7 +287,8 @@ export const parties: Party[] = [
       source: {
         name: 'Deutscher Bundestag',
         url: 'https://www.bundestag.de/parlament/fraktionen/afd/afd-inhalt-527374',
-        note: "Parti d'opposition au niveau fédéral, exclu de toute coalition : aucune loi AfD promulguée au Bundestag à ce jour.",
+        unverified: "registre DIP et page du groupe au Bundestag inaccessibles le 2026-10-20",
+        note: "Groupe d'opposition au Bundestag, tenu à l'écart de toute coalition. Statut à vérifier : le registre DIP du Bundestag n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -391,11 +402,12 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Premier Landrat (préfet de district) du parti obtenu à Sonneberg (Thuringe) en juin 2023, puis premier maire à Raguhn-Jeßnitz (Saxe-Anhalt) la même année. Percée confirmée à l'Ouest lors des élections municipales (Kommunalwahlen) de mars 2026 : 12,2% en Bavière (contre 4,5% en 2020) et 14,8% en Hesse (contre 6,8% en 2021), en plus des victoires régionales en Saxe-Anhalt, Rhénanie-Palatinat et Bade-Wurtemberg.",
+        "Robert Sesselmann, premier Landrat (administrateur de district) issu du parti, est en fonction à Sonneberg (Thuringe) depuis le 3 juillet 2023 ; Hannes Loth, élu en juillet 2023 à Raguhn-Jeßnitz (Saxe-Anhalt), est le premier maire AfD élu à plein temps. Aux élections municipales de Hesse de mars 2026, le parti obtient 14,8 % des voix selon le résultat provisoire, contre 6,8 % en 2021.",
       source: {
-        name: 'ZDFheute / Tagesspiegel',
-        url: 'https://www.zdfheute.de/politik/deutschland/sesselmann-afd-landrat-thueringen-sonneberg-100.html',
-        accessedOn: '2026-09-09',
+        name: 'hessenschau — Vorläufiges Landesergebnis der Kommunalwahl sieht CDU vor SPD und AfD',
+        url: 'https://www.hessenschau.de/politik/kommunalwahlen/vorlaeufiges-landesergebnis-der-kommunalwahl-sieht-cdu-vor-spd-und-afd-v6,vorlaeufiges-ergebnis-kom-hessen-100.html',
+        accessedOn: '2026-10-21',
+        note: "Article du 20 mars 2026. Robert Sesselmann : https://en.wikipedia.org/wiki/Robert_Sesselmann ; Hannes Loth : https://de.wikipedia.org/wiki/Hannes_Loth (consultés le 2026-10-21).",
       },
     },
     founded: 2013,
@@ -417,27 +429,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://bsw-vg.de',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/BSW_Bund' },
+      { platform: 'X', url: 'https://x.com/BSWbund' },
     ],
     classificationSource: {
-      name: 'InfoMigrants / Manifesto Project',
-      url: 'https://www.infomigrants.net/en/post/62871/german-elections-what-does-the-bsw-say-about-migration-in-its-manifesto',
-      note: "Cas atypique de cet annuaire : parti classé à gauche sur le plan économique (issu d'une scission de Die Linke en 2024) mais dont le programme migratoire est décrit par la presse comme largement superposable à celui de l'AfD sur le contrôle des frontières et les expulsions. Inclus ici sur la base de ce positionnement migratoire documenté, non sur l'ensemble de son programme économique et social.",
+      name: "The PopuList 4.0 — entrée « Bündnis Sahra Wagenknecht » (Allemagne)",
+      url: "https://popu-list.github.io/Data/The%20PopuList%204.0.csv",
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême gauche ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. Inclusion au titre du critère (a) de la méthodologie : son programme de 2025 demande de mettre fin à l'immigration irrégulière (voir « Intention »).",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'InfoMigrants — German elections: What does the BSW say about migration in its manifesto?',
         url: 'https://www.infomigrants.net/en/post/62871/german-elections-what-does-the-bsw-say-about-migration-in-its-manifesto',
-        note: "Programme demandant l'arrêt de l'immigration irrégulière, l'expulsion des demandeurs d'asile déboutés et le refus d'accueil pour toute personne déjà passée par un pays tiers sûr — position justifiée par la protection de l'État-providence plutôt que par un discours identitaire. Pas de politique de remigration de résidents en situation régulière.",
+        accessedOn: '2026-10-20',
+        note: "Programme des élections fédérales de 2025 : mettre fin à l'immigration irrégulière, expulser les personnes sans droit au séjour, refuser le séjour à celles déjà passées par un pays tiers sûr. L'argument principal est la préservation de l'État social (« un État social fort ne peut fonctionner que si tout le monde n'est pas autorisé à entrer »), à côté d'arguments de sécurité. InfoMigrants relève « certaines similarités » avec le programme de l'AfD.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Deutscher Bundestag',
-        url: 'https://www.bundestag.de',
-        note: "Absent du Bundestag depuis 2025 : aucune loi BSW promulguée au niveau fédéral à ce jour.",
+        name: "Bundestag — registre DIP",
+        url: "https://dip.bundestag.de/suche",
+        unverified: "registre DIP du Bundestag inaccessible le 2026-10-20",
+        note: "Absent du Bundestag depuis les élections de 2025. Statut à vérifier : le registre DIP du Bundestag n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé). Les mesures adoptées au niveau des Länder n'ont pas été examinées.",
       },
     },
     electoralHistory: [
@@ -519,7 +534,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices. Percée majeure le 7 mai 2026 : entrée simultanée au Senedd gallois (34 sièges, deuxième force) et au Parlement écossais (17 sièges, deuxième force ex æquo avec le Labour), en plus du contrôle de nombreux conseils locaux anglais.",
+      "8 députés à la Chambre des Communes : Nigel Farage (Clacton), Lee Anderson (Ashfield), Richard Tice (Boston and Skegness), Sarah Pochin (Runcorn and Helsby), Danny Kruger (East Wiltshire), Robert Jenrick (Newark), Andrew Rosindell (Romford) et Suella Braverman (Fareham and Waterlooville) — plusieurs issus de défections conservatrices. Le 7 mai 2026, entrée simultanée au Senedd gallois (34 sièges, deuxième force) et au Parlement écossais (17 sièges, deuxième force ex æquo avec le Labour), en plus du contrôle de nombreux conseils locaux anglais.",
     electoralStatusSource: {
       name: 'UK Parliament — members.parliament.uk',
       url: 'https://members.parliament.uk/member/5091/career',
@@ -530,24 +545,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/reformparty_uk' },
     ],
     classificationSource: {
-      name: 'The PopuList (successeur du Brexit Party) / Wikipedia',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Brexit Party / Reform » (Royaume-Uni)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: "Manifeste Reform UK 2024 (« Contract with You »)",
-        url: 'https://www.reformparty.uk',
-        note: "Objectif de « net zero » migration nette, gel de l'immigration non essentielle et expulsion de tous les arrivants illégaux par petits bateaux. Ne mentionne pas explicitement la « remigration » de populations déjà installées légalement.",
+        name: "Reform UK — Our Contract with You (programme des élections générales de 2024)",
+        url: 'https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf',
+        accessedOn: '2026-10-20',
+        note: "Premier des cinq engagements : gel de toute immigration « non essentielle », les compétences essentielles, surtout dans la santé, faisant exception. Détention et expulsion des migrants arrivés illégalement, renvoi des embarcations vers la France si nécessaire, sortie de la Convention européenne des droits de l'homme. Le document n'emploie pas le terme « remigration ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'UK Parliament',
-        url: 'https://members.parliament.uk/member/5091/career',
-        note: "Parti d'opposition, 8 sièges sur 650 : aucune loi Reform UK promulguée à ce jour.",
+        name: "UK Parliament — Bills : Universal Credit (British Citizens) Bill",
+        url: 'https://bills.parliament.uk/bills/4056',
+        accessedOn: '2026-10-20',
+        note: "Huit députés sur 650. Aucun projet de loi déposé par ses députés n'est devenu loi depuis les élections de 2024, dont le Universal Credit (British Citizens) Bill de Richard Tice (première lecture le 6 janvier 2026) et le Deprivation of Citizenship (Promotion of Terrorism or Violence) Bill de Sarah Pochin (7 janvier 2026). Parmi ses députés actuels, Suella Braverman avait porté l'Illegal Migration Act 2023 comme ministre de l'Intérieur d'un gouvernement conservateur.",
       },
     },
     electoralHistory: [
@@ -562,7 +580,7 @@ export const parties: Party[] = [
           name: 'Swansea Bay News — Senedd Election 2026',
           url: 'https://swanseabaynews.com/senedd-election-2026-plaid-cymru-largest-party-reform-uk-historic-breakthrough-welsh-labour-reduced-to-nine-seats-the-new-political-map-of-wales/',
           accessedOn: '2026-09-10',
-          note: "Percée historique : première entrée du parti au Senedd (élargi à 96 sièges pour ce scrutin), devenant la deuxième force politique du pays derrière Plaid Cymru, très loin devant le Labour gallois (9 sièges seulement) qui dirigeait le pays depuis la dévolution.",
+          note: "Première entrée du parti au Senedd (élargi à 96 sièges pour ce scrutin), devenant la deuxième force politique du pays derrière Plaid Cymru, très loin devant le Labour gallois (9 sièges seulement) qui dirigeait le pays depuis la dévolution.",
         },
       },
       {
@@ -596,11 +614,11 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Percée aux élections locales de mai 2025 : plus de 600 conseillers élus et prise de contrôle de plusieurs conseils de comté (dont le Kent, le Lincolnshire et Durham), ainsi que deux mairies avec scrutin direct (Greater Lincolnshire et Hull and East Yorkshire). Confirmée et amplifiée aux élections locales anglaises de mai 2026 (plus de 1 450 conseillers), puis par l'entrée simultanée au Senedd gallois et au Parlement écossais début mai 2026 — le parti est désormais représenté dans les quatre nations du Royaume-Uni.",
+        "Aux élections locales du 1er mai 2025, le parti gagne 677 sièges de conseillers, prend le contrôle de dix conseils (dont le Kent, le Lincolnshire et le comté de Durham) et remporte les deux mairies élues au suffrage direct de Greater Lincolnshire et de Hull and East Yorkshire. Aux élections locales de mai 2026, il gagne 1 451 sièges ; il entre la même année au Senedd et au Parlement écossais (voir le calendrier électoral).",
       source: {
-        name: 'The Guardian — Local elections 2025 results',
-        url: 'https://www.theguardian.com/politics/2025/may/02/local-elections-results-2025-reform-uk',
-        accessedOn: '2026-09-09',
+        name: 'Wikipedia — 2025 United Kingdom local elections',
+        url: 'https://en.wikipedia.org/wiki/2025_United_Kingdom_local_elections',
+        accessedOn: '2026-10-21',
       },
     },
     founded: 2018,
@@ -623,28 +641,31 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.restorebritain.org.uk',
     socialAccounts: [
-      { platform: 'X (parti)', url: 'https://x.com/RestoreBritain' },
-      { platform: 'X (Rupert Lowe)', url: 'https://x.com/RupertLowe10' },
+      { platform: 'X', url: 'https://x.com/RestoreBritain' },
+      { platform: 'X', url: 'https://x.com/RupertLowe10', leader: 'Rupert Lowe' },
     ],
     classificationSource: {
       name: 'Wikipedia — Restore Britain',
       url: 'https://en.wikipedia.org/wiki/Restore_Britain',
-      note: "Critère d'auto-déclaration satisfait sans ambiguïté : le parti se décrit lui-même comme ethno-nationaliste. Classé parti d'extrême droite ; le Financial Times y voit « une forme de nativisme dur que la vie politique britannique n'avait plus connue depuis la disparition de fait du BNP », HOPE not hate « une re-racialisation du courant d'extrême droite britannique », et The Critic un positionnement « plus à droite que Reform ».",
+      accessedOn: '2026-10-20',
+      note: "Décrit par l'article comme « ouvertement ethno-nationaliste » et classé à l'extrême droite. L'article rapporte que le Financial Times y voit une forme de nativisme dur rarement observée depuis la disparition de fait du BNP, que HOPE not hate le range dans une « re-racialisation plus large de l'extrême droite britannique », et que The Critic le situe plus à droite que Reform. Absent de The PopuList 4.0.",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'Wikipedia — Restore Britain',
         url: 'https://en.wikipedia.org/wiki/Restore_Britain',
-        note: "Ses figures de proue revendiquent ouvertement le terme « remigration » — critère central de la méthodologie de ce site. Rupert Lowe a publié un document de politique publique de 133 pages consacré aux « expulsions de masse », visant la déportation à grande échelle des personnes sans statut légal au Royaume-Uni et une immigration nette négative. Le parti reprend par ailleurs les thèses du « Grand Remplacement », affirmant que la part de la population de souche britannique déclinera d'ici 2070.",
+        accessedOn: '2026-10-20',
+        note: "Critère (b) de la méthodologie : départs massifs visant aussi des personnes en séjour régulier. Le parti vise une immigration nette négative et Rupert Lowe a publié un document de 133 pages consacré aux « expulsions de masse » (Wikipédia). Rupert Lowe veut non seulement arrêter l'immigration mais l'« inverser », sous le mot d'ordre « millions must go » (Sunder Katwala, The New World, 18 mars 2026 : https://www.thenewworld.co.uk/sunder-katwala-rupert-lowe-the-most-right-wing-mp-since-1945/), et Harrison Pitt a promis de faire de 2026 « l'année des déchéances de nationalité de masse » (UnHerd, février 2026 : https://unherd.com/2026/02/rupert-lowes-powellite-revolution/). L'emploi du mot « remigration » par les dirigeants du parti n'a pas été retrouvé dans ces sources.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'UK Parliament — Restore Britain',
-        url: 'https://en.wikipedia.org/wiki/Restore_Britain',
-        note: "Parti d'opposition disposant d'un seul siège aux Communes : aucune loi Restore Britain promulguée, et aucune possibilité arithmétique d'en faire adopter une. Son influence est celle d'un aiguillon exercé sur Reform UK et sur le Parti conservateur.",
+        name: "UK Parliament — Rupert Lowe, fiche de député",
+        url: 'https://members.parliament.uk/member/5158/career',
+        accessedOn: '2026-10-20',
+        note: "Un seul député, Rupert Lowe. Son seul projet de loi depuis 2024, le Quantitative Easing (Prohibition) Bill, ne porte pas sur l'immigration ; aucun texte du parti n'a été adopté (registre des projets de loi du Parlement britannique).",
       },
     },
     electoralHistory: [
@@ -689,7 +710,7 @@ export const parties: Party[] = [
     },
     founded: 2026,
     description:
-      "Lancé le 30 juin 2025 comme simple groupe de pression par Rupert Lowe, député de Great Yarmouth exclu de Reform UK trois mois plus tôt, puis converti en parti politique le 13 février 2026 et enregistré auprès de l'Electoral Commission le 20 mars. Le parti le plus jeune de ce répertoire, et l'un des rares en Europe de l'Ouest à faire de la remigration un axe programmatique assumé plutôt qu'un sous-entendu. Il a disputé trois scrutins durant son premier semestre d'existence.",
+      "Lancé le 30 juin 2025 comme simple groupe de pression par Rupert Lowe, député de Great Yarmouth exclu de Reform UK trois mois plus tôt, puis converti en parti politique le 13 février 2026 et enregistré auprès de l'Electoral Commission le 20 mars. Le parti le plus jeune de ce répertoire. Il a disputé trois scrutins durant son premier semestre d'existence.",
   },
   {
     slug: 'fratelli-italia',
@@ -709,24 +730,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/FratellidItalia' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti de droite radicale ; héritier direct du MSI (Movimento Sociale Italiano) via Alleanza Nazionale.",
+      name: "The PopuList 4.0 — entrée « Fratelli d'Italia » (Italie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Secolo d\'Italia — bilan gouvernemental',
         url: 'https://www.secoloditalia.it/2026/06/stop-allimmigrazione-irregolare-fdi-presenta-i-numeri-del-governo-meloni-su-rimpatri-e-sbarchi/',
-        note: "Priorité affichée : réduction drastique des débarquements et expulsions accélérées des personnes en situation irrégulière. -57% de débarquements en 2024-2025 vs 2023 ; -43% sur les 5 premiers mois de 2026 vs 4 ans plus tôt. Pas de politique de remigration de citoyens ou résidents légaux.",
+        accessedOn: '2026-10-20',
+        note: "Le parti met en avant « moins de débarquements, plus de rapatriements » : selon ses propres chiffres présentés le 3 juin 2026, 57 % d'arrivées en moins en 2024-2025 par rapport à 2023, et 43 % de moins sur les cinq premiers mois de 2026 par rapport à la même période quatre ans plus tôt.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Il Foglio / Today.it',
-        url: 'https://www.ilfoglio.it/politica/2025/06/30/news/il-doppio-fronte-del-governo-sull-immigrazione-il-decreto-flussi-e-le-polemiche-con-la-cassazione-per-l-albania-7879409',
-        note: "Décret flux migratoires et protocole Italie-Albanie (centres de rétention et rapatriement extraterritoriaux à Gjader) formellement en vigueur, malgré des décisions judiciaires italiennes ayant à plusieurs reprises refusé la rétention de migrants dans ces centres — tension ouverte entre gouvernement et magistrature sur l'application effective du dispositif.",
+        name: "Normattiva — legge 21 febbraio 2024, n. 14 (protocole Italie-Albanie)",
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024-02-21;14",
+        accessedOn: '2026-10-21',
+        note: "Textes adoptés par le gouvernement Meloni, que le parti dirige, et en vigueur : loi du 21 février 2024 n° 14 ratifiant le protocole Italie-Albanie sur la coopération migratoire (en vigueur depuis le 23 février 2024) ; décret-loi du 10 mars 2023 n° 20 sur les flux d'entrée et la lutte contre l'immigration irrégulière, converti par la loi du 5 mai 2023 n° 50 (Normattiva : https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-03-10;20).",
       },
     },
     electoralHistory: [
@@ -748,11 +772,12 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 24,
       totalCountryMeps: 76,
-      europeanGroup: 'Conservateurs et réformistes européens (ECR), que Giorgia Meloni préside',
+      europeanGroup: "Conservateurs et réformistes européens (ECR)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Italie',
-        url: 'https://elections-results.eu/national-results/italy/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Italie",
+        url: "https://results.elections.europa.eu/en/national-results/italy/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -781,29 +806,32 @@ export const parties: Party[] = [
       url: 'https://www.governo.it',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://www.leganord.org',
+    officialWebsite: 'https://www.legaonline.it',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/LegaSalvini' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti populiste de droite radicale. Fondé en 1989 sous le nom Lega Nord, à l'origine régionaliste et autonomiste (indépendance du « Nord » de l'Italie), le parti s'est renommé Lega en 2018 sous la direction de Matteo Salvini et a recentré son discours sur l'immigration et le nationalisme italien plutôt que sur le régionalisme.",
+      name: "The PopuList 4.0 — entrée « Lega (Nord) » (Italie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Ministero dell\'Interno / Lega.salvinipremier.it',
-        url: 'https://www.legasalvinipremier.it',
-        note: "Programme centré sur la fermeture des routes migratoires méditerranéennes et l'expulsion des personnes en situation irrégulière. Salvini a été condamné en première instance en 2024 pour avoir bloqué en 2019 le débarquement de 147 migrants du navire Open Arms (jugement annulé en appel en décembre 2024). Pas de politique explicite de remigration de résidents en situation régulière.",
+        name: "Il Giornale — « Della Lega la proposta per la remigrazione »",
+        url: 'https://www.ilgiornale.it/news/politica/della-lega-la-proposta-per-la-remigrazione/',
+        accessedOn: '2026-10-20',
+        note: "Le groupe de la Lega au conseil régional de Lombardie a présenté une motion sur la « remigrazione » visant les détenus étrangers (article du 9 août 2026), son chef de groupe Alessandro Corbetta revendiquant le terme pour le parti. Une proposition de loi nationale sur la remigration avait été annoncée en février 2026 par le député Rossano Sasso, qui a quitté la Lega pour Futuro Nazionale quelques jours plus tard. Usage explicite du terme par le parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Il Foglio / Ministero dell\'Interno',
-        url: 'https://www.ilfoglio.it/politica/2025/06/30/news/il-doppio-fronte-del-governo-sull-immigrazione-il-decreto-flussi-e-le-polemiche-con-la-cassazione-per-l-albania-7879409',
-        note: "Comme partenaire de la coalition gouvernementale, coporte le décret flux migratoires et le protocole Italie-Albanie en vigueur (voir fiche Fratelli d'Italia) ; en tant que ministre de l'Intérieur en 2018-2019, Salvini avait fait adopter le premier « decreto sicurezza » restreignant l'accès à la protection humanitaire, partiellement retouché par les gouvernements suivants.",
+        name: "Normattiva — legge 21 febbraio 2024, n. 14 (protocole Italie-Albanie)",
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024-02-21;14",
+        accessedOn: '2026-10-21',
+        note: "Membre de la coalition du gouvernement Meloni, qui a adopté les textes suivants, en vigueur : loi du 21 février 2024 n° 14 ratifiant le protocole Italie-Albanie sur la coopération migratoire ; décret-loi du 10 mars 2023 n° 20 sur les flux d'entrée et la lutte contre l'immigration irrégulière, converti par la loi du 5 mai 2023 n° 50 (Normattiva : https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-03-10;20).",
       },
     },
     electoralHistory: [
@@ -823,18 +851,20 @@ export const parties: Party[] = [
       },
     ],
     europeanRepresentation: {
-      meps: 8,
+      meps: 7,
       totalCountryMeps: 76,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'eunews.it — The Patriots for Europe group springs up in the EU Parliament',
-        url: 'https://www.eunews.it/en/2024/07/08/the-patriots-for-europe-group-springs-up-in-the-eu-parliament-it-is-the-third-largest-the-league-is-also-a-part/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Italie",
+        url: "https://results.elections.europa.eu/en/national-results/italy/2024-2029/",
+        accessedOn: '2026-10-21',
+        note: "8 élus en 2024 sur la liste de la Lega. Roberto Vannacci, parti fonder Futuro Nazionale, siège depuis 2026 au groupe ENS (Parlement européen, données ouvertes : https://data.europarl.europa.eu/api/v2/meps/show-current, consultées le 2026-10-21).",
+
       },
     },
     localImplantation: {
       summary:
-        "Ancrage historique fort dans le nord de l'Italie (Vénétie, Lombardie), où le parti détient plusieurs présidences de région depuis les années 1990, dont la Vénétie sans interruption depuis 2010.",
+        "Implantation ancienne et forte dans le nord de l'Italie (Vénétie, Lombardie), où le parti détient plusieurs présidences de région depuis les années 1990, dont la Vénétie sans interruption depuis 2010.",
       source: {
         name: 'Regione del Veneto',
         url: 'https://www.regione.veneto.it',
@@ -860,28 +890,31 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.futuronazionale.it',
     socialAccounts: [
-      { platform: 'X (Roberto Vannacci)', url: 'https://x.com/RoVannacci' },
-      { platform: 'Instagram (parti)', url: 'https://www.instagram.com/futuro_nazionale_ufficiale/' },
+      { platform: 'X', url: 'https://x.com/RoVannacci', leader: 'Roberto Vannacci' },
+      { platform: 'Instagram', url: 'https://www.instagram.com/futuro_nazionale_ufficiale/' },
     ],
     classificationSource: {
       name: 'Wikipedia — National Future (Futuro Nazionale)',
       url: 'https://en.wikipedia.org/wiki/National_Future',
-      note: "Classifié parti d'extrême droite, national-conservateur et populiste de droite. Comme pour les autres formations récentes de cet annuaire, les bases universitaires de référence (Manifesto Project, ParlGov, PopuList, CHES) n'ont pas encore codé un parti fondé en février 2026 ; l'appartenance au groupe Europe des nations souveraines, le plus à droite du Parlement européen, fournit un indicateur de positionnement complémentaire.",
+      accessedOn: '2026-10-20',
+      note: "Décrit comme un parti d'extrême droite, nationaliste, national-conservateur et populiste de droite. Absent de The PopuList 4.0 (consulté le 2026-10-20).",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'Wikipedia — National Future (Futuro Nazionale)',
         url: 'https://en.wikipedia.org/wiki/National_Future',
-        note: "Ligne fortement anti-immigration assortie d'une politique explicite de remigration visant les personnes qui ne s'assimilent pas aux normes et valeurs culturelles italiennes — usage direct du terme, critère central de la méthodologie de ce site. C'est ce qui distingue le parti de la Lega, dont Vannacci est issu, et de Fratelli d'Italia, dont la ligne reste centrée sur la réduction des entrées.",
+        accessedOn: '2026-10-20',
+        note: "Selon l'article, le parti adopte une ligne fortement anti-immigration et promeut des « politiques de remigration » visant les personnes qui ne s'assimilent pas aux normes et valeurs culturelles italiennes. Critère (a) de la méthodologie : terme employé par le parti.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Camera dei Deputati',
-        url: 'https://www.camera.it',
-        note: "Parti d'opposition depuis mars 2026 : aucune loi Futuro Nazionale promulguée, et aucun exécutif local détenu à ce jour.",
+        name: "Camera dei Deputati — données ouvertes (dati.camera.it), actes de la XIXe législature",
+        url: "https://dati.camera.it/sparql",
+        accessedOn: '2026-10-20',
+        note: "Composante du groupe mixte de la Chambre depuis le 27 mai 2026, avec quatre députés. Aucune des propositions de loi qu'ils ont déposées en premier signataire depuis février 2026 ne porte sur l'immigration.",
       },
     },
     europeanRepresentation: {
@@ -924,27 +957,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.pvv.nl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/geertwilderspvv' },
+      { platform: 'X', url: 'https://x.com/geertwilderspvv', leader: 'Geert Wilders' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Partij voor de Vrijheid » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'Follow the Money',
         url: 'https://www.ftm.nl/artikelen/vier-partijen-hebben-deportatie-van-migranten-in-hun-verkiezingsprogramma-staan',
-        note: "Selon l'analyse de Follow the Money, le PVV fait partie des partis dont le programme électoral appelle à la « remigratie » (remigration) des personnes issues de l'immigration. D'anciennes versions du programme proposaient explicitement un « ministère de la Remigration et de la Déislamisation » ; le programme 2023 a retiré cette formulation précise tout en maintenant l'objectif d'un arrêt total de l'asile et d'une réduction de l'immigration non-occidentale.",
+        accessedOn: '2026-10-20',
+        note: "Selon Follow the Money (10 octobre 2025), le programme électoral du PVV plaide pour la « remigration » de personnes issues de l'immigration, avec un dispositif de départ volontaire (« Wie dit land wil verlaten, krijgt die kans ») ; en janvier 2021, le parti réclamait déjà un ministère consacré à la remigration. Critère (a) de la méthodologie.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Rijksoverheid.nl',
-        url: 'https://www.rijksoverheid.nl/documenten/kamerstukken/2024/10/25/brief-over-nadere-afspraken-uitvoering-hoofdstuk-2-hoofdlijnenakkoord-grip-op-asiel-en-migratie',
-        note: "Projet de loi « asielnoodmaatregelenwet » (loi de mesures d'urgence sur l'asile) déposé le 25 octobre 2024 par le cabinet Schoof, sous l'impulsion du PVV, pour permettre l'invocation d'un régime de crise migratoire. Le texte n'a jamais été voté avant la chute du gouvernement en juin 2025 ; son sort sous le cabinet Jetten reste incertain.",
+        name: "Eerste Kamer — Wet invoering tweestatusstelsel (36.703)",
+        url: 'https://www.eerstekamer.nl/wetsvoorstel/36703_wet_invoering',
+        accessedOn: '2026-10-20',
+        note: "Loi instaurant un double statut d'asile et durcissant le regroupement familial, déposée le 7 mars 2025 par la ministre de l'Asile et des Migrations Marjolein Faber (PVV), adoptée par le Sénat le 21 avril 2026 (41 voix contre 34) et publiée le 9 juin 2026 ; son entrée en vigueur est fixée par décret royal. La loi de mesures d'urgence sur l'asile (Asielnoodmaatregelenwet, 36.704), déposée le même jour, a été rejetée par le Sénat le 21 avril 2026 (44 voix contre 31).",
       },
     },
     electoralHistory: [
@@ -981,9 +1017,10 @@ export const parties: Party[] = [
       totalCountryMeps: 31,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Pays-Bas',
-        url: 'https://elections-results.eu/national-results/netherlands/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Pays-Bas",
+        url: "https://results.elections.europa.eu/en/national-results/netherlands/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1014,27 +1051,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://ja21.nl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/JA21NL' },
+      { platform: 'X', url: 'https://x.com/JuisteAntwoord' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti national-conservateur de droite radicale. Fondé en 2020 par des dissidents de Forum voor Democratie (FvD), sur une ligne jugée plus modérée dans la forme mais tout aussi ferme sur l'immigration.",
+      name: "The PopuList 4.0 — entrée « Juiste Antwoord 21 » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'NL Times',
-        url: 'https://nltimes.nl/2025/06/24/former-pvv-state-secs-switch-ja21-wins-party-7-seats-polls',
-        note: "Propose l'externalisation du traitement des demandes d'asile vers des pays tiers hors UE, sur le modèle danois, ainsi qu'une réduction générale de l'immigration. Pas de politique explicite de remigration de résidents en situation régulière.",
+        name: "Tweede Kamer — initiative de loi 2026Z11062 (registre officiel, données ouvertes)",
+        url: "https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Zaak?$filter=Nummer%20eq%20%272026Z11062%27",
+        accessedOn: '2026-10-20',
+        note: "Ses députés ont cosigné en 2026 deux initiatives de loi : l'abrogation de la loi sur la répartition de l'accueil des demandeurs d'asile entre communes (« Spreidingswet ») et la fin de la priorité au logement pour les réfugiés statutaires.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Tweede Kamer',
-        url: 'https://www.tweedekamer.nl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi JA21 promulguée à ce jour.",
+        name: "Tweede Kamer — initiative de loi 2026Z11062 (registre officiel, données ouvertes)",
+        url: 'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Zaak?$filter=Nummer%20eq%20%272026Z11062%27',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Des députés JA21 ont cosigné deux initiatives de loi encore pendantes : l'abrogation de la loi sur la répartition de l'accueil des demandeurs d'asile entre communes (« Spreidingswet », déposée le 27 mai 2026 avec FvD et BBB) et l'interdiction de la priorité au logement pour les réfugiés statutaires (23 avril 2026). Aucune n'a été adoptée.",
       },
     },
     electoralHistory: [
@@ -1087,7 +1127,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Sept sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025, plus que doublant sa représentation (3 sièges auparavant). Percée locale spectaculaire aux élections municipales de mars 2026 : 299 sièges de conseillers municipaux, contre 55 avant le scrutin — la plus forte progression de tous les partis. Parti d'opposition, non associé au gouvernement Jetten.",
+      "Sept sièges à la Tweede Kamer après les élections anticipées du 29 octobre 2025, plus que doublant sa représentation (3 sièges auparavant). Aux élections municipales de mars 2026 : 299 sièges de conseillers municipaux, contre 55 avant le scrutin — la plus forte progression de tous les partis. Parti d'opposition, non associé au gouvernement Jetten.",
     electoralStatusSource: {
       name: 'AlleCijfers.nl — Verkiezingsuitslagen voor FvD',
       url: 'https://allecijfers.nl/politieke-partij/fvd/',
@@ -1098,24 +1138,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/fvdemocratie' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti populiste de droite radicale. Fondé en 2016 par Thierry Baudet, qui reste président du parti après avoir cédé la tête de liste à Lidewij de Vos pour les élections de 2025.",
+      name: "The PopuList 4.0 — entrée « Forum voor Democratie » (Pays-Bas)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'nl.wikipedia.org — Forum voor Democratie',
         url: 'https://nl.wikipedia.org/wiki/Forum_voor_Democratie',
-        note: "Le programme de campagne 2025 du parti inclut explicitement la lutte contre l'immigration et le lancement de « programmes de remigration » (« remigratieprogramma's ») — usage direct du terme, critère central de la méthodologie de ce site. Thierry Baudet est également connu pour avoir employé publiquement, dès les années 2010, le concept d'« omvolking » (grand remplacement).",
+        accessedOn: '2026-10-20',
+        note: "Selon l'article de Wikipédia en néerlandais, le parti défend, outre la réduction de l'immigration, la « remigratie door middel van financiële prikkels » (remigration au moyen d'incitations financières). Critère (a) de la méthodologie : terme employé par le parti.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Tweede Kamer',
-        url: 'https://www.tweedekamer.nl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi FvD promulguée à ce jour au niveau national.",
+        name: "Tweede Kamer — initiative de loi 2026Z11062 (registre officiel, données ouvertes)",
+        url: 'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Zaak?$filter=Nummer%20eq%20%272026Z11062%27',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Un député FvD a cosigné le 27 mai 2026 une initiative de loi abrogeant la loi sur la répartition de l'accueil des demandeurs d'asile entre communes (« Spreidingswet ») ; elle n'a pas été adoptée à ce jour.",
       },
     },
     electoralHistory: [
@@ -1157,7 +1200,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Percée locale majeure en mars 2026 : 299 conseillers municipaux (contre 55 avant le scrutin), le parti passant de 3,6% à 8,4% de moyenne dans les communes où il se présentait déjà, avec ses meilleurs scores dans le nord du pays (Drenthe, Groningue, Frise).",
+        "En mars 2026 : 299 conseillers municipaux (contre 55 avant le scrutin), le parti passant de 3,6% à 8,4% de moyenne dans les communes où il se présentait déjà, avec ses meilleurs scores dans le nord du pays (Drenthe, Groningue, Frise).",
       source: {
         name: 'StukRoodVlees — Waarom deed Forum het zo goed bij de Raadsverkiezingen?',
         url: 'https://stukroodvlees.nl/waarom-deed-forum-het-zo-goed-bij-de-raadsverkiezingen/',
@@ -1186,40 +1229,44 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/GOP' },
     ],
     classificationSource: {
-      name: 'Manifesto Project',
-      url: 'https://manifesto-project.wzb.eu',
-      note: "Inclusion sur auto-déclaration : le programme officiel 2024 du parti (RNC Platform) fait de l'immigration sa priorité affichée n°1-2.",
+      name: "The American Presidency Project (UC Santa Barbara) — 2024 Republican Party Platform",
+      url: 'https://www.presidency.ucsb.edu/documents/2024-republican-party-platform',
+      accessedOn: '2026-10-20',
+      note: "Aucun des jeux de données de référence ne couvre les États-Unis (The PopuList se limite à l'Europe, ParlGov n'inclut pas les États-Unis). Inclusion sur autodéclaration : les deux premiers des vingt engagements du programme adopté le 15 juillet 2024 sont « Seal the border, and stop the migrant invasion » et « Carry out the largest deportation operation in American history ».",
     },
     intention: {
       tag: 'remigration',
       source: {
-        name: 'Axios — « Trump\'s self-deportation machine »',
-        url: 'https://www.axios.com/2026/07/28/trump-self-deportation-ice',
-        note: "Le programme officiel du parti promet « la plus grande opération d'expulsion de l'histoire américaine ». Le dispositif de « self-deportation » mis en œuvre par l'administration incite financièrement au départ volontaire, avec des objectifs chiffrés de retours (plus de 200 000 départs attendus via ce seul programme) — critère de remigration au sens de la méthodologie de ce site, même si le mot lui-même n'est pas employé officiellement.",
+        name: "NPR — 'Remigration,' once a fringe idea, becomes a mantra for the Trump administration",
+        url: 'https://www.npr.org/2025/12/09/nx-s1-5630505/remigration-once-a-fringe-idea-becomes-a-mantra-for-the-trump-administration',
+        accessedOn: '2026-10-20',
+        note: "Usage du terme par l'administration du parti : le plan de réorganisation du département d'État présenté en mai 2025 crée un « Office of Remigration », et le département de la Sécurité intérieure (DHS) a appelé à la « remigration » sur ses réseaux sociaux ; le 27 novembre 2025, Donald Trump a écrit que seule une « reverse migration » pourrait remédier à la situation (article du 9 décembre 2025). Critère (a) de la méthodologie : terme employé par le parti ou ses dirigeants.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'DHS / Washington Times',
-        url: 'https://www.washingtontimes.com/news/2026/sep/3/donald-trump-cuts-migrant-population-nearly-3-million-total-us/',
-        note: "Plus de 605 000 expulsions et 1,9 million de départs « volontaires » (self-deportation) depuis janvier 2025, soit environ 2,5 millions de départs cumulés, portés par des mesures administratives (décrets présidentiels, directives DHS/ICE) sans nécessiter de vote du Congrès.",
+        name: "ABC7 — DHS increasing self-deportation stipend from $1,000 to $2,600",
+        url: "https://abc7news.com/18444117",
+        accessedOn: '2026-10-21',
+        note: "Mesures administratives en vigueur, sans vote du Congrès : programme de départ volontaire par l'application CBP Home, dont l'aide au départ a été portée de 1 000 à 2 600 dollars en janvier 2026. Le DHS revendique 2,2 millions de départs « volontaires » depuis janvier 2025 et 675 000 expulsions la première année ; la Brookings Institution estime les expulsions de 2025 entre 310 000 et 315 000 (article du 21 janvier 2026).",
       },
     },
     actionStatusHistory: [
       {
         date: '2026-06-30',
         tag: 'mesures_concretes_abrogee',
-        note: "Le décret présidentiel (Executive Order 14160, 20 janvier 2025) visant à mettre fin au droit du sol pour les enfants nés aux États-Unis de parents sans statut légal a été invalidé par la Cour suprême le 30 juin 2026 (6 voix contre 3), comme contraire au 14e amendement.",
+        note: "Le décret présidentiel 14160 (20 janvier 2025), qui visait à mettre fin au droit du sol pour les enfants de parents sans statut légal ou en séjour temporaire, a été invalidé par la Cour suprême le 30 juin 2026 (Trump v. Barbara) au titre de la clause de citoyenneté du 14e amendement.",
         source: {
-          name: 'Congress.gov — CRS Legal Sidebar',
-          url: 'https://www.congress.gov/crs-product/LSB11468',
+          name: "National Law Review — Supreme Court Strikes Down Birthright Citizenship Executive Order",
+          url: "https://natlawreview.com/article/supreme-court-upholds-birthright-citizenship-rejecting-executive-order",
+          accessedOn: '2026-10-21',
         },
       },
     ],
     electoralHistory: [
       {
-        label: 'Élections de mi-mandat 2024 — Chambre des représentants',
+        label: 'Élections au Congrès 2024 — Chambre des représentants',
         chamber: 'Chambre des représentants',
         date: '2024-11-05',
         seats: 220,
@@ -1231,7 +1278,7 @@ export const parties: Party[] = [
         },
       },
       {
-        label: 'Élections de mi-mandat 2024 — Sénat',
+        label: 'Élections au Congrès 2024 — Sénat',
         chamber: 'Sénat',
         date: '2024-11-05',
         seats: 53,
@@ -1274,24 +1321,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/sdriks' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale ; fondé en 1988 avec des racines documentées dans des mouvements néonazis suédois.',
+      name: "The PopuList 4.0 — entrée « Sverigedemokraterna » (Suède)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2001 et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
       source: {
-        name: 'Migrationsverket',
-        url: 'https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html',
-        note: "Le « återvandringsbidrag » (littéralement : allocation de remigration) porté par SD dans l'accord de Tidö a été fortement revalorisé à 350 000 couronnes suédoises par adulte (jusqu'à 600 000 par foyer) à compter du 1er janvier 2026 — incitation financière chiffrée au retour volontaire, correspondant explicitement au critère de remigration retenu par la méthodologie de ce site.",
+        name: "Migrationsverket — Återvandringsbidraget höjs den 1 januari 2026",
+        url: "https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html",
+        accessedOn: '2026-10-20',
+        note: "L'aide au retour (återvandringsbidrag) passe le 1er janvier 2026 à 350 000 couronnes par adulte, 25 000 par enfant, 500 000 par couple et 600 000 par foyer, pour les personnes ayant obtenu au plus tard le 12 septembre 2024 un titre de séjour au titre de la protection. Incitation financière au départ de personnes en séjour régulier : critère (b) de la méthodologie.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Regeringen.se',
-        url: 'https://www.regeringen.se/pressmeddelanden/2025/04/ett-kraftigt-hojt-atervandringsbidrag/',
-        note: "Règlement gouvernemental adopté le 30 octobre 2025, entré en vigueur le 1er janvier 2026, revalorisant l'allocation de remigration. Coût estimé à environ 2,5 milliards de couronnes sur trois ans.",
+        name: "Migrationsverket — Återvandringsbidraget höjs den 1 januari 2026",
+        url: "https://www.migrationsverket.se/nyhetsarkiv/nyhetsarkiv/2025-10-31-atervandringsbidraget-hojs-den-1-januari-2026.html",
+        accessedOn: '2026-10-21',
+        note: "Aide au retour relevée, en vigueur depuis le 1er janvier 2026 (Migrationsverket). La réforme a été lancée par la directive du 26 octobre 2023 (Dir. 2023:151 : https://www.regeringen.se/contentassets/73ed5c84dbda4bba89289e467ff31632/oversyn-av-incitamentsstrukturerna-for-frivillig-atervandring-dir.-2023151.pdf), qui s'inscrit dans l'accord de Tidö conclu entre les partis du gouvernement et SD : accord de soutien écrit au sens de la méthodologie.",
       },
     },
     electoralHistory: [
@@ -1367,7 +1417,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Premier parti aux élections législatives de septembre 2024 — une première historique — mais resté dans l'opposition : les négociations de coalition avec l'ÖVP menées par Herbert Kickl ont échoué début 2025. Le gouvernement Stocker (ÖVP-SPÖ-NEOS, première coalition tripartite du pays) a prêté serment le 3 mars 2025. Herbert Kickl dirige l'opposition au Conseil national (Nationalrat).",
+      "Premier parti aux élections législatives de septembre 2024 — une première — mais resté dans l'opposition : les négociations de coalition avec l'ÖVP menées par Herbert Kickl ont échoué début 2025. Le gouvernement Stocker (ÖVP-SPÖ-NEOS, première coalition tripartite du pays) a prêté serment le 3 mars 2025. Herbert Kickl dirige l'opposition au Conseil national (Nationalrat).",
     electoralStatusSource: {
       name: 'Euronews / t-online',
       url: 'https://www.euronews.com/2025/03/03/centre-right-ovps-christian-stocker-sworn-in-as-new-austrian-chancellor',
@@ -1378,24 +1428,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/fpoe_at' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale ; fondé en 1956, avec d\'anciens cadres nazis et du VdU parmi ses fondateurs.',
+      name: "The PopuList 4.0 — entrée « Freiheitliche Partei Österreichs » (Autriche)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'NZZ / 20 Minuten',
         url: 'https://www.20min.ch/story/wahlen-oesterreich-remigration-und-asylstopp-was-will-fpoe-chef-herbert-kickl-103192636',
-        note: "Le terme « Remigration » figure explicitement dans le programme électoral du parti et dans le discours régulier de Herbert Kickl, qui l'emploie pour désigner le retour de personnes immigrées y compris titulaires d'un titre de séjour valide. Le parti a même publié en 2026 un clip musical de promotion intitulé « Airbert One – Der Remigrationssong ».",
+        accessedOn: '2026-10-20',
+        note: "Le terme « Remigration » fait partie du vocabulaire habituel de Herbert Kickl, qui l'emploie pour désigner le retour « de toutes les personnes immigrées » (20 Minuten, 29 septembre 2024). Critère (a) de la méthodologie. Le programme électoral de 2024 prévoyait de suspendre le droit d'asile par une loi d'urgence.",
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: 'Wahlprogramm FPÖ',
-        url: 'https://www.fpoe.at',
-        note: "Parti d'opposition depuis mars 2025 : aucune loi FPÖ promulguée. Le programme prévoit la suspension du droit d'asile par « loi d'urgence » (Notgesetz), non déposée faute de majorité gouvernementale.",
+        name: "RIS — BFA-Verfahrensgesetz § 39 « Sicherstellen von Beweismitteln und Bargeld », texte consolidé",
+        url: "https://www.ris.bka.gv.at/eli/bgbl/i/2012/87/P39/NOR40278170",
+        accessedOn: '2026-10-20',
+        note: "Loi de 2018 sur le droit des étrangers (FrÄG 2018, BGBl. I Nr. 56/2018), projet du gouvernement ÖVP-FPÖ dont le ministère de l'Intérieur était tenu par Herbert Kickl (FPÖ), adoptée en juillet 2018 : saisie de l'argent liquide des demandeurs d'asile jusqu'à 840 €, lecture de leurs téléphones en cas de doute sur leur identité ou leur itinéraire, délai minimal de naturalisation des réfugiés porté de six à dix ans (Parlement autrichien : https://www.parlament.gv.at/aktuelles/pk/jahr_2018/pk0870). Les articles 39 et 39a de la loi BFA-VG qui en sont issus figurent toujours dans le texte consolidé, modifié en dernier lieu en 2026. Le parti est dans l'opposition depuis 2019 ; son programme de 2024 prévoit la fin des demandes d'asile en Autriche.",
       },
     },
     electoralHistory: [
@@ -1433,9 +1486,10 @@ export const parties: Party[] = [
       totalCountryMeps: 20,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Autriche',
-        url: 'https://elections-results.eu/national-results/austria/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Autriche",
+        url: "https://results.elections.europa.eu/en/national-results/austria/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1469,9 +1523,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/vox_es' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Vox » (Espagne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1483,11 +1538,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Vox España',
-        url: 'https://www.voxespana.es/wp-content/uploads/2026/04/MCIU-VOX-Prioridad-nacional.pdf',
-        note: "Proposition déposée au Congreso de los Diputados en avril 2026 (« Prioridad nacional ») demandant l'expulsion des migrants en situation irrégulière ; non contraignante et non votée, mais formellement déposée — parti minoritaire sans capacité de faire adopter une loi.",
+        name: "Congreso de los Diputados — données ouvertes, propositions de loi de la XVe législature",
+        url: "https://www.congreso.es/es/opendata/iniciativas",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition au niveau national. Aucune des 48 propositions de loi de son groupe au Congreso depuis 2023 n'a abouti : elles ont été rejetées ou sont devenues caduques, dont une réforme de la nationalité (rejetée le 15 octobre 2024) et une modification de la loi sur les étrangers pour restreindre la régularisation (rejetée le 16 septembre 2025). En avril 2026, il a déposé une motion « Prioridad nacional », texte non contraignant.",
       },
     },
     electoralHistory: [
@@ -1578,9 +1634,10 @@ export const parties: Party[] = [
       totalCountryMeps: 61,
       europeanGroup: 'Patriotes pour l\'Europe (PfE)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Espagne',
-        url: 'https://elections-results.eu/national-results/spain/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Espagne",
+        url: "https://results.elections.europa.eu/en/national-results/spain/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1603,35 +1660,37 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'extra-parlementaire',
     electoralStatusDetail:
-      "Créé en 2024 par la personnalité des réseaux sociaux Luis « Alvise » Pérez comme simple groupement électoral pour les européennes de juin 2024, où il crée la surprise avec 3 sièges. Formellement enregistré comme parti politique le 31 janvier 2025 puis officiellement lancé comme force nationale le 12 octobre 2025 ; ne s'est pas encore présenté à des élections législatives espagnoles et ne siège donc pas au Congreso de los Diputados.",
+      "Créé en 2024 par la personnalité des réseaux sociaux Luis « Alvise » Pérez comme simple groupement électoral pour les européennes de juin 2024, où il obtient 3 sièges. Formellement enregistré comme parti politique le 31 janvier 2025 puis officiellement lancé comme force nationale le 12 octobre 2025 ; ne s'est pas encore présenté à des élections législatives espagnoles et ne siège donc pas au Congreso de los Diputados.",
     electoralStatusSource: {
       name: 'France 24 — Spanish social media star launches new far-right party',
       url: 'https://www.france24.com/en/live-news/20251012-spanish-social-media-star-launches-new-far-right-party',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://seacabolafiesta.es',
+    officialWebsite: 'https://www.seacabolafiesta.com',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/vamosalvise' },
     ],
     classificationSource: {
       name: 'Wikipedia / presse espagnole',
       url: 'https://en.wikipedia.org/wiki/Se_Acab%C3%B3_La_Fiesta',
-      note: "Classifié parti de droite radicale à extrême droite par la presse et les observateurs politiques espagnols.",
+      accessedOn: '2026-10-20',
+      note: "Décrit comme un parti de droite à extrême droite ; idéologie : nationalisme espagnol, populisme de droite, euroscepticisme. Le parti se présente comme anti-corruption et anti-establishment. Absent de The PopuList 4.0.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Euronews — Alvise Pérez, the Spanish outsider',
         url: 'https://www.euronews.com/2024/05/29/alvise-perez-the-spanish-outsider-wanting-to-capture-discontent-in-the-european-elections',
-        note: "Alvise Pérez a promis « le plus grand plan d'expulsion de l'histoire récente de l'Espagne », ciblant les personnes étrangères ayant commis des infractions, financé par le gel de l'aide internationale espagnole. Pas de politique explicite de remigration de résidents en situation régulière.",
+        unverified: "la source citée (Euronews, 29 mai 2024) ne mentionne pas le plan d'expulsion attribué au parti",
+        note: "Position migratoire à documenter.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Congreso de los Diputados',
-        url: 'https://www.congreso.es',
-        note: "Parti sans élu au Congreso de los Diputados : aucune loi SALF promulguée à ce jour en Espagne.",
+        name: "Congreso de los Diputados — données ouvertes, propositions de loi de la XVe législature",
+        url: "https://www.congreso.es/es/opendata/iniciativas",
+        accessedOn: '2026-10-20',
+        note: "Parti sans député au Congreso : aucune proposition de loi à son nom dans le registre de la législature ouverte en 2023.",
       },
     },
     electoralHistory: [
@@ -1646,7 +1705,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2024 European Parliament election in Spain',
           url: 'https://en.wikipedia.org/wiki/2024_European_Parliament_election_in_Spain',
           accessedOn: '2026-09-09',
-          note: "Percée surprise pour un groupement électoral créé quelques semaines avant le scrutin, sixième force du pays.",
+          note: "Groupement électoral créé quelques semaines avant le scrutin, sixième force du pays.",
         },
       },
     ],
@@ -1671,7 +1730,7 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Défaite historique aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán tombe à 52 sièges sur 199 (38,61% des voix de liste) face au parti Tisza de Péter Magyar, qui en obtient 141 (53,18%) — soit à son tour une majorité des deux tiers, suffisante pour réviser la Constitution. Orbán a concédé sa défaite le soir même. Participation de 78,99%, la plus forte depuis la transition démocratique de 1990. Fidesz est désormais dans l'opposition.",
+      "Défaite aux élections législatives du 12 avril 2026 : après 16 ans au pouvoir et quatre victoires consécutives à la majorité des deux tiers, l'alliance Fidesz-KDNP de Viktor Orbán tombe à 52 sièges sur 199 (38,61% des voix de liste) face au parti Tisza de Péter Magyar, qui en obtient 141 (53,18%) — soit à son tour une majorité des deux tiers, suffisante pour réviser la Constitution. Orbán a concédé sa défaite le soir même. Participation de 78,99%, la plus forte depuis la transition démocratique de 1990. Fidesz est désormais dans l'opposition.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
@@ -1680,19 +1739,20 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://fidesz.hu',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/fidesz_hu' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Fidesz » (Hongrie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2002 et d'extrême droite depuis 2010. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'HVG',
         url: 'https://hvg.hu/itthon/20260110_a-biztos-valasztas-ez-lett-orbanek-valasztasi-jelszava-eloben-a-fidesz-jeloltbemutato-kongresszusarol',
-        note: "Discours centré sur la fermeture des frontières et le refus d'accueillir des migrants imposés par l'UE, avec une rhétorique sur le déclin démographique des « Européens de souche » ; pas de programme explicite de remigration de résidents déjà installés (l'immigration reste marginale en Hongrie, la politique vise essentiellement à empêcher de nouvelles arrivées).",
+        unverified: "lien mort le 2026-10-20",
+        note: "Position migratoire à documenter par une source accessible.",
       },
     },
     actionStatus: {
@@ -1700,7 +1760,8 @@ export const parties: Party[] = [
       source: {
         name: 'mfor.hu',
         url: 'https://mfor.hu/cikkek/kozelet/dontott-a-kormany-a-hetfon-lejaro-migracios-valsaghelyzetrol.html',
-        note: "L'« état de crise migratoire » décrété par les gouvernements Orbán successifs depuis 2015-2016 (fermeture des frontières, zones de transit, barrière frontalière) reste en vigueur : le nouveau gouvernement Tisza l'a lui-même prolongé jusqu'au 31 décembre 2026, illustrant la règle méthodologique selon laquelle une mesure concrète reste active indépendamment du parti au pouvoir tant qu'elle n'est pas abrogée.",
+        accessedOn: '2026-10-20',
+        note: "L'état de crise lié à l'immigration de masse instauré sous les gouvernements Orbán reste en vigueur : le gouvernement Tisza l'a prolongé jusqu'au 31 décembre 2026 (mfor.hu, 5 septembre 2026).",
       },
     },
     electoralHistory: [
@@ -1736,11 +1797,13 @@ export const parties: Party[] = [
     europeanRepresentation: {
       meps: 11,
       totalCountryMeps: 21,
-      europeanGroup: "Patriotes pour l'Europe (PfE), rejoint en juillet 2024 après la rupture avec le PPE en 2021",
+      europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Hongrie',
-        url: 'https://elections-results.eu/national-results/hungary/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Hongrie",
+        url: "https://results.elections.europa.eu/en/national-results/hungary/2024-2029/",
+        accessedOn: '2026-10-21',
+        note: "Sièges de la liste commune Fidesz-KDNP.",
+
       },
     },
     localImplantation: {
@@ -1763,35 +1826,37 @@ export const parties: Party[] = [
     positioning: 'Extrême droite, ultranationaliste',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Six sièges à l'Országgyűlés, un score stable entre les élections de 2022 et celles d'avril 2026 (5,6-6,2% des voix selon le mode de scrutin). Décrit par les observateurs comme le parti le plus radical à entrer au Parlement hongrois depuis la Seconde Guerre mondiale. Troisième force parlementaire depuis 2026, loin derrière Tisza (141 sièges) et le Fidesz (55 sièges), sans participation gouvernementale.",
+      "Six sièges à l'Országgyűlés, un score stable entre les élections de 2022 et celles d'avril 2026 (5,6 à 5,9 % des voix selon le mode de scrutin). Décrit par les observateurs comme le parti le plus radical à entrer au Parlement hongrois depuis la Seconde Guerre mondiale. Troisième force parlementaire depuis 2026, loin derrière Tisza (141 sièges) et le Fidesz (52 sièges), sans participation gouvernementale.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
-      accessedOn: '2026-09-10',
+      accessedOn: '2026-10-21',
     },
     officialWebsite: 'https://mihazank.hu',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/mihazankmozgalom' },
     ],
     classificationSource: {
-      name: 'The Times of Israel / The PopuList',
-      url: 'https://www.timesofisrael.com/hungarys-most-radical-nationalist-party-since-wwii-just-won-7-seats-in-parliament/',
-      note: "Classifié parti d'extrême droite ultranationaliste. Fondé en 2018 par László Toroczkai, maire d'Ásotthalom (localité frontalière symbole de la fermeture des frontières hongroises), après son exclusion du Jobbik qu'il jugeait trop modéré.",
+      name: "The PopuList 4.0 — entrée « Mi Hazánk Mozgalom » (Hongrie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Budapest Times — Migration clash erupts over EU pact in parliament',
         url: 'https://www.budapesttimes.hu/hungary/migration-clash-erupts-over-eu-pact-in-parliament/',
-        note: "Ligne dure contre le Pacte européen sur la migration et l'asile, jugeant même la politique du Fidesz insuffisamment restrictive. Programme centré sur la fermeture totale des frontières, sans politique explicite de remigration de résidents en situation régulière (l'immigration extra-européenne restant marginale en Hongrie).",
+        accessedOn: '2026-10-20',
+        note: "Son président László Toroczkai a attaqué au Parlement la politique migratoire du gouvernement Tisza (Budapest Times, 31 mai 2026). Le programme migratoire du parti reste à documenter.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Országgyűlés',
-        url: 'https://www.parlament.hu',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Mi Hazánk promulguée à ce jour.",
+        name: "Országgyűlés — recherche dans les documents parlementaires (irományok)",
+        url: "https://www.parlament.hu/web/guest/iromanyok-egyszerusitett-lekerdezese",
+        unverified: "registre de l'Országgyűlés non exploitable (recherche par formulaire) le 2026-10-20",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de l'Országgyűlés, qui ne s'interroge que par formulaire, n'a pas pu être exploité le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -1812,14 +1877,14 @@ export const parties: Party[] = [
         label: 'Élections législatives 2022',
         chamber: 'Országgyűlés',
         date: '2022-04-03',
-        seats: 7,
+        seats: 6,
         totalSeats: 199,
-        votePercent: 6.17,
+        votePercent: 5.88,
         source: {
-          name: 'European Roma Rights Centre',
-          url: 'https://www.errc.org/news/hungary-far-right-extremist-mi-hazank-emerges-as-the-other-winner-in-the-2022-elections',
-          accessedOn: '2026-09-10',
-          note: 'Première entrée au Parlement, comme troisième force de l\'opposition.',
+          name: 'Wikipedia — 2022 Hungarian parliamentary election',
+          url: 'https://en.wikipedia.org/wiki/2022_Hungarian_parliamentary_election',
+          accessedOn: '2026-10-21',
+          note: 'Première entrée au Parlement : 6 sièges et 5,88 % des voix de liste, troisième force derrière le Fidesz-KDNP et l\'alliance d\'opposition.',
         },
       },
     ],
@@ -1853,27 +1918,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.perussuomalaiset.fi',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/perussuomalaiset' },
+      { platform: 'X', url: 'https://x.com/persut' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Suomen Maaseudun Puolue | Perussuomalaiset » (Finlande)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite avant 2017). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Perussuomalaiset.fi',
         url: 'https://www.perussuomalaiset.fi/maahanmuuttopolitiikka/',
-        note: "Programme visant une réduction forte de l'immigration hors UE/EEE par des mesures législatives et administratives, sans politique de remigration de résidents déjà installés.",
+        accessedOn: '2026-10-20',
+        note: "Le parti revendique le passage d'une politique migratoire « naïve » à une ligne « restrictive » : durcissement des conditions du regroupement familial, frais de scolarité complets pour les étudiants hors UE/EEE, éloignement plus efficace des personnes sans droit au séjour.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Suomen Politiikka',
-        url: 'https://www.suomenpolitiikka.fi/helmikuun-perussuomalaisten-puheenaiheet-2026-kooste/',
-        note: "Durcissement de la loi sur la citoyenneté mené en trois phases : allongement de la durée de résidence requise, renforcement des conditions de ressources et de bonne conduite (deux phases déjà mises en œuvre, la troisième — test de citoyenneté — en consultation).",
+        name: "Migri — Longer period of residence required for citizenship as of 1 October 2024",
+        url: "https://migri.fi/en/-/longer-period-of-residence-required-for-citizenship-as-of-1-october-2024",
+        accessedOn: '2026-10-21',
+        note: "Réforme de la loi sur la nationalité adoptée sous le gouvernement Orpo, dont le parti est membre : durée de résidence requise portée à huit ans en règle générale à partir du 1er octobre 2024. Les étapes suivantes de la réforme sont en cours.",
       },
     },
     electoralHistory: [
@@ -1905,13 +1973,14 @@ export const parties: Party[] = [
       },
     ],
     europeanRepresentation: {
-      meps: 2,
+      meps: 1,
       totalCountryMeps: 15,
       europeanGroup: 'Conservateurs et réformistes européens (ECR)',
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Finlande',
-        url: 'https://elections-results.eu/national-results/finland/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Finlande",
+        url: "https://results.elections.europa.eu/en/national-results/finland/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -1945,9 +2014,10 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/vlbelang' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti d'extrême droite ; héritier direct du Vlaams Blok, dissous en 2004 pour racisme par la justice belge.",
+      name: "The PopuList 4.0 — entrée « Vlaams Belang » (Belgique)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
@@ -1959,11 +2029,12 @@ export const parties: Party[] = [
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Vlaams Belang',
+        name: "Vlaams Belang",
         url: 'https://www.vlaamsbelang.org/nieuws/vlaams-belang-lanceert-resolutie-voor-een-massale-terugkeerstrategie-van-illegale-migranten',
-        note: "Résolution déposée au Parlement européen avec 36 autres eurodéputés appelant à une stratégie de retour à grande échelle des migrants en situation irrégulière ; non contraignante, parti d'opposition sans capacité de faire adopter une loi au niveau fédéral belge.",
+        unverified: "site du parti et registre de la Chambre inaccessibles le 2026-10-20",
+        note: "Le parti est tenu à l'écart des coalitions par le « cordon sanitaire ». La résolution pour une stratégie de retour, déposée au Parlement européen et citée jusqu'ici, n'a pas pu être revérifiée.",
       },
     },
     electoralHistory: [
@@ -2000,9 +2071,10 @@ export const parties: Party[] = [
       totalCountryMeps: 22,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Belgique',
-        url: 'https://elections-results.eu/national-results/belgium/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Belgique",
+        url: "https://results.elections.europa.eu/en/national-results/belgium/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -2033,27 +2105,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.svp.ch',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/svp_ch' },
+      { platform: 'X', url: 'https://x.com/SVPch' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Schweizerische Volkspartei » (Suisse)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'UDC — svp.ch',
-        url: 'https://www.svp.ch',
-        note: "Programme centré sur la limitation de l'immigration et la préférence nationale à l'embauche, sans politique de remigration de résidents déjà installés légalement.",
+        name: "UDC/SVP — Parteiprogramm 2023 bis 2027, chapitre « Ausländerpolitik »",
+        url: 'https://www.svp.ch/wp-content/uploads/230523_Parteiprogramm.pdf',
+        accessedOn: '2026-10-20',
+        note: "Le programme demande l'application conséquente de l'article constitutionnel issu de l'initiative contre l'immigration de masse, pour que la Suisse décide elle-même qui peut immigrer et en quel nombre, et juge démesurée l'arrivée de 1,5 million d'immigrés en vingt ans. Le terme « Remigration » n'y figure pas.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Confédération suisse',
-        url: 'https://www.admin.ch',
-        note: "Initiative populaire « contre l'immigration de masse » portée par l'UDC, acceptée en votation le 9 février 2014 (50,3%), inscrivant des plafonds et contingents d'immigration dans la Constitution. Sa mise en œuvre législative de 2016 a été fortement atténuée (mécanisme de préférence indigène « light ») pour rester compatible avec l'accord de libre circulation UE-Suisse, sous la pression du Parlement et du risque de rupture des accords bilatéraux.",
+        name: "Swissvotes (Université de Berne) — votation n° 580, initiative populaire « Contre l'immigration de masse »",
+        url: 'https://swissvotes.ch/vote/580.00',
+        accessedOn: '2026-10-20',
+        note: "Initiative lancée par l'UDC, acceptée le 9 février 2014 par 50,3 % des votants et une majorité de cantons. Elle inscrit à l'article 121a de la Constitution des plafonds et contingents annuels d'immigration. Le Parlement l'a mise en œuvre en décembre 2016 sans contingents, par l'obligation d'annoncer les postes vacants aux offices de l'emploi dans les secteurs à fort chômage (swissinfo, 16 juin 2017 : https://www.swissinfo.ch/eng/politics/domestic-and-foreign-labour_cabinet-sets-details-for-hiring-preference-rules/43258282).",
       },
     },
     electoralHistory: [
@@ -2063,12 +2138,12 @@ export const parties: Party[] = [
         date: '2023-10-22',
         seats: 62,
         totalSeats: 200,
-        votePercent: 28.6,
+        votePercent: 27.9,
         source: {
-          name: 'Chancellerie fédérale — admin.ch',
-          url: 'https://www.bfs.admin.ch/bfs/fr/home/statistiques/politique/elections/conseil-national.html',
-          accessedOn: '2026-09-09',
-          note: 'Meilleur score du parti à une élection fédérale depuis 2015.',
+          name: 'Wikipedia — 2023 Swiss federal election',
+          url: 'https://en.wikipedia.org/wiki/2023_Swiss_federal_election',
+          accessedOn: '2026-10-21',
+          note: "En hausse par rapport à 2019 (25,6 %).",
         },
       },
       {
@@ -2115,19 +2190,20 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://partidochega.pt',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/partido_chega' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Chega » (Portugal)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'Diário da Cidadania',
-        url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
-        note: "Programme centré sur la fin de l'immigration « à portes ouvertes », l'expulsion des personnes en situation irrégulière et le durcissement de l'accès à la résidence et à la nationalité, sans politique explicite de remigration de résidents en situation régulière.",
+        name: "Diário de Notícias — Aproximação do Chega ao grupo Reconquista leva tema da remigração ao Parlamento",
+        url: 'https://www.dn.pt/sociedade/aproximao-do-chega-ao-grupo-reconquista-leva-tema-da-remigrao-ao-parlamento',
+        accessedOn: '2026-10-20',
+        note: "Chega a inscrit un « Programme national de remigration » (Programa Nacional de Remigração), prévoyant une unité nationale d'exécution forcée, parmi ses propositions pour le budget de l'État 2026 (article du 21 novembre 2025). Le député Ricardo Reis a défendu la remigration au Parlement le 7 novembre 2025. Usage explicite du terme par le parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
@@ -2135,7 +2211,8 @@ export const parties: Party[] = [
       source: {
         name: 'Diário da Cidadania',
         url: 'https://diariodacidadania.com/2025/04/24/com-foco-em-imigracao-chega-apresenta-propostas-polemicas-para-residencia-e-nacionalidade/',
-        note: "Parti d'opposition sans participation gouvernementale : propositions présentées (durcissement de la résidence et de la nationalité) mais aucune loi Chega promulguée. Le durcissement effectif du régime d'expulsion en vigueur depuis mars 2026 (« pacote retorno ») a été porté par le gouvernement AD, sous la pression politique de Chega, non par Chega lui-même.",
+        accessedOn: '2026-10-20',
+        note: "Programme présenté le 23 avril 2025 : abrogation de l'accord de mobilité de la CPLP, accès à la nationalité réservé aux personnes ayant un lien réel avec le Portugal, contrat de travail exigé à l'entrée, cinq ans de résidence légale pour certaines prestations, expulsion des immigrés incapables de subvenir à leurs besoins, délit de séjour irrégulier. Statut à vérifier : le registre de l'Assemblée de la République n'a pas pu être consulté le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -2173,9 +2250,10 @@ export const parties: Party[] = [
       totalCountryMeps: 21,
       europeanGroup: "Patriotes pour l'Europe (PfE)",
       source: {
-        name: 'Parlement européen — résultats des élections européennes 2024, Portugal',
-        url: 'https://elections-results.eu/national-results/portugal/2024-2029/',
-        accessedOn: '2026-09-09',
+        name: "Parlement européen — résultats des élections européennes 2024, Portugal",
+        url: "https://results.elections.europa.eu/en/national-results/portugal/2024-2029/",
+        accessedOn: '2026-10-21',
+
       },
     },
     localImplantation: {
@@ -2209,24 +2287,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/pisorgpl' },
     ],
     classificationSource: {
-      name: 'The PopuList — fiche Pologne',
-      url: 'https://popu-list.org/wp-content/uploads/2023/09/Poland.pdf',
-      note: "Classifié parti populiste d'extrême droite (populist far-right) par la base PopuList, l'une des quatre références méthodologiques de ce site. Également répertorié comme populiste de droite radicale (populist radical right) dans la littérature académique comparative.",
+      name: "The PopuList 4.0 — entrée « Prawo i Sprawiedliwosc » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2005 (cas limite avant 2015) et d'extrême droite depuis 2005 (cas limite avant 2015). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Wikipedia — 2023 Polish referendum',
         url: 'https://en.wikipedia.org/wiki/2023_Polish_referendum',
-        note: "Ligne constante de refus de l'accueil : rejet des quotas européens de relocalisation depuis 2015, opposition au Pacte européen sur la migration et l'asile, et organisation en octobre 2023 d'un référendum demandant aux électeurs s'ils soutenaient « l'admission de milliers d'immigrés illégaux du Moyen-Orient et d'Afrique dans le cadre du mécanisme de relocalisation forcée imposé par la bureaucratie européenne ». Pas de politique explicite de remigration de résidents en situation régulière : la ligne porte sur le blocage des entrées.",
+        accessedOn: '2026-10-20',
+        note: "Le gouvernement PiS a organisé le 15 octobre 2023 un référendum demandant notamment : « Soutenez-vous l'admission de milliers d'immigrés illégaux du Moyen-Orient et d'Afrique […] ? »",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Euronews — Poland completes 186-kilometre border wall with Belarus after migration dispute',
-        url: 'https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute',
-        note: "Mesures effectivement mises en œuvre pendant les huit années au pouvoir : mur de 186 km achevé en juillet 2022 le long de la frontière biélorusse (5,5 m de haut, 1,3 milliard de zlotys, 2 500 caméras), état d'urgence frontalier, et règlement autorisant les refoulements — dispositif dont l'illégalité a été constatée dans plusieurs cas par le Médiateur polonais et par des juridictions. Ces dispositifs restent en vigueur sous le gouvernement Tusk, d'où le classement « mesures concrètes » et non « abrogées ».",
+        name: "Sejm — ustawa z dnia 29 października 2021 r. o budowie zabezpieczenia granicy państwowej (registre ELI)",
+        url: "https://api.sejm.gov.pl/eli/acts/DU/2021/1992",
+        accessedOn: '2026-10-21',
+        note: "Loi du 29 octobre 2021, adoptée sous le gouvernement PiS, sur la construction de la barrière à la frontière biélorusse, toujours en vigueur selon le registre ELI du Sejm. Le mur de 186 km et 5,5 m de haut a été achevé le 30 juin 2022 (Euronews : https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute).",
       },
     },
     actionStatusHistory: [
@@ -2243,7 +2324,7 @@ export const parties: Party[] = [
       {
         date: '2022-06-30',
         tag: 'mesures_concretes',
-        note: "Achèvement du mur frontalier avec la Biélorussie, mesure anti-immigration la plus lourde jamais engagée par un gouvernement polonais.",
+        note: "Achèvement du mur frontalier avec la Biélorussie (186 km).",
         source: {
           name: 'Euronews',
           url: 'https://www.euronews.com/2022/06/30/poland-completes-186-kilometre-border-wall-with-belarus-after-migration-dispute',
@@ -2263,7 +2344,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2023 Polish parliamentary election',
           url: 'https://en.wikipedia.org/wiki/2023_Polish_parliamentary_election',
           accessedOn: '2026-09-13',
-          note: "Premier parti en sièges et en voix, mais privé de majorité : les trois listes d'opposition réunies forment le gouvernement Tusk. Participation record de 72,9%.",
+          note: "Premier parti en sièges et en voix, mais privé de majorité : les trois listes d'opposition réunies forment le gouvernement Tusk. Participation : 72,9 %.",
         },
       },
       {
@@ -2327,35 +2408,39 @@ export const parties: Party[] = [
     positioning: 'National-libertarien, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Groupe parlementaire à la Diète (Sejm) depuis 2019, dans l'opposition à la coalition gouvernementale menée par Donald Tusk (Koalicja Obywatelska) depuis octobre 2023. Krzysztof Bosak, coprésident du parti, est vice-maréchal (vice-président) de la Diète.",
+      "Groupe parlementaire à la Diète (Sejm) depuis 2019 (16 députés dans la législature ouverte en novembre 2023), dans l'opposition à la coalition gouvernementale menée par Donald Tusk (Koalicja Obywatelska) depuis octobre 2023. Krzysztof Bosak, coprésident du parti, est vice-maréchal (vice-président) de la Diète.",
     electoralStatusSource: {
-      name: 'Sejm Rzeczypospolitej Polskiej',
-      url: 'https://www.sejm.gov.pl/sejm9.nsf/klubposlowie.xsp?klub=Konfederacja',
-      accessedOn: '2026-09-07',
+      name: 'Sejm RP — Klub Poselski Konfederacja (10e législature), données ouvertes',
+      url: 'https://api.sejm.gov.pl/sejm/term10/clubs/Konfederacja',
+      accessedOn: '2026-10-21',
+      note: 'Seize membres, dont Krzysztof Bosak. Fonction de vice-maréchal de la Diète : Wikipédia, https://en.wikipedia.org/wiki/Krzysztof_Bosak (consulté le 2026-10-21).',
     },
     officialWebsite: 'https://konfederacja.pl',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/KONFEDERACJA_' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Konfederacja Wolność i Niepodległość » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Konfederacja.pl',
-        url: 'https://konfederacja.pl/rzad-nie-kontroluje-imigracji-do-polski',
-        note: "Programme centré sur le contrôle des frontières, l'expulsion des migrants en situation irrégulière et le rejet du Pacte européen sur la migration et l'asile, sans politique explicite de remigration de résidents en situation régulière.",
+        name: "Sejm — impression n° 1043 (Xe législature)",
+        url: "https://api.sejm.gov.pl/sejm/term10/prints/1043/1043.pdf",
+        accessedOn: '2026-10-20',
+        note: "Ses députés ont déposé le 6 février 2025 un projet de résolution contre la mise en œuvre du pacte européen sur la migration et l'asile.",
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: 'Konfederacja.pl',
-        url: 'https://konfederacja.pl/chcemy-aby-sejm-zobowiazal-rzad-od-odrzucenia-paktu-migracyjnego/',
-        note: "Proposition de loi déposée à la Diète pour supprimer le système de caution (kaucja) pour demandeurs d'asile instauré par le gouvernement PiS puis maintenu par le gouvernement Tusk ; non votée, parti minoritaire d'opposition sans capacité de faire adopter une loi seul.",
+        name: "Sejm — impression n° 1043 (Xe législature) : projet de résolution sur la non-mise en œuvre du pacte sur la migration et l'asile",
+        url: 'https://api.sejm.gov.pl/sejm/term10/prints/1043/1043.pdf',
+        accessedOn: '2026-10-20',
+        note: "Projet de résolution déposé le 6 février 2025 par les députés de Konfederacja contre la mise en œuvre du pacte européen sur la migration et l'asile. Examiné avec deux autres projets, il a abouti le 9 juillet 2025 à une résolution non contraignante du Sejm « sur la politique migratoire et la protection de la frontière orientale » (M.P. 2025 poz. 683). Aucune proposition de loi migratoire déposée par des députés n'a été adoptée au cours de la législature ouverte en novembre 2023 (registre du Sejm : https://api.sejm.gov.pl/sejm/term10/processes?limit=5000).",
       },
     },
     electoralHistory: [
@@ -2426,27 +2511,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://konfederacjakoronypolskiej.pl',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/GrzegorzBraun_' },
+      { platform: 'X', url: 'https://x.com/GrzegorzBraun_', leader: 'Grzegorz Braun' },
     ],
     classificationSource: {
-      name: 'Balkan Insight / Wikipedia',
-      url: 'https://balkaninsight.com/2026/07/01/impossible-to-discredit-the-far-right-theatre-of-polands-grzegorz-braun/rd/',
-      note: "Classifié parti d'extrême droite, national-catholique et ultranationaliste. Son président Grzegorz Braun a fait l'objet de cinq levées d'immunité parlementaire européenne pour des faits liés à des actions et propos antisémites, anti-ukrainiens et anti-LGBT, dont l'extinction en direct de bougies de Hanouca au Parlement polonais en décembre 2023.",
+      name: "The PopuList 4.0 — entrée « Konfederacja Korony Polskiej » (Pologne)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Wikipedia — Grzegorz Braun',
         url: 'https://en.wikipedia.org/wiki/Grzegorz_Braun',
-        note: "Programme prônant la sortie de la Pologne de l'Union européenne et la fin de l'immigration en provenance d'Ukraine. Pas de politique explicite de remigration de résidents en situation régulière.",
+        accessedOn: '2026-10-20',
+        note: "Son président Grzegorz Braun prône la sortie de la Pologne de l'UE et la fin de « toute nouvelle immigration ukrainienne » ; il a mené une campagne « Stop à l'ukrainisation de la Pologne ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Sejm Rzeczypospolitej Polskiej',
-        url: 'https://www.sejm.gov.pl',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi KKP promulguée à ce jour.",
+        name: "Sejm — registre des procédures législatives de la Xe législature (API officielle)",
+        url: 'https://api.sejm.gov.pl/sejm/term10/processes?limit=5000',
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition sans participation gouvernementale. Aucune proposition de loi migratoire déposée par des députés n'a été adoptée au cours de la législature ouverte en novembre 2023.",
       },
     },
     europeanRepresentation: {
@@ -2482,24 +2570,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/Fremskrittsp' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Fremskrittspartiet » (Norvège)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'FrP — partiprogram 2025-2029',
         url: 'https://www.frp.no/files/Program/2025/FrP-Partiprogram-2025-2029.pdf',
-        note: "Programme centré sur une réduction drastique de l'immigration non-occidentale et de l'asile, sans politique explicite de remigration de résidents déjà installés légalement.",
+        accessedOn: '2026-10-20',
+        note: "Programme 2025-2029 : rendre impossible l'obtention d'un titre de séjour par une demande d'asile à la frontière, traitement des demandes dans des centres hors d'Europe, arrêt de principe de l'accueil des réfugiés réinstallés, « contrat d'intégration » pour les immigrés non occidentaux. Le rythme de l'immigration y est jugé « non soutenable » pour le modèle social.",
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: 'Storting',
-        url: 'https://www.stortinget.no',
-        note: "Parti d'opposition sans participation gouvernementale depuis 2020 : aucune loi FrP promulguée à ce jour au niveau national.",
+        name: "Lovdata — utlendingsloven § 41 a (24-årskrav for familieetablering), texte consolidé",
+        url: "https://lovdata.no/dokument/NL/lov/2008-05-15-35/KAPITTEL_6",
+        accessedOn: '2026-10-20',
+        note: "Exigence d'âge de 24 ans pour l'installation en Norvège d'un conjoint ou concubin (article 41 a de la loi sur les étrangers), introduite par la loi du 17 juin 2016 n° 58 « innstramninger II » (Prop. 90 L (2015-2016)), projet du gouvernement Solberg dont le FrP était membre, en vigueur depuis le 1er janvier 2017 et toujours présente dans le texte consolidé (Lovdata : https://lovdata.no/dokument/LTI/lov/2016-06-17-58). Le parti est dans l'opposition depuis 2020.",
       },
     },
     electoralHistory: [
@@ -2514,7 +2605,7 @@ export const parties: Party[] = [
           name: 'NRK',
           url: 'https://www.nrk.no/norge/ny-valgstudie_-ideologisk-skifte-mot-hoyre-1.17991477',
           accessedOn: '2026-09-09',
-          note: 'Meilleur résultat historique du parti à une élection législative.',
+          note: 'Meilleur résultat du parti à une élection législative.',
         },
       },
       {
@@ -2563,16 +2654,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/SPD_CZ' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et anti-UE.',
+      name: "The PopuList 4.0 — entrée « Svoboda a prímá demokracie » (Tchéquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'SPD.cz',
-        url: 'https://www.spd.cz',
-        note: "Programme centré sur l'arrêt de l'immigration extra-européenne et le rejet du Pacte européen sur la migration et l'asile, sans politique explicite de remigration de résidents déjà installés légalement.",
+        name: "ČTK (České noviny) — Program SPD se soustředí na zlevnění energií či potravin, bydlení či bezpečnost",
+        url: 'https://www.ceskenoviny.cz/zpravy/2718106',
+        accessedOn: '2026-10-20',
+        note: "Programme des législatives de 2025 (dépêche du 8 septembre 2025) : rejet de la migration et du pacte européen sur la migration et l'asile, révision des titres de séjour de tous les migrants. Le député Jaroslav Foldyna a promis le renvoi de tous les migrants en situation irrégulière.",
       },
     },
     actionStatus: {
@@ -2580,7 +2673,8 @@ export const parties: Party[] = [
       source: {
         name: 'iRozhlas',
         url: 'https://www.irozhlas.cz/zpravy-domov/okamura-chce-aby-se-spd-podilelo-na-vlade-s-ano-zminil-ministerstva-vnitra_2510051407_job',
-        note: "Entré au gouvernement fin 2025 : aucune loi migratoire spécifiquement portée par le SPD promulguée à ce jour, le ministère de l'Intérieur restant hors de son portefeuille.",
+        unverified: "article d'iRozhlas et registre de la Chambre des députés inaccessibles le 2026-10-20",
+        note: "Au gouvernement depuis fin 2025, sans le ministère de l'Intérieur. Statut à vérifier : le registre de la Chambre des députés (psp.cz) n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé). Les textes migratoires adoptés depuis son entrée au gouvernement n'ont pas été examinés.",
       },
     },
     electoralHistory: [
@@ -2654,19 +2748,21 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://elliniki-lisi.gr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/kvelopoulos' },
+      { platform: 'X', url: 'https://x.com/kvelopoulos', leader: 'Kyriakos Velopoulos' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Elliniki Lisi » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Enikos.gr',
         url: 'https://www.enikos.gr/politics/velopoulos-i-ellada-den-antechei-alles-metanasteftikes-roes-entoni-kritiki-gia-ton-kyvernitiko-anaschimatismo/2595253/',
-        note: "Discours centré sur la fermeture des frontières et l'arrêt des flux migratoires (« la Grèce ne supporte plus d'autres flux »), sans politique explicite de remigration de résidents déjà installés légalement.",
+        accessedOn: '2026-10-20',
+        note: "Son président Kyriakos Velopoulos a déclaré le 9 juin 2026, lors du débat sur la loi de mise en œuvre du pacte européen, que « la Grèce et les Grecs ne supportent plus d'autres flux » et que les frontières doivent être gardées.",
       },
     },
     actionStatus: {
@@ -2674,7 +2770,8 @@ export const parties: Party[] = [
       source: {
         name: 'Newsit.gr',
         url: 'https://www.newsit.gr/politikh/vouli-me-tis-psifous-tis-nd-perase-apo-tin-epitropi-to-nomosxedio-gia-to-asylo-kai-ti-metanasteysi/4694513/',
-        note: "Parti d'opposition sans participation gouvernementale : a voté contre le projet de loi sur l'asile et la migration porté par le gouvernement ND en 2026, le jugeant insuffisamment restrictif ; aucune loi Elliniki Lisi promulguée.",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition sans participation gouvernementale : a voté contre, sur le principe, le projet de loi sur l'asile et la migration du gouvernement ND en commission (4 juin 2026). Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -2732,29 +2829,32 @@ export const parties: Party[] = [
       url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://www.niki.gr',
+    officialWebsite: 'https://nikh.gr',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/NIKI_official_' },
     ],
     classificationSource: {
-      name: 'Al Jazeera / The PopuList',
-      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
-      note: "Classifié parti d'extrême droite par les observateurs, aux côtés d'Elliniki Lisi et de Spartiates : la Grèce est devenue en 2023 le seul pays européen avec trois partis d'extrême droite représentés simultanément au Parlement.",
+      name: "The PopuList 4.0 — entrée « Δημοκρατικό Πατριωτικό Κίνημα \"ΝΙΚΗ\" » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Al Jazeera',
         url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
-        note: "Programme axé sur l'opposition à l'immigration non-européenne dans le cadre plus large d'une « guerre culturelle » de défense de l'identité orthodoxe grecque, sans politique explicite de remigration de résidents en situation régulière.",
+        accessedOn: '2026-10-20',
+        note: "Parti chrétien orthodoxe que l'analyste Georgios Samaras décrit comme le premier en Grèce à « investir autant dans les guerres culturelles » (Al Jazeera, 30 juin 2023). Sa position migratoire reste à documenter.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hellenic Parliament',
-        url: 'https://www.hellenicparliament.gr',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi NIKI promulguée à ce jour.",
+        name: "Parlement hellénique — projets et propositions de loi déposés",
+        url: "https://www.hellenicparliament.gr/Nomothetiko-Ergo/Katatethenta-Nomosxedia",
+        unverified: "registre du Parlement grec inaccessible le 2026-10-20",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2786,7 +2886,7 @@ export const parties: Party[] = [
     },
     founded: 2019,
     description:
-      "Fondé en 2019 par Dimitris Natsios, théologien orthodoxe. Parti resté marginal jusqu'à sa percée surprise aux élections législatives de 2023.",
+      "Fondé en 2019 par Dimitris Natsios, théologien orthodoxe. Parti resté marginal jusqu'à son entrée au Parlement aux élections législatives de 2023.",
   },
   {
     slug: 'spartiates',
@@ -2795,7 +2895,7 @@ export const parties: Party[] = [
     positioning: 'Extrême droite, ultranationaliste',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Douze députés à la Vouli, entrés au Parlement dès leur première élection en juin 2023 — une percée largement attribuée au soutien affiché d'Ilias Kasidiaris, ancien député d'Aube dorée condamné pour appartenance à une organisation criminelle, dont le propre parti (Ethniko Komma – Ellines) avait été disqualifié par la justice grecque juste avant le scrutin. Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
+      "Douze députés à la Vouli, entrés au Parlement dès leur première élection en juin 2023 — un résultat largement attribué au soutien affiché d'Ilias Kasidiaris, ancien député d'Aube dorée condamné pour appartenance à une organisation criminelle, dont le propre parti (Ethniko Komma – Ellines) avait été disqualifié par la justice grecque juste avant le scrutin. Dans l'opposition face au gouvernement de la Nouvelle Démocratie.",
     electoralStatusSource: {
       name: 'NBC News — Greece election far right Spartans',
       url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
@@ -2803,27 +2903,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://spartiates.gr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/spartiates_gr' },
+      { platform: 'X', url: 'https://x.com/spartiates_PO' },
     ],
     classificationSource: {
-      name: 'Al Jazeera / Wikipedia',
-      url: 'https://www.aljazeera.com/news/2023/6/30/very-worrying-three-far-right-parties-enter-greek-parliament',
-      note: "Classifié parti d'extrême droite, présenté par les observateurs comme un successeur informel d'Aube dorée (Chrysi Avgi), parti dissous par la justice grecque en 2020 pour appartenance à une organisation criminelle.",
+      name: "The PopuList 4.0 — entrée « Σπαρτιάτες » (Grèce)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'NBC News',
         url: 'https://www.nbcnews.com/news/world/election-greece-right-wing-spartans-trend-europe-italy-lepen-vox-rcna91094',
-        note: "Programme ultranationaliste centré sur l'identité ethnique grecque, l'opposition à l'immigration extra-européenne et le rejet du multiculturalisme ; soutien électoral disproportionné dans les régions du nord de la Grèce les plus exposées à la pression migratoire.",
+        accessedOn: '2026-10-20',
+        note: "Décrit comme « un groupe nativiste d'extrême droite », largement considéré comme le descendant direct d'Aube dorée (NBC News, 27 juin 2023).",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hellenic Parliament',
-        url: 'https://www.hellenicparliament.gr',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Spartiates promulguée à ce jour.",
+        name: "Parlement hellénique — projets et propositions de loi déposés",
+        url: "https://www.hellenicparliament.gr/Nomothetiko-Ergo/Katatethenta-Nomosxedia",
+        unverified: "registre du Parlement grec inaccessible le 2026-10-20",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Parlement grec n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -2868,21 +2971,23 @@ export const parties: Party[] = [
       url: 'https://www.euronews.ro/articole/george-simion-nu-suntem-in-alianta-cu-psd-nici-cu-pnl',
       accessedOn: '2026-09-07',
     },
-    officialWebsite: 'https://www.aur.ro',
+    officialWebsite: 'https://partidulaur.ro',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/AUR_Romania' },
+      { platform: 'X', url: 'https://x.com/partidulaur' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-souverainiste de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Alianța pentru Unirea Românilor » (Roumanie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
-      tag: 'reduction',
+      tag: 'remigration',
       source: {
-        name: 'AUR.ro',
-        url: 'https://www.aur.ro',
-        note: "Positionnement souverainiste et anti-immigration général, moins centré sur des mesures migratoires spécifiques que d'autres partis de cette liste (la Roumanie reste un pays d'émigration nette avec une immigration extra-européenne limitée). Pas de politique explicite de remigration.",
+        name: "Realitatea — George Simion : Pentru milioane de europeni, remigrația a devenit o politică necesară",
+        url: 'https://www.realitatea.net/stiri/politica/george-simion-pentru-milioane-de-europeni-remigratia-a-devenit-o-politica-necesara-snhudo',
+        accessedOn: '2026-10-20',
+        note: "Le 20 juin 2026, lors d'une conférence coorganisée par le parti au Parlement roumain, le président de l'AUR George Simion a déclaré que « pour des millions d'Européens, la remigration est devenue une politique nécessaire », en la définissant comme le retour des personnes en situation irrégulière. Usage explicite du terme par le dirigeant du parti — critère central de la méthodologie de ce site.",
       },
     },
     actionStatus: {
@@ -2890,7 +2995,8 @@ export const parties: Party[] = [
       source: {
         name: 'Digi24',
         url: 'https://www.digi24.ro/video/george-simion-dupa-votul-din-parlament-pe-bugetul-2026-opozitie-totala-aur-contesta-legea-la-ccr-3687189',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi migratoire AUR promulguée à ce jour.",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition : son président George Simion a annoncé une « opposition totale » et contesté la loi de budget 2026 devant la Cour constitutionnelle (Digi24, 20 mars 2026). Statut à vérifier : le registre de la Chambre des députés roumaine n'a pas pu être consulté le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -2936,29 +3042,32 @@ export const parties: Party[] = [
       url: 'https://www.rferl.org/a/sosoaca-romania-far-right-presidential-election/33209702.html',
       accessedOn: '2026-09-09',
     },
-    officialWebsite: 'https://sosromania.eu',
+    officialWebsite: 'https://sosro.ro',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/sosoacadiana' },
+      { platform: 'X', url: 'https://x.com/sosoacadiana', leader: 'Diana Șoșoacă' },
     ],
     classificationSource: {
-      name: 'European Conservatism and Populism Studies (ECPS) / Wikipedia',
-      url: 'https://www.populismstudies.org',
-      note: "Classifié parti ultra-nationaliste et populiste radical. Fondé en 2021 par Diana Șoșoacă après son exclusion d'AUR ; ligne combinant souverainisme, anti-européisme (appel au « RO-exit »), positions anti-vaccins et rhétorique régulièrement qualifiée d'antisémite par des observateurs.",
+      name: "The PopuList 4.0 — entrée « S.O.S Romǎnia » (Roumanie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'ECPS — Charting Populist Pathways',
         url: 'https://www.populismstudies.org/charting-populist-pathways-romanian-populisms-journey-to-the-european-parliament/',
-        note: "Diana Șoșoacă s'est fait connaître par des positions anti-immigration, intégrées à un ensemble plus large de thèmes souverainistes (retrait de l'UE, opposition aux directives européennes sur l'asile et la santé). Pas de politique explicite de remigration formalisée dans un programme écrit.",
+        accessedOn: '2026-10-20',
+        note: "Le European Center for Populism Studies qualifie les messages de Diana Șoșoacă d'« ultranationalistes, xénophobes et anti-européens », relève une dimension « nativiste » et son appel au « Ro-exit ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Camera Deputaților',
-        url: 'https://www.cdep.ro',
-        note: "Parti d'opposition entré au Parlement fin 2024 : aucune loi S.O.S. România promulguée à ce jour.",
+        name: "Camera Deputaților — registre des propositions législatives",
+        url: "https://www.cdep.ro/pls/proiecte/upl_pck2015.home",
+        unverified: "registre de la Chambre des députés roumaine inaccessible le 2026-10-20",
+        note: "Parti d'opposition entré au Parlement fin 2024. Statut à vérifier : le registre de la Chambre des députés roumaine n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3006,27 +3115,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.sns.sk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/SNSoficialne' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti de droite radicale, ultra-nationaliste. Doyen des partis nationalistes slovaques (fondé en 1990), déjà partenaire de coalition à plusieurs reprises depuis les années 1990.",
+      name: "The PopuList 4.0 — entrée « Slovenská Národná Strana » (Slovaquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'SNS.sk — campagne 2023',
         url: 'https://www.sns.sk/kto-voli-progresivne-slovensko-ten-hlasuje-za-migrantov-na-slovensku/',
-        note: "Campagne 2023 centrée sur le refus de l'immigration illégale, résumée par le slogan « voter Slovaquie progressiste, c'est voter pour des migrants en Slovaquie ». Positionnement anti-immigration ferme, sans politique explicite de remigration de résidents en situation régulière.",
+        unverified: "la page citée ne contient plus le slogan rapporté (consultée le 2026-10-20)",
+        note: "Position migratoire à documenter.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'STVR — Slovensko je pripravené zareagovať na akúkoľvek vlnu nelegálnej migrácie',
-        url: 'https://spravy.stvr.sk/2023/10/slovensko-nasadi-na-zelenej-hranici-s-madarskom-masivnu-silu-avizoval-to-premier-a-minister-vnutra/',
-        note: "Comme partenaire de la coalition gouvernementale, a soutenu le déploiement de jusqu'à 500 militaires en patrouilles conjointes avec la police à la frontière hongroise face à la migration de transit en 2023, ainsi que la suppression de l'attestation de séjour temporaire pour les migrants en 2024.",
+        name: "Slov-Lex — zákon č. 69/2026 Z. z. o medzinárodnej ochrane",
+        url: "https://static.slov-lex.sk/pdf/SK/ZZ/2026/69/ZZ_2026_69_20260612.pdf",
+        accessedOn: '2026-10-21',
+        note: "Membre de la coalition du gouvernement Fico depuis 2023. Ce gouvernement a fait adopter la loi du 14 avril 2026 sur la protection internationale (n° 69/2026, en vigueur depuis le 12 juin 2026), qui remplace la loi sur l'asile, introduit une procédure d'asile à la frontière et met en œuvre la réforme européenne de l'asile.",
       },
     },
     electoralHistory: [
@@ -3076,24 +3187,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/hnutierepublika' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Republika » (Slovaquie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
-      tag: 'remigration',
+      tag: 'reduction',
       source: {
-        name: 'SkSprávy.sk',
-        url: 'https://skspravy.sk/konflikt/uhrik-progresivcov-sme-s-mazurekom-v-debate-uplne-zadupali-do-zeme/',
-        note: "Milan Uhrík (président) et Milan Mazurek, figures dirigeantes du parti, ont explicitement déclaré que « la seule politique migratoire qu'ils soutiennent est la remigration » — usage explicite du terme, critère direct de la méthodologie de ce site.",
+        name: "Wikipedia — Republic Movement",
+        url: "https://en.wikipedia.org/wiki/Republic_Movement",
+        accessedOn: '2026-10-20',
+        note: "Le parti demande l'arrêt de toute immigration illégale, « même contre les institutions de l'UE ». L'emploi du terme « remigration » par ses dirigeants, cité jusqu'ici, n'a pas pu être vérifié : la source précédente est inaccessible.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Hnutie-republika.sk',
-        url: 'https://www.hnutie-republika.sk',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Republika promulguée à ce jour.",
+        name: "Národná rada — registre des projets de loi",
+        url: "https://www.nrsr.sk/web/?sid=zakony/zakony",
+        unverified: "registre du Conseil national slovaque inaccessible le 2026-10-20",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre du Conseil national slovaque n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3142,27 +3256,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://danmarksdemokraterne.dk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/Danmarksdem' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Danmarksdemokraterne » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Danmarksdemokraterne.dk',
-        url: 'https://danmarksdemokraterne.dk/forside/udlaendingepolitik/',
-        note: "Programme centré sur une politique migratoire stricte et la critique du relâchement supposé des contrôles migratoires, sans politique explicite de remigration de résidents déjà installés légalement.",
+        name: "Folketinget — B (2025-26) « Om at gennemføre en håndfast hjemsendelsespolitik » (registre officiel, données ouvertes)",
+        url: "https://oda.ft.dk/api/Sag(103780)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Ses députés ont déposé au Folketing des propositions de résolution pour une politique de retour « ferme », la suppression de l'asile spontané au profit d'un centre d'accueil dans un pays tiers et le durcissement de la naturalisation.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Kristeligt Dagblad',
-        url: 'https://www.kristeligt-dagblad.dk/danmark/stoejberg-skoser-regerings-udlaendingepolitik-et-svigt-af-danmark',
-        note: "Parti d'opposition depuis 2026 : aucune loi Danmarksdemokraterne promulguée à ce jour.",
+        name: "Folketinget — B (2025-26) « Om at gennemføre en håndfast hjemsendelsespolitik » (registre officiel, données ouvertes)",
+        url: "https://oda.ft.dk/api/Sag(103780)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Depuis 2022, ses députés ont déposé au Folketing plusieurs propositions de résolution sur l'immigration (politique de retour « ferme », suppression de l'asile spontané au profit d'un centre d'accueil dans un pays tiers, durcissement de la naturalisation) ; aucune n'a été adoptée, l'une a fait l'objet d'un rapport de commission et une autre est pendante.",
       },
     },
     electoralHistory: [
@@ -3216,35 +3332,38 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Spectaculaire retour électoral aux élections du 24 mars 2026 : le parti quasiment triple son score (9,1% des voix, 16 sièges), après avoir frôlé l'effondrement en 2022 (5 sièges). Dans l'opposition à la coalition gouvernementale de Mette Frederiksen. Le président Morten Messerschmidt a annoncé que le parti ne rejoindrait un gouvernement que si celui-ci garantit que davantage d'immigrés extra-européens quittent le Danemark qu'il n'en arrive.",
+      "Aux élections du 24 mars 2026, le parti fait plus que tripler son score (9,1 % des voix contre 2,6 % en 2022) et passe de 5 à 16 sièges. Dans l'opposition au troisième gouvernement de Mette Frederiksen (sociaux-démocrates, Parti populaire socialiste, Modérés, Parti social-libéral).",
     electoralStatusSource: {
-      name: 'Searchlight Magazine — Danish Election: DPP comeback as far right vote is reshuffled',
-      url: 'https://searchlightmagazine.com/2026/03/danish-election-dpp-comeback-as-far-right-vote-is-reshuffled/',
-      accessedOn: '2026-09-09',
+      name: 'Wikipedia — 2026 Danish general election',
+      url: 'https://en.wikipedia.org/wiki/2026_Danish_general_election',
+      accessedOn: '2026-10-21',
     },
     officialWebsite: 'https://danskfolkeparti.dk',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/MrMesserschmidt' },
+      { platform: 'X', url: 'https://x.com/MrMesserschmidt', leader: 'Morten Messerschmidt' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti national-conservateur de droite radicale. Fondé en 1995 par Pia Kjærsgaard, historiquement le parti anti-immigration de référence au Danemark, à l'origine de l'inflexion restrictive de la politique migratoire danoise adoptée ensuite par les gouvernements sociaux-démocrates successifs.",
+      name: "The PopuList 4.0 — entrée « Dansk Folkeparti » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'remigration',
       source: {
         name: 'Altinget — Når Dansk Folkeparti taler om remigration, henter de ordene fra kontroversiel højreradikal bevægelse',
         url: 'https://www.altinget.dk/artikel/naar-dansk-folkeparti-taler-om-remigration-henter-de-ordene-fra-kontroversiel-hoejreradikal-bevaegelse',
-        note: "Le président Morten Messerschmidt emploie explicitement le terme « remigration » dans sa communication publique (« MASSIVE HJEMSENDELSER OG REMIGRATION NU! », publié sur X), appelant à des renvois massifs et à des incitations au départ des immigrés non-occidentaux — usage direct du terme, critère central de la méthodologie de ce site. Le média danois Altinget a documenté que cette terminologie provient du même corpus identitaire que celui popularisé par Martin Sellner.",
+        accessedOn: '2026-10-20',
+        note: "Son président Morten Messerschmidt parle de « remigration » pendant la campagne de 2026, et les publications du parti sur le sujet reprennent le slogan « Remigration nu » (Altinget, tribune du 9 mars 2026). Critère (a) de la méthodologie.",
       },
     },
     actionStatus: {
-      tag: 'programme',
+      tag: 'mesures_concretes',
       source: {
-        name: 'Folketinget',
-        url: 'https://www.ft.dk',
-        note: "Parti d'opposition depuis 2026 : aucune loi Dansk Folkeparti promulguée à ce jour dans ce nouveau mandat. Le parti revendique toutefois avoir directement inspiré, lors de ses précédentes participations gouvernementales (2001-2011, puis soutien parlementaire 2015-2019), plusieurs des dispositifs restrictifs toujours en vigueur dans la loi danoise sur les étrangers.",
+        name: "Folketinget — L 140 (2018-19), loi dite du « changement de paradigme »",
+        url: "https://oda.ft.dk/api/Sag(78454)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Loi promulguée après son adoption le 21 février 2019. Elle met en œuvre le volet migratoire de l'accord budgétaire pour 2019 conclu le 30 novembre 2018 entre le gouvernement et le DF : titres de séjour des réfugiés délivrés en vue d'un séjour temporaire et retirés dès que possible, plafond pour le regroupement familial des réfugiés. Aucune abrogation n'a été relevée à la date de consultation. Depuis 2022, les propositions de résolution migratoires de ses députés ont toutes été rejetées ou sont devenues caduques, deux restant pendantes.",
       },
     },
     electoralHistory: [
@@ -3256,9 +3375,9 @@ export const parties: Party[] = [
         totalSeats: 179,
         votePercent: 9.1,
         source: {
-          name: 'Searchlight Magazine',
-          url: 'https://searchlightmagazine.com/2026/03/danish-election-dpp-comeback-as-far-right-vote-is-reshuffled/',
-          accessedOn: '2026-09-09',
+          name: 'Wikipedia — 2026 Danish general election',
+          url: 'https://en.wikipedia.org/wiki/2026_Danish_general_election',
+          accessedOn: '2026-10-21',
           note: 'Le parti fait plus que tripler son nombre de sièges par rapport à 2022.',
         },
       },
@@ -3273,7 +3392,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2022 Danish general election',
           url: 'https://en.wikipedia.org/wiki/2022_Danish_general_election',
           accessedOn: '2026-09-09',
-          note: "Quasi-effondrement du parti, en grande partie absorbé par le Danmarksdemokraterne alors nouvellement fondé.",
+          note: "Recul à 5 sièges, en grande partie au profit du Danmarksdemokraterne, alors nouvellement fondé.",
         },
       },
     ],
@@ -3309,24 +3428,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/borgernesparti' },
     ],
     classificationSource: {
-      name: 'Wikipedia — Citizens\' Party (Denmark)',
-      url: 'https://en.wikipedia.org/wiki/Citizens%27_Party_(Denmark)',
-      note: "Classifié parti d'extrême droite, national-conservateur et libertarien. Fondé en août 2024 par Lars Boje Mathiesen après son exclusion du Nye Borgerlige (Nouvelle Droite), dont il avait pris la présidence en février 2023 avant d'en être écarté un mois plus tard pour des différends sur le financement de campagne.",
+      name: "The PopuList 4.0 — entrée « Borgernes Parti » (Danemark)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
-      tag: 'remigration',
+      tag: 'reduction',
       source: {
         name: 'Politpro — Borgernes Parti',
         url: 'https://politpro.eu/en/denmark/political-parties/borgernes-parti',
-        note: "Le programme électoral 2026 du parti appelle explicitement à la remigration, décrite dans sa plateforme comme un objectif de « libération » du Danemark vis-à-vis de l'islam, aux côtés d'une ligne dure anti-immigration envers les personnes originaires de pays à majorité musulmane — usage direct du terme, critère central de la méthodologie de ce site.",
+        accessedOn: '2026-10-20',
+        note: "Décrit comme combinant une politique d'immigration stricte et une politique « robuste » d'expulsion et de protection des frontières. L'appel à la « remigration » attribué jusqu'ici à son programme n'a été retrouvé dans aucune source.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Folketinget',
-        url: 'https://www.ft.dk',
-        note: "Parti d'opposition entré au Parlement en mars 2026 : aucune loi Borgernes Parti promulguée à ce jour.",
+        name: "Folketinget — B (2024-25) « Om at fjerne udgifterne til ikkevestlige udlændinge og efterkommere » (registre officiel, données ouvertes)",
+        url: "https://oda.ft.dk/api/Sag(101135)?$format=json",
+        accessedOn: '2026-10-20',
+        note: "Parti entré au Parlement en mars 2026. Sa seule proposition sur l'immigration, une résolution de Lars Boje Mathiesen visant à supprimer les dépenses publiques liées aux immigrés non occidentaux et à leurs descendants (session 2024-25), a été rejetée.",
       },
     },
     electoralHistory: [
@@ -3356,7 +3478,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. Percée spectaculaire en 2026 : victoire du parti à l'élection partielle fédérale de Farrer (9 mai) avec David Farley, premier député One Nation directement élu à la Chambre des représentants de son histoire (les précédents élus y étaient arrivés par défection) ; deuxième place à l'élection partielle de Nepean (Victoria, 2 mai) ; et surtout un « séisme électoral » en Australie-Méridionale (21 mars), où le parti dépasse les Libéraux pour la première fois de l'histoire de cet État. Reste un parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
+      "Quatre sièges au Sénat australien (dont celui de Pauline Hanson), après un gain de deux sièges lors des élections générales de mai 2025. En 2026 : victoire du parti à l'élection partielle fédérale de Farrer (9 mai) avec David Farley, premier député One Nation directement élu à la Chambre des représentants de son histoire (les précédents élus y étaient arrivés par défection) ; deuxième place à l'élection partielle de Nepean (Victoria, 2 mai) ; et, en Australie-Méridionale (21 mars), un score supérieur à celui des Libéraux, une première dans cet État. Reste un parti d'opposition, le pays étant dirigé par le gouvernement travailliste d'Anthony Albanese.",
     electoralStatusSource: {
       name: 'The Conversation — Labor easily wins South Australian election with One Nation beating Liberals into second',
       url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
@@ -3364,27 +3486,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.onenation.org.au',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/PaulineHansonOz' },
+      { platform: 'X', url: 'https://x.com/PaulineHansonOz', leader: 'Pauline Hanson' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « One Nation Party » (ID 386), Australie",
+      url: 'https://parlgov.fly.dev/data/parties/aus/386/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Right-wing » par ParlGov. The PopuList, limitée à l'Europe, ne code pas ce parti.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Build a Ballot',
         url: 'https://www.buildaballot.org.au/party-info/one-nation-policies',
-        note: "Objectif chiffré de réduire l'immigration de plus de 570 000 personnes par rapport aux niveaux actuels (plafond de 130 000 visas), expulsion de 75 000 « migrants illégaux » et retrait de la Convention de l'ONU relative au statut des réfugiés. Pas de politique de remigration de résidents en situation régulière.",
+        accessedOn: '2026-10-20',
+        note: "Le parti veut réduire nettement l'immigration : plafond de 130 000 visas permanents et temporaires par an, retrait de l'Australie de la Convention de l'ONU relative au statut des réfugiés.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Parlement australien',
-        url: 'https://www.aph.gov.au',
-        note: "Parti minoritaire d'opposition (4 sièges sur 76 au Sénat) : aucune loi One Nation promulguée à ce jour.",
+        name: "Parlement australien — Bills and Legislation",
+        url: "https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation",
+        unverified: "registre des projets de loi du Parlement australien inaccessible le 2026-10-20",
+        note: "Parti minoritaire d'opposition (4 sièges sur 76 au Sénat). Statut à vérifier : le registre des projets de loi du Parlement australien n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -3413,7 +3538,7 @@ export const parties: Party[] = [
           name: 'The Conversation',
           url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
           accessedOn: '2026-09-10',
-          note: "Meilleur résultat du parti à une élection d'État ou fédérale depuis 1998 (Queensland). Le parti obtient aussi 3 sièges au Conseil législatif (chambre haute) et devance les Libéraux en voix, une première historique dans cet État.",
+          note: "Meilleur résultat du parti à une élection d'État ou fédérale depuis 1998 (Queensland). Le parti obtient aussi 3 sièges au Conseil législatif (chambre haute) et devance les Libéraux en voix, une première dans cet État.",
         },
       },
       {
@@ -3474,16 +3599,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/peoplespca' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « People's Party of Canada » (ID 2791), Canada",
+      url: 'https://parlgov.fly.dev/data/parties/can/2791/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Right-wing » par ParlGov. The PopuList, limitée à l'Europe, ne code pas ce parti.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Impunity Observer',
         url: 'https://impunityobserver.com/2025/04/02/maxime-bernier-only-the-peoples-party-sides-with-canadians-on-immigration/',
-        note: "Programme visant à réduire l'immigration à 150 000 entrées par an et à abroger la loi canadienne sur le multiculturalisme, sans politique explicite de remigration de résidents déjà installés légalement.",
+        unverified: "la source citée, une tribune, ne contient pas les engagements rapportés",
+        note: "Engagements migratoires à documenter.",
       },
     },
     actionStatus: {
@@ -3491,6 +3618,7 @@ export const parties: Party[] = [
       source: {
         name: 'CBC News',
         url: 'https://www.cbc.ca/news/politics/maxime-bernier-ppc-campaign-launch-1.7492181',
+        unverified: "article de CBC inaccessible le 2026-10-20",
         note: "Aucun élu à la Chambre des communes : aucun texte déposé au niveau fédéral à ce jour.",
       },
     },
@@ -3506,7 +3634,7 @@ export const parties: Party[] = [
           name: "CBC News — With less than 1% of the vote, does the PPC have a future?",
           url: 'https://www.cbc.ca/news/politics/peoples-party-of-canada-ppc-maxime-bernier-election-2025-1.7523653',
           accessedOn: '2026-09-09',
-          note: 'Pire résultat historique du parti ; Maxime Bernier arrive quatrième dans sa propre circonscription.',
+          note: 'Plus faible résultat du parti ; Maxime Bernier arrive quatrième dans sa propre circonscription.',
         },
       },
       {
@@ -3543,27 +3671,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://dp.hr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/domovinskipokret' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Domovinski Pokret » (Croatie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Monitor.hr',
-        url: 'https://www.monitor.hr/kako-bi-most-domovinski-pokret-i-mozemo-rijesili-problem-uvoza-stranih-radnika/',
-        note: "S'oppose à la libéralisation de la loi sur les étrangers et à la suppression des quotas de travailleurs étrangers, et met en avant le retour de la diaspora croate plutôt que l'importation de main-d'œuvre étrangère — logique de retour de la diaspora nationale, distincte de la remigration de populations immigrées telle que définie par la méthodologie de ce site.",
+        name: "Index.hr — Otvoreno o stranim radnicima",
+        url: "https://www.index.hr/amp/vijesti/clanak/otvoreno-o-stranim-radnicima-hdzovac-mi-znamo-sve-o-tim-ljudima/2609577.aspx",
+        accessedOn: '2026-10-20',
+        note: "Le député DP Ivica Kukavica a déclaré que le parti ferait « tout » pour que, « sous couvert du besoin de travailleurs étrangers », il n'y ait pas de « remplacement de la population » (Index.hr, 24 octobre 2024).",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'Index.hr',
-        url: 'https://www.index.hr/amp/vijesti/clanak/otvoreno-o-stranim-radnicima-hdzovac-mi-znamo-sve-o-tim-ljudima/2609577.aspx',
-        note: "En tant que partenaire de la coalition gouvernementale, soutient les amendements à la loi sur les étrangers (obligation de connaissance de la langue croate, annulation de visa en cas d'abus) actuellement en vigueur.",
+        name: "TEB — Zakon o izmjenama i dopunama Zakona o strancima (NN 55/26)",
+        url: "https://teb.hr/novosti/2026/zakon-o-izmjenama-i-dopunama-zakona-o-strancima/",
+        accessedOn: '2026-10-21',
+        note: "Partenaire de la coalition gouvernementale avec le HDZ depuis 2024. La modification de la loi sur les étrangers adoptée en mai 2026 (Narodne novine 55/26) est en vigueur depuis le 4 juin 2026 ; elle impose à certains travailleurs étrangers un examen de croate et d'alphabet latin de niveau A1.1, exigible à partir du 4 juin 2027.",
       },
     },
     electoralHistory: [
@@ -3603,7 +3733,7 @@ export const parties: Party[] = [
     },
     founded: 2020,
     description:
-      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava. Partenaire de coalition du HDZ depuis 2024, malgré la perte de son fief historique de Vukovar en 2025.",
+      "Fondé en 2020 par Miroslav Škoro, aujourd'hui dirigé par Ivan Penava. Partenaire de coalition du HDZ depuis 2024, malgré la perte de son fief de Vukovar en 2025.",
   },
   {
     slug: 'hrvatski-suverenisti',
@@ -3612,35 +3742,37 @@ export const parties: Party[] = [
     positioning: 'National-conservateur, droite radicale à extrême droite',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Deux sièges au Sabor (8,02% en coalition avec Most aux élections de 2024), mais surtout une victoire locale retentissante : son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025, mettant fin à onze années de règne d'Ivan Penava (Domovinski pokret) sur ce bastion symbolique du nationalisme croate, avec seulement 184 voix d'avance. Poursuit sa progression en 2026 via une coalition électorale (« Vukovarska koalicija ») avec DOMiNO et le HSP pour les élections des conseils d'arrondissement de Split, prévues le 27 septembre 2026.",
+      "Deux sièges au Sabor (8,02 % en coalition avec Most aux élections de 2024). Au niveau local, son président Marijan Pavliček a conquis la mairie de Vukovar en mai 2025 avec 184 voix d'avance sur Ivan Penava (Domovinski pokret), qui la dirigeait depuis 2013.",
     electoralStatusSource: {
       name: 'HRT',
       url: 'https://vijesti.hrt.hr/hrvatska/domovinski-pokret-izgubio-vukovar-pobijedio-suverenist-m-pavlicek-12184051',
       accessedOn: '2026-09-10',
     },
-    officialWebsite: 'https://hrvatski-suverenisti.hr',
+    officialWebsite: 'https://suverenisti.hr',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/hrsuverenisti' },
     ],
     classificationSource: {
-      name: 'Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
-      note: "Classifié national-conservateur, christiano-fondamentaliste, droite radicale à extrême droite. Né en 2019 de la fusion du Parti conservateur croate, de Hrast (Mouvement pour une Croatie réussie) et de la Génération du renouveau.",
+      name: "The PopuList 4.0 — entrée « Hrvatski Suverenisti » (Croatie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Wikipedia — Croatian Sovereignists',
         url: 'https://en.wikipedia.org/wiki/Croatian_Sovereignists',
-        note: "Ligne national-conservatrice et christiano-identitaire plus radicale que celle de Domovinski pokret, dont il a débauché plusieurs cadres locaux. Pas de politique explicite de remigration formalisée dans un programme écrit.",
+        unverified: "la source citée (Wikipédia) ne décrit pas de position migratoire",
+        note: "Parti conservateur et chrétien, classé de droite à extrême droite ; position migratoire à documenter.",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Sabor',
-        url: 'https://www.sabor.hr',
-        note: "Parti d'opposition minoritaire au niveau national (2 sièges) : aucune loi Hrvatski suverenisti promulguée à ce jour au Parlement croate.",
+        name: "Sabor — registre e-doc des actes",
+        url: "https://edoc.sabor.hr/Akti.aspx",
+        unverified: "registre e-doc du Sabor non exploitable (recherche par formulaire) le 2026-10-20",
+        note: "Parti d'opposition minoritaire au niveau national (2 sièges). Statut à vérifier : le registre e-doc du Sabor, qui ne s'interroge que par formulaire, n'a pas pu être exploité le 20 octobre 2026.",
       },
     },
     electoralHistory: [
@@ -3685,7 +3817,7 @@ export const parties: Party[] = [
     },
     localImplantation: {
       summary:
-        "Détient la mairie de Vukovar depuis mai 2025 (Marijan Pavliček), la principale ville symbolique de la mémoire nationale croate — une victoire directement arrachée à Domovinski pokret. Étend son implantation via une coalition locale à Split pour les élections d'arrondissement de septembre 2026.",
+        "Détient la mairie de Vukovar depuis mai 2025 (Marijan Pavliček), ville symbole de la mémoire nationale croate, prise à Domovinski pokret. Étend son implantation via une coalition locale à Split pour les élections d'arrondissement de septembre 2026.",
       source: {
         name: 'Nacional.hr',
         url: 'https://www.nacional.hr/primopredaja-pavlicek-postao-gradonacelnik-vukovara-penava-ovdje-stvari-nisu-jednostavne/',
@@ -3711,27 +3843,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.sds.si',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/SDS_Slovenija' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Slovenska Demokratska Stranka » (Slovénie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste depuis 2000 et d'extrême droite depuis 2015. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'N1 Info',
-        url: 'https://n1info.si/volitve-2026/jansa-o-oblikovanju-vlade-s-tem-se-se-ne-ukvarjamo-to-svetujemo-tudi-ostalim/',
-        note: "Programme centré sur le renvoi des migrants en situation irrégulière vers des pays tiers et le contrôle strict des frontières, sans politique explicite de remigration de résidents en situation régulière.",
+        name: "24ur.com — Mahnič bi imel « slovensko ICE »",
+        url: "https://www.24ur.com/novice/slovenija/golob-dotok-ilegalnih-migrantov-je-minimalen-mahnic-bi-ustanovil-urad-za-deportacije.html",
+        accessedOn: '2026-10-20',
+        note: "Le député SDS Žan Mahnič a annoncé le 3 février 2026 la création d'un « bureau des déportations ».",
       },
     },
     actionStatus: {
-      tag: 'mesures_concretes',
+      tag: 'programme',
       source: {
-        name: '24ur.com',
+        name: "24ur.com",
         url: 'https://www.24ur.com/novice/slovenija/golob-dotok-ilegalnih-migrantov-je-minimalen-mahnic-bi-ustanovil-urad-za-deportacije.html',
-        note: "Dès sa prise de fonction, le Premier ministre Janša a signé une lettre avec les dirigeants de 18 États membres de l'UE demandant le retour des migrants illégaux vers des pays tiers ; un « bureau des déportations » est annoncé par le député SDS Branko Mahnič.",
+        accessedOn: '2026-10-20',
+        note: "Statut à revérifier. Le « bureau des déportations » annoncé par le député SDS Žan Mahnič n'est pas un texte adopté, et l'adoption d'une loi migratoire par le gouvernement Janša n'a pas pu être établie à la date de consultation.",
       },
     },
     electoralHistory: [
@@ -3791,27 +3925,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://vazrazhdane.bg',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/vazrazhdane_bg' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration et pro-russe.',
+      name: "The PopuList 4.0 — entrée « Vazrazhdane » (Bulgarie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Novinite.com',
         url: 'https://www.novinite.com/articles/223323/Vazrazhdane+Party+Leader+Urges+Bulgaria+to+Refrain+from+Signing+EU+Migration+Pact',
-        note: "Kostadin Kostadinov (président) s'oppose fermement à l'application du Pacte européen sur la migration et l'asile en Bulgarie, craignant d'en faire un pays d'accueil de réfugiés en transit vers l'Autriche et l'Allemagne. Pas de politique explicite de remigration.",
+        accessedOn: '2026-10-20',
+        note: "Son président Kostadin Kostadinov s'oppose à l'adoption du pacte européen sur la migration et l'asile, qui risquerait selon lui de « transformer le pays en vaste camp de réfugiés » pour des migrants en route vers l'Autriche et l'Allemagne (3 janvier 2024).",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Assemblée nationale bulgare',
-        url: 'https://www.parliament.bg',
-        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Vazrazhdane promulguée à ce jour.",
+        name: "Народно събрание — registre des projets de loi de la 52e Assemblée nationale",
+        url: "https://www.parliament.bg/bg/bills",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement. Aucun projet de loi sur les étrangers n'a été déposé par ses députés depuis l'élection de l'Assemblée en 2026 (les deux textes de juillet 2026 viennent du gouvernement et de PP-DB). Le parti a en revanche fait adopter le 7 août 2024 un amendement à la loi sur l'éducation, sans rapport avec l'immigration (RFE/RL : https://www.rferl.org/a/bulgaria-lgbt-sexual-orientation-amendment-schools/33069623.html).",
       },
     },
     electoralHistory: [
@@ -3863,7 +3999,7 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'pouvoir',
     electoralStatusDetail:
-      "Partenaire de la coalition gouvernementale avec le National Party depuis les élections d'octobre 2023. Winston Peters, chef du parti, a occupé le poste de vice-Premier ministre. Des tensions existent avec son partenaire de coalition sur plusieurs aspects de la politique migratoire, à l'approche des élections d'octobre 2026.",
+      "Partenaire de la coalition gouvernementale avec le National Party depuis les élections d'octobre 2023. Winston Peters, chef du parti, a occupé le poste de vice-Premier ministre. Des tensions existent avec son partenaire de coalition sur plusieurs aspects de la politique migratoire, à l'approche des élections générales de 2026.",
     electoralStatusSource: {
       name: 'NZ Herald',
       url: 'https://www.nzherald.co.nz/nz/politics/new-zealand-first-national-at-odds-on-immigration-policy-whether-new-zealand-a-launch-pad-to-australia-jamie-ensor/5XMNMNSUURDOLBYMUU36ZLC5HI/',
@@ -3874,16 +4010,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/nzfirst' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti populiste de droite radicale, positionnement anti-immigration.',
+      name: "ParlGov 2024 (Döring & Manow) — entrée « New Zealand First Party » (ID 891), Nouvelle-Zélande",
+      url: 'https://parlgov.fly.dev/data/parties/nzl/891/',
+      accessedOn: '2026-10-20',
+      note: "Classé dans la famille « Conservative » par ParlGov, et non dans la famille « Right-wing ». The PopuList, limitée à l'Europe, ne code pas ce parti. L'inclusion repose sur la ligne migratoire du parti (voir « Intention »), pas sur ce classement.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'NZ Herald',
-        url: 'https://www.nzherald.co.nz/nz/politics/nz-firsts-winston-peters-announces-a-new-migrant-values-statement-policy/YRSNUSTEOV2G57XKOYFCWSL3TY/',
-        note: "Campagne 2026 axée sur une réduction de l'immigration, un « document de valeurs néo-zélandaises » obligatoire pour les nouveaux migrants et la conditionnalité de certaines prestations sociales (dont la retraite, à partir de 2029) à la citoyenneté. Pas de politique explicite de remigration.",
+        name: "Reuters via TimesLIVE — New Zealand First's culture-war policies lack broad appeal, warn analysts",
+        url: 'https://www.timeslive.co.za/news/world/2026-10-12-new-zealand-firsts-culture-war-policies-lack-broad-appeal-warn-analysts/',
+        accessedOn: '2026-10-22',
+        note: "Selon Reuters (12 octobre 2026), Winston Peters a proposé des restrictions à l'immigration pour l'élection du 7 novembre 2026, en dénonçant le niveau élevé de l'immigration. Wikipédia rapporte un plafond annuel de 7 000 à 15 000 migrants « sérieusement qualifiés », d'après une page du programme archivée en 2012 (https://en.wikipedia.org/wiki/New_Zealand_First). Le programme officiel de 2026 n'a pas pu être consulté (vérification anti-robot sur nzfirst.nz). Critère (a) de la méthodologie.",
       },
     },
     actionStatus: {
@@ -3891,7 +4029,8 @@ export const parties: Party[] = [
       source: {
         name: '1News',
         url: 'https://www.1news.co.nz/2026/09/07/peters-signals-benefits-as-well-as-super-require-citizenship-under-nz-first-policy/',
-        note: "Propositions de campagne pour les élections d'octobre 2026 (document de valeurs, conditionnalité des prestations) : non encore déposées comme texte de loi.",
+        accessedOn: '2026-10-20',
+        note: "Campagne de 2026 : réserver la retraite publique (NZ Super) aux citoyens à partir de 2029 ; Winston Peters a évoqué la même condition pour d'autres prestations, sans proposition formelle. Rien n'a été déposé comme texte de loi. Au gouvernement depuis 2023 : les mesures adoptées par ce gouvernement n'ont pas été examinées.",
       },
     },
     electoralHistory: [
@@ -3924,77 +4063,6 @@ export const parties: Party[] = [
       "Fondé en 1993 par Winston Peters, ancien député du National Party. A participé à plusieurs gouvernements de coalition, travaillistes et nationaux, depuis sa fondation.",
   },
   {
-    slug: 'la-libertad-avanza',
-    name: 'La Libertad Avanza (LLA)',
-    countryCode: 'AR',
-    positioning: 'Libertarien, droite radicale',
-    electoralStatus: 'pouvoir',
-    electoralStatusDetail:
-      "Javier Milei, fondateur du parti, est président de la Nation argentine depuis décembre 2023. La Libertad Avanza est arrivée en tête des élections législatives de 2025, renforçant sa position au Congrès.",
-    electoralStatusSource: {
-      name: 'Diario de Cuyo',
-      url: 'https://www.diariodecuyo.com.ar/argentina/milei-lanza-lla-nacional-y-pone-primera-hacia-la-campana-2025-1665742.html',
-      accessedOn: '2026-09-07',
-    },
-    officialWebsite: 'https://www.lalibertadavanza.com.ar',
-    socialAccounts: [
-      { platform: 'X', url: 'https://x.com/LLibertadAvanza' },
-    ],
-    classificationSource: {
-      name: 'Manifesto Project',
-      url: 'https://manifesto-project.wzb.eu',
-      note: "Inclusion sur mesures concrètes en matière migratoire prises par l'administration Milei, bien que le parti se définisse avant tout comme libertarien plutôt qu'anti-immigration au sens classique européen.",
-    },
-    intention: {
-      tag: 'reduction',
-      source: {
-        name: 'La República / El Cronista',
-        url: 'https://larepublica.pe/mundo/2026/07/30/milei-modifica-la-ley-de-migraciones-para-prohibir-el-ingreso-de-extranjeros-que-expresen-mensajes-de-odio-contra-argentina-1356360',
-        note: "Restrictions ciblées sur l'entrée et le séjour des étrangers jugés « hostiles » envers l'Argentine, plutôt qu'une politique de réduction généralisée de l'immigration ou de remigration de résidents déjà installés légalement.",
-      },
-    },
-    actionStatus: {
-      tag: 'mesures_concretes',
-      source: {
-        name: 'Perfil',
-        url: 'https://www.perfil.com/noticias/politica/la-justicia-freno-su-reforma-migratoria-pero-milei-insiste-con-un-nuevo-dnu-contra-extranjeros.phtml',
-        note: "Décret présidentiel (DNU) n°681/2026 modifiant la loi sur les migrations pour interdire l'entrée aux étrangers tenant des propos jugés hostiles envers l'Argentine, en vigueur. Une réforme migratoire plus large avait auparavant été bloquée par la justice argentine.",
-      },
-    },
-    electoralHistory: [
-      {
-        label: 'Élections législatives de mi-mandat 2025',
-        chamber: 'Chambre des députés (renouvellement partiel)',
-        date: '2025-10-26',
-        seats: 92,
-        totalSeats: 257,
-        votePercent: 40.68,
-        source: {
-          name: 'Buenos Aires Herald — LLA gets landslide win, reaches key number of Congress seats',
-          url: 'https://buenosairesherald.com/politics/argentina-2025-midterms-lla-gets-landslide-win-reaches-key-number-of-congress-seats',
-          accessedOn: '2026-09-09',
-          note: "92 sièges au total après ce scrutin partiel (127 des 257 sièges étaient renouvelés), franchissant le seuil du tiers de la chambre nécessaire pour bloquer une destitution ou soutenir un décret présidentiel. Le pourcentage indiqué correspond au scrutin partiel, non au total national.",
-        },
-      },
-      {
-        label: 'Élections générales 2023',
-        chamber: 'Chambre des députés',
-        date: '2023-10-22',
-        seats: 35,
-        totalSeats: 257,
-        source: {
-          name: "Wikipedia — 2023 Argentine general election",
-          url: 'https://en.wikipedia.org/wiki/2023_Argentine_general_election',
-          accessedOn: '2026-09-15',
-          note: "Une version antérieure de cette fiche indiquait 37 sièges. Le décompte des sièges effectivement remportés par La Libertad Avanza à ce scrutin est de 35 ; les chiffres plus élevés que l'on rencontre correspondent à la taille du bloc parlementaire après ralliements de députés alliés. Javier Milei avait obtenu 26,51% au premier tour de la présidentielle tenue le même jour, puis 55,65% au second tour du 19 novembre 2023.",
-        },
-      },
-    ],
-    founded: 2021,
-    description:
-      "Fondé en 2021 par l'économiste Javier Milei, élu président de l'Argentine en décembre 2023 sur une ligne libertarienne et anti-establishment.",
-  },
-  {
     slug: 'ekre',
     name: 'Eesti Konservatiivne Rahvaerakond (EKRE)',
     countryCode: 'EE',
@@ -4009,27 +4077,29 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://ekre.ee',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/EKRE_erakond' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Eesti Konservatiivne Rahvaerakond » (Estonie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'EKRE.ee',
-        url: 'https://ekre.ee',
-        note: "Programme centré sur la limitation stricte de l'immigration extra-européenne et la défense de « l'État-nation estonien », sans politique explicite de remigration de résidents déjà installés légalement.",
+        name: "ERR News — EKRE vows national focus and an end to 'Russifying' immigration",
+        url: 'https://news.err.ee/1609967681/ekre-vows-national-focus-and-an-end-to-russifying-immigration',
+        accessedOn: '2026-10-20',
+        note: "Déclaration adoptée par le conseil du parti en mars 2026 en vue des législatives de 2027 : refonte radicale de la politique migratoire et fin de l'immigration qualifiée de « russifiante ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Riigikogu',
-        url: 'https://www.riigikogu.ee/fraktsioonide-teated/eesti-konservatiivse-rahvaerakonna-fraktsioon/ekre-alustab-riigikogus-taiemahulist-obstruktsiooni-valitsuse-poliitika-pidurdamiseks/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi EKRE promulguée à ce jour.",
+        name: "Riigikogu — eelnõu 145 SE (2020), registre officiel",
+        url: "https://api.riigikogu.ee/api/volumes/drafts/7c3765b5-b4be-4fab-a037-1711e4603961?lang=ET",
+        accessedOn: '2026-10-20',
+        note: "Statut à revérifier. Le parti a participé au gouvernement d'avril 2019 à janvier 2021, avec le ministère de l'Intérieur. Une loi de 2020 visant à limiter le détournement des règles de travail des étrangers (salaire au moins égal au salaire moyen estonien) a été adoptée sur projet de ce gouvernement ; les règles ont été modifiées depuis et son maintien en vigueur n'a pas pu être établi. En 2022, sa proposition de loi 628 SE sur les étrangers et l'enseignement supérieur a été rejetée.",
       },
     },
     electoralHistory: [
@@ -4090,27 +4160,30 @@ export const parties: Party[] = [
     },
     officialWebsite: 'https://www.nacionalaapvieniba.lv',
     socialAccounts: [
-      { platform: 'X', url: 'https://x.com/nacionalaap' },
+      { platform: 'X', url: 'https://x.com/vl_tblnnk' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale.',
+      name: "The PopuList 4.0 — entrée « Nacionālā Apvienība » (Lettonie)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé d'extrême droite ; non codé populiste. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'LSM.lv',
-        url: 'https://www.lsm.lv/raksts/zinas/latvija/25.05.2026-providus-vaditaja-jaunaja-valdiba-var-butiski-mainities-migracijas-un-integracijas-politika.a648671/',
-        note: "Programme axé sur un développement économique « sans immigration de masse » de pays tiers, la fin des « visas dorés » pour investisseurs étrangers, et la priorité à la main-d'œuvre locale, sans politique explicite de remigration de résidents en situation régulière.",
+        name: "LV portāls — Valdība atbalsta Iekšlietu ministrijas sagatavoto visaptverošo imigrācijas ierobežošanas plānu",
+        url: "https://lvportals.lv/dienaskartiba/394845-valdiba-atbalsta-iekslietu-ministrijas-sagatavoto-visaptveroso-imigracijas-ierobezosanas-planu-2026",
+        accessedOn: '2026-10-20',
+        note: "Le plan de restriction de l'immigration du ministre de l'Intérieur Jānis Dombrava (Alliance nationale) prévoit des quotas d'entrée pour les ressortissants de pays tiers et des conditions renforcées pour les étudiants étrangers et les titres de séjour.",
       },
     },
     actionStatus: {
       tag: 'mesures_concretes',
       source: {
-        name: 'LSM.lv',
-        url: 'https://www.lsm.lv/raksts/zinas/latvija/04.09.2026-koalicija-nogludinajusi-domstarpibas-un-solas-imigracijas-ierobezosanas-planu-apstiprinat-divu-nedelu-laika.a661835/',
-        note: "En tant que partenaire de la coalition gouvernementale, a obtenu l'inscription au programme du nouveau gouvernement d'un plan de restriction de l'immigration, dont l'adoption formelle était annoncée pour la mi-septembre 2026.",
+        name: "LV portāls — Valdība atbalsta Iekšlietu ministrijas sagatavoto visaptverošo imigrācijas ierobežošanas plānu",
+        url: 'https://lvportals.lv/dienaskartiba/394845-valdiba-atbalsta-iekslietu-ministrijas-sagatavoto-visaptveroso-imigracijas-ierobezosanas-planu-2026',
+        accessedOn: '2026-10-20',
+        note: "Le Conseil des ministres a approuvé le 22 septembre 2026 le plan global de restriction de l'immigration (71 mesures : quotas d'entrée de ressortissants de pays tiers, conditions renforcées pour les étudiants étrangers et les titres de séjour) préparé par le ministère de l'Intérieur de Jānis Dombrava (Alliance nationale), en poste depuis le 29 mai 2026.",
       },
     },
     electoralHistory: [
@@ -4174,16 +4247,18 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/adr_lu' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: 'Classifié parti national-conservateur de droite radicale, positionnement anti-immigration.',
+      name: "The PopuList 4.0 — entrée « Alternativ Demokratesch Reformpartei » (Luxembourg)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste et d'extrême droite depuis 2022 (cas limite). Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Le Quotidien',
         url: 'https://lequotidien.lu/politique-societe/ladr-veut-stopper-la-migration-irreguliere/',
-        note: "Appelle à « stopper la migration irrégulière » et critique la politique migratoire jugée trop laxiste de la coalition CSV-DP, sans politique explicite de remigration de résidents en situation régulière.",
+        accessedOn: '2026-10-20',
+        note: "Le parti veut « stopper la migration irrégulière » et estime que le Luxembourg « ne peut pas accueillir davantage de migrants, excepté ceux qui ont un vrai droit à l'asile et arrivent par des voies légales » (Le Quotidien, 10 novembre 2023).",
       },
     },
     actionStatus: {
@@ -4191,7 +4266,8 @@ export const parties: Party[] = [
       source: {
         name: 'Le Quotidien',
         url: 'https://lequotidien.lu/politique-societe/ladr-veut-stopper-la-migration-irreguliere/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi ADR promulguée à ce jour.",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de la Chambre des députés n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -4232,27 +4308,29 @@ export const parties: Party[] = [
     positioning: 'National-populiste, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Progression spectaculaire aux élections législatives du 24 mai 2026 : le parti double sa représentation parlementaire, passant de 4 à 8 sièges (environ 11% des voix, contre 6,8% en 2021), devenant la troisième force politique du pays derrière le DISY (au pouvoir) et l'AKEL.",
+      "Aux élections législatives du 24 mai 2026, le parti passe de 4 à 8 sièges (10,9 % des voix, contre 6,8 % en 2021) et devient, à égalité de sièges avec le DIKO, la troisième force derrière le DISY et l'AKEL.",
     electoralStatusSource: {
-      name: 'Anixneuseis.gr',
-      url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
-      accessedOn: '2026-09-08',
+      name: 'Wikipedia — 2026 Cypriot legislative election',
+      url: 'https://en.wikipedia.org/wiki/2026_Cypriot_legislative_election',
+      accessedOn: '2026-10-21',
     },
     officialWebsite: 'https://elamcy.com',
     socialAccounts: [
       { platform: 'X', url: 'https://x.com/ELAM_official' },
     ],
     classificationSource: {
-      name: 'The PopuList / Manifesto Project',
-      url: 'https://popu-list.org',
-      note: "Classifié parti d'extrême droite, historiquement lié au parti grec Aube dorée (Chrysi Avgi).",
+      name: "The PopuList 4.0 — entrée « Ethniko Laiko Metopo » (Chypre)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste (cas limite) et d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'Anixneuseis.gr',
         url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
-        note: "Ligne dure sur l'immigration et la question chypriote, y compris position favorable à la fermeture des points de passage entre les deux parties de l'île ; sans politique explicite de remigration de résidents en situation régulière.",
+        unverified: "lien mort le 2026-10-20",
+        note: "Position migratoire à documenter.",
       },
     },
     actionStatus: {
@@ -4260,7 +4338,8 @@ export const parties: Party[] = [
       source: {
         name: 'Anixneuseis.gr',
         url: 'https://www.anixneuseis.gr/%CE%BA%CF%8D%CF%80%CF%81%CE%BF%CF%82-2026-%CE%BD%CE%AF%CE%BA%CE%B7-%CE%B4%CE%B7%CF%83%CF%85-%CE%AC%CE%BD%CE%BF%CE%B4%CE%BF%CF%82-%CE%B5%CE%BB%CE%B1%CE%BC-%CE%B5%CE%AF%CF%83%CE%BF%CE%B4%CE%BF%CF%82-%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%85%CF%83%CF%84%CE%B7%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%AE%CE%BD%CF%85%CE%BC%CE%B1-%CF%86%CE%B8%CE%BF%CF%81%CE%AC%CF%82-%CF%80%CF%81%CE%BF%CF%82-%CF%84%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CF%8C-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF/',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi ELAM promulguée à ce jour.",
+        unverified: "lien mort le 2026-10-20 ; registre de la Chambre des représentants inaccessible",
+        note: "Parti d'opposition sans participation gouvernementale. Statut à vérifier : le registre de la Chambre des représentants de Chypre n'a pas pu être consulté le 20 octobre 2026 (accès automatisé refusé).",
       },
     },
     electoralHistory: [
@@ -4308,89 +4387,13 @@ export const parties: Party[] = [
       "Fondé en 2008. Troisième force politique de Chypre depuis les élections législatives de mai 2026, en forte progression électorale depuis sa création.",
   },
   {
-    slug: 'independent-ireland',
-    name: 'Independent Ireland',
-    countryCode: 'IE',
-    positioning: 'National-populiste, droite radicale',
-    electoralStatus: 'opposition',
-    electoralStatusDetail:
-      "Quatre députés (TDs) au Dáil depuis les élections de novembre 2024, dont le co-fondateur Michael Collins, arrivé en tête dans sa circonscription de Cork South-West. Environ 23-24 conseillers locaux. Candidat arrivé en tête au premier décompte de l'élection partielle de Galway West (mai 2026) avant de s'incliner de justesse après répartition des préférences.",
-    electoralStatusSource: {
-      name: 'The Irish Times — Galway West byelection live results',
-      url: 'https://www.irishtimes.com/politics/2026/05/23/galway-west-byelection-live-latest-results/',
-      accessedOn: '2026-09-10',
-    },
-    officialWebsite: 'https://www.independentireland.ie',
-    socialAccounts: [
-      { platform: 'X', url: 'https://x.com/independentirl' },
-    ],
-    classificationSource: {
-      name: 'Wikipedia / presse irlandaise',
-      url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
-      note: "Classifié parti populiste de droite radicale par la presse et les observateurs politiques irlandais. Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne rurale et anti-establishment progressivement recentrée sur l'immigration.",
-    },
-    intention: {
-      tag: 'reduction',
-      source: {
-        name: 'Irish Times — Fifth of Dublin Central votes went to candidates who had used anti-immigration rhetoric',
-        url: 'https://www.irishtimes.com/politics/2026/05/25/fifth-of-dublin-central-votes-went-to-candidates-who-had-used-anti-immigration-rhetoric/',
-        note: "Programme incluant une interdiction de la burqa dans l'espace public et la création de centres de rétention de type « australien » pour les demandeurs d'asile déboutés. Pas de politique explicite de remigration de résidents en situation régulière.",
-      },
-    },
-    actionStatus: {
-      tag: 'programme',
-      source: {
-        name: 'Oireachtas (Parlement irlandais)',
-        url: 'https://www.oireachtas.ie',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Independent Ireland promulguée à ce jour.",
-      },
-    },
-    electoralHistory: [
-      {
-        label: 'Élections générales 2024',
-        chamber: 'Dáil Éireann',
-        date: '2024-11-29',
-        seats: 4,
-        totalSeats: 174,
-        source: {
-          name: 'RTE — The TDs elected to the 34th Dáil',
-          url: 'https://www.rte.ie/news/election-24/2024/1201/1484007-elected-candidates/',
-          accessedOn: '2026-09-10',
-        },
-      },
-    ],
-    europeanRepresentation: {
-      meps: 1,
-      totalCountryMeps: 14,
-      europeanGroup: 'Renew Europe',
-      source: {
-        name: 'Wikipedia — Independent Ireland',
-        url: 'https://en.wikipedia.org/wiki/Independent_Ireland',
-        accessedOn: '2026-09-10',
-        note: "Positionnement européen atypique pour un parti de cette liste : son unique élu européen siège dans le groupe centriste Renew Europe plutôt que dans un groupe de droite radicale.",
-      },
-    },
-    localImplantation: {
-      summary:
-        "Environ 23 à 24 conseillers municipaux et de comté élus depuis 2024. Quasi-victoire à l'élection partielle de Galway West en mai 2026 : son candidat Noel Thomas a devancé le Fine Gael au premier décompte (20,9% contre 20,1%) avant de perdre après répartition des préférences.",
-      source: {
-        name: 'RTE — Galway West bye-election',
-        url: 'https://www.rte.ie/news/bye-election-2026/2026/0523/1574863-galway-west-bye-election/',
-        accessedOn: '2026-09-10',
-      },
-    },
-    founded: 2023,
-    description:
-      "Fondé en novembre 2023 par les députés indépendants Michael Collins et Richard O'Donoghue, sur une ligne d'abord rurale et anti-establishment, de plus en plus centrée sur l'immigration depuis 2025-2026.",
-  },
-  {
     slug: 'midflokkurinn',
     name: 'Miðflokkurinn (Parti du centre)',
     countryCode: 'IS',
     positioning: 'National-conservateur, droite radicale',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Représenté à l'Althing depuis les élections de novembre 2024. Percée inédite aux élections municipales de Reykjavik de mai 2026 : passage de 0 à 3 sièges au conseil municipal de la capitale (11,36% des voix), dans le cadre d'un net basculement à droite de la ville.",
+      "Représenté à l'Althing depuis les élections de novembre 2024. Aux élections municipales de Reykjavik de mai 2026, le parti passe de 0 à 3 sièges au conseil municipal de la capitale (11,36 % des voix).",
     electoralStatusSource: {
       name: 'Iceland Review — Major changes ahead for Reykjavik City Council',
       url: 'https://www.icelandreview.com/news/major-changes-ahead-for-reykjavik-city-council-after-election-results/',
@@ -4401,24 +4404,27 @@ export const parties: Party[] = [
       { platform: 'X', url: 'https://x.com/midflokkurinn' },
     ],
     classificationSource: {
-      name: 'Wikipedia / presse islandaise',
-      url: 'https://en.wikipedia.org/wiki/Centre_Party_(Iceland)',
-      note: "Classifié parti national-conservateur, populiste de droite et eurosceptique. Fondé en 2017 par Sigmundur Davíð Gunnlaugsson, ancien Premier ministre islandais (2013-2016), après sa rupture avec le Parti du progrès.",
+      name: "The PopuList 4.0 — entrée « Miðflokkurinn » (Islande)",
+      url: 'https://popu-list.github.io/Data/The%20PopuList%204.0.csv',
+      accessedOn: '2026-10-20',
+      note: "Codé populiste ; non codé d'extrême droite. Version 4.0 du jeu de données (mai 2026), qui couvre les élections nationales de 31 pays européens du 1er janvier 1989 au 1er mai 2026. Inclusion au titre du critère (a) de la méthodologie : le programme du parti demande de réduire le flux d'immigrants vers l'Islande « dans tous les domaines » (voir « Intention »).",
     },
     intention: {
       tag: 'reduction',
       source: {
-        name: 'Politpro — Miðflokkurinn',
-        url: 'https://politpro.eu/en/iceland/political-parties/midflokkurinn',
-        note: "Positionnement national-conservateur défendant une gestion stricte de l'immigration et de l'octroi de l'asile, dans un pays historiquement marginal sur ces enjeux mais où le parti en a fait un thème central de campagne. Pas de politique explicite de remigration de résidents en situation régulière.",
+        name: "Miðflokkurinn — Gæsla landamæra og málefni hælisleitenda og flóttamanna (programme du parti)",
+        url: 'https://midflokkurinn.is/stefna/gaesla-landamaera-og-malefni-haelisleitenda-og-flottamanna/',
+        accessedOn: '2026-10-20',
+        note: "Le parti demande une nouvelle loi sur les étrangers fondée sur « la volonté et les intérêts de la nation », un arrêt temporaire de cinq ans de l'octroi de l'asile, l'exclusion du droit d'asile pour les personnes entrées irrégulièrement, et de « réduire le flux d'immigrants vers l'Islande dans tous les domaines ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'Althingi',
-        url: 'https://www.althingi.is',
-        note: "Parti d'opposition sans participation gouvernementale : aucune loi Miðflokkurinn promulguée à ce jour.",
+        name: "Althingi — þingmál 158/35 « veiting íslensks ríkisborgararéttar » (registre officiel, XML)",
+        url: "https://www.althingi.is/altext/xml/thingmalalisti/thingmal/?lthing=158&malnr=35",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition. Sa proposition de résolution sur l'octroi de la nationalité islandaise (Snorri Másson et sept autres députés), non examinée lors de la session 2025-2026, a été redéposée en septembre 2026 et attend sa première lecture. Aucun texte migratoire de ses députés n'a été adopté depuis 2024.",
       },
     },
     electoralHistory: [
@@ -4448,7 +4454,7 @@ export const parties: Party[] = [
     positioning: 'Nationaliste japonais, populiste de droite radicale à extrême droite',
     electoralStatus: 'opposition',
     electoralStatusDetail:
-      "Dans l'opposition aux deux chambres de la Diète, avec 15 sièges sur 465 à la Chambre des représentants et 15 sur 248 à la Chambre des conseillers. Le parti a doublé sa présence parlementaire en sept mois, à la faveur de deux scrutins nationaux successifs : les sénatoriales du 20 juillet 2025 (de 1 à 15 conseillers) puis les élections générales anticipées du 8 février 2026 (de 3 à 15 députés). Malgré la supermajorité obtenue par le PLD de Sanae Takaichi lors de ce dernier scrutin, Sanseitō est devenu l'une des principales forces d'opposition et a imposé l'immigration au centre du débat public japonais.",
+      "Dans l'opposition aux deux chambres de la Diète, avec 15 sièges sur 465 à la Chambre des représentants et 15 sur 248 à la Chambre des conseillers. Le parti est passé de 4 à 30 parlementaires en sept mois, à la faveur de deux scrutins nationaux successifs : les sénatoriales du 20 juillet 2025 (de 1 à 15 conseillers) puis les élections générales anticipées du 8 février 2026 (de 3 à 15 députés). Malgré la supermajorité obtenue par le PLD de Sanae Takaichi lors de ce dernier scrutin, Sanseitō est devenu l'une des principales forces d'opposition.",
     electoralStatusSource: {
       name: 'Wikipedia — 2026 Japanese general election',
       url: 'https://en.wikipedia.org/wiki/2026_Japanese_general_election',
@@ -4460,24 +4466,27 @@ export const parties: Party[] = [
       { platform: 'YouTube', url: 'https://www.youtube.com/@sanseito-official' },
     ],
     classificationSource: {
-      name: 'The Asia-Pacific Journal (Cambridge University Press) — Zaitokukai, Sanseito, and the Sudden Emergence of Anti-Foreigner Populism',
-      url: 'https://www.cambridge.org/core/journals/asia-pacific-journal/article/zaitokukai-sanseito-and-the-sudden-emergence-of-antiforeigner-populism-in-the-july-2025-house-of-councilors-election-has-japan-reached-a-tipping-point/5252E99245D15FD900599683401E96A0',
-      note: "Classifié parti populiste de droite radicale à extrême droite, nationaliste et anti-immigration, par la littérature académique évaluée par les pairs. Critère d'inclusion doublement satisfait : classification universitaire, et revendication explicite du parti lui-même, dont le slogan de campagne est « 日本人ファースト » (« les Japonais d'abord »). Les bases de données de référence utilisées ailleurs sur ce site (Manifesto Project, ParlGov, PopuList, CHES) ne couvrant pas le Japon, la classification s'appuie ici sur les sources académiques et de presse équivalentes.",
+      name: "The Conversation — Rightwing populist Sanseitō party shakes Japan with election surge",
+      url: "https://theconversation.com/rightwing-populist-sanseito-party-shakes-japan-with-election-surge-261303",
+      accessedOn: '2026-10-20',
+      note: "Décrit comme un parti populiste de droite faisant campagne sur une plateforme « anti-étrangers et anti-immigration » sous le slogan « Japanese First » (21 juillet 2025). Sanseitō n'est codé ni par The PopuList, limitée à l'Europe, ni par ParlGov, qui couvre le Japon mais dont les données s'arrêtent en 2023 (vérifié le 2026-10-20). L'article de l'Asia-Pacific Journal cité jusqu'ici n'a pas pu être consulté.",
     },
     intention: {
       tag: 'reduction',
       source: {
         name: 'The Conversation — Rightwing populist Sanseitō party shakes Japan with election surge',
         url: 'https://theconversation.com/rightwing-populist-sanseito-party-shakes-japan-with-election-surge-261303',
-        note: "Programme centré sur la limitation du nombre d'étrangers admis (« s'opposer à l'acceptation excessive d'immigrés »), des contrôles de loyauté pour les résidents étrangers, la restriction de l'accès des étrangers aux prestations sociales et l'interdiction de l'achat de terres par des non-Japonais. Pas de politique explicite de remigration de résidents en situation régulière : la ligne porte sur la réduction des flux et le durcissement du statut, non sur le renvoi organisé des personnes déjà installées.",
+        accessedOn: '2026-10-20',
+        note: "Campagne de 2025 sous le slogan « Japanese First » ; son président Sohei Kamiya promet une « régulation des étrangers ».",
       },
     },
     actionStatus: {
       tag: 'programme',
       source: {
-        name: 'The Japan Times — Will foreign-national policies return to the spotlight in the snap election?',
-        url: 'https://www.japantimes.co.jp/news/2026/01/20/japan/politics/election-immigration-policy/',
-        note: "Parti d'opposition n'ayant jamais participé à un gouvernement : aucune loi Sanseitō promulguée à ce jour. Son influence est indirecte — la pression électorale exercée depuis juillet 2025 a conduit les partis de gouvernement à inscrire à leur tour le dossier des résidents étrangers à l'agenda de la campagne de février 2026.",
+        name: "参議院 — 外国人総合政策庁の設置等による外国人政策の総合的な推進に関する法律案 (proposition de loi n° 9, 221e session)",
+        url: "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221100221009.htm",
+        accessedOn: '2026-10-20',
+        note: "Parti d'opposition n'ayant jamais participé à un gouvernement. Le 17 juin 2026, son président Sohei Kamiya et trois autres sénateurs ont déposé une proposition de loi créant une agence chargée de la politique des étrangers ; au dernier relevé du registre du Sénat (19 juin 2026), elle n'avait été ni renvoyée en commission ni votée.",
       },
     },
     electoralHistory: [
@@ -4506,7 +4515,7 @@ export const parties: Party[] = [
           name: 'Wikipedia — 2025 Japanese House of Councillors election',
           url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
           accessedOn: '2026-09-13',
-          note: "14 sièges remportés sur les 125 renouvelés ce jour-là, portant le groupe à 15 sur 248. Troisième score national à la proportionnelle. Scrutin considéré comme le point de bascule de l'entrée de la question migratoire dans le débat électoral japonais.",
+          note: "14 sièges remportés sur les 125 renouvelés ce jour-là, portant le groupe à 15 sur 248. Troisième score national à la proportionnelle.",
         },
       },
       {
@@ -4526,7 +4535,7 @@ export const parties: Party[] = [
     ],
     localImplantation: {
       summary:
-        "Maillage local en construction rapide mais encore marginal à l'échelle du pays : environ 200 conseillers municipaux sur les 28 696 que compte le Japon, et 5 conseillers préfectoraux sur 2 614. Le parti s'appuie sur un réseau de sections locales issu de sa base YouTube plutôt que sur des implantations historiques.",
+        "Maillage local en construction rapide mais encore marginal à l'échelle du pays : environ 200 conseillers municipaux sur les 28 696 que compte le Japon, et 5 conseillers préfectoraux sur 2 614. Le parti s'appuie sur un réseau de sections locales issu de sa base YouTube plutôt que sur des implantations anciennes.",
       source: {
         name: 'Wikipedia — Sanseitō',
         url: 'https://en.wikipedia.org/wiki/Sanseit%C5%8D',
@@ -4535,7 +4544,7 @@ export const parties: Party[] = [
     },
     founded: 2020,
     description:
-      "Fondé le 17 mars 2020 par Sohei Kamiya, ancien conseiller municipal de Suita (préfecture d'Osaka), d'abord comme une chaîne YouTube contestataire pendant la pandémie de Covid-19. Devenu en deux scrutins la principale force anti-immigration du Japon sous le slogan « les Japonais d'abord », il est le premier parti de ce type à peser sur la vie politique nationale d'un pays d'Asie membre du G7.",
+      "Fondé le 17 mars 2020 par Sohei Kamiya, ancien conseiller municipal de Suita (préfecture d'Osaka), d'abord comme une chaîne YouTube contestataire pendant la pandémie de Covid-19. Il a fait campagne en 2025 et 2026 sous le slogan « les Japonais d'abord ».",
   },
 ];
 

@@ -1,0 +1,44 @@
+name: Weekly digest
+
+# Runs the four fetch scripts and posts their recent candidates as one
+# GitHub issue labelled "veille" (scripts/fetch/digest.ts), so leads are
+# reviewed in one place instead of expiring in daily artifacts.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1' # Mondays, 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      # One failed feed must not stop the others; the digest says which file is missing.
+      - name: Fetch candidates
+        run: |
+          npm run fetch:parties || true
+          npm run fetch:elections || true
+          npm run fetch:legislation || true
+          npm run fetch:news || true
+
+      - name: Build the digest
+        run: npx tsx scripts/fetch/digest.ts digest.md
+
+      - name: Post the digest as an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create veille --color 1E3A5F --description "Récapitulatif hebdomadaire des pistes" --force
+          gh issue create --title "Veille de la semaine du $(date -u +%F)" --label veille --body-file digest.md

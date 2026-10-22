@@ -27,7 +27,7 @@ export const news: NewsItem[] = [
     countries: ['US'],
     date: '2026-08-24',
     summary:
-      "Fondée en septembre 2023 par Eric Orwoll dans l'Arkansas, Return to the Land (RTTL) est une organisation privée qui réserve l'installation sur ses terrains aux personnes vetted comme d'ascendance européenne et partageant ses vues séparatistes ; les personnes juives en sont explicitement exclues. Le mouvement a ouvert une deuxième implantation en 2025 et prévoit quatre nouveaux sites (Ozarks, Appalaches). Une conférence internationale rassemblant des figures de l'extrême droite de France, d'Allemagne, d'Afrique du Sud, de Suède, du Royaume-Uni et des États-Unis s'est tenue le 7 février 2026 pour coordonner ce type d'initiatives à l'échelle mondiale.",
+      "Fondée en septembre 2023 par Eric Orwoll dans l'Arkansas, Return to the Land (RTTL) est une organisation privée qui réserve l'installation sur ses terrains aux personnes reconnues, après examen, comme d'ascendance européenne et partageant ses vues séparatistes ; les personnes juives en sont explicitement exclues. Le mouvement a ouvert une deuxième implantation en 2025 et prévoit quatre nouveaux sites (Ozarks, Appalaches). Une conférence internationale rassemblant des figures de l'extrême droite de France, d'Allemagne, d'Afrique du Sud, de Suède, du Royaume-Uni et des États-Unis s'est tenue le 7 février 2026 pour coordonner ce type d'initiatives à l'échelle mondiale.",
     legalStatus:
       "Poursuivie en justice pour discrimination depuis mai 2026 après le refus de vendre un terrain à une candidate d'ascendance juive. Les cofondateurs (Eric Orwoll, Peter Csere) ont depuis contre-attaqué : plainte déposée le 24 août 2026 contre le ministère de la Justice américain, le régulateur des valeurs mobilières de l'Arkansas et le procureur général de l'État pour faire cesser les enquêtes à leur encontre ; plainte distincte en diffamation déposée le 28 juillet 2026 contre Sky News (Royaume-Uni) au sujet d'un documentaire de 2025, réclamant 1,2 million de dollars de dommages compensatoires et 1,5 million de dommages punitifs.",
     source: {
@@ -38,11 +38,11 @@ export const news: NewsItem[] = [
   },
   {
     id: 'orania-croissance',
-    title: 'Orania : la ville autonome afrikaner enregistre son taux de natalité le plus élevé depuis sa fondation',
+    title: 'Orania : la ville autonome afrikaner enregistre son plus grand nombre de naissances depuis sa fondation',
     countries: ['ZA'],
     date: '2026-02-20',
     summary:
-      "Fondée en 1991 après la fin de l'apartheid, Orania (Afrique du Sud, environ 3 000 habitants en 2026) est une ville privée autogérée réservée aux Afrikaners, dotée de ses propres institutions locales et d'une monnaie complémentaire, l'Ora. Le conseil municipal a confirmé le 20 février 2026 un record de 36 naissances sur l'année 2025, le chiffre le plus élevé depuis la création de la colonie, dans un contexte d'installation croissante de jeunes Afrikaners attirés par un nouveau collège et un sentiment d'appartenance communautaire.",
+      "Fondée en 1991 après la fin de l'apartheid, Orania (Afrique du Sud, environ 3 000 habitants en 2026) est une ville privée autogérée réservée aux Afrikaners, dotée de ses propres institutions locales et d'une monnaie complémentaire, l'Ora. Le conseil municipal a confirmé le 20 février 2026 36 naissances sur l'année 2025, le chiffre le plus élevé depuis la création de la colonie, dans un contexte d'installation croissante de jeunes Afrikaners attirés par un nouveau collège et un sentiment d'appartenance communautaire.",
     legalStatus:
       "Statut légal inchangé : structure fondée sur la propriété privée actionnariale (via la société Vluytjeskraal Aandeleblok), permise par le droit sud-africain de la propriété privée ; ne fait pas l'objet de procédure judiciaire connue.",
     source: {
@@ -53,13 +53,13 @@ export const news: NewsItem[] = [
   },
   {
     id: 'afrikaner-refugee-resettlement',
-    title: "Réfugiés afrikaners : Washington accueille des milliers de Blancs sud-africains, malgré le refus des organisations qui les représentent",
+    title: "Réfugiés afrikaners : les États-Unis accueillent des milliers de Sud-Africains blancs ; AfriForum et Solidarity ont refusé l'offre",
     countries: ['US', 'ZA'],
     date: '2026-05-10',
     summary:
-      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : 59 premiers réfugiés arrivés le 12 mai 2025, puis plus de 4 500 admis entre octobre 2025 et avril 2026 — l'écrasante majorité des 6 069 réfugiés admis aux États-Unis sur cette période, dans un contexte de plafond national des admissions humanitaires ramené à son niveau le plus bas de l'histoire (7 500 places pour l'année budgétaire 2026). Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
+      "Le décret présidentiel « Addressing Egregious Actions of the Republic of South Africa », signé le 7 février 2025 par Donald Trump, suspend l'aide américaine à l'Afrique du Sud et instaure une voie de réfugié prioritaire pour les Afrikaners qui s'estiment victimes de « discrimination raciale sanctionnée par l'État », notamment via la loi sud-africaine sur l'expropriation foncière. Les deux principales organisations afrikaners, AfriForum et Solidarity, ont publiquement refusé l'offre (« nous ne voulons pas partir ailleurs », a déclaré le président d'AfriForum Kallie Kriel), mais le programme s'est poursuivi sans elles : les 59 premiers réfugiés sont arrivés le 12 mai 2025. Selon des chiffres du gouvernement américain cités par Reuters, environ 6 000 Sud-Africains blancs avaient été admis fin avril 2026, alors que le plafond annuel des admissions de réfugiés était fixé à 7 500 places pour l'année budgétaire 2026, le plus bas jamais fixé ; une décision présidentielle du 21 mai 2026 l'a relevé à 17 500. Environ 8 200 Afrikaners avaient manifesté un intérêt indépendant pour le programme.",
     legalStatus:
-      "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour. Des données de suivi début 2026 indiquent que 63% des Afrikaners admis depuis octobre 2025 restaient sans emploi six mois après leur arrivée.",
+      "Programme fédéral américain en vigueur, mis en œuvre par le Département d'État et le DHS ; contesté politiquement par le gouvernement sud-africain (« ironique de réserver un statut de réfugié à un groupe qui reste parmi les plus favorisés économiquement du pays », a réagi le ministère sud-africain des Affaires étrangères) mais non soumis à un contentieux judiciaire connu à ce jour.",
     source: {
       name: 'PassBlue — Cracks Are Showing in Trump\'s Special "Refugee" Program for Afrikaners',
       url: 'https://passblue.com/2026/05/10/cracks-are-showing-in-trumps-special-refugee-program-for-afrikaners/',
@@ -68,7 +68,7 @@ export const news: NewsItem[] = [
   },
   {
     id: 'compact-magazine-allemagne',
-    title: "Allemagne : la justice fédérale annule l'interdiction du magazine d'extrême droite Compact, malgré ses liens documentés avec le concept de « remigration »",
+    title: "Allemagne : la Cour administrative fédérale annule l'interdiction du magazine Compact, jugée disproportionnée",
     countries: ['DE'],
     date: '2025-06-24',
     summary:
@@ -79,6 +79,7 @@ export const news: NewsItem[] = [
       name: 'JURIST — Germany federal court lifts ban on right-wing Compact magazine',
       url: 'https://www.jurist.org/news/2025/06/germany-federal-court-lifts-ban-on-right-wing-compact-magazine/',
       accessedOn: '2026-09-09',
+      note: "Chiffres d'admission et relèvement du plafond : Reuters, 26 mai 2026, repris par TimesLIVE (https://www.timeslive.co.za/news/world/2026-05-26-trump-raises-refugee-cap-to-admit-more-white-south-africans/), consulté le 2026-10-21. PassBlue n'a pas pu être revérifié le 21 octobre 2026 (vérification anti-robot).",
     },
   },
   {
@@ -87,43 +88,45 @@ export const news: NewsItem[] = [
     countries: ['GB'],
     date: '2026-08-28',
     summary:
-      "Déclenchée par une série de rassemblements à Epping (Essex) à partir du 13 juillet 2025 — après qu'un demandeur d'asile hébergé dans un hôtel local a été inculpé d'agression sexuelle sur une adolescente de 14 ans —, la contestation contre l'hébergement de demandeurs d'asile en hôtel s'est étendue à l'ensemble du Royaume-Uni. L'organisation antiraciste HOPE not hate a recensé au moins 251 rassemblements dans 77 localités entre juin et décembre 2025, en Angleterre, en Écosse, au pays de Galles et en Irlande du Nord, avec des points chauds à Londres, Epping, Norwich, Altrincham et sur la côte sud. Ces manifestations, parfois marquées par des débordements et des arrestations, ont été relayées ou organisées par divers acteurs — dont des sections locales de Reform UK, Britain First, UKIP, Homeland Party et Patriotic Alternative — sans qu'aucune organisation unique ne pilote le mouvement dans son ensemble.",
+      "Déclenchée par une série de rassemblements devant le Bell Hotel d'Epping (Essex) à partir du 13 juillet 2025 — après qu'un demandeur d'asile hébergé dans cet hôtel a été inculpé d'agressions sexuelles sur une femme et une adolescente, faits pour lesquels il a été reconnu coupable le 4 septembre 2025 —, la contestation contre l'hébergement de demandeurs d'asile en hôtel s'est étendue à l'ensemble du Royaume-Uni. Plusieurs rassemblements ont donné lieu à des violences et à des arrestations. Ils ont été organisés ou rejoints par divers groupes, dont Reform UK, Britain First, UKIP, Homeland Party et Patriotic Alternative. L'organisation antiraciste HOPE not hate dit avoir recensé au moins 251 rassemblements dans 77 localités entre juin et décembre 2025, avec des points chauds à Londres, Epping, Norwich, Altrincham et sur la côte sud.",
     legalStatus:
-      "Plusieurs autorités locales ont engagé des procédures judiciaires pour faire cesser l'hébergement de demandeurs d'asile dans des hôtels contestés (dont Epping) ; une décision de justice favorable en ce sens a été obtenue puis annulée en appel par le gouvernement britannique fin août 2025. Situation juridique évolutive, hôtel par hôtel.",
+      "Le conseil du district d'Epping Forest a obtenu de la Haute Cour, le 19 août 2025, une injonction provisoire imposant de cesser l'hébergement de demandeurs d'asile au Bell Hotel ; la Cour d'appel l'a annulée le 29 août, et la Haute Cour a refusé une injonction définitive le 11 novembre 2025. Plusieurs autres conseils, dont les douze dirigés par Reform UK, ont annoncé vouloir mettre fin à cet hébergement dans leurs hôtels.",
     source: {
-      name: 'HOPE not hate — State of Hate 2026: A Year of Anti-Migrant Protests',
-      url: 'https://hopenothate.org.uk/state-of-hate-2026-anti-migrant-protests/',
-      accessedOn: '2026-09-09',
+      name: "Wikipedia — United Kingdom anti-immigration protests (2025–present)",
+      url: "https://en.wikipedia.org/wiki/United_Kingdom_anti-immigration_protests_(2025%E2%80%93present)",
+      accessedOn: "2026-10-21",
+      note: "Décompte des rassemblements : HOPE not hate, organisation antiraciste, « State of Hate 2026: A Year of Anti-Migrant Protests » (https://hopenothate.org.uk/state-of-hate-2026-anti-migrant-protests/), consulté le 2026-10-21.",
     },
   },
   {
     id: 'afd-saxe-anhalt-record',
-    title: "Allemagne : l'AfD remporte largement l'élection régionale de Saxe-Anhalt et prend une avance inédite dans les sondages nationaux",
+    title: "Allemagne : l'AfD arrive en tête de l'élection régionale de Saxe-Anhalt avec 43,8 % des voix",
     countries: ['DE'],
     date: '2026-09-06',
     summary:
-      "L'AfD arrive en tête de l'élection régionale de Saxe-Anhalt du 6 septembre 2026 avec 44,4% des voix, contre 18,3% pour les conservateurs du chancelier Friedrich Merz (CDU/CSU) — un parti d'extrême droite au bord du pouvoir régional pour la première fois depuis la Seconde Guerre mondiale. Ce résultat confirme une tendance nationale : plusieurs instituts de sondage (dont INSA) placent désormais l'AfD en tête des intentions de vote au niveau fédéral avec environ 28% des voix, un écart inédit avec la CDU/CSU (20-21%), les instituts anticipant que le parti pourrait arriver en tête des prochaines élections fédérales prévues en 2029.",
-    legalStatus:
-      "Résultat électoral légal et définitif ; la formation d'un gouvernement régional en Saxe-Anhalt reste bloquée par le refus de tous les autres partis de gouverner avec l'AfD (« Brandmauer »), malgré son score.",
+      "L'AfD remporte l'élection régionale de Saxe-Anhalt du 6 septembre 2026 avec 43,8 % des voix et 39 sièges sur 83, loin devant la CDU (17,2 %). C'est le meilleur score du parti dans une élection régionale. Avec le BSW (5,3 %), il disposerait arithmétiquement d'une majorité absolue de 44 sièges.",
+    legalStatus: 'Résultat électoral publié le 6 septembre 2026.',
     source: {
-      name: 'CNBC — Germany\'s far-right AfD seeks landmark state victory',
-      url: 'https://www.cnbc.com/2026/09/06/germanys-far-right-afd-seeks-landmark-state-victory.html',
-      accessedOn: '2026-09-09',
+      name: "ZDFheute — Wahl in Sachsen-Anhalt : AfD liegt klar vor CDU",
+      url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+      accessedOn: '2026-10-20',
+      note: "Une version antérieure de cette actualité donnait 44,4 % à l'AfD et 18,3 % à la « CDU/CSU », d'après un article publié avant la fin du dépouillement, et citait un sondage national INSA de septembre qui n'a pu être retrouvé : ces éléments ont été corrigés ou retirés.",
     },
   },
   {
     id: 'suisse-referendum-10-millions',
-    title: "Suisse : le peuple rejette de justesse l'initiative de l'UDC plafonnant la population à 10 millions d'habitants",
+    title: "Suisse : l'initiative de l'UDC « Pas de Suisse à 10 millions ! » rejetée par 54,8 % des votants",
     countries: ['CH'],
     date: '2026-06-14',
     summary:
-      "Portée par l'UDC (SVP) sous le nom « Stop à la surpopulation ! (Initiative pour la durabilité) », l'initiative populaire proposait d'inscrire dans la Constitution suisse l'obligation de ne pas dépasser 10 millions de résidents permanents avant 2050 — la population du pays étant passée de 7,3 millions en 2002 (date de l'accord de libre circulation avec l'UE) à plus de 9 millions en 2025. Son adoption aurait potentiellement contraint le gouvernement à dénoncer cet accord. Soumise au vote le 14 juin 2026 dans le cadre du système de démocratie directe suisse, l'initiative a été rejetée avec 55% de « non » contre 45% de « oui », le clivage villes/campagnes et linguistique étant très marqué : le « oui » l'a emporté dans les zones rurales alémaniques (jusqu'à 65,9% dans le canton d'Appenzell Rhodes-Intérieures), le « non » dominant dans les villes romandes.",
+      "Portée par l'UDC (SVP) sous le nom « Pas de Suisse à 10 millions ! (initiative pour la durabilité) », l'initiative populaire proposait d'inscrire dans la Constitution suisse l'obligation de ne pas dépasser 10 millions de résidents permanents avant 2050 — la population du pays étant passée de 7,3 millions en 2002 (date de l'accord de libre circulation avec l'UE) à plus de 9 millions en 2025. Son adoption aurait potentiellement contraint le gouvernement à dénoncer cet accord. Soumise au vote le 14 juin 2026 dans le cadre du système de démocratie directe suisse, l'initiative a été rejetée par 54,8 % des votants. Le clivage entre villes et campagnes est net : le « oui » l'emporte dans une dizaine de cantons, dont Appenzell Rhodes-Intérieures (65,9 %), Schwytz (63,1 %) et Uri (59,9 %), tandis que tous les cantons romands la rejettent.",
     legalStatus:
       "Initiative rejetée par le peuple suisse le 14 juin 2026 ; sans suite constitutionnelle. L'accord de libre circulation UE-Suisse reste inchangé.",
     source: {
       name: 'SWI swissinfo.ch — Swiss voters reject proposal to cap population at ten million',
       url: 'https://www.swissinfo.ch/eng/votes/swiss-voters-reject-proposal-to-cap-population-at-ten-million/91548146',
       accessedOn: '2026-09-09',
+      note: "Nom officiel de l'initiative, pourcentage définitif et résultats cantonaux : RTS (https://www.rts.ch/info/suisse/2026/article/l-initiative-udc-pas-de-suisse-a-10-millions-rejetee-a-54-5-29273820.html), consulté le 2026-10-05.",
     },
   },
   {

@@ -5,13 +5,14 @@
     "elections": "Elections",
     "legislation": "Legislation",
     "news": "News",
-    "methodology": "Methodology"
+    "methodology": "Methodology",
+    "brand": "Migration Policy Watch"
   },
   "home": {
     "title": "Migration Policy Watch",
-    "subtitle": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "subtitle": "Factual, sourced tracking of parties, laws and elections related to immigration policy in pluralist democracies.",
     "scopeTitle": "Scope",
-    "scopeText": "EU27, United Kingdom, Norway, Switzerland, Iceland, United States, Canada, Australia, New Zealand, Argentina. Selection by political criterion (Western democracies with active anti-immigration movements), not ethnic.",
+    "scopeText": "EU27, United Kingdom, Norway, Switzerland, Iceland, United States, Canada, Australia, New Zealand, Argentina, Japan. Selected on a political criterion: pluralist democracies where parties or governments pursue policies to reduce immigration. Neither geographic nor ethnic.",
     "countriesLive": "Currently covered countries",
     "explorePartiesLink": "Explore the party directory →",
     "readMethodology": "Read the methodology →"
@@ -34,36 +35,138 @@
     "classificationSource": "Classification source",
     "officialSite": "Official website",
     "socialAccounts": "Official accounts",
-    "history": "Status history"
+    "history": "Status history",
+    "verifiedOn": "checked on {date}",
+    "unverified": "not checked: {reason}",
+    "archive": "archived copy",
+    "lastChecked": "Sources last checked on {date}.",
+    "leaderAccount": "personal account: {name}, party leader",
+    "sectionElectoral": "Electoral status",
+    "sectionHistory": "Electoral history",
+    "sectionPresence": "Presence",
+    "europeanParliament": "European Parliament",
+    "meps": "{count, plural, one {# MEP} other {# MEPs}}",
+    "mepsOfTotal": "{count, plural, one {# MEP} other {# MEPs}} of the country's {total}",
+    "europeanGroup": "group: {group}",
+    "localPresence": "Local presence",
+    "mayors": "{count, plural, one {# mayor} other {# mayors}}",
+    "seats": "{seats} / {total} seats",
+    "sectionProfile": "Profile",
+    "founded": "Founded",
+    "viewProfile": "View profile →"
   },
   "methodology": {
     "title": "Methodology",
-    "intro": "This site documents parties, laws and elections related to migration policy across Western democracies. Every classification is sourced and verifiable."
+    "intro": "This site tracks parties, laws and elections related to policies to reduce immigration in pluralist democracies. This page describes what it actually does: who is included and why, how parties are classified, where the information comes from and how errors are corrected.",
+    "scope": {
+      "title": "Scope",
+      "text": "The site covers pluralist democracies, that is countries whose parliament comes out of elections in which several parties compete, where parties or governments pursue policies to reduce immigration: the 27 member states of the European Union, the United Kingdom, Norway, Switzerland, Iceland, the United States, Canada, Australia, New Zealand, Argentina and Japan. The criterion is political, neither geographic nor ethnic: another country that meets it can be added.",
+      "covered": "{count} countries in scope currently have at least one party profile. None yet: {missing}."
+    },
+    "directory": {
+      "title": "Party directory",
+      "criteria": "A party is included if it meets one of two conditions: (a) its official programme explicitly calls for reducing or stopping immigration, or for \"remigration\"; (b) a reference academic dataset classifies it as far right: The PopuList in Europe and, outside Europe, which The PopuList does not cover, ParlGov (\"Right-wing\" family). A party that meets neither condition is removed, and the removal is recorded in the corrections log.",
+      "notJudgment": "Including a party means that its position on immigration is documented and sourced. It is neither a judgment on that party nor an endorsement.",
+      "basesIntro": "Each profile cites the source of its classification. Current breakdown of the {count} profiles:",
+      "basis": {
+        "popuList": "The PopuList 4.0 (Europe): {count} parties",
+        "parlGov": "ParlGov, for countries The PopuList does not cover: {count, plural, one {# party} other {# parties}} ({names})",
+        "secondary": "Description in an encyclopedia or the press, when no dataset codes the party: {count, plural, one {# party} other {# parties}} ({names})",
+        "programme": "The party's own programme, as no dataset covers the country: {count, plural, one {# party} other {# parties}} ({names})"
+      }
+    },
+    "grid": {
+      "title": "Classification grid",
+      "axis1Title": "Axis 1 — Intention",
+      "axis1": "<strong>Stop / reduce immigration</strong> or <strong>remigration</strong>. The \"remigration\" tag applies if the party or its leaders explicitly use the term, or if the policy described is substantively equivalent for people residing legally: large-scale, financially encouraged \"voluntary\" returns, numerical departure targets. Deporting people without legal status, even with a numerical target, counts as reduction. The tag is always sourced, including when the party disputes or rejects the term.",
+      "axis2Title": "Axis 2 — Action status",
+      "axis2": "<strong>Programme</strong> (the party's commitments, with no adopted text) or <strong>concrete measures</strong> (an adopted text or a measure in force: a law passed, a decree, an administrative measure). A bill filed but not adopted, or a non-binding resolution, leaves the profile at \"programme\"; it is mentioned there with its date. A measure is attributed to a party if it was adopted while the party held ministerial posts, or if it is part of a written support agreement the party signed. The \"concrete measures\" status remains while the measure is in force, whether or not the party is in power; if it is repealed or no longer applied, the profile moves to \"concrete measures (historical, repealed on [date])\" and keeps a dated history.",
+      "registers": "To establish that a party has had no text adopted, the profile cites the parliamentary register consulted. When that register could not be consulted, the profile says so instead of drawing a conclusion."
+    },
+    "sources": {
+      "title": "Sources",
+      "preference": "Official sources (parliaments, governments, electoral administrations, the European Union) and academic datasets come first. Where no official source is accessible, the site cites Wikipedia or the press. A party or a campaigning organisation is cited only for its own positions, or as a complement to a neutral source. Figures from a government or a party are attributed to their author.",
+      "breakdownIntro": "Actual breakdown of the {total} sources cited on the site:",
+      "kind": {
+        "official": "Official sources",
+        "dataset": "Datasets and academic work",
+        "wikipedia": "Wikipedia",
+        "press": "Press",
+        "party": "Party documents and accounts"
+      },
+      "kindLine": "{label}: {count} ({percent})",
+      "dates": "Each source shows the date it was checked and a link to its archived copy in the Wayback Machine. Links are checked and archived every week. A source that could not be verified is marked as such on the page, with the reason: {count, plural, one {# source} other {# sources}} today."
+    },
+    "corrections": {
+      "title": "Corrections policy",
+      "text": "Every error corrected, every change of classification and every profile removed is recorded in the corrections log, with the date, what the site said, what it says now and the source of the correction. Rewording that changes no fact is not logged.",
+      "report": "To report an error, use the contact page. Every report is checked against the sources, whoever sends it.",
+      "log": "Corrections log →",
+      "contact": "Contact →"
+    },
+    "notDone": {
+      "title": "What this site does not do",
+      "text": "It does not feature party youth organisations and publishes no membership or donation link to any party. Non-partisan initiatives (news section) are covered as news: nature, developments, legal status, press coverage, with no profile and no contact or membership link. Its links to external sites carry the \"nofollow\" attribute: they pass on no search ranking to the parties."
+    },
+    "charter": {
+      "title": "Vocabulary charter",
+      "intro": "The texts on this site describe; they do not characterise. These rules apply to every party profile, election, law and news item:",
+      "r1": "No dramatising words: no \"breakthrough\", \"earthquake\", \"spectacular\", \"crushing\", \"unprecedented\" or \"collapse\". \"Historic\" is used only in its literal sense.",
+      "r2": "\"Record\", \"best\" or \"worst\" result only with the basis of comparison: since when, for which type of election.",
+      "r3": "Figures from a government, a party or a campaigning organisation are attributed to their author (\"according to the Interior Ministry\").",
+      "r4": "Neutral names (\"immigration legislation\", \"return grant\"); a party's own vocabulary (\"remigration\", \"invasion\") is quoted and attributed.",
+      "r5": "No judgment on the merits of a programme or a measure: the site reports what a party proposes or gets adopted.",
+      "check": "The data audit flags these words when they appear outside a quotation."
+    }
   },
   "elections": {
     "title": "Electoral tracker",
-    "intro": "National, regional, local and by-elections, all levels."
+    "intro": "National, regional, local and by-elections, all levels.",
+    "level": {
+      "national": "National",
+      "regional": "Regional",
+      "local": "Local",
+      "partial": "By-election"
+    },
+    "statusKnown": "Result known",
+    "statusUpcoming": "Upcoming",
+    "mandate": "term: {duration}",
+    "seatsContested": "{count, plural, one {# seat} other {# seats}} up for election out of {total}",
+    "assembly": "assembly of {total} seats",
+    "powers": "Powers",
+    "result": "Result"
   },
   "legislation": {
     "title": "Legislative tracker",
-    "intro": "Anti-immigration laws enacted or under advanced discussion, by country and at EU level."
+    "intro": "Immigration legislation (laws, decrees, EU acts) adopted or under advanced discussion, by country and at EU level.",
+    "status": {
+      "promulguee": "Enacted",
+      "en_discussion": "Under discussion",
+      "invalidee": "Struck down by the courts",
+      "abrogee": "Repealed",
+      "caduque": "Lapsed"
+    }
   },
   "news": {
-    "title": "Initiative news",
-    "intro": "Journalistic coverage of migration-policy initiatives: nature, developments, legal status, press coverage."
+    "title": "News",
+    "intro": "Developments in migration policy outside the directory: citizen and activist initiatives, closed communities, court cases, elections and referendums. Journalistic treatment: nature, developments, legal status.",
+    "legalStatus": "Legal status"
   },
   "footer": {
-    "sources": "Sources: Manifesto Project, ParlGov, PopuList, EUR-Lex, IPU Parline.",
-    "donate": "Support this project",
+    "sources": "Sources: official sites, academic datasets (The PopuList, ParlGov), Wikipedia and the press, each dated and archived. Details in the methodology.",
+    "donate": "Donate",
     "notice": "Journalistic and documentary content. No personal data is collected for targeting. Every classification is sourced and verifiable — see the methodology.",
     "legal": "Legal notice",
     "contact": "Contact and corrections",
-    "corrections": "Corrections log"
+    "corrections": "Corrections log",
+    "updated": "Content updated on {date}.",
+    "about": "About",
+    "privacy": "Privacy"
   },
   "meta": {
     "siteName": "Migration Policy Watch",
     "siteTitle": "Migration Policy Watch — parties, laws and elections",
-    "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy across Western democracies.",
+    "siteDescription": "Factual, sourced tracking of parties, laws and elections related to immigration policy in pluralist democracies.",
     "partiesTitle": "Party directory",
     "partiesDescription": "Sourced profiles of parties whose platform or academic classification centres on reducing immigration or on remigration: electoral standing, history, footprint."
   },
@@ -75,7 +178,8 @@
     "hostText": "The site is hosted by {name}, {address}, United States.",
     "lawText": "Notice provided under French law no. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN).",
     "missing": "To be completed before publication",
-    "publisherText": "The site is published on a non-professional basis by a private individual who, as the law allows, has chosen not to make their identity public and has disclosed it to the host."
+    "publisherText": "The site is published on a non-professional basis by a private individual who, as the law allows, has chosen not to make their identity public and has disclosed it to the host.",
+    "publisherNamed": "The site is published on a non-professional basis by {name}, publication director, residing at {address}, telephone {phone}."
   },
   "contact": {
     "title": "Contact and corrections",
@@ -93,5 +197,56 @@
     "kind_reclassement": "Reclassification",
     "kind_retrait": "Withdrawal",
     "page": "Page"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist or has moved.",
+    "home": "Back to the home page"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "text": "The page could not be displayed. Try again; if the problem persists, report it.",
+    "retry": "Try again",
+    "report": "Report the problem"
+  },
+  "about": {
+    "title": "About",
+    "intro": "The Migration Policy Watch tracks, with their sources, parties, laws and elections related to policies to reduce immigration in pluralist democracies. It describes what these parties propose and get adopted; it neither supports nor opposes any of them.",
+    "publisherTitle": "Who publishes the site",
+    "publisherNamed": "The site is published in a personal, non-professional capacity by {name}, publication director.",
+    "publisherAnonymous": "The site is published in a personal, non-professional capacity by an individual whose identity is known to the host, as French law provides. They answer at the address on the contact page.",
+    "legalLink": "Legal notice →",
+    "fundingTitle": "Funding",
+    "fundingNone": "The site has no income: no advertising, no grants, no donations.",
+    "fundingDonations": "The site is funded by donations from its readers, received on Liberapay. Donors have no say over the content. Donations from a party, an elected official or an organisation linked to them are not accepted. The total received is published here every year.",
+    "donate": "Donate on Liberapay →",
+    "independenceTitle": "Independence",
+    "independence": "No party, movement, campaigning organisation or donor has any say over the content. The site publishes no membership or donation link to any party, and its links to external sites pass on no search ranking. Non-partisan initiatives are covered as news, with no profile.",
+    "inclusionTitle": "What being in the directory means",
+    "inclusion": "A party is in the directory because its position on immigration meets the criteria of the methodology and is documented by sources. It is a judgment neither on that party nor on its voters, and it is not an endorsement.",
+    "methodologyLink": "Methodology →",
+    "correctionsTitle": "Corrections",
+    "corrections": "Errors corrected, changes of classification and removed profiles are recorded in the corrections log, with their date and source. To report an error, write to the address on the contact page.",
+    "correctionsLink": "Corrections log →",
+    "contactLink": "Contact →"
+  },
+  "common": {
+    "field": "{label}: ",
+    "skipLink": "Skip to main content"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "This site shows no advertising, does not measure its audience and sets no tracking cookie. These are the only data processed during a visit.",
+    "hostTitle": "Host logs",
+    "host": "Like any web server, the host {host}, based in the United States, records technical connection data (IP address, date, page requested, browser) to run and secure the service. These logs fall under Vercel's privacy policy; the publisher does not use them.",
+    "hostLink": "Vercel privacy policy",
+    "cookieTitle": "Language cookie",
+    "cookie": "The NEXT_LOCALE cookie remembers the language chosen (French or English). It is a session cookie, deleted when the browser closes. As it is strictly necessary for the service requested, it does not require consent (Article 82 of the French Data Protection Act).",
+    "thirdTitle": "No third party during a visit",
+    "third": "Pages, flags and icons are served by the site itself, and no font is loaded from another server: a visit sends no request to any third party. Links to sources and party websites open those sites, which apply their own rules.",
+    "contactTitle": "Messages and rights",
+    "contact": "Messages sent to the contact address are used only to reply to them. For any question, or to exercise your rights of access, rectification or erasure, write to that address; you may also complain to the CNIL, the French data protection authority.",
+    "donations": "Donations are processed by Liberapay under its own privacy policy; the publisher receives only what Liberapay passes on.",
+    "contactLink": "Contact →"
   }
 }

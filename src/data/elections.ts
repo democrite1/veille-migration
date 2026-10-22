@@ -137,7 +137,7 @@ export const elections: Election[] = [
     date: '2026-03-18',
     status: 'resultat_connu',
     result:
-      "Scrutin organisé dans 340 des 342 communes. Percée du Forum voor Democratie, qui quadruple son nombre de voix et remporte 299 sièges dans 104 communes — dont la première place à Velsen et à Epe — tout en n'entrant dans aucun exécutif municipal. Le PVV, dépourvu de maillage local, n'a présenté de listes que dans une minorité de communes.",
+      "Scrutin organisé dans 340 des 342 communes. Le Forum voor Democratie quadruple son nombre de voix et remporte 299 sièges dans 104 communes — dont la première place à Velsen et à Epe — tout en n'entrant dans aucun exécutif municipal. Le PVV, dépourvu de maillage local, n'a présenté de listes que dans une minorité de communes.",
     source: {
       name: 'Wikipedia — 2026 Dutch municipal elections',
       url: 'https://en.wikipedia.org/wiki/2026_Dutch_municipal_elections',
@@ -154,7 +154,7 @@ export const elections: Election[] = [
     date: '2026-03-21',
     status: 'resultat_connu',
     result:
-      "Victoire large des travaillistes, mais séisme à droite : One Nation obtient 22,9% et 4 sièges sur 47, devançant les Libéraux en voix pour la première fois dans cet État. Meilleur résultat du parti à une élection d'État ou fédérale depuis le Queensland en 1998. Il gagne également 3 sièges au Conseil législatif.",
+      "Large victoire travailliste ; à droite, One Nation obtient 22,9% et 4 sièges sur 47, devançant les Libéraux en voix pour la première fois dans cet État. Meilleur résultat du parti à une élection d'État ou fédérale depuis le Queensland en 1998. Il gagne également 3 sièges au Conseil législatif.",
     totalSeats: 47,
     source: {
       name: 'The Conversation — Labor easily wins South Australian election with One Nation beating Liberals into second',
@@ -174,6 +174,7 @@ export const elections: Election[] = [
     result:
       'Première victoire de One Nation dans une circonscription de la Chambre des représentants : David Farley devient le premier député du parti directement élu à la chambre basse fédérale, les précédents y étant arrivés par défection.',
     totalSeats: 150,
+    seatsContested: 1,
     source: {
       name: 'The Conversation',
       url: 'https://theconversation.com/labor-easily-wins-south-australian-election-with-one-nation-beating-liberals-into-second-on-primary-votes-278423',
@@ -191,7 +192,7 @@ export const elections: Election[] = [
     date: '2026-05-16',
     status: 'resultat_connu',
     result:
-      "Net basculement à droite de la capitale : le Miðflokkurinn entre pour la première fois au conseil municipal de Reykjavik avec 11,36% et 3 sièges sur 23, après un score nul en 2022.",
+      "Le Miðflokkurinn entre pour la première fois au conseil municipal de Reykjavik avec 11,36% et 3 sièges sur 23, après un score nul en 2022.",
     source: {
       name: 'Iceland Review — Major changes ahead for Reykjavik City Council',
       url: 'https://www.icelandreview.com/news/major-changes-ahead-for-reykjavik-city-council-after-election-results/',
@@ -211,6 +212,7 @@ export const elections: Election[] = [
     result:
       "Partielle provoquée par le départ d'Andy Burnham, élu député six semaines plus tôt. La travailliste Bev Craig l'emporte. Restore Britain, parti remigrationniste fondé cinq mois auparavant, arrive quatrième sur sept avec 46 289 voix (8,7%), devant les conservateurs sur ce scrutin.",
     totalSeats: 1,
+    seatsContested: 1,
     source: {
       name: 'Wikipedia — 2026 Greater Manchester mayoral by-election',
       url: 'https://en.wikipedia.org/wiki/2026_Greater_Manchester_mayoral_by-election',
@@ -229,6 +231,7 @@ export const elections: Election[] = [
     result:
       "Andy Burnham (Labour) conserve le siège pour son parti avec 54,8%, devant Reform UK (34,5%). Restore Britain, pour sa première législative partielle, obtient 6,84% (3 111 voix) et se classe troisième sur quatorze candidats. Participation : 58,75%.",
     totalSeats: 650,
+    seatsContested: 1,
     source: {
       name: 'Wikipedia — 2026 Makerfield by-election',
       url: 'https://en.wikipedia.org/wiki/2026_Makerfield_by-election',
@@ -246,7 +249,7 @@ export const elections: Election[] = [
     date: '2026-02-08',
     status: 'resultat_connu',
     result:
-      "Scrutin anticipé convoqué par la Première ministre Sanae Takaichi, qui obtient pour le PLD 316 sièges sur 465 — la plus large majorité jamais réunie par un parti seul depuis 1945. Sanseitō, parti nationaliste anti-immigration, passe de 3 à 15 sièges (7,44% à la proportionnelle) et devient l'une des principales forces d'opposition, sept mois après sa percée aux sénatoriales. Le Parti conservateur du Japon perd en revanche ses 3 sièges.",
+      "Scrutin anticipé convoqué par la Première ministre Sanae Takaichi, qui obtient pour le PLD 316 sièges sur 465 — la plus large majorité jamais réunie par un parti seul depuis 1945. Sanseitō, parti nationaliste anti-immigration, passe de 3 à 15 sièges (7,44% à la proportionnelle) et devient l'une des principales forces d'opposition, sept mois après ses gains aux sénatoriales. Le Parti conservateur du Japon perd en revanche ses 3 sièges.",
     totalSeats: 465,
     source: {
       name: 'Wikipedia — 2026 Japanese general election',
@@ -265,8 +268,9 @@ export const elections: Election[] = [
     date: '2025-07-20',
     status: 'resultat_connu',
     result:
-      "Scrutin de bascule : Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
+      "Sanseitō remporte 14 des 125 sièges renouvelés (12,55% à la proportionnelle, troisième score national), passant de 1 à 15 conseillers sur 248. Pour la première fois, l'immigration s'impose comme un enjeu électoral majeur au Japon, sujet quasi absent des enquêtes d'opinion lors du scrutin précédent.",
     totalSeats: 248,
+    seatsContested: 125,
     source: {
       name: 'Wikipedia — 2025 Japanese House of Councillors election',
       url: 'https://en.wikipedia.org/wiki/2025_Japanese_House_of_Councillors_election',
@@ -302,12 +306,12 @@ export const elections: Election[] = [
     date: '2026-09-06',
     status: 'resultat_connu',
     result:
-      "Meilleur score de l'AfD dans un scrutin régional allemand : 43,8% et 39 sièges sur 83, loin devant la CDU du chancelier Merz (moins de 18%). Le BSW obtient 5,3%, un appoint qui rend arithmétiquement possible une majorité avec l'AfD — hypothèse d'une première direction de Land par l'extrême droite depuis 1945.",
+      "Meilleur score de l'AfD dans un scrutin régional allemand : 43,8 % et 39 sièges sur 83, loin devant la CDU (17,2 %). Le BSW obtient 5,3 % ; AfD et BSW totaliseraient 44 sièges, soit la majorité absolue.",
     totalSeats: 83,
     source: {
-      name: 'NPR — Germany\'s far-right achieves an electoral breakthrough in key state election',
-      url: 'https://www.npr.org/2026/09/06/nx-s1-5955677/german-afd-far-right',
-      accessedOn: '2026-09-13',
+      name: "ZDFheute — Wahl in Sachsen-Anhalt : AfD liegt klar vor CDU",
+      url: 'https://www.zdfheute.de/politik/deutschland/landtagswahl-sachsen-anhalt-wahlergebnisse-cdu-afd-schulze-siegmund-100.html',
+      accessedOn: '2026-10-20',
     },
   },
   {
@@ -355,6 +359,8 @@ export const elections: Election[] = [
     status: 'resultat_connu',
     result:
       "27 des 81 sièges renouvelés, au premier tour les 9 et 10 octobre puis au second les 16 et 17 octobre. STAN remporte 9 sièges (14 au total) et l'ODS 7 (20 au total, premier groupe du Sénat). L'ANO, au gouvernement, ne gagne aucun des 27 sièges en jeu. Le SPD obtient 4,96 % des voix au premier tour et n'accède à aucun second tour. Participation : 43,31 % au premier tour, 21,12 % au second.",
+    totalSeats: 81,
+    seatsContested: 27,
     source: {
       name: 'Wikipedia — 2026 Czech Senate election',
       url: 'https://en.wikipedia.org/wiki/2026_Czech_Senate_election',
@@ -373,7 +379,7 @@ export const elections: Election[] = [
     date: '2026-05-07',
     status: 'resultat_connu',
     result:
-      "Percée historique de Reform UK, qui devient deuxième force politique du pays avec 34 sièges (29,3%) sur un Senedd élargi à 96 sièges pour ce scrutin, juste derrière Plaid Cymru (43 sièges). Le Labour gallois, au pouvoir sans interruption depuis la dévolution, s'effondre à 9 sièges.",
+      "Reform UK devient la deuxième force du pays avec 34 sièges (29,3%) sur un Senedd élargi à 96 sièges pour ce scrutin, juste derrière Plaid Cymru (43 sièges). Le Labour gallois, au pouvoir sans interruption depuis la dévolution, tombe à 9 sièges.",
     totalSeats: 96,
     source: {
       name: 'Swansea Bay News',
@@ -517,12 +523,12 @@ export const elections: Election[] = [
     date: '2026-04-12',
     status: 'resultat_connu',
     result:
-      "Défaite historique du Fidesz-KDNP de Viktor Orbán (52 sièges sur 199, 38,61% des voix de liste) face au parti Tisza de Péter Magyar (141 sièges, 53,18%), qui obtient à son tour une majorité des deux tiers. Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) se maintient au Parlement mais recule de 7 à 6 sièges (5,63%). Participation de 78,99%, la plus forte depuis 1990.",
+      "Défaite du Fidesz-KDNP de Viktor Orbán (52 sièges sur 199, 38,61% des voix de liste) face au parti Tisza de Péter Magyar (141 sièges, 53,18%), qui obtient à son tour une majorité des deux tiers. Fin de 16 années de pouvoir ininterrompu d'Orbán. Le parti d'extrême droite Mi Hazánk (Notre Patrie) se maintient au Parlement avec 6 sièges, comme en 2022 (5,63 %). Participation de 78,99%, la plus forte depuis 1990.",
     totalSeats: 199,
     source: {
       name: 'Wikipedia — 2026 Hungarian parliamentary election',
       url: 'https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election',
-      accessedOn: '2026-09-15',
+      accessedOn: '2026-10-21',
     },
   },
   {
@@ -691,7 +697,7 @@ export const elections: Election[] = [
     date: '2023-04-02',
     status: 'resultat_connu',
     result:
-      "Les Perussuomalaiset (Riikka Purra) obtiennent leur meilleur score historique (46 sièges, 20,1%), juste derrière le Kokoomus (conservateur, 48 sièges) qui forme le gouvernement. Purra devient vice-Première ministre et ministre des Finances.",
+      "Les Perussuomalaiset (Riikka Purra) obtiennent leur meilleur score à des législatives (46 sièges, 20,1 %), juste derrière le Kokoomus (conservateur, 48 sièges) qui forme le gouvernement. Purra devient vice-Première ministre et ministre des Finances.",
     totalSeats: 200,
     source: {
       name: 'Ministère de la Justice finlandais — vaalit.fi',
@@ -727,12 +733,12 @@ export const elections: Election[] = [
     date: '2023-10-22',
     status: 'resultat_connu',
     result:
-      "L'UDC (SVP) confirme sa place de premier parti du pays avec 62 sièges (28,6%), son meilleur score depuis 2015. Conserve ses 2 sièges au Conseil fédéral (Guy Parmelin, Albert Rösti).",
+      "L'UDC (SVP) reste le premier parti du pays avec 62 sièges et 27,9 % des voix, contre 25,6 % en 2019.",
     totalSeats: 200,
     source: {
-      name: 'Chancellerie fédérale',
-      url: 'https://www.bfs.admin.ch/bfs/fr/home/statistiques/politique/elections/conseil-national.html',
-      accessedOn: '2026-09-10',
+      name: 'Wikipedia — 2023 Swiss federal election',
+      url: 'https://en.wikipedia.org/wiki/2023_Swiss_federal_election',
+      accessedOn: '2026-10-21',
     },
   },
   {
@@ -763,7 +769,7 @@ export const elections: Election[] = [
     date: '2025-09-08',
     status: 'resultat_connu',
     result:
-      "Le Fremskrittspartiet (FrP) réalise son meilleur score historique (47 sièges, 23,8%) mais le bloc rouge-vert emmené par le Parti travailliste conserve, de justesse, sa majorité. Le FrP reste dans l'opposition.",
+      "Le Fremskrittspartiet (FrP) réalise son meilleur score à des législatives (47 sièges, 23,8 %) mais le bloc rouge-vert emmené par le Parti travailliste conserve, de justesse, sa majorité. Le FrP reste dans l'opposition.",
     totalSeats: 169,
     source: {
       name: 'NRK',
@@ -853,7 +859,7 @@ export const elections: Election[] = [
     date: '2025-04-28',
     status: 'resultat_connu',
     result:
-      "Le Parti populaire du Canada (PPC) de Maxime Bernier réalise son pire score historique (0,7% des voix, aucun élu), en net recul par rapport à 2021 (5%). Maxime Bernier arrive quatrième dans sa propre circonscription.",
+      "Le Parti populaire du Canada (PPC) de Maxime Bernier réalise son plus faible score (0,7 % des voix, aucun élu), en net recul par rapport à 2021 (5%). Maxime Bernier arrive quatrième dans sa propre circonscription.",
     totalSeats: 343,
     source: {
       name: 'CBC News',
@@ -955,7 +961,7 @@ export const elections: Election[] = [
     id: 'us-midterms-2024',
     countryCode: 'US',
     level: 'national',
-    scopeName: 'Élections de mi-mandat (Chambre des représentants et Sénat)',
+    scopeName: 'Élections au Congrès (Chambre des représentants et un tiers du Sénat)',
     mandateDuration: '2 ans (Chambre), 6 ans par tiers (Sénat)',
     powers: 'Élection de la Chambre des représentants et renouvellement partiel du Sénat, aux côtés de la présidentielle.',
     date: '2024-11-05',

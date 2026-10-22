@@ -1,6 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useFormatter, useLocale, useTranslations } from 'next-intl';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import type { ReactNode } from 'react';
+import { Link } from '@/i18n/navigation';
 import { pageMetadata } from '@/lib/metadata';
+import { parties } from '@/data/parties';
+import { SCOPE, countryName } from '@/lib/scope';
+import { SOURCE_KINDS, classificationBasis, sourceBreakdown, type ClassificationBasis } from '@/lib/sourceStats';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -14,8 +19,34 @@ export default async function MethodologyPage({ params }: { params: Promise<{ lo
   return <MethodologyPageInner />;
 }
 
+const BASES: ClassificationBasis[] = ['popuList', 'parlGov', 'secondary', 'programme'];
+
+function Section({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <section className="card space-y-2">
+      <h2 className="font-serif text-lg font-semibold">{title}</h2>
+      {children}
+    </section>
+  );
+}
+
+// Everything below that counts something is computed from src/data at build
+// time, so the page describes what the site actually does (audit E9).
 function MethodologyPageInner() {
   const t = useTranslations('methodology');
+  const format = useFormatter();
+  const locale = useLocale();
+  const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
+
+  const covered = new Set<string>(parties.map((p) => p.countryCode));
+  const missing = SCOPE.filter((c) => !covered.has(c))
+    .map((c) => countryName(c, locale))
+    .sort((a, b) => a.localeCompare(b, locale));
+
+  const byBasis = new Map<ClassificationBasis, string[]>(BASES.map((b) => [b, []]));
+  for (const p of parties) byBasis.get(classificationBasis(p))!.push(p.name);
+
+  const sources = sourceBreakdown();
 
   return (
     <div className="prose prose-neutral max-w-none space-y-8">
@@ -24,69 +55,72 @@ function MethodologyPageInner() {
         <p className="mt-3 max-w-2xl text-muted">{t('intro')}</p>
       </div>
 
-      <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Périmètre géographique</h2>
+      <Section title={t('scope.title')}>
+        <p className="text-sm">{t('scope.text')}</p>
         <p className="text-sm">
-          UE27, Royaume-Uni, Norvège, Suisse, Islande, États-Unis, Canada, Australie,
-          Nouvelle-Zélande, Argentine. La sélection des pays repose sur un critère
-          politique — démocraties occidentales où des mouvements anti-immigration sont
-          politiquement actifs — et non sur un critère ethnique.
+          {t('scope.covered', { count: SCOPE.filter((c) => covered.has(c)).length, missing: format.list(missing) })}
         </p>
-      </section>
+      </Section>
 
-      <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Annuaire des partis</h2>
-        <p className="text-sm">
-          Un parti est inclus si (a) son programme officiel se revendique explicitement
-          de la réduction ou de l’arrêt de l’immigration / de la remigration, ou (b) une
-          source tierce académique reconnue (Manifesto Project, ParlGov, PopuList, CHES)
-          le classe dans la famille populiste radicale de droite / nationaliste avec
-          positionnement anti-immigration. Chaque fiche cite sa source de classification.
-        </p>
-      </section>
-
-      <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Grille de classification</h2>
-        <p className="text-sm font-medium">Axe 1 — Intention</p>
-        <p className="text-sm">
-          <strong>Stop / réduction immigration</strong> vs <strong>Remigration</strong>.
-          Le tag « remigration » est appliqué si le terme est utilisé explicitement par
-          le parti ou ses dirigeants, OU si la politique décrite est équivalente sur le
-          fond (retour « volontaire » massif incité financièrement, objectifs chiffrés de
-          retours). Toujours sourcé — y compris lorsque le parti conteste ou rejette
-          explicitement le terme.
-        </p>
-        <p className="text-sm font-medium">Axe 2 — Statut d’action</p>
-        <p className="text-sm">
-          <strong>Programme</strong> (engagement électoral, rien de déposé formellement)
-          vs <strong>Mesures concrètes</strong> (dès qu’un texte formel existe :
-          proposition de loi déposée même non votée, décret, mesure administrative, loi
-          votée). Le tag « mesures concrètes » reste actif tant que la mesure est en
-          vigueur, indépendamment du parti au pouvoir ou non. Si la mesure est abrogée ou
-          son application arrêtée → « mesures concrètes (historique, abrogée le [date]) »,
-          avec un historique daté conservé sur la fiche.
-        </p>
-      </section>
-
-      <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Sources de données</h2>
+      <Section title={t('directory.title')}>
+        <p className="text-sm">{t('directory.criteria')}</p>
+        <p className="text-sm">{t('directory.notJudgment')}</p>
+        <p className="text-sm">{t('directory.basesIntro', { count: parties.length })}</p>
         <ul className="list-disc space-y-1 pl-5 text-sm">
-          <li>Classification des partis : Manifesto Project, ParlGov, PopuList, Wikipedia (source de repli)</li>
-          <li>Calendrier électoral : commissions électorales nationales, IPU Parline, Wikipedia</li>
-          <li>Législation : EUR-Lex, sites des parlements nationaux</li>
-          <li>Actualité des initiatives : presse généraliste et spécialisée, flux RSS</li>
+          {BASES.filter((b) => byBasis.get(b)!.length).map((b) => {
+            const names = byBasis.get(b)!;
+            return <li key={b}>{t(`directory.basis.${b}`, { count: names.length, names: format.list(names) })}</li>;
+          })}
         </ul>
-      </section>
+      </Section>
 
-      <section className="card space-y-2">
-        <h2 className="font-serif text-lg font-semibold">Ce que ce site ne fait pas</h2>
-        <p className="text-sm">
-          Pas de mise en avant séparée des structures jeunesse des partis. Pour les
-          initiatives non partisanes (section actualités), traitement journalistique
-          uniquement : nature, développements, statut légal, couverture presse — jamais
-          de fiche-annuaire ni de liens de contact ou d’adhésion.
+      <Section title={t('grid.title')}>
+        <p className="text-sm font-medium">{t('grid.axis1Title')}</p>
+        <p className="text-sm">{t.rich('grid.axis1', { strong })}</p>
+        <p className="text-sm font-medium">{t('grid.axis2Title')}</p>
+        <p className="text-sm">{t.rich('grid.axis2', { strong })}</p>
+        <p className="text-sm">{t('grid.registers')}</p>
+      </Section>
+
+      <Section title={t('sources.title')}>
+        <p className="text-sm">{t('sources.preference')}</p>
+        <p className="text-sm">{t('sources.breakdownIntro', { total: sources.total })}</p>
+        <ul className="list-disc space-y-1 pl-5 text-sm">
+          {SOURCE_KINDS.map((k) => (
+            <li key={k}>
+              {t('sources.kindLine', {
+                label: t(`sources.kind.${k}`),
+                count: sources.counts[k],
+                percent: format.number(sources.counts[k] / sources.total, { style: 'percent' }),
+              })}
+            </li>
+          ))}
+        </ul>
+        <p className="text-sm">{t('sources.dates', { count: sources.unverified })}</p>
+      </Section>
+
+      <Section title={t('corrections.title')}>
+        <p className="text-sm">{t('corrections.text')}</p>
+        <p className="text-sm">{t('corrections.report')}</p>
+        <p className="flex flex-wrap gap-x-6 text-sm">
+          <Link href="/corrections">{t('corrections.log')}</Link>
+          <Link href="/contact">{t('corrections.contact')}</Link>
         </p>
-      </section>
+      </Section>
+
+      <Section title={t('charter.title')}>
+        <p className="text-sm">{t('charter.intro')}</p>
+        <ul className="list-disc space-y-1 pl-5 text-sm">
+          {(['r1', 'r2', 'r3', 'r4', 'r5'] as const).map((k) => (
+            <li key={k}>{t(`charter.${k}`)}</li>
+          ))}
+        </ul>
+        <p className="text-sm text-muted">{t('charter.check')}</p>
+      </Section>
+
+      <Section title={t('notDone.title')}>
+        <p className="text-sm">{t('notDone.text')}</p>
+      </Section>
     </div>
   );
 }

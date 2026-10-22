@@ -15,10 +15,14 @@ import { elections } from '../src/data/elections';
 import { legislation } from '../src/data/legislation';
 import { news } from '../src/data/news';
 import { corrections } from '../src/data/corrections';
-import { PUBLISHER } from '../src/lib/publisher';
-import type { Source } from '../src/data/types';
-import { readFileSync } from 'node:fs';
+import { PUBLISHER, isNamed } from '../src/lib/publisher';
+import { SCOPE, countryName } from '../src/lib/scope';
+import { englishPairs, hasEnglish, sourceNamePairs, translatable } from '../src/data/i18n';
+import { allSources } from '../src/lib/sourceStats';
+import { usedFlagCodes } from '../src/lib/flags';
+import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import type { Source } from '../src/data/types';
 
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -45,13 +49,14 @@ checkDuplicates(news, (n) => n.id, 'news');
 
 // ------------------------------------------------------------------- sources
 /**
- * `factBearing` marks citations that back a precise figure (a seat count, a
- * vote share). For those, a bare domain is a real defect: the reader cannot
- * check the number. Elsewhere — an institution's homepage cited for "this
- * party has passed no law", or a classification database cited as a database —
- * a bare domain is the correct citation, so it is not flagged.
+ * `onBare` says what a bare domain means for this citation. A figure (a seat
+ * count, a vote share) or a classification must point at the page or dataset
+ * entry that states it: a home page leaves the reader nothing to check, so it
+ * is an error for classifications and intentions and a warning for figures.
+ * An institution's homepage cited for "this party has passed no law" is still
+ * tolerated with a warning until each fiche names the register consulted.
  */
-function checkSource(where: string, s: Source | undefined, factBearing = false) {
+function checkSource(where: string, s: Source | undefined, onBare: 'ok' | 'warn' | 'err' = 'ok') {
   if (!s) return;
   if (!s.name?.trim()) err(where, 'source sans nom');
   if (!s.url?.trim()) {
@@ -66,16 +71,21 @@ function checkSource(where: string, s: Source | undefined, factBearing = false) 
     return;
   }
   const path = u.pathname.replace(/\/+$/, '');
-  if (factBearing && (path === '' || path === '/')) {
-    warn(where, `chiffre sourcé sur un domaine nu, non vérifiable en l'état : ${s.url}`);
+  if (onBare !== 'ok' && (path === '' || path === '/')) {
+    (onBare === 'err' ? err : warn)(where, `source sur un domaine nu, non vérifiable en l'état : ${s.url}`);
   }
   // Live blogs and exit polls carry election-night estimates that are routinely
   // revised. A Fidesz seat count taken from one was wrong by three seats.
   if (/live-blog|\/live\/|ultima-hora|-directo-|exit-poll/i.test(s.url)) {
     warn(where, `citation vers un direct / une estimation de soir de scrutin : ${s.url}`);
   }
-  if (s.accessedOn && !isIsoDate(s.accessedOn)) err(where, `accessedOn mal formé : ${s.accessedOn}`);
-  if (s.accessedOn && s.accessedOn > TODAY) err(where, `accessedOn dans le futur : ${s.accessedOn}`);
+  // Every source carries either the date it was checked or the reason it could not be.
+  if (s.unverified !== undefined) {
+    if (!s.unverified.trim()) err(where, 'source non vérifiée sans raison indiquée');
+    else warn(where, `source non vérifiée : ${s.unverified}`);
+  } else if (!s.accessedOn) err(where, 'source sans date de consultation');
+  else if (!isIsoDate(s.accessedOn)) err(where, `accessedOn mal formé : ${s.accessedOn}`);
+  else if (s.accessedOn > TODAY) err(where, `accessedOn dans le futur : ${s.accessedOn}`);
 }
 
 // ------------------------------------------------- chamber size cross-checks
@@ -88,9 +98,9 @@ for (const p of parties) {
     err(w, `année de fondation invraisemblable : ${p.founded}`);
 
   checkSource(`${w} / electoralStatusSource`, p.electoralStatusSource);
-  checkSource(`${w} / classificationSource`, p.classificationSource);
-  checkSource(`${w} / intention`, p.intention?.source);
-  checkSource(`${w} / actionStatus`, p.actionStatus?.source);
+  checkSource(`${w} / classificationSource`, p.classificationSource, 'err');
+  checkSource(`${w} / intention`, p.intention?.source, 'err');
+  checkSource(`${w} / actionStatus`, p.actionStatus?.source, 'warn');
   for (const h of p.actionStatusHistory ?? []) {
     if (!isIsoDate(h.date)) err(w, `actionStatusHistory : date mal formée ${h.date}`);
     checkSource(`${w} / actionStatusHistory ${h.date}`, h.source);
@@ -115,7 +125,7 @@ for (const p of parties) {
     if (r.seats > r.totalSeats) err(rw, `${r.seats} sièges sur une assemblée de ${r.totalSeats}`);
     if (r.votePercent != null && (r.votePercent < 0 || r.votePercent > 100))
       err(rw, `pourcentage hors bornes : ${r.votePercent}`);
-    checkSource(rw, r.source, true);
+    checkSource(rw, r.source, 'warn');
 
     const dupKey = `${r.label}|${r.date}`;
     if (seenResults.has(dupKey)) err(rw, 'entrée dupliquée dans electoralHistory');
@@ -131,6 +141,36 @@ for (const p of parties) {
         );
       } else if (prev) prev.who.push(p.slug);
       else chamberSizes.set(key, { total: r.totalSeats, who: [p.slug] });
+    }
+  }
+}
+
+// A text updated without its source: the Sweden Democrats' status described
+// the election of 13 September 2026 while citing a source consulted in
+// August. Flag any party whose status text names a date later than the day
+// its source was consulted, and any result whose source predates the vote.
+const MONTHS: Record<string, string> = {
+  janvier: '01', février: '02', fevrier: '02', mars: '03', avril: '04', mai: '05', juin: '06',
+  juillet: '07', août: '08', aout: '08', septembre: '09', octobre: '10', novembre: '11', décembre: '12', decembre: '12',
+};
+function latestDateIn(text: string): string | null {
+  let latest: string | null = null;
+  for (const m of text.matchAll(/(?:(\d{1,2})(?:er)?\s+)?(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(20\d{2})/gi)) {
+    const day = m[1] ? m[1].padStart(2, '0') : '01';
+    const iso = `${m[3]}-${MONTHS[m[2].toLowerCase()]}-${day}`;
+    if (!latest || iso > latest) latest = iso;
+  }
+  return latest;
+}
+for (const p of parties) {
+  const consulted = p.electoralStatusSource.accessedOn;
+  const mentioned = latestDateIn(p.electoralStatusDetail);
+  if (consulted && mentioned && mentioned <= TODAY && mentioned > consulted) {
+    warn(`parti ${p.slug} / electoralStatusSource`, `le texte cite un fait du ${mentioned} mais la source a été consultée le ${consulted}`);
+  }
+  for (const r of p.electoralHistory ?? []) {
+    if (r.source.accessedOn && r.source.accessedOn < r.date) {
+      err(`parti ${p.slug} / « ${r.label} »`, `source consultée le ${r.source.accessedOn}, avant le scrutin du ${r.date}`);
     }
   }
 }
@@ -164,7 +204,12 @@ for (const e of elections) {
     warn(w, 'marquée « résultat connu » mais sans texte de résultat');
   if (e.status === 'a_venir' && e.result) warn(w, 'un résultat est renseigné pour un scrutin à venir');
   if (e.totalSeats != null && e.totalSeats <= 0) err(w, `totalSeats invalide : ${e.totalSeats}`);
-  checkSource(w, e.source, e.status === 'resultat_connu');
+  if (e.seatsContested != null && e.totalSeats != null && e.seatsContested > e.totalSeats)
+    err(w, `${e.seatsContested} sièges à pourvoir sur une assemblée de ${e.totalSeats}`);
+  // A by-election fills one seat: without seatsContested the page would
+  // present the whole chamber as up for election.
+  if (e.level === 'partial' && e.seatsContested == null) err(w, 'élection partielle sans seatsContested');
+  checkSource(w, e.source, e.status === 'resultat_connu' ? 'warn' : 'ok');
 }
 
 // Elections and party fiches must agree on the size of the body being elected —
@@ -225,6 +270,80 @@ for (const n of news) {
   checkSource(w, n.source);
 }
 
+// ------------------------------------------------------- partisan sources (E8)
+// A party or a campaigning organisation may be cited for its own positions,
+// or in a source note as a complement, but never as the main source of a
+// result, a law or a news item: Mi Hazánk's 2022 seat count came from a
+// campaigning organisation and was wrong by one seat.
+const CAMPAIGNING = /(^|\.)(hopenothate\.org\.uk|searchlightmagazine\.com|errc\.org|ecre\.org|hungarianconservative\.com|washingtontimes\.com)$/;
+const partyHosts = new Set(
+  parties.flatMap((p) => (p.officialWebsite ? [new URL(p.officialWebsite).hostname.replace(/^www\./, '')] : [])),
+);
+function checkNeutral(where: string, s: Source | undefined) {
+  if (!s?.url) return;
+  let host: string;
+  try {
+    host = new URL(s.url).hostname.replace(/^www\./, '');
+  } catch {
+    return;
+  }
+  if (CAMPAIGNING.test(host)) err(where, `source principale militante (${host}) : citer une source neutre, celle-ci en complément`);
+  else if (partyHosts.has(host)) err(where, `source principale partisane (${host}) : citer une source neutre, le parti en complément`);
+}
+for (const p of parties) {
+  checkNeutral(`parti ${p.slug} / electoralStatusSource`, p.electoralStatusSource);
+  for (const r of p.electoralHistory ?? []) checkNeutral(`parti ${p.slug} / « ${r.label} »`, r.source);
+}
+for (const e of elections) checkNeutral(`élection ${e.id}`, e.source);
+for (const l of legislation) checkNeutral(`législation ${l.id}`, l.source);
+for (const n of news) checkNeutral(`actualité ${n.id}`, n.source);
+
+// ---------------------------------------------------------------- vocabulary
+// Vocabulary charter (E7, methodology page): words that dramatise a result
+// instead of stating it. Quoted words are someone else's and may stay, as may
+// the status label "mesures concrètes (historique, abrogée le …)". URLs,
+// identifiers and source titles are not the site's own wording and are skipped.
+// The corrections log quotes earlier wordings by design and is not checked.
+const BANNED = {
+  fr: /(?<!\p{L})(percées?|spectaculaires?|séismes?|écrasante?s?|inédite?s?|effondr\p{L}*|historiques?|records?)(?!\p{L})/giu,
+  en: /(?<!\p{L})(breakthroughs?|spectacular|earthquakes?|landslides?|crushing|unprecedented|collaps\p{L}*|historic|record-breaking)(?!\p{L})/giu,
+};
+const SKIP_KEYS = new Set(['id', 'slug', 'url', 'officialWebsite', 'name', 'handle']);
+const unquoted = (s: string) =>
+  s.replace(/«[^»]*»|“[^”]*”|"[^"]*"/g, ' ').replace(/\(historique, abrog/g, '(');
+function checkWording(where: string, v: unknown, lang: 'fr' | 'en' = 'fr') {
+  if (typeof v === 'string') {
+    for (const m of unquoted(v).matchAll(BANNED[lang])) err(where, `charte de vocabulaire : « ${m[1]} » hors citation`);
+  } else if (Array.isArray(v)) {
+    for (const x of v) checkWording(where, x, lang);
+  } else if (v && typeof v === 'object') {
+    for (const [k, x] of Object.entries(v)) {
+      if (!SKIP_KEYS.has(k)) checkWording(where, x, k === 'en' ? 'en' : k === 'fr' ? 'fr' : lang);
+    }
+  }
+}
+for (const p of parties) checkWording(`parti ${p.slug}`, p);
+for (const e of elections) checkWording(`élection ${e.id}`, e);
+for (const l of legislation) checkWording(`législation ${l.id}`, l);
+for (const n of news) checkWording(`actualité ${n.id}`, n);
+
+// A news item about an election must not quote different figures from the
+// election entry: the AfD Saxony-Anhalt item said 44.4% (election-night
+// article) while the election and the party fiche said 43.8%.
+const percents = (text: string) =>
+  new Set([...text.matchAll(/(\d{1,2}(?:[.,]\d{1,2})?)\s?%/g)].map((m) => m[1].replace(',', '.')));
+for (const n of news) {
+  for (const e of elections) {
+    if (e.date !== n.date || !n.countries.includes(e.countryCode) || !e.result) continue;
+    const inElection = percents(e.result);
+    for (const p of percents(`${n.title} ${n.summary}`)) {
+      if (!inElection.has(p)) {
+        warn(`actualité ${n.id}`, `cite ${p.replace('.', ',')} % ; ce chiffre n'apparaît pas dans le résultat de l'élection ${e.id} du même jour`);
+      }
+    }
+  }
+}
+
 // ------------------------------------------------- corrections log, legal notice
 checkDuplicates(corrections, (c) => c.id, 'corrections');
 for (const c of corrections) {
@@ -233,31 +352,69 @@ for (const c of corrections) {
   else if (c.date > TODAY) err(w, `datée du futur : ${c.date}`);
   if (!c.summary.fr?.trim() || !c.summary.en?.trim()) err(w, 'résumé FR ou EN manquant');
   if (!c.page.startsWith('/')) err(w, `chemin de page invalide : ${c.page}`);
+  // A withdrawn fiche must not leave the journal pointing at a 404.
+  const fiche = /^\/partis\/([^/]+)$/.exec(c.page)?.[1];
+  if (fiche && !parties.some((p) => p.slug === fiche)) err(w, `la fiche ${c.page} n'existe pas`);
   checkSource(w, c.source);
 }
 // An incomplete legal notice must never reach main (LCEN, decision 3).
 if (!PUBLISHER.email?.trim()) err('mentions légales', 'adresse de contact non renseignée (src/lib/publisher.ts)');
+// Donations only with a named publisher (decision 3): name, home address and phone.
+if (PUBLISHER.liberapay && !isNamed()) err('mentions légales', 'dons activés sans éditeur nommé : renseigner nom, adresse et téléphone (src/lib/publisher.ts)');
+if (PUBLISHER.liberapay && !/^https:\/\/liberapay\.com\/[^/]+\/?$/.test(PUBLISHER.liberapay)) err('mentions légales', `adresse Liberapay invalide : ${PUBLISHER.liberapay}`);
+if (!isNamed()) warn('mentions légales', "éditeur nommé non renseigné (décision 3) : les mentions gardent la formule anonyme et les dons restent désactivés");
 
-// ------------------------------------------------- country labels across UI
-const usedCodes = new Set<string>([...parties.map((p) => p.countryCode), ...elections.map((e) => e.countryCode)]);
-const labelFiles = [
-  'src/app/[locale]/page.tsx',
-  'src/app/[locale]/partis/page.tsx',
-  'src/app/[locale]/partis/[slug]/page.tsx',
-  'src/app/[locale]/elections/page.tsx',
-  'scripts/seed-supabase.ts',
-];
-for (const f of labelFiles) {
-  let src = '';
-  try {
-    src = readFileSync(resolve(__dirname, '..', f), 'utf8');
-  } catch {
-    warn('labels', `fichier introuvable : ${f}`);
-    continue;
+// A country outside the scope stated in the methodology (src/lib/scope.ts).
+for (const p of parties) if (!SCOPE.includes(p.countryCode)) err(`parti ${p.slug}`, `pays hors périmètre : ${p.countryCode}`);
+for (const e of elections) if (!SCOPE.includes(e.countryCode)) err(`élection ${e.id}`, `pays hors périmètre : ${e.countryCode}`);
+
+// ------------------------------------------------------ country names (P2)
+// Country names come from Intl.DisplayNames, one table for the whole site.
+// An unknown code comes back unchanged, which would show "DK" on a page.
+const usedCodes = new Set<string>([
+  ...parties.map((p) => p.countryCode),
+  ...elections.map((e) => e.countryCode),
+  ...legislation.map((l) => l.countryOrLevel),
+  ...news.flatMap((n) => n.countries),
+]);
+for (const cc of usedCodes) {
+  for (const locale of ['fr', 'en']) {
+    if (countryName(cc, locale) === cc) err('pays', `aucun nom ${locale} pour le code ${cc}`);
   }
-  for (const cc of usedCodes) {
-    if (!new RegExp(`\\b${cc}:\\s`).test(src)) err('labels', `${cc} absent de ${f}`);
-  }
+}
+
+// Flags are served from public/flags (J3): a new country needs `npm run flags`.
+for (const code of usedFlagCodes()) {
+  if (!existsSync(resolve(__dirname, '../public/flags', `${code}.svg`))) err('drapeaux', `public/flags/${code}.svg manquant : lancer npm run flags`);
+}
+
+// ----------------------------------------------------- English content (P2)
+// Every French string shown on the site needs its English pair in
+// src/data/i18n/en. A French edit makes the old pair unused and the new text
+// untranslated, so this catches stale translations too.
+const frStrings = new Set(translatable([parties, elections, legislation, news]));
+const untranslated = [...frStrings].filter((fr) => !hasEnglish(fr));
+if (untranslated.length) {
+  err('traduction', `${untranslated.length} texte(s) sans traduction anglaise, dont : « ${untranslated[0].slice(0, 90)} »`);
+}
+const pairs = englishPairs();
+const orphans = pairs.filter(([fr]) => !frStrings.has(fr));
+if (orphans.length) warn('traduction', `${orphans.length} traduction(s) orpheline(s), dont : « ${orphans[0][0].slice(0, 90)} »`);
+for (const [fr, en] of pairs) {
+  if (!en.trim()) err('traduction', `traduction vide pour « ${fr.slice(0, 90)} »`);
+  for (const m of unquoted(en).matchAll(BANNED.en)) err('traduction', `charte de vocabulaire : « ${m[1]} » dans « ${en.slice(0, 90)} »`);
+}
+// Source titles: optional pairs, but a pair whose title is no longer cited is dead.
+const citedNames = new Set([...allSources(), ...corrections.flatMap((c) => (c.source ? [c.source] : []))].map((x) => x.name));
+const deadNames = sourceNamePairs().filter(([fr]) => !citedNames.has(fr));
+if (deadNames.length) {
+  warn('traduction', `${deadNames.length} titre(s) de source traduit(s) mais plus cité(s), dont : « ${deadNames[0][0].slice(0, 90)} »`);
+}
+
+const seenFr = new Set<string>();
+for (const [fr] of pairs) {
+  if (seenFr.has(fr)) err('traduction', `texte traduit deux fois : « ${fr.slice(0, 90)} »`);
+  seenFr.add(fr);
 }
 
 // -------------------------------------------------------------------- report
