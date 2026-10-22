@@ -3,11 +3,11 @@
  *
  * The publisher chose on 2026-10-21 to be named, so that the site can take
  * donations (Liberapay). A non-professional publisher who is named publishes
- * their name, home address and phone number (art. 6, III, 1). Until those
- * three fields are filled in, the legal notice and the About page keep the
- * anonymous wording, which the law allows only if the host holds the
- * publisher's identity, and donations stay off: `npm run audit` fails if
- * `liberapay` is set while the publisher is not fully named.
+ * their name, home address and phone number (art. 6, III, 1); they gave them
+ * on 2026-10-22 for publication. Without all three, the legal notice and the
+ * About page fall back to the anonymous wording and donations stay off:
+ * `npm run audit` fails if `liberapay` is set while the publisher is not
+ * fully named.
  *
  * `email` is the publisher's contact address, chosen by them on 2026-10-21;
  * the audit also fails while it is null.
@@ -22,9 +22,9 @@ export interface Publisher {
 }
 
 export const PUBLISHER: Publisher = {
-  name: null,
-  address: null,
-  phone: null,
+  name: 'Alexis Desvergnes',
+  address: "336 rue de l'Église, 39400 Hauts de Bienne, France",
+  phone: '+33 6 69 19 64 81',
   email: 'blancdemocrate@protonmail.com',
   liberapay: null,
 };
